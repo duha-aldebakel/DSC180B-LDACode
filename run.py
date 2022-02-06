@@ -45,7 +45,7 @@ testmode=False
 if sys.argv[-1].lower().strip()=='test':
     logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
     testmode=True
-    evalevery=100
+    evalevery=20
     numtopics=4
     fnprefix='test_'
 else:
@@ -171,7 +171,10 @@ logging.info('\n\n# Fitting via LDA Variational Inference (Gensim) library')
 
 
 def setUpNewLogFile(LOG_FILENAME):
-    os.remove(LOG_FILENAME)
+    try:
+      os.remove(LOG_FILENAME)
+    except:
+      0
     #logging.basicConfig(filename=LOG_FILENAME,
     #                    format="%(asctime)s:%(levelname)s:%(message)s",
     #                    level=logging.INFO)
@@ -296,6 +299,9 @@ logging.info('Note: Log likelihood is per-word ELBO')
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
 ## Finding the right value of K
+logging.info('\n\n## Finding the right value of K')
+K_Coherence={}
+models={}
 if testmode:
   searchgrid=[3,4,5,6]
 else:
@@ -308,13 +314,13 @@ for K in searchgrid:
     #New code uses multicore which runs works in parallel for each CPU core.
     lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
        corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=K, random_state=100, 
-       eval_every=1000, chunksize=1000, passes=8, alpha='symmetric', per_word_topics=True
+       eval_every=evalevery, chunksize=evalevery, passes=8, alpha='symmetric', per_word_topics=True
     )
     coherence_model_lda_lemmatized = CoherenceModel(
        model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v'
     )
     coherence_lda_lemmatized = coherence_model_lda_lemmatized.get_coherence()
-    logging.info('Coherence Score: ', coherence_lda_lemmatized)
+    logging.info('Coherence Score: {}'.format(coherence_lda_lemmatized))
     K_Coherence[K]=coherence_lda_lemmatized
     models[K]=lda_model_lemmatized
 
