@@ -1,32 +1,24 @@
 # 1) choose base container
-# generally use the most recent tag
-
-# base notebook, contains Jupyter and relevant tools
-ARG BASE_CONTAINER=ucsdets/datahub-base-notebook:2021.2-stable
-
-# data science notebook
-# https://hub.docker.com/repository/docker/ucsdets/datascience-notebook/tags
-# ARG BASE_CONTAINER=ucsdets/datascience-notebook:2021.2-stable
-
-# scipy/machine learning (tensorflow, pytorch)
-# https://hub.docker.com/repository/docker/ucsdets/scipy-ml-notebook/tags
-# ARG BASE_CONTAINER=ucsdets/scipy-ml-notebook:2021.3-42158c8
-
-FROM $BASE_CONTAINER
-
-LABEL maintainer="UC San Diego ITS/ETS <ets-consult@ucsd.edu>"
+FROM ucsdets/datascience-notebook:2021.2-stable
 
 # 2) change to root to install packages
 USER root
+#RUN pip install --no-cache-dir geopandas babypandas 
+RUN pip install --no-cache-dir pymc3 pandas
+RUN conda install mkl-service
+RUN conda install -c conda-forge python-kaleido
+RUN conda install -y gensim
+RUN conda install -y pyLDAvis
+RUN conda install -y spacy
 
-RUN apt-get -y install htop
+# 3) Download language library data
+RUN python -m spacy download en_core_web_sm
+RUN python -m spacy download en_core_web_md
+RUN python -m nltk.downloader stopwords
 
-# 3) install packages using notebook user
-USER jovyan
 
-# RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir networkx scipy
+#rename this file as "Dockerfile" then run:-
+#docker build -t duha-aldebakel/dsc180b .
 
-# Override command to disable running jupyter notebook at launch
-# CMD ["/bin/bash"]
+#3afa5723-df1c-4979-a0dc-2dd3d18abb30
