@@ -48,7 +48,7 @@ if sys.argv[-1].lower().strip()=='test':
     evalevery=20
     chunk=5
     numtopics=4
-    passes=1
+    passes=8
     fnprefix='test_'
     workers=2
 else:
@@ -246,7 +246,7 @@ plt.savefig('images/'+fnprefix+'NoLemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/'+fnprefix+'NoLemConvergenceLikelihood.png')
 plt.show()
 plt.close(fig)
-
+logging.info('NoLemConvergenceLikelihood -> '+str(liklihood))
 
 fig=plt.figure()
 plt.plot(iter[:-1],perplexity[:-1],c="black")
@@ -296,6 +296,7 @@ plt.savefig('images/'+fnprefix+'LemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/'+fnprefix+'LemConvergenceLikelihood.png')
 plt.show()
 plt.close(fig)
+logging.info('LemConvergenceLikelihood -> '+str(liklihood))
 
 fig=plt.figure()
 plt.plot(iter[:-1],perplexity[:-1],c="black")
