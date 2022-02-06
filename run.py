@@ -46,11 +46,13 @@ if sys.argv[-1].lower().strip()=='test':
     logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
     testmode=True
     evalevery=100
-    numtopics=5
+    numtopics=4
+    fnprefix='test_'
 else:
     logging.info('App started in full mode.')
     evalevery=1000
     numtopics=20
+    fnprefix=''
 
 
 fn='data/datapicklesoup.bz2'
@@ -228,8 +230,8 @@ plt.ylabel("log likelihood")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/NoLemConvergenceLikelihood.eps', format='eps')
-plt.savefig('images/NoLemConvergenceLikelihood.png')
+plt.savefig('images/'+fnprefix+'NoLemConvergenceLikelihood.eps', format='eps')
+plt.savefig('images/'+fnprefix+'NoLemConvergenceLikelihood.png')
 plt.show()
 plt.close(fig)
 
@@ -240,8 +242,8 @@ plt.ylabel("Perplexity")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
-plt.savefig('images/NoLemConvergencePerplexity.png')
+plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.eps', format='eps')
+plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.png')
 plt.show()
 plt.close(fig)
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
@@ -275,8 +277,8 @@ plt.ylabel("log likelihood")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/LemConvergenceLikelihood.eps', format='eps')
-plt.savefig('images/LemConvergenceLikelihood.png')
+plt.savefig('images/'+fnprefix+'LemConvergenceLikelihood.eps', format='eps')
+plt.savefig('images/'+fnprefix+'LemConvergenceLikelihood.png')
 plt.show()
 plt.close(fig)
 
@@ -286,11 +288,56 @@ plt.ylabel("Perplexity")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
-plt.savefig('images/NoLemConvergencePerplexity.png')
+plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.eps', format='eps')
+plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.png')
 plt.show()
 plt.close(fig)
 logging.info('Note: Log likelihood is per-word ELBO')
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
+## Finding the right value of K
+if testmode:
+  searchgrid=[3,4,5,6]
+else:
+  searchgrid=[5,10,15,20,25,30,40]
+for K in searchgrid:
+    logging.info('Starting K={}'.format(K))
+    starttime=time.time()
+    setUpNewLogFile('gensim_lem_{}.log'.format(K))
 
+    #New code uses multicore which runs works in parallel for each CPU core.
+    lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
+       corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=K, random_state=100, 
+       eval_every=1000, chunksize=1000, passes=8, alpha='symmetric', per_word_topics=True
+    )
+    coherence_model_lda_lemmatized = CoherenceModel(
+       model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v'
+    )
+    coherence_lda_lemmatized = coherence_model_lda_lemmatized.get_coherence()
+    logging.info('Coherence Score: ', coherence_lda_lemmatized)
+    K_Coherence[K]=coherence_lda_lemmatized
+    models[K]=lda_model_lemmatized
+
+fig=plt.figure(figsize=(8,5))
+
+x = list(K_Coherence.keys())
+coherence_values= list(K_Coherence.values())
+
+# Build the line plot
+#ax = sns.lineplot(x=x, y=coherence_values, color='#238C8C')
+ax=plt.plot(x,coherence_values)
+
+# Set titles and labels
+plt.title("Best Number of Topics for LDA Model")
+plt.xlabel("Num Topics")
+plt.ylabel("Coherence score")
+
+# Add a vertical line to show the optimum number of topics
+plt.axvline(x[np.argmax(coherence_values)], 
+            color='#F26457', linestyle='--')
+plt.savefig('images/'+fnprefix+'BestKValue.eps', format='eps')
+plt.savefig('images/'+fnprefix+'BestKValue.png')
+plt.show()
+plt.close(fig)
+
+logging.info('ALL DONE!')
