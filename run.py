@@ -224,7 +224,7 @@ plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/NoLemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/NoLemConvergenceLikelihood.png')
-
+plt.show()
 
 plt.plot(iter[:-1],perplexity[:-1],c="black")
 plt.ylabel("Perplexity")
@@ -233,6 +233,7 @@ plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
 plt.savefig('images/NoLemConvergencePerplexity.png')
+plt.show()
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
 ## With Lemmatization
@@ -264,6 +265,7 @@ plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/LemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/LemConvergenceLikelihood.png')
+plt.show()
 
 
 plt.plot(iter[:-1],perplexity[:-1],c="black")
@@ -273,6 +275,7 @@ plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/LemConvergencePerplexity.eps', format='eps')
 plt.savefig('images/LemConvergencePerplexity.png')
+plt.show()
 logging.info('Note: Log likelihood is per-word ELBO')
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
