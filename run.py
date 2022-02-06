@@ -223,6 +223,7 @@ plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/NoLemConvergenceLikelihood.eps', format='eps')
+plt.savefig('images/NoLemConvergenceLikelihood.png')
 
 
 plt.plot(iter[:-1],perplexity[:-1],c="black")
@@ -231,6 +232,47 @@ plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
 plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
-print('Note: Perplexity estimate based on a held-out corpus of 4 documents')
+plt.savefig('images/NoLemConvergencePerplexity.png')
+logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
+## With Lemmatization
+logging.info('\n\n## With Lemmatization')
+starttime=time.time()
+setUpNewLogFile('gensim_lem.log')
+
+#Old code
+#lda_model_lemmatized = gensim.models.ldamodel.LdaModel(
+
+#New code uses multicore which runs works in parallel for each CPU core.
+lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
+   corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=20, random_state=100, 
+   eval_every=1000, chunksize=1000, passes=10, alpha='symmetric', per_word_topics=True
+)
+logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
+
+p = re.compile(r"(-*\d+\.\d+) per-word .* (\d+\.\d+) perplexity")
+matches = [p.findall(l) for l in open('gensim_lem.log')]
+matches = [m for m in matches if len(m) > 0]
+tuples = [t[0] for t in matches]
+perplexity = [float(t[1]) for t in tuples]
+liklihood = [float(t[0]) for t in tuples]
+iter = list(range(0,len(tuples)*10,10))
+plt.plot(iter[:-1],liklihood[:-1],c="black")
+plt.ylabel("log likelihood")
+plt.xlabel("iteration")
+plt.title("Topic Model Convergence")
+plt.grid()
+plt.savefig('images/LemConvergenceLikelihood.eps', format='eps')
+plt.savefig('images/LemConvergenceLikelihood.png')
+
+
+plt.plot(iter[:-1],perplexity[:-1],c="black")
+plt.ylabel("Perplexity")
+plt.xlabel("iteration")
+plt.title("Topic Model Convergence")
+plt.grid()
+plt.savefig('images/LemConvergencePerplexity.eps', format='eps')
+plt.savefig('images/LemConvergencePerplexity.png')
+logging.info('Note: Log likelihood is per-word ELBO')
+logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
