@@ -15,8 +15,7 @@ To get it up and running:
 - Run the docker using 'docker run -it --rm daldebak/dsc180b bash ', or replace with your own <image-fullname>
 ### Option 3: If using DSMLP
 - SSH to `dsmlp-login.ucsd.edu`. (Note if working outside the school, you would need to first connect via VPN)
-- RUN `launch-scipy-ml.sh -i <image-fullname> -P Always` . The `-P Always` flag will force the docker host to sync, as it pulls the latest version of the image manifest. Note: a docker image name follows the format `<user>/<image>:<tag>`. The `:<tag>` part will be assumed to be `:latest` if you don't supply it to the launch script. Use tags like `v1` or `test` in the build step to have control over different versions of the same docker image.
-- In our case, the command would be "`launch-scipy-ml.sh -i daldebak/dsc180b:latest -P Always`"
+- launch.sh -i daldebak/dsc180b:latest`"
 ### Option 4: Running from your own python environment (Hardest)
 - Make sure, preferably, you have python3.7+ installed and assuming you have configured the `PATH` and `PATHEXT` variables upon installation:
 - `python3.7 -m venv env`
