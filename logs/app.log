@@ -1,10 +1,10 @@
-06-Feb-22 15:41:45 - root INFO Number of arguments: 2 arguments.
-06-Feb-22 15:41:45 - root INFO Argument List: ['run.py', 'test']
-06-Feb-22 15:41:45 - root INFO App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)
-06-Feb-22 15:41:45 - root INFO 
+06-Feb-22 08:15:49 - root INFO Number of arguments: 2 arguments.
+06-Feb-22 08:15:49 - root INFO Argument List: ['run.py', 'test']
+06-Feb-22 08:15:49 - root INFO App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)
+06-Feb-22 08:15:49 - root INFO 
 
 # Loading data pickle file test/testdata/testdatapickle.bz2
-06-Feb-22 15:41:45 - root INFO                                                  text                          title
+06-Feb-22 08:15:49 - root INFO                                                  text                          title
 0   The fishing industry in Yemen has considerable...               Fishing_in_Yemen
 1   Ballinamere GAA is a Gaelic Athletic Associati...                Ballinamere_GAA
 2   Phoenix City Hall is the center of government ...              Phoenix_City_Hall
@@ -18,663 +18,523 @@
 99  Andrew Best Semple (3 May 1912 in Glasgow – 15...      Andrew_Semple_(physician)
 
 [100 rows x 2 columns]
-06-Feb-22 15:41:45 - root INFO 
+06-Feb-22 08:15:49 - root INFO 
 
 # Tokenizing articles
-06-Feb-22 15:41:45 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
-06-Feb-22 15:41:45 - gensim.corpora.dictionary INFO built Dictionary(6953 unique tokens: ['about', 'adapted', 'book', 'businesses', 'but']...) from 100 documents (total 32683 corpus positions)
-06-Feb-22 15:41:45 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
-06-Feb-22 15:41:45 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(6953 unique tokens: ['about', 'adapted', 'book', 'businesses', 'but']...) from 100 documents (total 32683 corpus positions)", 'datetime': '2022-02-06T15:41:45.628352', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:45 - root INFO 
+06-Feb-22 08:15:49 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 08:15:49 - gensim.corpora.dictionary INFO built Dictionary(6953 unique tokens: ['about', 'adapted', 'book', 'businesses', 'but']...) from 100 documents (total 32683 corpus positions)
+06-Feb-22 08:15:49 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 08:15:49 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(6953 unique tokens: ['about', 'adapted', 'book', 'businesses', 'but']...) from 100 documents (total 32683 corpus positions)", 'datetime': '2022-02-06T08:15:49.851510', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:49 - root INFO 
 
 # Removing stop words and adding bigrams
-06-Feb-22 15:41:45 - gensim.models.phrases INFO collecting all words and their counts
-06-Feb-22 15:41:45 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
-06-Feb-22 15:41:45 - gensim.models.phrases INFO collected 30147 token types (unigram + bigrams) from a corpus of 32683 words and 100 sentences
-06-Feb-22 15:41:45 - gensim.models.phrases INFO merged Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
-06-Feb-22 15:41:45 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
-06-Feb-22 15:41:45 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.09s', 'datetime': '2022-02-06T15:41:45.747274', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:45 - gensim.models.phrases INFO collecting all words and their counts
-06-Feb-22 15:41:45 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
-06-Feb-22 15:41:45 - gensim.models.phrases INFO collected 30191 token types (unigram + bigrams) from a corpus of 32403 words and 100 sentences
-06-Feb-22 15:41:45 - gensim.models.phrases INFO merged Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
-06-Feb-22 15:41:45 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
-06-Feb-22 15:41:45 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.14s', 'datetime': '2022-02-06T15:41:45.889901', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:45 - gensim.models.phrases INFO exporting phrases from Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
-06-Feb-22 15:41:45 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
-06-Feb-22 15:41:45 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<28 phrases, min_count=5, threshold=100> from Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.06s', 'datetime': '2022-02-06T15:41:45.953252', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:45 - gensim.models.phrases INFO exporting phrases from Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
-06-Feb-22 15:41:46 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
-06-Feb-22 15:41:46 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<22 phrases, min_count=5, threshold=100> from Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.06s', 'datetime': '2022-02-06T15:41:46.016359', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:46 - root INFO data_words_nostops[0][:40]
-06-Feb-22 15:41:46 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
-06-Feb-22 15:41:46 - root INFO data_words_bigrams[0][:40]
-06-Feb-22 15:41:46 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
-06-Feb-22 15:41:46 - root INFO 
+06-Feb-22 08:15:49 - gensim.models.phrases INFO collecting all words and their counts
+06-Feb-22 08:15:49 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
+06-Feb-22 08:15:50 - gensim.models.phrases INFO collected 30147 token types (unigram + bigrams) from a corpus of 32683 words and 100 sentences
+06-Feb-22 08:15:50 - gensim.models.phrases INFO merged Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 08:15:50 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
+06-Feb-22 08:15:50 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.09s', 'datetime': '2022-02-06T08:15:50.050721', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:50 - gensim.models.phrases INFO collecting all words and their counts
+06-Feb-22 08:15:50 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
+06-Feb-22 08:15:50 - gensim.models.phrases INFO collected 30191 token types (unigram + bigrams) from a corpus of 32403 words and 100 sentences
+06-Feb-22 08:15:50 - gensim.models.phrases INFO merged Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 08:15:50 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
+06-Feb-22 08:15:50 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.12s', 'datetime': '2022-02-06T08:15:50.168870', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:50 - gensim.models.phrases INFO exporting phrases from Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 08:15:50 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
+06-Feb-22 08:15:50 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<28 phrases, min_count=5, threshold=100> from Phrases<30147 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.05s', 'datetime': '2022-02-06T08:15:50.215495', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:50 - gensim.models.phrases INFO exporting phrases from Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 08:15:50 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
+06-Feb-22 08:15:50 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<22 phrases, min_count=5, threshold=100> from Phrases<30191 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.05s', 'datetime': '2022-02-06T08:15:50.261267', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:50 - root INFO data_words_nostops[0][:40]
+06-Feb-22 08:15:50 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
+06-Feb-22 08:15:50 - root INFO data_words_bigrams[0][:40]
+06-Feb-22 08:15:50 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
+06-Feb-22 08:15:50 - root INFO 
 
 # Lemmatization
-06-Feb-22 15:41:46 - root INFO Lemmatization Example fishing -> NOUN
-06-Feb-22 15:41:46 - root INFO Lemmatization Example yemen -> PROPN
-06-Feb-22 15:41:46 - root INFO Lemmatization Example considerable -> ADJ
-06-Feb-22 15:41:46 - root INFO Lemmatization Example vastly -> ADV
-06-Feb-22 15:41:46 - root INFO Lemmatization Example exploit -> VERB
-06-Feb-22 15:41:49 - root INFO data_lemmatized[0][:40]
-06-Feb-22 15:41:49 - root INFO ['fishing', 'industry', 'considerable', 'potential', 'vastly', 'exploit', 'fishing', 'sector', 'employ', 'people', 'mainly', 'family', 'business', 'operate', 'small', 'vessel', 'ton', 'fish', 'catch', 'proximity', 'somali', 'pirate', 'discourage', 'effect', 'write', 'comic', 'novel', 'salmon', 'fishing', 'introduce', 'salmon', 'wadis', 'highland', 'book', 'adapt', 'film', 'name']
-06-Feb-22 15:41:49 - root INFO data_words_bigrams[0][:40]
-06-Feb-22 15:41:49 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
-06-Feb-22 15:41:49 - root INFO 
+06-Feb-22 08:15:50 - root INFO Lemmatization Example fishing -> NOUN
+06-Feb-22 08:15:50 - root INFO Lemmatization Example yemen -> PROPN
+06-Feb-22 08:15:50 - root INFO Lemmatization Example considerable -> ADJ
+06-Feb-22 08:15:50 - root INFO Lemmatization Example vastly -> ADV
+06-Feb-22 08:15:50 - root INFO Lemmatization Example exploit -> VERB
+06-Feb-22 08:15:54 - root INFO data_lemmatized[0][:40]
+06-Feb-22 08:15:54 - root INFO ['fishing', 'industry', 'considerable', 'potential', 'vastly', 'exploit', 'fishing', 'sector', 'employ', 'people', 'mainly', 'family', 'business', 'operate', 'small', 'vessel', 'ton', 'fish', 'catch', 'proximity', 'somali', 'pirate', 'discourage', 'effect', 'write', 'comic', 'novel', 'salmon', 'fishing', 'introduce', 'salmon', 'wadis', 'highland', 'book', 'adapt', 'film', 'name']
+06-Feb-22 08:15:54 - root INFO data_words_bigrams[0][:40]
+06-Feb-22 08:15:54 - root INFO ['fishing', 'industry', 'yemen', 'considerable', 'potential', 'vastly', 'exploited', 'fishing', 'sector', 'employed', 'people', 'mainly', 'family', 'owned', 'businesses', 'operating', 'small', 'vessels', 'tons', 'fish', 'caught', 'yemen', 'proximity', 'havens', 'somali', 'pirates', 'discouraging', 'effect', 'paul', 'torday', 'wrote', 'comic', 'novel', 'salmon', 'fishing', 'yemen', 'westerner', 'commission', 'introduce', 'salmon']
+06-Feb-22 08:15:54 - root INFO 
 
 # Creating bag of words frequencies
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO built Dictionary(6847 unique tokens: ['adapted', 'book', 'businesses', 'caught', 'comic']...) from 100 documents (total 19118 corpus positions)
-06-Feb-22 15:41:49 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
-06-Feb-22 15:41:49 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(6847 unique tokens: ['adapted', 'book', 'businesses', 'caught', 'comic']...) from 100 documents (total 19118 corpus positions)", 'datetime': '2022-02-06T15:41:49.891849', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:49 - root INFO No lemmatization -- Number of unique tokens: 6847
-06-Feb-22 15:41:49 - root INFO No lemmatization -- Number of documents: 100
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO built Dictionary(4682 unique tokens: ['adapt', 'book', 'business', 'catch', 'comic']...) from 100 documents (total 15254 corpus positions)
-06-Feb-22 15:41:49 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
-06-Feb-22 15:41:49 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(4682 unique tokens: ['adapt', 'book', 'business', 'catch', 'comic']...) from 100 documents (total 15254 corpus positions)", 'datetime': '2022-02-06T15:41:49.920555', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO discarding 4666 tokens: [('adapt', 2), ('book', 9), ('business', 6), ('catch', 5), ('comic', 1), ('considerable', 2), ('discourage', 1), ('effect', 3), ('employ', 5), ('exploit', 2)]...
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO keeping 16 tokens which were in no less than 10 and no more than 10 (=10.0%) documents
-06-Feb-22 15:41:49 - gensim.corpora.dictionary DEBUG rebuilding dictionary, shrinking gaps
-06-Feb-22 15:41:49 - gensim.corpora.dictionary INFO resulting dictionary: Dictionary(16 unique tokens: ['film', 'build', 'original', 'player', 'come']...)
-06-Feb-22 15:41:49 - root INFO lemmatization -- Number of unique tokens: 16
-06-Feb-22 15:41:49 - root INFO lemmatization -- Number of documents: 100
-06-Feb-22 15:41:49 - root INFO 
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO built Dictionary(6847 unique tokens: ['adapted', 'book', 'businesses', 'caught', 'comic']...) from 100 documents (total 19118 corpus positions)
+06-Feb-22 08:15:54 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 08:15:54 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(6847 unique tokens: ['adapted', 'book', 'businesses', 'caught', 'comic']...) from 100 documents (total 19118 corpus positions)", 'datetime': '2022-02-06T08:15:54.157636', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:54 - root INFO No lemmatization -- Number of unique tokens: 6847
+06-Feb-22 08:15:54 - root INFO No lemmatization -- Number of documents: 100
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO built Dictionary(4682 unique tokens: ['adapt', 'book', 'business', 'catch', 'comic']...) from 100 documents (total 15254 corpus positions)
+06-Feb-22 08:15:54 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 08:15:54 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(4682 unique tokens: ['adapt', 'book', 'business', 'catch', 'comic']...) from 100 documents (total 15254 corpus positions)", 'datetime': '2022-02-06T08:15:54.184601', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO discarding 4666 tokens: [('adapt', 2), ('book', 9), ('business', 6), ('catch', 5), ('comic', 1), ('considerable', 2), ('discourage', 1), ('effect', 3), ('employ', 5), ('exploit', 2)]...
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO keeping 16 tokens which were in no less than 10 and no more than 10 (=10.0%) documents
+06-Feb-22 08:15:54 - gensim.corpora.dictionary DEBUG rebuilding dictionary, shrinking gaps
+06-Feb-22 08:15:54 - gensim.corpora.dictionary INFO resulting dictionary: Dictionary(16 unique tokens: ['film', 'build', 'original', 'player', 'come']...)
+06-Feb-22 08:15:54 - root INFO lemmatization -- Number of unique tokens: 16
+06-Feb-22 08:15:54 - root INFO lemmatization -- Number of documents: 100
+06-Feb-22 08:15:54 - root INFO 
 
 # Fitting via LDA Variational Inference (Gensim) library
-06-Feb-22 15:41:49 - root INFO 
+06-Feb-22 08:15:54 - root INFO 
 
 ## Without Lemmatization
-06-Feb-22 15:41:49 - gensim.models.ldamodel INFO using symmetric alpha at 0.05
-06-Feb-22 15:41:49 - gensim.models.ldamodel INFO using symmetric eta at 0.05
-06-Feb-22 15:41:49 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO running online LDA training, 20 topics, 4 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:49 - gensim.models.ldamulticore WARNING too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:49 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #0 (0.050): 0.009*"page" + 0.007*"lee" + 0.004*"dickinson" + 0.003*"born" + 0.003*"two" + 0.003*"back" + 0.003*"cumbernauld" + 0.003*"inquisivi" + 0.003*"also" + 0.002*"team"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #12 (0.050): 0.006*"also" + 0.005*"england" + 0.005*"match" + 0.005*"first" + 0.004*"willey" + 0.003*"series" + 0.003*"schiffer" + 0.003*"systems" + 0.003*"took" + 0.003*"new"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #9 (0.050): 0.005*"district" + 0.004*"played" + 0.004*"rural" + 0.003*"born" + 0.003*"also" + 0.003*"bridge" + 0.003*"first" + 0.003*"norwegian" + 0.003*"cumbernauld" + 0.003*"courts"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #13 (0.050): 0.007*"page" + 0.007*"lee" + 0.005*"first" + 0.005*"acqui" + 0.004*"division" + 0.004*"two" + 0.004*"infantry" + 0.003*"also" + 0.003*"one" + 0.002*"may"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #18 (0.050): 0.004*"cumbernauld" + 0.004*"page" + 0.003*"film" + 0.003*"also" + 0.003*"first" + 0.003*"one" + 0.003*"women" + 0.003*"lee" + 0.002*"cadiz" + 0.002*"found"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic diff=9.222829, rho=1.000000
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO -11.791 per-word bound, 3543.5 perplexity estimate based on a held-out corpus of 20 documents with 3097 words
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #5 (0.050): 0.011*"page" + 0.006*"balls" + 0.005*"cchu" + 0.005*"first" + 0.005*"rubber" + 0.005*"program" + 0.004*"ball" + 0.004*"works" + 0.004*"de" + 0.003*"hospital"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #11 (0.050): 0.006*"madsen" + 0.006*"court" + 0.006*"first" + 0.005*"season" + 0.005*"art" + 0.005*"state" + 0.005*"member" + 0.004*"also" + 0.004*"new" + 0.004*"mr_pammer"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #18 (0.050): 0.008*"women" + 0.006*"cambridge" + 0.004*"society" + 0.003*"louise_creighton" + 0.003*"darwin" + 0.003*"one" + 0.003*"first" + 0.003*"cumbernauld" + 0.003*"suffrage" + 0.003*"also"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #0 (0.050): 0.007*"page" + 0.006*"lee" + 0.004*"inquisivi" + 0.003*"dickinson" + 0.003*"born" + 0.002*"team" + 0.002*"two" + 0.002*"road" + 0.002*"professional" + 0.002*"november"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #17 (0.050): 0.009*"castle" + 0.005*"first" + 0.005*"page" + 0.005*"nuremberg" + 0.004*"however" + 0.004*"hohenstein" + 0.003*"also" + 0.003*"back" + 0.003*"city" + 0.003*"lee"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic diff=1.419719, rho=0.377964
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO -10.317 per-word bound, 1275.9 perplexity estimate based on a held-out corpus of 20 documents with 3097 words
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #16 (0.050): 0.019*"dickinson" + 0.014*"wrestling" + 0.008*"debut" + 0.007*"made" + 0.006*"animator" + 0.006*"pro_wrestling" + 0.005*"evolve" + 0.005*"released" + 0.005*"herbert_west" + 0.005*"jersey"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #6 (0.050): 0.010*"film" + 0.005*"club" + 0.004*"air" + 0.004*"street_trash" + 0.003*"also" + 0.003*"one" + 0.003*"cumbernauld" + 0.003*"two" + 0.003*"division" + 0.003*"football"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #0 (0.050): 0.006*"page" + 0.005*"inquisivi" + 0.004*"lee" + 0.003*"road" + 0.003*"professional" + 0.003*"november" + 0.003*"born" + 0.003*"officially" + 0.003*"province" + 0.003*"capital"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #7 (0.050): 0.006*"infantry" + 0.005*"assault_pioneers" + 0.005*"tower" + 0.005*"pioneer" + 0.004*"one" + 0.004*"bazaine" + 0.004*"army" + 0.003*"assault" + 0.003*"page" + 0.003*"azs"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #13 (0.050): 0.019*"page" + 0.015*"lee" + 0.009*"division" + 0.008*"acqui" + 0.007*"infantry" + 0.005*"officers" + 0.004*"back" + 0.004*"two" + 0.004*"th" + 0.003*"first"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic diff=1.221366, rho=0.353553
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO -9.620 per-word bound, 787.0 perplexity estimate based on a held-out corpus of 20 documents with 3097 words
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:50 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #17 (0.050): 0.011*"castle" + 0.006*"nuremberg" + 0.005*"hohenstein" + 0.005*"gujarati" + 0.004*"gujarat" + 0.004*"theatre" + 0.004*"first" + 0.004*"however" + 0.004*"graham" + 0.004*"several"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #5 (0.050): 0.012*"page" + 0.008*"balls" + 0.007*"rubber" + 0.006*"cchu" + 0.006*"ball" + 0.005*"program" + 0.005*"works" + 0.005*"first" + 0.004*"hospital" + 0.004*"de"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #6 (0.050): 0.012*"film" + 0.005*"air" + 0.005*"club" + 0.004*"street_trash" + 0.003*"also" + 0.003*"one" + 0.003*"american" + 0.003*"wing" + 0.003*"airfield" + 0.003*"football"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #10 (0.050): 0.004*"track" + 0.004*"russian" + 0.003*"cumbernauld" + 0.003*"page" + 0.002*"lee" + 0.002*"along" + 0.002*"team" + 0.002*"born" + 0.002*"world" + 0.002*"october"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic #1 (0.050): 0.009*"mosque" + 0.008*"school" + 0.007*"south" + 0.006*"alberto" + 0.006*"mirando_city" + 0.005*"district" + 0.004*"mountain" + 0.004*"silvia" + 0.004*"time" + 0.003*"osman"
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO topic diff=1.031809, rho=0.333333
-06-Feb-22 15:41:50 - gensim.models.ldamodel INFO -9.192 per-word bound, 584.8 perplexity estimate based on a held-out corpus of 20 documents with 3097 words
-06-Feb-22 15:41:50 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=6847, num_topics=20, decay=0.5, chunksize=20) in 0.82s', 'datetime': '2022-02-06T15:41:50.767004', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:50 - root INFO Time taken = 0 minutes
-06-Feb-22 15:41:51 - root INFO Note: Perplexity estimate based on a held-out corpus of 4 documents
-06-Feb-22 15:41:51 - root INFO 
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO using symmetric alpha at 0.25
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO using symmetric eta at 0.25
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO using serial LDA version on this node
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO running online LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO training LDA model using 2 processes
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.017*"page" + 0.007*"inquisivi" + 0.007*"azs" + 0.006*"works" + 0.006*"cadiz" + 0.006*"edwards" + 0.006*"la" + 0.006*"de" + 0.006*"polish" + 0.005*"named"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.011*"court" + 0.007*"mr_pammer" + 0.006*"rome" + 0.006*"regulation_ec" + 0.006*"consumer" + 0.006*"article" + 0.006*"hotel" + 0.006*"page" + 0.006*"contract" + 0.005*"mr_heller"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.015*"page" + 0.009*"works" + 0.007*"television" + 0.006*"court" + 0.006*"edwards" + 0.005*"program" + 0.005*"royal" + 0.005*"first" + 0.005*"series" + 0.004*"many"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.010*"court" + 0.008*"page" + 0.006*"article" + 0.006*"regulation_ec" + 0.006*"de" + 0.006*"consumer" + 0.006*"rome" + 0.006*"mr_pammer" + 0.005*"first" + 0.005*"cadiz"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=3.297277, rho=1.000000
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.034*"page" + 0.024*"lee" + 0.006*"back" + 0.004*"two" + 0.004*"shaw" + 0.004*"police" + 0.004*"area" + 0.004*"found" + 0.004*"body" + 0.003*"around"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.019*"page" + 0.010*"lee" + 0.005*"court" + 0.003*"back" + 0.003*"shaw" + 0.003*"also" + 0.003*"first" + 0.003*"two" + 0.003*"found" + 0.003*"body"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.022*"page" + 0.014*"lee" + 0.004*"art" + 0.004*"back" + 0.003*"court" + 0.003*"two" + 0.003*"works" + 0.003*"first" + 0.003*"time" + 0.003*"also"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.014*"page" + 0.009*"lee" + 0.006*"city_hall" + 0.005*"court" + 0.005*"museumsquartier" + 0.004*"phoenix" + 0.003*"art" + 0.003*"also" + 0.003*"first" + 0.003*"construction"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.957441, rho=0.577350
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.026*"page" + 0.018*"lee" + 0.005*"back" + 0.004*"club" + 0.003*"two" + 0.003*"found" + 0.003*"shaw" + 0.003*"police" + 0.003*"balls" + 0.003*"area"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.013*"page" + 0.007*"lee" + 0.004*"court" + 0.003*"back" + 0.003*"air" + 0.003*"found" + 0.002*"first" + 0.002*"balls" + 0.002*"two" + 0.002*"rubber"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.014*"page" + 0.009*"lee" + 0.006*"art" + 0.005*"balls" + 0.004*"rubber" + 0.003*"ball" + 0.003*"works" + 0.003*"two" + 0.003*"gere" + 0.003*"march"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.006*"km" + 0.006*"page" + 0.006*"ft" + 0.005*"two" + 0.004*"balls" + 0.004*"boat" + 0.004*"lee" + 0.004*"one" + 0.003*"first" + 0.003*"tower"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.600438, rho=0.447214
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.021*"page" + 0.015*"lee" + 0.004*"club" + 0.004*"back" + 0.003*"province" + 0.003*"two" + 0.003*"based" + 0.003*"county" + 0.003*"found" + 0.003*"played"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.009*"page" + 0.005*"court" + 0.005*"lee" + 0.005*"schiffer" + 0.004*"found" + 0.004*"body" + 0.003*"year_old" + 0.003*"also" + 0.003*"murder" + 0.003*"district"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.010*"page" + 0.007*"lee" + 0.004*"time" + 0.004*"art" + 0.004*"balls" + 0.004*"two" + 0.003*"march" + 0.003*"rubber" + 0.003*"ball" + 0.003*"would"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.007*"castle" + 0.004*"maria" + 0.004*"two" + 0.004*"animator" + 0.004*"nuremberg" + 0.003*"km" + 0.003*"first" + 0.003*"page" + 0.003*"ft" + 0.003*"film"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.504325, rho=0.377964
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.022*"match" + 0.012*"england" + 0.012*"page" + 0.011*"willey" + 0.010*"took" + 0.009*"first" + 0.009*"lee" + 0.007*"season" + 0.007*"played" + 0.006*"final"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.007*"page" + 0.004*"court" + 0.004*"end" + 0.003*"district" + 0.003*"lee" + 0.003*"schiffer" + 0.003*"war" + 0.003*"since" + 0.003*"found" + 0.003*"recognition"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.016*"series" + 0.016*"england" + 0.010*"willey" + 0.007*"first" + 0.007*"women" + 0.006*"page" + 0.005*"runs" + 0.005*"took" + 0.004*"odi" + 0.004*"wicket"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.005*"castle" + 0.004*"first" + 0.004*"cambridge" + 0.004*"district" + 0.004*"women" + 0.003*"two" + 0.003*"one" + 0.003*"married" + 0.003*"ft" + 0.003*"society"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.510723, rho=0.333333
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.018*"match" + 0.010*"england" + 0.010*"page" + 0.009*"willey" + 0.008*"took" + 0.007*"first" + 0.007*"lee" + 0.007*"played" + 0.006*"season" + 0.005*"final"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.007*"film" + 0.005*"blinatumomab" + 0.004*"cell" + 0.004*"street_trash" + 0.003*"also" + 0.003*"drug" + 0.003*"time" + 0.003*"page" + 0.003*"body" + 0.003*"court"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.013*"series" + 0.013*"england" + 0.008*"willey" + 0.007*"first" + 0.006*"women" + 0.005*"page" + 0.004*"runs" + 0.004*"took" + 0.004*"odi" + 0.004*"two"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.004*"castle" + 0.004*"first" + 0.004*"cambridge" + 0.004*"district" + 0.004*"women" + 0.003*"two" + 0.003*"one" + 0.002*"married" + 0.002*"ft" + 0.002*"society"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.480764, rho=0.301511
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 7
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.013*"match" + 0.008*"england" + 0.007*"page" + 0.007*"willey" + 0.007*"took" + 0.006*"played" + 0.006*"first" + 0.005*"lee" + 0.004*"season" + 0.004*"club"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.017*"cumbernauld" + 0.009*"town" + 0.006*"also" + 0.006*"new" + 0.004*"infantry" + 0.004*"acqui" + 0.003*"film" + 0.003*"village" + 0.003*"two" + 0.002*"north"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.010*"series" + 0.009*"england" + 0.005*"first" + 0.005*"willey" + 0.005*"cumbernauld" + 0.004*"two" + 0.004*"one" + 0.004*"also" + 0.004*"women" + 0.003*"took"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.012*"division" + 0.008*"castle" + 0.006*"cumbernauld" + 0.006*"scotland" + 0.004*"one" + 0.004*"two" + 0.003*"acqui" + 0.003*"first" + 0.003*"infantry" + 0.003*"district"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.961937, rho=0.277350
+06-Feb-22 08:15:54 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.011*"match" + 0.007*"england" + 0.006*"page" + 0.006*"played" + 0.006*"willey" + 0.006*"took" + 0.006*"first" + 0.004*"lee" + 0.004*"season" + 0.004*"named"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.013*"cumbernauld" + 0.006*"town" + 0.006*"also" + 0.005*"new" + 0.004*"infantry" + 0.003*"village" + 0.003*"two" + 0.003*"acqui" + 0.003*"film" + 0.002*"mosque"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.007*"series" + 0.007*"first" + 0.006*"england" + 0.006*"art" + 0.004*"university" + 0.004*"also" + 0.004*"one" + 0.004*"madsen" + 0.004*"willey" + 0.003*"two"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.009*"division" + 0.007*"castle" + 0.004*"cumbernauld" + 0.004*"scotland" + 0.004*"one" + 0.004*"two" + 0.003*"cylinder" + 0.003*"first" + 0.003*"site" + 0.003*"development"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.523156, rho=0.258199
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO -10.772 per-word bound, 1748.5 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 15 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.010*"match" + 0.006*"dickinson" + 0.006*"played" + 0.006*"team" + 0.005*"england" + 0.005*"page" + 0.005*"season" + 0.005*"debut" + 0.004*"took" + 0.004*"first"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.012*"cumbernauld" + 0.006*"town" + 0.006*"also" + 0.005*"new" + 0.003*"infantry" + 0.003*"village" + 0.003*"two" + 0.003*"acqui" + 0.002*"film" + 0.002*"mosque"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.006*"series" + 0.006*"first" + 0.005*"england" + 0.005*"art" + 0.004*"university" + 0.004*"two" + 0.004*"also" + 0.004*"one" + 0.003*"married" + 0.003*"madsen"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.008*"division" + 0.006*"castle" + 0.004*"cumbernauld" + 0.004*"scotland" + 0.004*"one" + 0.003*"two" + 0.003*"cylinder" + 0.003*"first" + 0.003*"also" + 0.003*"site"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.339095, rho=0.242536
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO -10.745 per-word bound, 1716.3 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO merging changes from 5 documents into a model of 100 documents
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #0 (0.250): 0.007*"college" + 0.007*"samsung" + 0.007*"bridge" + 0.007*"first" + 0.006*"phone" + 0.005*"south" + 0.005*"match" + 0.005*"bada" + 0.004*"knox" + 0.004*"following"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #1 (0.250): 0.009*"cumbernauld" + 0.006*"new" + 0.006*"also" + 0.005*"town" + 0.004*"wave" + 0.003*"system" + 0.003*"published" + 0.003*"village" + 0.003*"two" + 0.003*"infantry"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #2 (0.250): 0.008*"bridge" + 0.007*"books" + 0.007*"first" + 0.005*"one" + 0.004*"series" + 0.004*"england" + 0.004*"play" + 0.004*"married" + 0.004*"two" + 0.003*"british"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic #3 (0.250): 0.006*"division" + 0.005*"castle" + 0.004*"development" + 0.004*"one" + 0.004*"two" + 0.003*"city" + 0.003*"cumbernauld" + 0.003*"scotland" + 0.003*"first" + 0.003*"italian"
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO topic diff=0.615269, rho=0.223607
+06-Feb-22 08:15:54 - gensim.models.ldamodel INFO -7.752 per-word bound, 215.5 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
+06-Feb-22 08:15:54 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=6847, num_topics=4, decay=0.5, chunksize=5) in 0.39s', 'datetime': '2022-02-06T08:15:54.599349', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:54 - root INFO Time taken = 0 minutes
+06-Feb-22 08:15:55 - root INFO Note: Perplexity estimate based on a held-out corpus of 4 documents
+06-Feb-22 08:15:55 - root INFO 
 
 ## With Lemmatization
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric alpha at 0.25
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric eta at 0.25
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO running online LDA training, 4 topics, 10 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.154*"area" + 0.137*"see" + 0.132*"back" + 0.127*"court" + 0.074*"build" + 0.070*"come" + 0.057*"royal" + 0.054*"set" + 0.050*"school" + 0.041*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.357*"player" + 0.096*"long" + 0.075*"build" + 0.074*"court" + 0.073*"short" + 0.073*"come" + 0.052*"school" + 0.051*"original" + 0.030*"film" + 0.030*"international"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.303*"film" + 0.170*"school" + 0.080*"area" + 0.074*"international" + 0.057*"come" + 0.045*"short" + 0.045*"royal" + 0.045*"set" + 0.040*"build" + 0.038*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.222*"back" + 0.161*"see" + 0.155*"film" + 0.111*"long" + 0.068*"area" + 0.065*"come" + 0.050*"original" + 0.032*"short" + 0.030*"set" + 0.023*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=1.067418, rho=1.000000
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -3.098 per-word bound, 8.6 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.169*"area" + 0.137*"court" + 0.131*"see" + 0.129*"back" + 0.077*"build" + 0.076*"come" + 0.061*"royal" + 0.050*"set" + 0.047*"school" + 0.040*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.385*"player" + 0.096*"long" + 0.078*"short" + 0.077*"come" + 0.075*"build" + 0.060*"original" + 0.048*"court" + 0.038*"international" + 0.037*"school" + 0.031*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.329*"film" + 0.181*"school" + 0.080*"international" + 0.067*"area" + 0.048*"come" + 0.047*"set" + 0.047*"short" + 0.040*"role" + 0.039*"royal" + 0.036*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.244*"back" + 0.181*"see" + 0.129*"film" + 0.120*"long" + 0.062*"come" + 0.056*"area" + 0.055*"original" + 0.032*"short" + 0.031*"set" + 0.022*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.200071, rho=0.377964
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -3.044 per-word bound, 8.2 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.181*"area" + 0.143*"court" + 0.121*"back" + 0.120*"see" + 0.081*"come" + 0.081*"build" + 0.069*"royal" + 0.048*"set" + 0.048*"school" + 0.040*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.399*"player" + 0.088*"long" + 0.084*"come" + 0.081*"short" + 0.074*"build" + 0.072*"original" + 0.048*"international" + 0.033*"court" + 0.033*"set" + 0.026*"school"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.352*"film" + 0.189*"school" + 0.084*"international" + 0.056*"area" + 0.049*"set" + 0.048*"short" + 0.043*"role" + 0.040*"come" + 0.032*"build" + 0.030*"royal"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.263*"back" + 0.205*"see" + 0.125*"long" + 0.108*"film" + 0.062*"come" + 0.049*"original" + 0.047*"area" + 0.033*"set" + 0.032*"short" + 0.021*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.186907, rho=0.353553
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -3.005 per-word bound, 8.0 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.192*"area" + 0.149*"court" + 0.112*"back" + 0.108*"see" + 0.085*"build" + 0.083*"come" + 0.075*"royal" + 0.049*"school" + 0.046*"set" + 0.039*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.395*"player" + 0.089*"come" + 0.087*"long" + 0.082*"short" + 0.077*"original" + 0.071*"build" + 0.068*"international" + 0.035*"set" + 0.023*"court" + 0.020*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.374*"film" + 0.194*"school" + 0.081*"international" + 0.050*"set" + 0.049*"short" + 0.047*"role" + 0.046*"area" + 0.033*"come" + 0.028*"build" + 0.027*"original"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.282*"back" + 0.233*"see" + 0.118*"long" + 0.083*"film" + 0.066*"come" + 0.044*"original" + 0.043*"area" + 0.035*"set" + 0.031*"short" + 0.020*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.174436, rho=0.333333
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.984 per-word bound, 7.9 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.204*"area" + 0.155*"court" + 0.103*"back" + 0.094*"see" + 0.091*"build" + 0.085*"come" + 0.081*"royal" + 0.051*"school" + 0.042*"set" + 0.038*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.384*"player" + 0.093*"come" + 0.092*"international" + 0.085*"long" + 0.081*"short" + 0.078*"original" + 0.068*"build" + 0.037*"set" + 0.021*"role" + 0.017*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.395*"film" + 0.199*"school" + 0.074*"international" + 0.053*"set" + 0.050*"short" + 0.049*"role" + 0.038*"area" + 0.029*"original" + 0.025*"come" + 0.024*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.294*"back" + 0.256*"see" + 0.109*"long" + 0.072*"come" + 0.061*"film" + 0.041*"original" + 0.040*"area" + 0.038*"set" + 0.030*"short" + 0.018*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.162894, rho=0.316228
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.975 per-word bound, 7.9 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.214*"area" + 0.161*"court" + 0.096*"build" + 0.095*"back" + 0.087*"royal" + 0.083*"come" + 0.082*"see" + 0.053*"school" + 0.039*"set" + 0.038*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.366*"player" + 0.121*"international" + 0.097*"come" + 0.082*"long" + 0.082*"short" + 0.079*"original" + 0.064*"build" + 0.038*"set" + 0.021*"role" + 0.013*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.415*"film" + 0.203*"school" + 0.063*"international" + 0.055*"set" + 0.051*"role" + 0.051*"short" + 0.032*"area" + 0.031*"original" + 0.021*"build" + 0.020*"come"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.303*"back" + 0.274*"see" + 0.101*"long" + 0.079*"come" + 0.045*"film" + 0.041*"set" + 0.040*"area" + 0.037*"original" + 0.027*"short" + 0.017*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.150138, rho=0.301511
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.970 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.222*"area" + 0.166*"court" + 0.102*"build" + 0.092*"royal" + 0.087*"back" + 0.080*"come" + 0.071*"see" + 0.056*"school" + 0.038*"role" + 0.036*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.348*"player" + 0.146*"international" + 0.098*"come" + 0.081*"short" + 0.080*"long" + 0.079*"original" + 0.060*"build" + 0.043*"set" + 0.021*"role" + 0.010*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.434*"film" + 0.207*"school" + 0.055*"set" + 0.053*"role" + 0.052*"short" + 0.050*"international" + 0.032*"original" + 0.027*"area" + 0.018*"build" + 0.018*"long"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.310*"back" + 0.286*"see" + 0.093*"long" + 0.086*"come" + 0.044*"set" + 0.040*"area" + 0.034*"original" + 0.033*"film" + 0.024*"short" + 0.015*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.138635, rho=0.288675
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.969 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.229*"area" + 0.171*"court" + 0.106*"build" + 0.096*"royal" + 0.080*"back" + 0.077*"come" + 0.062*"see" + 0.059*"school" + 0.039*"role" + 0.033*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.335*"player" + 0.161*"international" + 0.099*"come" + 0.081*"short" + 0.080*"long" + 0.079*"original" + 0.060*"build" + 0.045*"set" + 0.021*"role" + 0.008*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.448*"film" + 0.210*"school" + 0.055*"set" + 0.055*"role" + 0.054*"short" + 0.040*"international" + 0.033*"original" + 0.023*"area" + 0.020*"long" + 0.016*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.315*"back" + 0.295*"see" + 0.093*"come" + 0.085*"long" + 0.046*"set" + 0.042*"area" + 0.032*"original" + 0.025*"film" + 0.022*"short" + 0.013*"school"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.123112, rho=0.277350
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.967 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 8, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 8, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 8, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 8, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 8, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.235*"area" + 0.175*"court" + 0.110*"build" + 0.099*"royal" + 0.075*"come" + 0.074*"back" + 0.061*"school" + 0.055*"see" + 0.039*"role" + 0.031*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.326*"player" + 0.171*"international" + 0.098*"come" + 0.081*"long" + 0.081*"short" + 0.079*"original" + 0.061*"build" + 0.047*"set" + 0.020*"role" + 0.007*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.459*"film" + 0.211*"school" + 0.056*"role" + 0.055*"set" + 0.054*"short" + 0.034*"original" + 0.033*"international" + 0.023*"long" + 0.019*"area" + 0.014*"build"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.319*"back" + 0.300*"see" + 0.099*"come" + 0.077*"long" + 0.048*"set" + 0.044*"area" + 0.031*"original" + 0.020*"short" + 0.019*"film" + 0.013*"school"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.111285, rho=0.267261
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 9, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 9, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 9, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 9, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 9, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.250): 0.239*"area" + 0.178*"court" + 0.113*"build" + 0.102*"royal" + 0.072*"come" + 0.069*"back" + 0.063*"school" + 0.050*"see" + 0.040*"role" + 0.029*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.250): 0.320*"player" + 0.178*"international" + 0.094*"come" + 0.084*"long" + 0.081*"short" + 0.079*"original" + 0.062*"build" + 0.048*"set" + 0.020*"role" + 0.006*"court"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #2 (0.250): 0.468*"film" + 0.211*"school" + 0.057*"role" + 0.056*"set" + 0.055*"short" + 0.035*"original" + 0.027*"international" + 0.025*"long" + 0.016*"area" + 0.013*"see"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #3 (0.250): 0.321*"back" + 0.303*"see" + 0.107*"come" + 0.070*"long" + 0.050*"set" + 0.047*"area" + 0.029*"original" + 0.019*"short" + 0.015*"film" + 0.014*"school"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.101506, rho=0.258199
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.962 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=20) in 0.24s', 'datetime': '2022-02-06T15:41:51.332180', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:51 - root INFO Time taken = 0 minutes
-06-Feb-22 15:41:51 - root INFO Note: Log likelihood is per-word ELBO
-06-Feb-22 15:41:51 - root INFO Note: Perplexity estimate based on a held-out corpus of 4 documents
-06-Feb-22 15:41:51 - root INFO 
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using symmetric alpha at 0.25
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using symmetric eta at 0.25
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using serial LDA version on this node
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO running online LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO training LDA model using 2 processes
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 5
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.654*"court" + 0.192*"international" + 0.065*"build" + 0.065*"original" + 0.003*"player" + 0.003*"film" + 0.003*"come" + 0.002*"see" + 0.002*"short" + 0.002*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.406*"come" + 0.405*"player" + 0.024*"film" + 0.021*"international" + 0.018*"court" + 0.016*"build" + 0.015*"original" + 0.011*"see" + 0.011*"short" + 0.011*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.113*"international" + 0.101*"film" + 0.091*"come" + 0.089*"player" + 0.071*"court" + 0.065*"original" + 0.063*"build" + 0.045*"see" + 0.045*"short" + 0.045*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.655*"film" + 0.041*"international" + 0.034*"player" + 0.034*"come" + 0.028*"court" + 0.027*"original" + 0.025*"build" + 0.017*"see" + 0.017*"short" + 0.017*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=3.096141, rho=1.000000
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.476*"court" + 0.153*"build" + 0.124*"international" + 0.059*"see" + 0.059*"role" + 0.059*"area" + 0.043*"original" + 0.004*"royal" + 0.004*"come" + 0.004*"player"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.330*"come" + 0.326*"player" + 0.042*"build" + 0.030*"film" + 0.029*"royal" + 0.028*"international" + 0.027*"court" + 0.023*"original" + 0.021*"role" + 0.021*"back"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.512*"royal" + 0.109*"build" + 0.108*"come" + 0.106*"school" + 0.106*"back" + 0.007*"international" + 0.007*"film" + 0.006*"player" + 0.006*"court" + 0.005*"original"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.466*"film" + 0.054*"build" + 0.044*"international" + 0.042*"come" + 0.041*"royal" + 0.040*"player" + 0.038*"court" + 0.035*"original" + 0.032*"back" + 0.031*"area"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=1.491267, rho=0.577350
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.248*"see" + 0.186*"back" + 0.126*"area" + 0.125*"court" + 0.111*"come" + 0.046*"set" + 0.033*"build" + 0.033*"school" + 0.027*"international" + 0.017*"player"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.341*"long" + 0.174*"short" + 0.165*"school" + 0.096*"player" + 0.092*"come" + 0.018*"film" + 0.015*"build" + 0.013*"court" + 0.012*"international" + 0.012*"royal"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.427*"royal" + 0.119*"film" + 0.095*"school" + 0.093*"build" + 0.093*"come" + 0.091*"back" + 0.011*"player" + 0.010*"international" + 0.009*"court" + 0.008*"area"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.239*"see" + 0.234*"back" + 0.156*"area" + 0.133*"come" + 0.051*"court" + 0.043*"film" + 0.041*"set" + 0.035*"school" + 0.030*"international" + 0.015*"long"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=2.043001, rho=0.447214
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.236*"see" + 0.183*"back" + 0.129*"court" + 0.117*"come" + 0.110*"area" + 0.040*"set" + 0.030*"build" + 0.029*"original" + 0.029*"school" + 0.025*"international"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.315*"long" + 0.162*"short" + 0.154*"school" + 0.092*"player" + 0.089*"come" + 0.024*"film" + 0.019*"build" + 0.018*"international" + 0.017*"royal" + 0.017*"court"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.222*"royal" + 0.165*"film" + 0.124*"set" + 0.094*"build" + 0.066*"long" + 0.065*"short" + 0.065*"area" + 0.064*"see" + 0.037*"school" + 0.037*"come"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.220*"see" + 0.216*"back" + 0.144*"area" + 0.122*"come" + 0.062*"international" + 0.048*"long" + 0.048*"court" + 0.041*"film" + 0.039*"set" + 0.033*"school"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.744590, rho=0.377964
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 7
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 9
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 25 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.205*"see" + 0.163*"back" + 0.149*"court" + 0.099*"area" + 0.096*"come" + 0.062*"international" + 0.044*"original" + 0.040*"role" + 0.034*"set" + 0.028*"build"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.302*"player" + 0.188*"come" + 0.150*"short" + 0.129*"long" + 0.065*"school" + 0.049*"set" + 0.020*"international" + 0.013*"original" + 0.013*"film" + 0.011*"role"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.240*"school" + 0.173*"royal" + 0.090*"film" + 0.071*"short" + 0.070*"area" + 0.068*"set" + 0.064*"build" + 0.063*"back" + 0.038*"role" + 0.037*"long"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.357*"film" + 0.124*"back" + 0.123*"see" + 0.087*"area" + 0.073*"come" + 0.041*"set" + 0.036*"long" + 0.034*"international" + 0.028*"original" + 0.027*"short"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.797132, rho=0.333333
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.176*"see" + 0.147*"area" + 0.145*"back" + 0.123*"court" + 0.083*"come" + 0.067*"original" + 0.051*"international" + 0.048*"set" + 0.047*"school" + 0.040*"build"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.250*"player" + 0.200*"long" + 0.170*"come" + 0.168*"school" + 0.090*"short" + 0.031*"set" + 0.014*"international" + 0.010*"build" + 0.010*"original" + 0.009*"film"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.202*"build" + 0.173*"school" + 0.160*"area" + 0.116*"film" + 0.090*"set" + 0.085*"royal" + 0.051*"short" + 0.028*"long" + 0.026*"see" + 0.024*"come"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.283*"film" + 0.167*"area" + 0.108*"see" + 0.105*"back" + 0.071*"come" + 0.061*"international" + 0.044*"school" + 0.038*"set" + 0.032*"long" + 0.025*"court"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.393508, rho=0.267261
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO -3.036 per-word bound, 8.2 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 25 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.250): 0.168*"see" + 0.136*"court" + 0.134*"area" + 0.132*"back" + 0.082*"come" + 0.076*"original" + 0.051*"school" + 0.047*"international" + 0.044*"set" + 0.044*"build"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.250): 0.392*"player" + 0.155*"long" + 0.139*"come" + 0.112*"school" + 0.082*"short" + 0.033*"international" + 0.021*"set" + 0.010*"original" + 0.009*"build" + 0.007*"film"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #2 (0.250): 0.187*"build" + 0.173*"school" + 0.148*"area" + 0.128*"film" + 0.093*"royal" + 0.084*"set" + 0.048*"short" + 0.033*"long" + 0.026*"role" + 0.025*"see"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #3 (0.250): 0.269*"film" + 0.148*"area" + 0.147*"back" + 0.099*"see" + 0.077*"international" + 0.059*"come" + 0.044*"long" + 0.040*"set" + 0.037*"school" + 0.022*"court"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.199740, rho=0.250000
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO -2.773 per-word bound, 6.8 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+06-Feb-22 08:15:55 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.09s', 'datetime': '2022-02-06T08:15:55.224744', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:55 - root INFO Time taken = 0 minutes
+06-Feb-22 08:15:55 - root INFO Note: Log likelihood is per-word ELBO
+06-Feb-22 08:15:55 - root INFO Note: Perplexity estimate based on a held-out corpus of 4 documents
+06-Feb-22 08:15:55 - root INFO 
 
 ## Finding the right value of K
-06-Feb-22 15:41:51 - root INFO Starting K=1
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric alpha at 1.0
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric eta at 1.0
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO running online LDA training, 1 topics, 8 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:51 - gensim.models.ldamulticore WARNING too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"see" + 0.086*"school" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.406030, rho=1.000000
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"see" + 0.086*"school" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.377964
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"see" + 0.086*"school" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.353553
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"school" + 0.086*"see" + 0.065*"court" + 0.065*"come" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.333333
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"see" + 0.086*"school" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.316228
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"see" + 0.086*"school" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.301511
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"school" + 0.086*"see" + 0.065*"come" + 0.065*"court" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.288675
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (1.000): 0.138*"film" + 0.099*"area" + 0.094*"back" + 0.086*"school" + 0.086*"see" + 0.065*"court" + 0.065*"come" + 0.055*"build" + 0.052*"player" + 0.044*"set"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.000000, rho=0.277350
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -2.964 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=1, decay=0.5, chunksize=20) in 0.17s', 'datetime': '2022-02-06T15:41:51.833619', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:51 - gensim.topic_coherence.probability_estimation INFO using ParallelWordOccurrenceAccumulator(processes=7, batch_size=64) to estimate probabilities from sliding windows
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO 7 accumulators retrieved from output queue
-06-Feb-22 15:41:51 - gensim.topic_coherence.text_analysis INFO accumulated word occurrence stats for 65 virtual documents
-06-Feb-22 15:41:51 - root INFO K=1, Coherence Score: 0.5503595963830591
-06-Feb-22 15:41:51 - root INFO Starting K=2
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric alpha at 0.5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using symmetric eta at 0.5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO running online LDA training, 2 topics, 8 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:51 - gensim.models.ldamulticore WARNING too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #0 (0.500): 0.141*"back" + 0.141*"area" + 0.127*"see" + 0.082*"come" + 0.068*"court" + 0.060*"build" + 0.059*"school" + 0.052*"set" + 0.052*"international" + 0.044*"royal"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic #1 (0.500): 0.268*"film" + 0.121*"school" + 0.074*"player" + 0.060*"court" + 0.060*"long" + 0.048*"build" + 0.045*"short" + 0.044*"area" + 0.042*"come" + 0.038*"role"
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO topic diff=0.435885, rho=1.000000
-06-Feb-22 15:41:51 - gensim.models.ldamodel INFO -3.203 per-word bound, 9.2 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:51 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.146*"area" + 0.145*"back" + 0.129*"see" + 0.089*"come" + 0.077*"court" + 0.061*"build" + 0.054*"international" + 0.053*"school" + 0.052*"set" + 0.048*"royal"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.289*"film" + 0.131*"school" + 0.085*"player" + 0.065*"long" + 0.050*"short" + 0.048*"court" + 0.045*"build" + 0.040*"original" + 0.039*"role" + 0.034*"area"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.125831, rho=0.377964
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.160 per-word bound, 8.9 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.149*"area" + 0.147*"back" + 0.130*"see" + 0.093*"come" + 0.085*"court" + 0.063*"build" + 0.055*"international" + 0.051*"royal" + 0.051*"set" + 0.049*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.303*"film" + 0.137*"school" + 0.094*"player" + 0.068*"long" + 0.055*"short" + 0.044*"original" + 0.043*"build" + 0.041*"role" + 0.037*"court" + 0.034*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.112017, rho=0.353553
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.126 per-word bound, 8.7 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.152*"area" + 0.149*"back" + 0.131*"see" + 0.096*"come" + 0.091*"court" + 0.064*"build" + 0.056*"international" + 0.054*"royal" + 0.051*"set" + 0.047*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.313*"film" + 0.142*"school" + 0.101*"player" + 0.071*"long" + 0.058*"short" + 0.047*"original" + 0.042*"role" + 0.041*"build" + 0.035*"set" + 0.028*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.099104, rho=0.333333
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.101 per-word bound, 8.6 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.154*"area" + 0.150*"back" + 0.131*"see" + 0.098*"come" + 0.095*"court" + 0.065*"build" + 0.056*"international" + 0.056*"royal" + 0.050*"set" + 0.045*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.320*"film" + 0.145*"school" + 0.107*"player" + 0.073*"long" + 0.061*"short" + 0.050*"original" + 0.043*"role" + 0.040*"build" + 0.036*"set" + 0.026*"international"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.088262, rho=0.316228
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.082 per-word bound, 8.5 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.156*"area" + 0.151*"back" + 0.132*"see" + 0.100*"come" + 0.098*"court" + 0.066*"build" + 0.058*"royal" + 0.057*"international" + 0.050*"set" + 0.044*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.324*"film" + 0.147*"school" + 0.111*"player" + 0.074*"long" + 0.063*"short" + 0.052*"original" + 0.044*"role" + 0.038*"build" + 0.036*"set" + 0.025*"international"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.079325, rho=0.301511
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.069 per-word bound, 8.4 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.157*"area" + 0.151*"back" + 0.133*"see" + 0.101*"come" + 0.100*"court" + 0.067*"build" + 0.059*"royal" + 0.057*"international" + 0.049*"set" + 0.043*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.328*"film" + 0.149*"school" + 0.114*"player" + 0.075*"long" + 0.064*"short" + 0.054*"original" + 0.044*"role" + 0.037*"build" + 0.037*"set" + 0.025*"international"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.071781, rho=0.288675
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.060 per-word bound, 8.3 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.500): 0.158*"area" + 0.152*"back" + 0.133*"see" + 0.102*"come" + 0.101*"court" + 0.067*"build" + 0.060*"royal" + 0.058*"international" + 0.049*"set" + 0.042*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.500): 0.330*"film" + 0.150*"school" + 0.117*"player" + 0.075*"long" + 0.065*"short" + 0.056*"original" + 0.045*"role" + 0.037*"set" + 0.036*"build" + 0.024*"international"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.065211, rho=0.277350
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.053 per-word bound, 8.3 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=2, decay=0.5, chunksize=20) in 0.19s', 'datetime': '2022-02-06T15:41:52.128271', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:52 - gensim.topic_coherence.probability_estimation INFO using ParallelWordOccurrenceAccumulator(processes=7, batch_size=64) to estimate probabilities from sliding windows
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO 7 accumulators retrieved from output queue
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulated word occurrence stats for 65 virtual documents
-06-Feb-22 15:41:52 - root INFO K=2, Coherence Score: 0.550359596383059
-06-Feb-22 15:41:52 - root INFO Starting K=3
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using symmetric alpha at 0.3333333333333333
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using symmetric eta at 0.3333333333333333
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO running online LDA training, 3 topics, 8 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:52 - gensim.models.ldamulticore WARNING too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.186*"see" + 0.154*"area" + 0.135*"back" + 0.109*"court" + 0.086*"come" + 0.059*"build" + 0.048*"school" + 0.047*"set" + 0.031*"original" + 0.028*"royal"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.197*"film" + 0.173*"player" + 0.113*"long" + 0.083*"court" + 0.066*"build" + 0.057*"school" + 0.050*"role" + 0.039*"come" + 0.037*"short" + 0.035*"see"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.213*"film" + 0.136*"school" + 0.090*"area" + 0.090*"back" + 0.072*"international" + 0.064*"royal" + 0.059*"come" + 0.051*"set" + 0.044*"build" + 0.042*"short"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.692438, rho=1.000000
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.248 per-word bound, 9.5 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.181*"see" + 0.160*"area" + 0.154*"back" + 0.121*"court" + 0.093*"come" + 0.057*"build" + 0.045*"set" + 0.043*"school" + 0.029*"original" + 0.023*"royal"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.208*"player" + 0.180*"film" + 0.130*"long" + 0.067*"build" + 0.060*"court" + 0.050*"role" + 0.045*"school" + 0.044*"short" + 0.039*"original" + 0.035*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.242*"film" + 0.149*"school" + 0.079*"area" + 0.074*"international" + 0.071*"royal" + 0.067*"back" + 0.052*"set" + 0.052*"come" + 0.046*"build" + 0.044*"short"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.165443, rho=0.377964
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.175 per-word bound, 9.0 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.179*"see" + 0.167*"back" + 0.165*"area" + 0.127*"court" + 0.097*"come" + 0.055*"build" + 0.043*"set" + 0.039*"school" + 0.025*"original" + 0.020*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.234*"player" + 0.154*"film" + 0.143*"long" + 0.068*"build" + 0.053*"short" + 0.051*"original" + 0.049*"role" + 0.043*"court" + 0.040*"international" + 0.036*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.267*"film" + 0.160*"school" + 0.075*"royal" + 0.075*"international" + 0.070*"area" + 0.054*"set" + 0.049*"back" + 0.047*"build" + 0.046*"come" + 0.044*"short"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.148743, rho=0.353553
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.123 per-word bound, 8.7 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.177*"see" + 0.175*"back" + 0.169*"area" + 0.131*"court" + 0.099*"come" + 0.054*"build" + 0.042*"set" + 0.037*"school" + 0.023*"original" + 0.020*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.255*"player" + 0.152*"long" + 0.126*"film" + 0.070*"build" + 0.062*"original" + 0.060*"short" + 0.048*"role" + 0.047*"international" + 0.033*"come" + 0.032*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.288*"film" + 0.167*"school" + 0.077*"royal" + 0.074*"international" + 0.062*"area" + 0.055*"set" + 0.048*"build" + 0.044*"short" + 0.042*"come" + 0.042*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.129639, rho=0.333333
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.080 per-word bound, 8.5 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.180*"back" + 0.176*"see" + 0.173*"area" + 0.133*"court" + 0.100*"come" + 0.053*"build" + 0.041*"set" + 0.034*"school" + 0.021*"role" + 0.020*"original"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.269*"player" + 0.158*"long" + 0.100*"film" + 0.071*"build" + 0.071*"original" + 0.067*"short" + 0.055*"international" + 0.047*"role" + 0.036*"come" + 0.027*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.306*"film" + 0.174*"school" + 0.080*"royal" + 0.071*"international" + 0.056*"set" + 0.055*"area" + 0.048*"build" + 0.043*"short" + 0.043*"role" + 0.038*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.117558, rho=0.316228
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.047 per-word bound, 8.3 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.184*"back" + 0.177*"area" + 0.175*"see" + 0.134*"court" + 0.100*"come" + 0.053*"build" + 0.041*"set" + 0.033*"school" + 0.021*"role" + 0.019*"original"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.274*"player" + 0.159*"long" + 0.077*"original" + 0.077*"film" + 0.072*"international" + 0.071*"build" + 0.071*"short" + 0.046*"role" + 0.043*"come" + 0.029*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.323*"film" + 0.180*"school" + 0.082*"royal" + 0.065*"international" + 0.055*"set" + 0.049*"area" + 0.049*"build" + 0.044*"role" + 0.043*"short" + 0.033*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.116449, rho=0.301511
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.022 per-word bound, 8.1 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.188*"back" + 0.181*"area" + 0.174*"see" + 0.135*"court" + 0.100*"come" + 0.053*"build" + 0.040*"set" + 0.032*"school" + 0.021*"role" + 0.017*"original"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.272*"player" + 0.157*"long" + 0.092*"international" + 0.082*"original" + 0.073*"short" + 0.070*"build" + 0.059*"film" + 0.051*"come" + 0.045*"role" + 0.031*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.338*"film" + 0.186*"school" + 0.085*"royal" + 0.056*"international" + 0.055*"set" + 0.049*"build" + 0.044*"role" + 0.044*"area" + 0.042*"short" + 0.030*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.106722, rho=0.288675
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.002 per-word bound, 8.0 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.333): 0.190*"back" + 0.184*"area" + 0.174*"see" + 0.136*"court" + 0.099*"come" + 0.053*"build" + 0.040*"set" + 0.031*"school" + 0.021*"role" + 0.015*"original"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.333): 0.269*"player" + 0.155*"long" + 0.113*"international" + 0.084*"original" + 0.073*"short" + 0.070*"build" + 0.057*"come" + 0.046*"film" + 0.040*"role" + 0.035*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.333): 0.351*"film" + 0.192*"school" + 0.087*"royal" + 0.054*"set" + 0.049*"build" + 0.047*"role" + 0.046*"international" + 0.043*"short" + 0.039*"area" + 0.027*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.102160, rho=0.277350
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.989 per-word bound, 7.9 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=3, decay=0.5, chunksize=20) in 0.18s', 'datetime': '2022-02-06T15:41:52.414732', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:52 - gensim.topic_coherence.probability_estimation INFO using ParallelWordOccurrenceAccumulator(processes=7, batch_size=64) to estimate probabilities from sliding windows
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO 7 accumulators retrieved from output queue
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulated word occurrence stats for 65 virtual documents
-06-Feb-22 15:41:52 - root INFO K=3, Coherence Score: 0.5503595963830591
-06-Feb-22 15:41:52 - root INFO Starting K=4
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using symmetric alpha at 0.25
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using symmetric eta at 0.25
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO using serial LDA version on this node
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO running online LDA training, 4 topics, 8 passes over the supplied corpus of 100 documents, updating every 140 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-06-Feb-22 15:41:52 - gensim.models.ldamulticore WARNING too few updates, training might not converge; consider increasing the number of passes or iterations to improve accuracy
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO training LDA model using 7 processes
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.154*"area" + 0.137*"see" + 0.132*"back" + 0.127*"court" + 0.074*"build" + 0.070*"come" + 0.057*"royal" + 0.054*"set" + 0.050*"school" + 0.041*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.357*"player" + 0.096*"long" + 0.075*"build" + 0.074*"court" + 0.073*"short" + 0.073*"come" + 0.052*"school" + 0.051*"original" + 0.030*"film" + 0.030*"international"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.303*"film" + 0.170*"school" + 0.080*"area" + 0.074*"international" + 0.057*"come" + 0.045*"short" + 0.045*"royal" + 0.045*"set" + 0.040*"build" + 0.038*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.222*"back" + 0.161*"see" + 0.155*"film" + 0.111*"long" + 0.068*"area" + 0.065*"come" + 0.050*"original" + 0.032*"short" + 0.030*"set" + 0.023*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=1.067418, rho=1.000000
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.098 per-word bound, 8.6 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 1, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.169*"area" + 0.137*"court" + 0.131*"see" + 0.129*"back" + 0.077*"build" + 0.076*"come" + 0.061*"royal" + 0.050*"set" + 0.047*"school" + 0.040*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.385*"player" + 0.096*"long" + 0.078*"short" + 0.077*"come" + 0.075*"build" + 0.060*"original" + 0.048*"court" + 0.038*"international" + 0.037*"school" + 0.031*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.329*"film" + 0.181*"school" + 0.080*"international" + 0.067*"area" + 0.048*"come" + 0.047*"set" + 0.047*"short" + 0.040*"role" + 0.039*"royal" + 0.036*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.244*"back" + 0.181*"see" + 0.129*"film" + 0.120*"long" + 0.062*"come" + 0.056*"area" + 0.055*"original" + 0.032*"short" + 0.031*"set" + 0.022*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.200071, rho=0.377964
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.044 per-word bound, 8.2 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 2, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.181*"area" + 0.143*"court" + 0.121*"back" + 0.120*"see" + 0.081*"come" + 0.081*"build" + 0.069*"royal" + 0.048*"set" + 0.048*"school" + 0.038*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.399*"player" + 0.088*"long" + 0.084*"come" + 0.081*"short" + 0.074*"build" + 0.072*"original" + 0.048*"international" + 0.033*"court" + 0.033*"set" + 0.026*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.352*"film" + 0.188*"school" + 0.083*"international" + 0.056*"area" + 0.049*"set" + 0.048*"short" + 0.046*"role" + 0.040*"come" + 0.032*"build" + 0.030*"royal"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.263*"back" + 0.205*"see" + 0.125*"long" + 0.108*"film" + 0.062*"come" + 0.049*"original" + 0.047*"area" + 0.033*"set" + 0.032*"short" + 0.021*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.188703, rho=0.353553
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -3.005 per-word bound, 8.0 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 3, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.193*"area" + 0.149*"court" + 0.112*"back" + 0.108*"see" + 0.086*"build" + 0.084*"come" + 0.075*"royal" + 0.049*"school" + 0.046*"set" + 0.037*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.401*"player" + 0.090*"come" + 0.083*"short" + 0.081*"long" + 0.078*"original" + 0.072*"build" + 0.062*"international" + 0.035*"set" + 0.024*"court" + 0.020*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.372*"film" + 0.193*"school" + 0.083*"international" + 0.050*"set" + 0.049*"role" + 0.049*"short" + 0.046*"area" + 0.032*"come" + 0.028*"build" + 0.027*"original"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.281*"back" + 0.231*"see" + 0.122*"long" + 0.082*"film" + 0.065*"come" + 0.044*"original" + 0.042*"area" + 0.035*"set" + 0.031*"short" + 0.020*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.170666, rho=0.333333
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.979 per-word bound, 7.9 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 4, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.204*"area" + 0.155*"court" + 0.103*"back" + 0.095*"see" + 0.091*"build" + 0.083*"come" + 0.082*"royal" + 0.051*"school" + 0.042*"set" + 0.037*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.387*"player" + 0.099*"come" + 0.088*"international" + 0.081*"short" + 0.078*"original" + 0.076*"long" + 0.069*"build" + 0.038*"set" + 0.021*"role" + 0.017*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.394*"film" + 0.198*"school" + 0.076*"international" + 0.053*"set" + 0.051*"role" + 0.050*"short" + 0.038*"area" + 0.029*"original" + 0.025*"come" + 0.024*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.292*"back" + 0.254*"see" + 0.115*"long" + 0.071*"come" + 0.061*"film" + 0.041*"original" + 0.040*"area" + 0.038*"set" + 0.030*"short" + 0.018*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.165278, rho=0.316228
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.966 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 5, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.214*"area" + 0.161*"court" + 0.096*"build" + 0.095*"back" + 0.087*"royal" + 0.082*"see" + 0.082*"come" + 0.054*"school" + 0.039*"set" + 0.037*"role"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.371*"player" + 0.119*"international" + 0.103*"come" + 0.080*"short" + 0.079*"original" + 0.071*"long" + 0.065*"build" + 0.038*"set" + 0.022*"role" + 0.013*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.415*"film" + 0.202*"school" + 0.064*"international" + 0.055*"set" + 0.052*"role" + 0.051*"short" + 0.032*"area" + 0.031*"original" + 0.021*"build" + 0.020*"come"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.299*"back" + 0.271*"see" + 0.108*"long" + 0.078*"come" + 0.044*"film" + 0.041*"set" + 0.039*"area" + 0.038*"original" + 0.028*"short" + 0.017*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.149026, rho=0.301511
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.959 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 6, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.222*"area" + 0.166*"court" + 0.102*"build" + 0.092*"royal" + 0.087*"back" + 0.079*"come" + 0.071*"see" + 0.056*"school" + 0.038*"role" + 0.036*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.353*"player" + 0.146*"international" + 0.102*"come" + 0.080*"short" + 0.078*"original" + 0.071*"long" + 0.061*"build" + 0.043*"set" + 0.021*"role" + 0.010*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.434*"film" + 0.207*"school" + 0.055*"set" + 0.054*"role" + 0.052*"short" + 0.051*"international" + 0.032*"original" + 0.027*"area" + 0.018*"build" + 0.018*"long"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.307*"back" + 0.284*"see" + 0.100*"long" + 0.085*"come" + 0.043*"set" + 0.039*"area" + 0.035*"original" + 0.033*"film" + 0.025*"short" + 0.014*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.138334, rho=0.288675
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.961 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #0 = documents up to #20/100, outstanding queue size 1
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #1 = documents up to #40/100, outstanding queue size 2
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #2 = documents up to #60/100, outstanding queue size 3
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #3 = documents up to #80/100, outstanding queue size 4
-06-Feb-22 15:41:52 - gensim.models.ldamulticore INFO PROGRESS: pass 7, dispatched chunk #4 = documents up to #100/100, outstanding queue size 5
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #0 (0.250): 0.229*"area" + 0.170*"court" + 0.107*"build" + 0.096*"royal" + 0.080*"back" + 0.077*"come" + 0.063*"see" + 0.059*"school" + 0.038*"role" + 0.034*"set"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #1 (0.250): 0.340*"player" + 0.162*"international" + 0.102*"come" + 0.080*"short" + 0.079*"original" + 0.072*"long" + 0.059*"build" + 0.046*"set" + 0.021*"role" + 0.008*"court"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #2 (0.250): 0.448*"film" + 0.209*"school" + 0.055*"role" + 0.055*"set" + 0.054*"short" + 0.041*"international" + 0.033*"original" + 0.023*"area" + 0.020*"long" + 0.016*"build"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic #3 (0.250): 0.313*"back" + 0.292*"see" + 0.092*"long" + 0.092*"come" + 0.046*"set" + 0.040*"area" + 0.033*"original" + 0.025*"film" + 0.023*"short" + 0.012*"school"
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO topic diff=0.123266, rho=0.277350
-06-Feb-22 15:41:52 - gensim.models.ldamodel INFO -2.961 per-word bound, 7.8 perplexity estimate based on a held-out corpus of 20 documents with 39 words
-06-Feb-22 15:41:52 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=20) in 0.17s', 'datetime': '2022-02-06T15:41:52.702925', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
-06-Feb-22 15:41:52 - gensim.topic_coherence.probability_estimation INFO using ParallelWordOccurrenceAccumulator(processes=7, batch_size=64) to estimate probabilities from sliding windows
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulator serialized
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO 7 accumulators retrieved from output queue
-06-Feb-22 15:41:52 - gensim.topic_coherence.text_analysis INFO accumulated word occurrence stats for 65 virtual documents
-06-Feb-22 15:41:52 - root INFO K=4, Coherence Score: 0.550359596383059
-06-Feb-22 15:41:53 - root INFO ALL DONE!
+06-Feb-22 08:15:55 - root INFO Starting K=2
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using symmetric alpha at 0.5
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using symmetric eta at 0.5
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO using serial LDA version on this node
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO running online LDA training, 2 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO training LDA model using 2 processes
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 7
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.271*"royal" + 0.151*"original" + 0.145*"build" + 0.095*"player" + 0.089*"school" + 0.086*"come" + 0.071*"film" + 0.010*"long" + 0.010*"see" + 0.010*"short"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.311*"royal" + 0.133*"film" + 0.120*"come" + 0.117*"school" + 0.111*"player" + 0.067*"build" + 0.062*"original" + 0.009*"long" + 0.009*"see" + 0.009*"short"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=1.946910, rho=1.000000
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.206*"build" + 0.202*"royal" + 0.072*"see" + 0.072*"area" + 0.070*"role" + 0.070*"court" + 0.068*"back" + 0.058*"school" + 0.046*"original" + 0.030*"player"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.183*"long" + 0.168*"royal" + 0.117*"build" + 0.112*"school" + 0.093*"short" + 0.058*"film" + 0.053*"come" + 0.050*"player" + 0.030*"original" + 0.027*"back"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=1.497898, rho=0.577350
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.317*"court" + 0.108*"royal" + 0.100*"international" + 0.077*"build" + 0.062*"see" + 0.060*"back" + 0.056*"come" + 0.052*"original" + 0.031*"film" + 0.028*"area"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.215*"court" + 0.120*"long" + 0.112*"film" + 0.094*"international" + 0.082*"royal" + 0.075*"come" + 0.052*"build" + 0.050*"school" + 0.045*"set" + 0.042*"short"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=1.017173, rho=0.447214
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 7
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.242*"court" + 0.121*"royal" + 0.105*"international" + 0.078*"see" + 0.074*"build" + 0.055*"come" + 0.049*"area" + 0.047*"back" + 0.041*"original" + 0.036*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.184*"international" + 0.124*"come" + 0.100*"player" + 0.092*"court" + 0.076*"long" + 0.072*"royal" + 0.070*"short" + 0.069*"set" + 0.049*"film" + 0.045*"build"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.541281, rho=0.377964
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 8
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.197*"court" + 0.108*"see" + 0.099*"royal" + 0.087*"international" + 0.083*"area" + 0.067*"role" + 0.061*"build" + 0.049*"original" + 0.046*"come" + 0.040*"back"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.449*"film" + 0.088*"player" + 0.074*"international" + 0.062*"short" + 0.050*"come" + 0.045*"set" + 0.037*"court" + 0.034*"original" + 0.032*"role" + 0.031*"long"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.548134, rho=0.333333
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 7
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.223*"see" + 0.211*"back" + 0.132*"area" + 0.117*"come" + 0.068*"court" + 0.043*"set" + 0.038*"school" + 0.035*"royal" + 0.022*"international" + 0.021*"role"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.421*"film" + 0.090*"player" + 0.072*"international" + 0.057*"short" + 0.054*"come" + 0.043*"court" + 0.043*"set" + 0.034*"original" + 0.030*"see" + 0.030*"role"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.589752, rho=0.301511
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 7
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.204*"back" + 0.195*"see" + 0.138*"area" + 0.108*"come" + 0.071*"court" + 0.043*"set" + 0.040*"school" + 0.035*"role" + 0.031*"royal" + 0.030*"build"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.318*"film" + 0.176*"school" + 0.065*"short" + 0.055*"court" + 0.051*"long" + 0.045*"player" + 0.042*"original" + 0.042*"come" + 0.041*"international" + 0.039*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.283365, rho=0.277350
+06-Feb-22 08:15:55 - gensim.models.ldamulticore INFO PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 10 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.209*"area" + 0.181*"back" + 0.142*"see" + 0.085*"build" + 0.080*"come" + 0.057*"school" + 0.053*"court" + 0.040*"set" + 0.026*"royal" + 0.026*"film"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.278*"film" + 0.177*"school" + 0.072*"set" + 0.059*"international" + 0.059*"short" + 0.045*"build" + 0.041*"long" + 0.040*"role" + 0.039*"court" + 0.039*"player"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.316681, rho=0.258199
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO -3.264 per-word bound, 9.6 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 15 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.205*"area" + 0.172*"back" + 0.140*"see" + 0.080*"build" + 0.076*"come" + 0.068*"court" + 0.060*"school" + 0.039*"set" + 0.027*"original" + 0.025*"royal"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.265*"film" + 0.170*"school" + 0.069*"set" + 0.062*"short" + 0.060*"player" + 0.057*"international" + 0.044*"long" + 0.043*"build" + 0.039*"court" + 0.038*"role"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.077815, rho=0.242536
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO -3.160 per-word bound, 8.9 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO merging changes from 5 documents into a model of 100 documents
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #0 (0.500): 0.177*"back" + 0.170*"area" + 0.132*"see" + 0.093*"come" + 0.081*"build" + 0.057*"court" + 0.055*"royal" + 0.051*"school" + 0.038*"role" + 0.032*"set"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic #1 (0.500): 0.246*"film" + 0.166*"player" + 0.129*"school" + 0.080*"long" + 0.056*"international" + 0.045*"set" + 0.045*"role" + 0.041*"short" + 0.034*"build" + 0.031*"come"
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO topic diff=0.256053, rho=0.223607
+06-Feb-22 08:15:55 - gensim.models.ldamodel INFO -2.761 per-word bound, 6.8 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+06-Feb-22 08:15:55 - gensim.utils INFO LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=2, decay=0.5, chunksize=5) in 0.18s', 'datetime': '2022-02-06T08:15:55.793137', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 08:15:55 - gensim.topic_coherence.probability_estimation INFO using ParallelWordOccurrenceAccumulator(processes=127, batch_size=64) to estimate probabilities from sliding windows
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:15:59 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:00 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:04 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:05 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:06 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO serializing accumulator to return to master...
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:07 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized
+06-Feb-22 08:16:08 - gensim.topic_coherence.text_analysis INFO accumulator serialized

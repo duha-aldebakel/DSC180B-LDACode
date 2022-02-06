@@ -46,12 +46,16 @@ if sys.argv[-1].lower().strip()=='test':
     logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
     testmode=True
     evalevery=20
+    chunk=5
     numtopics=4
+    passes=1
     fnprefix='test_'
 else:
     logging.info('App started in full mode.')
     evalevery=1000
+    chunk=1000
     numtopics=20
+    passes=8
     fnprefix=''
 
 
@@ -214,8 +218,8 @@ setUpNewLogFile('gensim_nolem.log')
 
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model = gensim.models.ldamulticore.LdaMulticore(
-   corpus=corpus, id2word=id2word, num_topics=20, random_state=100, 
-   eval_every=evalevery, chunksize=evalevery, passes=numtopics, alpha='symmetric', per_word_topics=True
+   corpus=corpus, id2word=id2word, num_topics=numtopics, random_state=100, 
+   eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -263,7 +267,7 @@ setUpNewLogFile('gensim_lem.log')
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
    corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=numtopics, random_state=100, 
-   eval_every=evalevery, chunksize=evalevery, passes=10, alpha='symmetric', per_word_topics=True
+   eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -302,28 +306,26 @@ logging.info('Note: Perplexity estimate based on a held-out corpus of 4 document
 ## Finding the right value of K
 logging.info('\n\n## Finding the right value of K')
 K_Coherence={}
-models={}
 if testmode:
-  searchgrid=[1,2,3,4]
+  searchgrid=[2,3,4]
 else:
   searchgrid=[5,10,15,20,25,30,40]
 for K in searchgrid:
     logging.info('Starting K={}'.format(K))
     starttime=time.time()
-    setUpNewLogFile('gensim_lem_{}.log'.format(K))
+    #setUpNewLogFile('gensim_lem_{}.log'.format(K))
 
     #New code uses multicore which runs works in parallel for each CPU core.
     lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
        corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=K, random_state=100, 
-       eval_every=evalevery, chunksize=evalevery, passes=8, alpha='symmetric', per_word_topics=True
-    )
+       eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
+    )   
     coherence_model_lda_lemmatized = CoherenceModel(
        model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v'
     )
     coherence_lda_lemmatized = coherence_model_lda_lemmatized.get_coherence()
     logging.info('K={}, Coherence Score: {}'.format(K,coherence_lda_lemmatized))
     K_Coherence[K]=coherence_lda_lemmatized
-    models[K]=lda_model_lemmatized
 
 fig=plt.figure(figsize=(8,5))
 
