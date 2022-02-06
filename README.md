@@ -15,7 +15,7 @@ To get it up and running:
 - Run the docker using 'docker run -it --rm daldebak/dsc180b bash ', or replace with your own <image-fullname>
 ### Option 3: If using DSMLP
 - SSH to `dsmlp-login.ucsd.edu`. (Note if working outside the school, you would need to first connect via VPN)
-- launch.sh -i daldebak/dsc180b:latest`"
+- Run "`launch.sh -i daldebak/dsc180b:latest`"
 ### Option 4: Running from your own python environment (Hardest)
 - Make sure, preferably, you have python3.7+ installed and assuming you have configured the `PATH` and `PATHEXT` variables upon installation:
 - `python3.7 -m venv env`
