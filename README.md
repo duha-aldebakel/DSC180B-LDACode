@@ -3,7 +3,7 @@
 This repository serves as the central user code repository for Group A06's DSC180B Capstone project.
 
 To get it up and running:
-- `git clone https://github.com/a1limon/DSC180B-LDACode.git`
+- `git clone https://github.com/duha-aldebakel/DSC180B-LDACode.git`
 - `cd DSC180B-LDACode`
 - Option 1:
 - Build from Dockerfile using the command 'docker build -t daldebak/dsc180b .'
