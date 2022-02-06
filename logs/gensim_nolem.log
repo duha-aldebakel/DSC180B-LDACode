@@ -1,92 +1,149 @@
 using symmetric alpha at 0.25
 using symmetric eta at 0.25
 using serial LDA version on this node
-running online LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-training LDA model using 2 processes
-PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
-PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
-PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
-PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
-PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
-PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.017*"page" + 0.007*"inquisivi" + 0.007*"azs" + 0.006*"works" + 0.006*"cadiz" + 0.006*"edwards" + 0.006*"la" + 0.006*"de" + 0.006*"polish" + 0.005*"named"
-topic #1 (0.250): 0.011*"court" + 0.007*"mr_pammer" + 0.006*"rome" + 0.006*"regulation_ec" + 0.006*"consumer" + 0.006*"article" + 0.006*"hotel" + 0.006*"page" + 0.006*"contract" + 0.005*"mr_heller"
-topic #2 (0.250): 0.015*"page" + 0.009*"works" + 0.007*"television" + 0.006*"court" + 0.006*"edwards" + 0.005*"program" + 0.005*"royal" + 0.005*"first" + 0.005*"series" + 0.004*"many"
-topic #3 (0.250): 0.010*"court" + 0.008*"page" + 0.006*"article" + 0.006*"regulation_ec" + 0.006*"de" + 0.006*"consumer" + 0.006*"rome" + 0.006*"mr_pammer" + 0.005*"first" + 0.005*"cadiz"
-topic diff=3.297277, rho=1.000000
-PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.034*"page" + 0.024*"lee" + 0.006*"back" + 0.004*"two" + 0.004*"shaw" + 0.004*"police" + 0.004*"area" + 0.004*"found" + 0.004*"body" + 0.003*"around"
-topic #1 (0.250): 0.019*"page" + 0.010*"lee" + 0.005*"court" + 0.003*"back" + 0.003*"shaw" + 0.003*"also" + 0.003*"first" + 0.003*"two" + 0.003*"found" + 0.003*"body"
-topic #2 (0.250): 0.022*"page" + 0.014*"lee" + 0.004*"art" + 0.004*"back" + 0.003*"court" + 0.003*"two" + 0.003*"works" + 0.003*"first" + 0.003*"time" + 0.003*"also"
-topic #3 (0.250): 0.014*"page" + 0.009*"lee" + 0.006*"city_hall" + 0.005*"court" + 0.005*"museumsquartier" + 0.004*"phoenix" + 0.003*"art" + 0.003*"also" + 0.003*"first" + 0.003*"construction"
-topic diff=0.957441, rho=0.577350
-PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.026*"page" + 0.018*"lee" + 0.005*"back" + 0.004*"club" + 0.003*"two" + 0.003*"found" + 0.003*"shaw" + 0.003*"police" + 0.003*"balls" + 0.003*"area"
-topic #1 (0.250): 0.013*"page" + 0.007*"lee" + 0.004*"court" + 0.003*"back" + 0.003*"air" + 0.003*"found" + 0.002*"first" + 0.002*"balls" + 0.002*"two" + 0.002*"rubber"
-topic #2 (0.250): 0.014*"page" + 0.009*"lee" + 0.006*"art" + 0.005*"balls" + 0.004*"rubber" + 0.003*"ball" + 0.003*"works" + 0.003*"two" + 0.003*"gere" + 0.003*"march"
-topic #3 (0.250): 0.006*"km" + 0.006*"page" + 0.006*"ft" + 0.005*"two" + 0.004*"balls" + 0.004*"boat" + 0.004*"lee" + 0.004*"one" + 0.003*"first" + 0.003*"tower"
-topic diff=0.600438, rho=0.447214
-PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.021*"page" + 0.015*"lee" + 0.004*"club" + 0.004*"back" + 0.003*"province" + 0.003*"two" + 0.003*"based" + 0.003*"county" + 0.003*"found" + 0.003*"played"
-topic #1 (0.250): 0.009*"page" + 0.005*"court" + 0.005*"lee" + 0.005*"schiffer" + 0.004*"found" + 0.004*"body" + 0.003*"year_old" + 0.003*"also" + 0.003*"murder" + 0.003*"district"
-topic #2 (0.250): 0.010*"page" + 0.007*"lee" + 0.004*"time" + 0.004*"art" + 0.004*"balls" + 0.004*"two" + 0.003*"march" + 0.003*"rubber" + 0.003*"ball" + 0.003*"would"
-topic #3 (0.250): 0.007*"castle" + 0.004*"maria" + 0.004*"two" + 0.004*"animator" + 0.004*"nuremberg" + 0.003*"km" + 0.003*"first" + 0.003*"page" + 0.003*"ft" + 0.003*"film"
-topic diff=0.504325, rho=0.377964
-PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.022*"match" + 0.012*"england" + 0.012*"page" + 0.011*"willey" + 0.010*"took" + 0.009*"first" + 0.009*"lee" + 0.007*"season" + 0.007*"played" + 0.006*"final"
-topic #1 (0.250): 0.007*"page" + 0.004*"court" + 0.004*"end" + 0.003*"district" + 0.003*"lee" + 0.003*"schiffer" + 0.003*"war" + 0.003*"since" + 0.003*"found" + 0.003*"recognition"
-topic #2 (0.250): 0.016*"series" + 0.016*"england" + 0.010*"willey" + 0.007*"first" + 0.007*"women" + 0.006*"page" + 0.005*"runs" + 0.005*"took" + 0.004*"odi" + 0.004*"wicket"
-topic #3 (0.250): 0.005*"castle" + 0.004*"first" + 0.004*"cambridge" + 0.004*"district" + 0.004*"women" + 0.003*"two" + 0.003*"one" + 0.003*"married" + 0.003*"ft" + 0.003*"society"
-topic diff=0.510723, rho=0.333333
-PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 7
-PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.018*"match" + 0.010*"england" + 0.010*"page" + 0.009*"willey" + 0.008*"took" + 0.007*"first" + 0.007*"lee" + 0.007*"played" + 0.006*"season" + 0.005*"final"
-topic #1 (0.250): 0.007*"film" + 0.005*"blinatumomab" + 0.004*"cell" + 0.004*"street_trash" + 0.003*"also" + 0.003*"drug" + 0.003*"time" + 0.003*"page" + 0.003*"body" + 0.003*"court"
-topic #2 (0.250): 0.013*"series" + 0.013*"england" + 0.008*"willey" + 0.007*"first" + 0.006*"women" + 0.005*"page" + 0.004*"runs" + 0.004*"took" + 0.004*"odi" + 0.004*"two"
-topic #3 (0.250): 0.004*"castle" + 0.004*"first" + 0.004*"cambridge" + 0.004*"district" + 0.004*"women" + 0.003*"two" + 0.003*"one" + 0.002*"married" + 0.002*"ft" + 0.002*"society"
-topic diff=0.480764, rho=0.301511
-PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.013*"match" + 0.008*"england" + 0.007*"page" + 0.007*"willey" + 0.007*"took" + 0.006*"played" + 0.006*"first" + 0.005*"lee" + 0.004*"season" + 0.004*"club"
-topic #1 (0.250): 0.017*"cumbernauld" + 0.009*"town" + 0.006*"also" + 0.006*"new" + 0.004*"infantry" + 0.004*"acqui" + 0.003*"film" + 0.003*"village" + 0.003*"two" + 0.002*"north"
-topic #2 (0.250): 0.010*"series" + 0.009*"england" + 0.005*"first" + 0.005*"willey" + 0.005*"cumbernauld" + 0.004*"two" + 0.004*"one" + 0.004*"also" + 0.004*"women" + 0.003*"took"
-topic #3 (0.250): 0.012*"division" + 0.008*"castle" + 0.006*"cumbernauld" + 0.006*"scotland" + 0.004*"one" + 0.004*"two" + 0.003*"acqui" + 0.003*"first" + 0.003*"infantry" + 0.003*"district"
-topic diff=0.961937, rho=0.277350
-PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.011*"match" + 0.007*"england" + 0.006*"page" + 0.006*"played" + 0.006*"willey" + 0.006*"took" + 0.006*"first" + 0.004*"lee" + 0.004*"season" + 0.004*"named"
-topic #1 (0.250): 0.013*"cumbernauld" + 0.006*"town" + 0.006*"also" + 0.005*"new" + 0.004*"infantry" + 0.003*"village" + 0.003*"two" + 0.003*"acqui" + 0.003*"film" + 0.002*"mosque"
-topic #2 (0.250): 0.007*"series" + 0.007*"first" + 0.006*"england" + 0.006*"art" + 0.004*"university" + 0.004*"also" + 0.004*"one" + 0.004*"madsen" + 0.004*"willey" + 0.003*"two"
-topic #3 (0.250): 0.009*"division" + 0.007*"castle" + 0.004*"cumbernauld" + 0.004*"scotland" + 0.004*"one" + 0.004*"two" + 0.003*"cylinder" + 0.003*"first" + 0.003*"site" + 0.003*"development"
-topic diff=0.523156, rho=0.258199
--10.772 per-word bound, 1748.5 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
-merging changes from 15 documents into a model of 100 documents
-topic #0 (0.250): 0.010*"match" + 0.006*"dickinson" + 0.006*"played" + 0.006*"team" + 0.005*"england" + 0.005*"page" + 0.005*"season" + 0.005*"debut" + 0.004*"took" + 0.004*"first"
-topic #1 (0.250): 0.012*"cumbernauld" + 0.006*"town" + 0.006*"also" + 0.005*"new" + 0.003*"infantry" + 0.003*"village" + 0.003*"two" + 0.003*"acqui" + 0.002*"film" + 0.002*"mosque"
-topic #2 (0.250): 0.006*"series" + 0.006*"first" + 0.005*"england" + 0.005*"art" + 0.004*"university" + 0.004*"two" + 0.004*"also" + 0.004*"one" + 0.003*"married" + 0.003*"madsen"
-topic #3 (0.250): 0.008*"division" + 0.006*"castle" + 0.004*"cumbernauld" + 0.004*"scotland" + 0.004*"one" + 0.003*"two" + 0.003*"cylinder" + 0.003*"first" + 0.003*"also" + 0.003*"site"
-topic diff=0.339095, rho=0.242536
--10.745 per-word bound, 1716.3 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
+running online (single-pass) LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating model once every 5 documents, evaluating perplexity every 100 documents, iterating 50x with a convergence threshold of 0.001000
+PROGRESS: pass 0, at document #5/100
 merging changes from 5 documents into a model of 100 documents
-topic #0 (0.250): 0.007*"college" + 0.007*"samsung" + 0.007*"bridge" + 0.007*"first" + 0.006*"phone" + 0.005*"south" + 0.005*"match" + 0.005*"bada" + 0.004*"knox" + 0.004*"following"
-topic #1 (0.250): 0.009*"cumbernauld" + 0.006*"new" + 0.006*"also" + 0.005*"town" + 0.004*"wave" + 0.003*"system" + 0.003*"published" + 0.003*"village" + 0.003*"two" + 0.003*"infantry"
-topic #2 (0.250): 0.008*"bridge" + 0.007*"books" + 0.007*"first" + 0.005*"one" + 0.004*"series" + 0.004*"england" + 0.004*"play" + 0.004*"married" + 0.004*"two" + 0.003*"british"
-topic #3 (0.250): 0.006*"division" + 0.005*"castle" + 0.004*"development" + 0.004*"one" + 0.004*"two" + 0.003*"city" + 0.003*"cumbernauld" + 0.003*"scotland" + 0.003*"first" + 0.003*"italian"
-topic diff=0.615269, rho=0.223607
--7.752 per-word bound, 215.5 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
-LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=6847, num_topics=4, decay=0.5, chunksize=5) in 0.39s', 'datetime': '2022-02-06T08:15:54.599349', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+topic #0 (0.250): 0.018*"football" + 0.016*"yemen" + 0.013*"january" + 0.013*"kreamcheck" + 0.012*"played" + 0.011*"fishing" + 0.007*"college" + 0.007*"seasons" + 0.007*"salmon" + 0.007*"defensive"
+topic #1 (0.250): 0.014*"yemen" + 0.012*"fishing" + 0.009*"salmon" + 0.005*"considerable" + 0.005*"football" + 0.005*"somali" + 0.005*"pirates" + 0.005*"westerner" + 0.005*"novel" + 0.005*"family"
+topic #2 (0.250): 0.017*"chinese" + 0.009*"located" + 0.009*"county" + 0.009*"xincheng" + 0.009*"footballer" + 0.009*"gaelic" + 0.009*"july" + 0.009*"ireland" + 0.009*"association" + 0.009*"beijing"
+topic #3 (0.250): 0.044*"city_hall" + 0.026*"phoenix" + 0.017*"old" + 0.012*"building" + 0.012*"construction" + 0.011*"city" + 0.006*"located" + 0.006*"total" + 0.006*"known" + 0.006*"downtown"
+topic diff=2.755040, rho=1.000000
+PROGRESS: pass 0, at document #10/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.011*"played" + 0.009*"league" + 0.007*"football" + 0.006*"yemen" + 0.005*"azs" + 0.005*"january" + 0.005*"kreamcheck" + 0.004*"fishing" + 0.004*"polish" + 0.004*"warszawska"
+topic #1 (0.250): 0.015*"court" + 0.009*"mr_pammer" + 0.008*"rome" + 0.008*"consumer" + 0.008*"regulation_ec" + 0.008*"article" + 0.007*"cadiz" + 0.007*"de" + 0.007*"hotel" + 0.007*"commission"
+topic #2 (0.250): 0.015*"court" + 0.011*"de" + 0.011*"cadiz" + 0.010*"la" + 0.009*"mr_pammer" + 0.008*"regulation_ec" + 0.008*"article" + 0.008*"rome" + 0.008*"consumer" + 0.007*"hotel"
+topic #3 (0.250): 0.017*"city_hall" + 0.010*"phoenix" + 0.007*"old" + 0.005*"building" + 0.005*"construction" + 0.005*"city" + 0.003*"known" + 0.003*"located" + 0.003*"total" + 0.003*"downtown"
+topic diff=0.813124, rho=0.707107
+PROGRESS: pass 0, at document #15/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.030*"page" + 0.014*"works" + 0.013*"mary" + 0.011*"edwards" + 0.010*"john" + 0.009*"royal" + 0.008*"many" + 0.006*"art" + 0.006*"early" + 0.006*"academy"
+topic #1 (0.250): 0.017*"television" + 0.010*"court" + 0.006*"mr_pammer" + 0.006*"also" + 0.006*"program" + 0.006*"rome" + 0.006*"article" + 0.006*"consumer" + 0.006*"regulation_ec" + 0.005*"de"
+topic #2 (0.250): 0.012*"due" + 0.011*"work" + 0.011*"first" + 0.010*"court" + 0.009*"worked" + 0.009*"also" + 0.009*"one" + 0.008*"born" + 0.008*"la" + 0.007*"cadiz"
+topic #3 (0.250): 0.024*"page" + 0.011*"zacatecas" + 0.011*"works" + 0.009*"edwards" + 0.007*"city" + 0.007*"benin" + 0.007*"river" + 0.007*"inquisivi" + 0.007*"royal" + 0.006*"xhzac"
+topic diff=0.805579, rho=0.577350
+PROGRESS: pass 0, at document #20/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.084*"page" + 0.020*"lee" + 0.010*"two" + 0.008*"around" + 0.007*"three" + 0.005*"man" + 0.005*"missing" + 0.005*"back" + 0.005*"works" + 0.004*"th"
+topic #1 (0.250): 0.028*"lee" + 0.008*"found" + 0.007*"back" + 0.006*"later" + 0.005*"shaw" + 0.005*"police" + 0.005*"also" + 0.005*"area" + 0.005*"body" + 0.005*"several"
+topic #2 (0.250): 0.012*"one" + 0.010*"time" + 0.009*"first" + 0.009*"lee" + 0.008*"called" + 0.008*"born" + 0.008*"based" + 0.008*"also" + 0.007*"due" + 0.006*"came"
+topic #3 (0.250): 0.049*"page" + 0.013*"lee" + 0.011*"art" + 0.008*"two" + 0.007*"park" + 0.006*"stated" + 0.006*"would" + 0.006*"began" + 0.005*"around" + 0.005*"many"
+topic diff=1.139173, rho=0.500000
+PROGRESS: pass 0, at document #25/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.069*"page" + 0.016*"lee" + 0.009*"two" + 0.007*"three" + 0.006*"around" + 0.004*"back" + 0.004*"missing" + 0.004*"man" + 0.004*"works" + 0.003*"south"
+topic #1 (0.250): 0.025*"lee" + 0.010*"found" + 0.006*"back" + 0.006*"later" + 0.005*"shaw" + 0.005*"police" + 0.005*"also" + 0.005*"several" + 0.004*"area" + 0.004*"body"
+topic #2 (0.250): 0.016*"balls" + 0.014*"rubber" + 0.011*"ball" + 0.009*"air" + 0.006*"one" + 0.006*"ancient" + 0.005*"airfield" + 0.005*"tower" + 0.005*"well" + 0.004*"de"
+topic #3 (0.250): 0.032*"page" + 0.009*"would" + 0.008*"lee" + 0.008*"two" + 0.007*"art" + 0.006*"used" + 0.006*"modern" + 0.006*"many" + 0.005*"construction" + 0.005*"began"
+topic diff=0.575545, rho=0.447214
+PROGRESS: pass 0, at document #30/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.043*"page" + 0.011*"two" + 0.010*"lee" + 0.007*"four" + 0.005*"five" + 0.005*"south" + 0.005*"three" + 0.004*"boat" + 0.004*"november" + 0.004*"km"
+topic #1 (0.250): 0.022*"lee" + 0.009*"found" + 0.006*"back" + 0.005*"later" + 0.004*"several" + 0.004*"police" + 0.004*"shaw" + 0.004*"also" + 0.004*"area" + 0.004*"body"
+topic #2 (0.250): 0.011*"balls" + 0.009*"rubber" + 0.008*"ft" + 0.008*"one" + 0.008*"ball" + 0.008*"first" + 0.007*"club" + 0.007*"ireland" + 0.006*"air" + 0.005*"km"
+topic #3 (0.250): 0.020*"page" + 0.011*"art" + 0.007*"would" + 0.007*"two" + 0.006*"total" + 0.005*"lee" + 0.005*"gere" + 0.004*"began" + 0.004*"located" + 0.004*"november"
+topic diff=0.369201, rho=0.408248
+PROGRESS: pass 0, at document #35/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.031*"page" + 0.010*"two" + 0.007*"lee" + 0.006*"john" + 0.006*"th" + 0.005*"four" + 0.004*"family" + 0.003*"five" + 0.003*"london" + 0.003*"south"
+topic #1 (0.250): 0.015*"lee" + 0.008*"found" + 0.007*"mountain" + 0.006*"time" + 0.005*"back" + 0.005*"maria" + 0.003*"later" + 0.003*"like" + 0.003*"film" + 0.003*"became"
+topic #2 (0.250): 0.010*"maria" + 0.009*"balls" + 0.007*"ireland" + 0.007*"rubber" + 0.007*"one" + 0.006*"club" + 0.006*"ball" + 0.006*"time" + 0.006*"ft" + 0.005*"born"
+topic #3 (0.250): 0.014*"page" + 0.007*"art" + 0.007*"would" + 0.007*"two" + 0.006*"province" + 0.006*"used" + 0.006*"located" + 0.004*"caused" + 0.004*"known" + 0.004*"total"
+topic diff=0.353793, rho=0.377964
+PROGRESS: pass 0, at document #40/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.020*"women" + 0.013*"page" + 0.010*"society" + 0.009*"cambridge" + 0.007*"college" + 0.006*"two" + 0.005*"members" + 0.005*"darwin" + 0.005*"louise_creighton" + 0.004*"suffrage"
+topic #1 (0.250): 0.010*"lee" + 0.005*"time" + 0.005*"found" + 0.005*"mountain" + 0.005*"later" + 0.005*"first" + 0.004*"several" + 0.004*"group" + 0.004*"also" + 0.004*"back"
+topic #2 (0.250): 0.012*"married" + 0.011*"first" + 0.010*"one" + 0.008*"club" + 0.007*"maria" + 0.006*"active" + 0.006*"time" + 0.006*"balls" + 0.005*"association" + 0.005*"ball"
+topic #3 (0.250): 0.010*"page" + 0.006*"would" + 0.005*"art" + 0.005*"located" + 0.005*"two" + 0.005*"used" + 0.005*"province" + 0.004*"construction" + 0.004*"known" + 0.004*"order"
+topic diff=0.527077, rho=0.353553
+PROGRESS: pass 0, at document #45/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.018*"women" + 0.012*"page" + 0.009*"society" + 0.008*"cambridge" + 0.006*"college" + 0.005*"education" + 0.005*"two" + 0.005*"members" + 0.004*"darwin" + 0.004*"louise_creighton"
+topic #1 (0.250): 0.007*"schiffer" + 0.006*"district" + 0.006*"film" + 0.006*"found" + 0.006*"body" + 0.006*"court" + 0.006*"lee" + 0.005*"animator" + 0.005*"year_old" + 0.005*"released"
+topic #2 (0.250): 0.010*"first" + 0.009*"married" + 0.008*"one" + 0.007*"however" + 0.006*"july" + 0.006*"club" + 0.005*"maria" + 0.005*"based" + 0.005*"active" + 0.005*"later"
+topic #3 (0.250): 0.016*"castle" + 0.011*"school" + 0.007*"two" + 0.006*"city" + 0.006*"page" + 0.005*"used" + 0.005*"nuremberg" + 0.005*"would" + 0.005*"mirando_city" + 0.004*"known"
+topic diff=0.451687, rho=0.333333
+PROGRESS: pass 0, at document #50/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.045*"england" + 0.025*"match" + 0.016*"willey" + 0.013*"took" + 0.010*"final" + 0.010*"two" + 0.009*"women" + 0.009*"played" + 0.007*"odi" + 0.006*"page"
+topic #1 (0.250): 0.023*"series" + 0.011*"took" + 0.009*"second" + 0.009*"third" + 0.008*"first" + 0.007*"willey" + 0.006*"also" + 0.006*"three" + 0.005*"take" + 0.005*"found"
+topic #2 (0.250): 0.022*"first" + 0.020*"runs" + 0.014*"willey" + 0.013*"match" + 0.011*"game" + 0.009*"season" + 0.009*"one" + 0.007*"district" + 0.007*"australia" + 0.007*"made"
+topic #3 (0.250): 0.013*"castle" + 0.009*"school" + 0.007*"end" + 0.007*"two" + 0.006*"since" + 0.005*"city" + 0.005*"province" + 0.005*"page" + 0.004*"used" + 0.004*"war"
+topic diff=0.437412, rho=0.316228
+PROGRESS: pass 0, at document #55/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.039*"england" + 0.022*"match" + 0.013*"willey" + 0.011*"took" + 0.010*"played" + 0.009*"final" + 0.009*"two" + 0.008*"women" + 0.008*"play" + 0.006*"odi"
+topic #1 (0.250): 0.020*"film" + 0.014*"series" + 0.008*"second" + 0.007*"also" + 0.006*"took" + 0.006*"first" + 0.006*"third" + 0.005*"cell" + 0.005*"released" + 0.005*"body"
+topic #2 (0.250): 0.019*"first" + 0.016*"runs" + 0.011*"willey" + 0.011*"match" + 0.009*"game" + 0.008*"one" + 0.007*"season" + 0.007*"july" + 0.006*"club" + 0.006*"made"
+topic #3 (0.250): 0.007*"blinatumomab" + 0.007*"castle" + 0.006*"us" + 0.006*"two" + 0.005*"drug" + 0.005*"new" + 0.005*"school" + 0.005*"end" + 0.005*"since" + 0.004*"cells"
+topic diff=0.517840, rho=0.301511
+PROGRESS: pass 0, at document #60/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.031*"england" + 0.017*"match" + 0.011*"willey" + 0.009*"took" + 0.008*"played" + 0.007*"two" + 0.007*"women" + 0.007*"final" + 0.006*"play" + 0.005*"odi"
+topic #1 (0.250): 0.017*"film" + 0.012*"series" + 0.007*"second" + 0.006*"also" + 0.006*"first" + 0.006*"took" + 0.005*"third" + 0.004*"cell" + 0.004*"released" + 0.004*"body"
+topic #2 (0.250): 0.017*"first" + 0.014*"runs" + 0.010*"willey" + 0.009*"match" + 0.008*"one" + 0.008*"game" + 0.006*"season" + 0.006*"july" + 0.006*"club" + 0.006*"made"
+topic #3 (0.250): 0.006*"blinatumomab" + 0.006*"two" + 0.006*"castle" + 0.005*"us" + 0.004*"drug" + 0.004*"new" + 0.004*"school" + 0.004*"end" + 0.004*"fashion" + 0.004*"since"
+topic diff=0.247411, rho=0.288675
+PROGRESS: pass 0, at document #65/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.021*"england" + 0.012*"match" + 0.008*"two" + 0.007*"willey" + 0.007*"th" + 0.007*"took" + 0.005*"played" + 0.005*"women" + 0.005*"final" + 0.005*"infantry"
+topic #1 (0.250): 0.025*"division" + 0.012*"film" + 0.008*"series" + 0.007*"infantry" + 0.007*"second" + 0.006*"acqui" + 0.006*"also" + 0.005*"mountain" + 0.005*"pioneer" + 0.004*"took"
+topic #2 (0.250): 0.012*"first" + 0.012*"infantry" + 0.010*"italian" + 0.009*"acqui" + 0.009*"one" + 0.008*"runs" + 0.005*"willey" + 0.005*"division" + 0.005*"district" + 0.005*"support"
+topic #3 (0.250): 0.008*"december" + 0.007*"two" + 0.006*"infantry" + 0.005*"acqui" + 0.005*"since" + 0.005*"new" + 0.004*"blinatumomab" + 0.004*"castle" + 0.004*"school" + 0.004*"us"
+topic diff=0.543896, rho=0.277350
+PROGRESS: pass 0, at document #70/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.016*"england" + 0.009*"match" + 0.007*"two" + 0.006*"willey" + 0.006*"th" + 0.005*"took" + 0.005*"son" + 0.004*"madsen" + 0.004*"played" + 0.004*"academy"
+topic #1 (0.250): 0.019*"division" + 0.009*"film" + 0.007*"program" + 0.007*"series" + 0.006*"also" + 0.005*"infantry" + 0.005*"second" + 0.005*"three" + 0.005*"acqui" + 0.004*"first"
+topic #2 (0.250): 0.013*"first" + 0.010*"one" + 0.008*"infantry" + 0.008*"italian" + 0.007*"also" + 0.007*"acqui" + 0.006*"married" + 0.006*"year" + 0.006*"runs" + 0.005*"time"
+topic #3 (0.250): 0.010*"two" + 0.009*"art" + 0.006*"children" + 0.006*"village" + 0.006*"december" + 0.006*"new" + 0.006*"city" + 0.006*"mosque" + 0.004*"madsen" + 0.004*"castle"
+topic diff=0.443592, rho=0.267261
+PROGRESS: pass 0, at document #75/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.016*"cumbernauld" + 0.010*"england" + 0.006*"two" + 0.005*"james" + 0.005*"match" + 0.004*"people" + 0.004*"town" + 0.004*"played" + 0.004*"community" + 0.004*"north"
+topic #1 (0.250): 0.015*"cumbernauld" + 0.011*"also" + 0.010*"division" + 0.009*"town" + 0.007*"film" + 0.005*"name" + 0.005*"series" + 0.005*"area" + 0.004*"three" + 0.004*"like"
+topic #2 (0.250): 0.011*"one" + 0.011*"also" + 0.011*"cumbernauld" + 0.011*"town" + 0.011*"first" + 0.006*"built" + 0.005*"still" + 0.005*"club" + 0.005*"infantry" + 0.005*"well"
+topic #3 (0.250): 0.014*"new" + 0.013*"cumbernauld" + 0.012*"castle" + 0.009*"village" + 0.008*"two" + 0.006*"scotland" + 0.006*"glasgow" + 0.006*"town" + 0.005*"used" + 0.005*"site"
+topic diff=1.077898, rho=0.258199
+PROGRESS: pass 0, at document #80/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.012*"cumbernauld" + 0.007*"england" + 0.005*"two" + 0.004*"january" + 0.004*"cylinder" + 0.004*"played" + 0.004*"play" + 0.004*"north" + 0.004*"university" + 0.004*"th"
+topic #1 (0.250): 0.011*"cumbernauld" + 0.011*"also" + 0.007*"division" + 0.007*"town" + 0.006*"film" + 0.005*"international" + 0.005*"second" + 0.005*"name" + 0.005*"part" + 0.004*"three"
+topic #2 (0.250): 0.011*"also" + 0.010*"first" + 0.010*"one" + 0.009*"cumbernauld" + 0.009*"town" + 0.005*"still" + 0.005*"well" + 0.005*"east" + 0.005*"built" + 0.004*"infantry"
+topic #3 (0.250): 0.014*"new" + 0.011*"cumbernauld" + 0.010*"castle" + 0.008*"village" + 0.007*"two" + 0.006*"used" + 0.006*"scotland" + 0.005*"glasgow" + 0.005*"art" + 0.005*"town"
+topic diff=0.422773, rho=0.250000
+PROGRESS: pass 0, at document #85/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.010*"cumbernauld" + 0.007*"england" + 0.005*"played" + 0.005*"two" + 0.004*"january" + 0.004*"university" + 0.004*"cylinder" + 0.003*"including" + 0.003*"play" + 0.003*"north"
+topic #1 (0.250): 0.010*"cumbernauld" + 0.010*"also" + 0.007*"division" + 0.006*"town" + 0.005*"film" + 0.005*"second" + 0.005*"part" + 0.004*"international" + 0.004*"name" + 0.004*"three"
+topic #2 (0.250): 0.010*"also" + 0.009*"one" + 0.009*"first" + 0.008*"cumbernauld" + 0.008*"town" + 0.005*"still" + 0.005*"team" + 0.005*"well" + 0.005*"time" + 0.004*"east"
+topic #3 (0.250): 0.012*"new" + 0.010*"cumbernauld" + 0.009*"castle" + 0.007*"two" + 0.007*"village" + 0.005*"used" + 0.005*"scotland" + 0.005*"glasgow" + 0.005*"years" + 0.005*"art"
+topic diff=0.249759, rho=0.242536
+PROGRESS: pass 0, at document #90/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.008*"cumbernauld" + 0.007*"england" + 0.005*"january" + 0.005*"professional" + 0.004*"played" + 0.004*"two" + 0.004*"world" + 0.003*"match" + 0.003*"including" + 0.003*"university"
+topic #1 (0.250): 0.009*"also" + 0.009*"cumbernauld" + 0.006*"part" + 0.006*"division" + 0.005*"town" + 0.005*"name" + 0.005*"second" + 0.005*"film" + 0.004*"international" + 0.003*"wrestling"
+topic #2 (0.250): 0.011*"dickinson" + 0.009*"also" + 0.008*"made" + 0.008*"team" + 0.007*"wrestling" + 0.007*"debut" + 0.007*"first" + 0.006*"one" + 0.006*"cumbernauld" + 0.006*"town"
+topic #3 (0.250): 0.014*"new" + 0.009*"cumbernauld" + 0.008*"castle" + 0.007*"since" + 0.007*"two" + 0.006*"village" + 0.004*"used" + 0.004*"scotland" + 0.004*"city" + 0.004*"house"
+topic diff=0.290485, rho=0.235702
+PROGRESS: pass 0, at document #95/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.007*"cumbernauld" + 0.006*"england" + 0.005*"played" + 0.004*"january" + 0.004*"professional" + 0.004*"two" + 0.003*"four" + 0.003*"career" + 0.003*"world" + 0.003*"match"
+topic #1 (0.250): 0.008*"also" + 0.007*"cumbernauld" + 0.006*"part" + 0.005*"second" + 0.005*"division" + 0.004*"town" + 0.004*"name" + 0.004*"film" + 0.004*"international" + 0.004*"national"
+topic #2 (0.250): 0.010*"dickinson" + 0.008*"also" + 0.007*"made" + 0.007*"team" + 0.007*"wrestling" + 0.007*"debut" + 0.006*"first" + 0.006*"one" + 0.005*"cumbernauld" + 0.005*"town"
+topic #3 (0.250): 0.013*"new" + 0.008*"cumbernauld" + 0.007*"castle" + 0.007*"two" + 0.006*"since" + 0.005*"village" + 0.005*"years" + 0.005*"city" + 0.005*"mexico" + 0.004*"known"
+topic diff=0.224768, rho=0.229416
+-10.866 per-word bound, 1866.1 perplexity estimate based on a held-out corpus of 5 documents with 1680 words
+PROGRESS: pass 0, at document #100/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.009*"bridge" + 0.008*"south" + 0.008*"books" + 0.007*"college" + 0.007*"play" + 0.005*"published" + 0.005*"th" + 0.005*"edition" + 0.004*"cumbernauld" + 0.004*"january"
+topic #1 (0.250): 0.008*"also" + 0.005*"first" + 0.005*"second" + 0.005*"film" + 0.005*"cumbernauld" + 0.004*"part" + 0.004*"samsung" + 0.004*"president" + 0.004*"however" + 0.004*"phone"
+topic #2 (0.250): 0.011*"first" + 0.008*"one" + 0.008*"following" + 0.008*"dickinson" + 0.007*"also" + 0.007*"made" + 0.007*"bridge" + 0.005*"team" + 0.005*"wrestling" + 0.005*"debut"
+topic #3 (0.250): 0.015*"new" + 0.007*"two" + 0.007*"years" + 0.007*"many" + 0.006*"city" + 0.005*"cumbernauld" + 0.005*"village" + 0.005*"since" + 0.005*"known" + 0.005*"castle"
+topic diff=0.659340, rho=0.223607
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=6847, num_topics=4, decay=0.5, chunksize=5) in 0.21s', 'datetime': '2022-02-06T08:40:44.404195', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
 Time taken = 0 minutes
 Note: Perplexity estimate based on a held-out corpus of 4 documents
 
@@ -95,357 +152,658 @@ Note: Perplexity estimate based on a held-out corpus of 4 documents
 using symmetric alpha at 0.25
 using symmetric eta at 0.25
 using serial LDA version on this node
-running online LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-training LDA model using 2 processes
-PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
-PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
-PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
-PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
-PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
-PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 5
-PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.654*"court" + 0.192*"international" + 0.065*"build" + 0.065*"original" + 0.003*"player" + 0.003*"film" + 0.003*"come" + 0.002*"see" + 0.002*"short" + 0.002*"set"
-topic #1 (0.250): 0.406*"come" + 0.405*"player" + 0.024*"film" + 0.021*"international" + 0.018*"court" + 0.016*"build" + 0.015*"original" + 0.011*"see" + 0.011*"short" + 0.011*"set"
-topic #2 (0.250): 0.113*"international" + 0.101*"film" + 0.091*"come" + 0.089*"player" + 0.071*"court" + 0.065*"original" + 0.063*"build" + 0.045*"see" + 0.045*"short" + 0.045*"set"
-topic #3 (0.250): 0.655*"film" + 0.041*"international" + 0.034*"player" + 0.034*"come" + 0.028*"court" + 0.027*"original" + 0.025*"build" + 0.017*"see" + 0.017*"short" + 0.017*"set"
-topic diff=3.096141, rho=1.000000
-PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.476*"court" + 0.153*"build" + 0.124*"international" + 0.059*"see" + 0.059*"role" + 0.059*"area" + 0.043*"original" + 0.004*"royal" + 0.004*"come" + 0.004*"player"
-topic #1 (0.250): 0.330*"come" + 0.326*"player" + 0.042*"build" + 0.030*"film" + 0.029*"royal" + 0.028*"international" + 0.027*"court" + 0.023*"original" + 0.021*"role" + 0.021*"back"
-topic #2 (0.250): 0.512*"royal" + 0.109*"build" + 0.108*"come" + 0.106*"school" + 0.106*"back" + 0.007*"international" + 0.007*"film" + 0.006*"player" + 0.006*"court" + 0.005*"original"
-topic #3 (0.250): 0.466*"film" + 0.054*"build" + 0.044*"international" + 0.042*"come" + 0.041*"royal" + 0.040*"player" + 0.038*"court" + 0.035*"original" + 0.032*"back" + 0.031*"area"
-topic diff=1.491267, rho=0.577350
-PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.248*"see" + 0.186*"back" + 0.126*"area" + 0.125*"court" + 0.111*"come" + 0.046*"set" + 0.033*"build" + 0.033*"school" + 0.027*"international" + 0.017*"player"
-topic #1 (0.250): 0.341*"long" + 0.174*"short" + 0.165*"school" + 0.096*"player" + 0.092*"come" + 0.018*"film" + 0.015*"build" + 0.013*"court" + 0.012*"international" + 0.012*"royal"
-topic #2 (0.250): 0.427*"royal" + 0.119*"film" + 0.095*"school" + 0.093*"build" + 0.093*"come" + 0.091*"back" + 0.011*"player" + 0.010*"international" + 0.009*"court" + 0.008*"area"
-topic #3 (0.250): 0.239*"see" + 0.234*"back" + 0.156*"area" + 0.133*"come" + 0.051*"court" + 0.043*"film" + 0.041*"set" + 0.035*"school" + 0.030*"international" + 0.015*"long"
-topic diff=2.043001, rho=0.447214
-PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.236*"see" + 0.183*"back" + 0.129*"court" + 0.117*"come" + 0.110*"area" + 0.040*"set" + 0.030*"build" + 0.029*"original" + 0.029*"school" + 0.025*"international"
-topic #1 (0.250): 0.315*"long" + 0.162*"short" + 0.154*"school" + 0.092*"player" + 0.089*"come" + 0.024*"film" + 0.019*"build" + 0.018*"international" + 0.017*"royal" + 0.017*"court"
-topic #2 (0.250): 0.222*"royal" + 0.165*"film" + 0.124*"set" + 0.094*"build" + 0.066*"long" + 0.065*"short" + 0.065*"area" + 0.064*"see" + 0.037*"school" + 0.037*"come"
-topic #3 (0.250): 0.220*"see" + 0.216*"back" + 0.144*"area" + 0.122*"come" + 0.062*"international" + 0.048*"long" + 0.048*"court" + 0.041*"film" + 0.039*"set" + 0.033*"school"
-topic diff=0.744590, rho=0.377964
-PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 7
-PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 8
-PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 9
-merging changes from 25 documents into a model of 100 documents
-topic #0 (0.250): 0.205*"see" + 0.163*"back" + 0.149*"court" + 0.099*"area" + 0.096*"come" + 0.062*"international" + 0.044*"original" + 0.040*"role" + 0.034*"set" + 0.028*"build"
-topic #1 (0.250): 0.302*"player" + 0.188*"come" + 0.150*"short" + 0.129*"long" + 0.065*"school" + 0.049*"set" + 0.020*"international" + 0.013*"original" + 0.013*"film" + 0.011*"role"
-topic #2 (0.250): 0.240*"school" + 0.173*"royal" + 0.090*"film" + 0.071*"short" + 0.070*"area" + 0.068*"set" + 0.064*"build" + 0.063*"back" + 0.038*"role" + 0.037*"long"
-topic #3 (0.250): 0.357*"film" + 0.124*"back" + 0.123*"see" + 0.087*"area" + 0.073*"come" + 0.041*"set" + 0.036*"long" + 0.034*"international" + 0.028*"original" + 0.027*"short"
-topic diff=0.797132, rho=0.333333
-PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.250): 0.176*"see" + 0.147*"area" + 0.145*"back" + 0.123*"court" + 0.083*"come" + 0.067*"original" + 0.051*"international" + 0.048*"set" + 0.047*"school" + 0.040*"build"
-topic #1 (0.250): 0.250*"player" + 0.200*"long" + 0.170*"come" + 0.168*"school" + 0.090*"short" + 0.031*"set" + 0.014*"international" + 0.010*"build" + 0.010*"original" + 0.009*"film"
-topic #2 (0.250): 0.202*"build" + 0.173*"school" + 0.160*"area" + 0.116*"film" + 0.090*"set" + 0.085*"royal" + 0.051*"short" + 0.028*"long" + 0.026*"see" + 0.024*"come"
-topic #3 (0.250): 0.283*"film" + 0.167*"area" + 0.108*"see" + 0.105*"back" + 0.071*"come" + 0.061*"international" + 0.044*"school" + 0.038*"set" + 0.032*"long" + 0.025*"court"
-topic diff=0.393508, rho=0.267261
--3.036 per-word bound, 8.2 perplexity estimate based on a held-out corpus of 5 documents with 27 words
-merging changes from 25 documents into a model of 100 documents
-topic #0 (0.250): 0.168*"see" + 0.136*"court" + 0.134*"area" + 0.132*"back" + 0.082*"come" + 0.076*"original" + 0.051*"school" + 0.047*"international" + 0.044*"set" + 0.044*"build"
-topic #1 (0.250): 0.392*"player" + 0.155*"long" + 0.139*"come" + 0.112*"school" + 0.082*"short" + 0.033*"international" + 0.021*"set" + 0.010*"original" + 0.009*"build" + 0.007*"film"
-topic #2 (0.250): 0.187*"build" + 0.173*"school" + 0.148*"area" + 0.128*"film" + 0.093*"royal" + 0.084*"set" + 0.048*"short" + 0.033*"long" + 0.026*"role" + 0.025*"see"
-topic #3 (0.250): 0.269*"film" + 0.148*"area" + 0.147*"back" + 0.099*"see" + 0.077*"international" + 0.059*"come" + 0.044*"long" + 0.040*"set" + 0.037*"school" + 0.022*"court"
-topic diff=0.199740, rho=0.250000
--2.773 per-word bound, 6.8 perplexity estimate based on a held-out corpus of 5 documents with 27 words
-LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.09s', 'datetime': '2022-02-06T08:15:55.224744', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+running online (single-pass) LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating model once every 5 documents, evaluating perplexity every 100 documents, iterating 50x with a convergence threshold of 0.001000
+PROGRESS: pass 0, at document #5/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.450*"build" + 0.449*"original" + 0.017*"player" + 0.015*"film" + 0.006*"back" + 0.006*"short" + 0.006*"set" + 0.006*"see" + 0.006*"long" + 0.006*"royal"
+topic #1 (0.250): 0.798*"player" + 0.037*"film" + 0.020*"build" + 0.018*"original" + 0.011*"back" + 0.011*"short" + 0.011*"set" + 0.011*"see" + 0.011*"long" + 0.011*"royal"
+topic #2 (0.250): 0.162*"film" + 0.130*"player" + 0.083*"original" + 0.080*"build" + 0.045*"back" + 0.045*"short" + 0.045*"set" + 0.045*"see" + 0.045*"long" + 0.045*"royal"
+topic #3 (0.250): 0.798*"film" + 0.030*"player" + 0.024*"original" + 0.019*"build" + 0.011*"back" + 0.011*"short" + 0.011*"set" + 0.011*"see" + 0.011*"long" + 0.011*"royal"
+topic diff=3.360335, rho=1.000000
+PROGRESS: pass 0, at document #10/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.378*"build" + 0.377*"original" + 0.025*"player" + 0.023*"film" + 0.018*"international" + 0.018*"come" + 0.017*"court" + 0.016*"see" + 0.016*"short" + 0.016*"set"
+topic #1 (0.250): 0.574*"player" + 0.044*"film" + 0.032*"international" + 0.032*"build" + 0.031*"come" + 0.031*"original" + 0.029*"court" + 0.025*"see" + 0.025*"short" + 0.025*"set"
+topic #2 (0.250): 0.701*"court" + 0.210*"international" + 0.070*"come" + 0.002*"film" + 0.002*"player" + 0.002*"original" + 0.002*"build" + 0.001*"see" + 0.001*"short" + 0.001*"set"
+topic #3 (0.250): 0.573*"film" + 0.039*"player" + 0.034*"original" + 0.033*"international" + 0.032*"come" + 0.031*"build" + 0.030*"court" + 0.025*"see" + 0.025*"short" + 0.025*"set"
+topic diff=1.734049, rho=0.707107
+PROGRESS: pass 0, at document #15/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.292*"build" + 0.291*"original" + 0.038*"royal" + 0.034*"player" + 0.033*"film" + 0.031*"school" + 0.030*"come" + 0.029*"international" + 0.029*"court" + 0.028*"short"
+topic #1 (0.250): 0.378*"player" + 0.063*"royal" + 0.048*"film" + 0.046*"school" + 0.043*"come" + 0.041*"international" + 0.041*"build" + 0.040*"original" + 0.040*"court" + 0.037*"set"
+topic #2 (0.250): 0.623*"court" + 0.188*"international" + 0.150*"come" + 0.005*"royal" + 0.003*"film" + 0.003*"school" + 0.003*"player" + 0.003*"original" + 0.003*"build" + 0.003*"short"
+topic #3 (0.250): 0.623*"royal" + 0.211*"school" + 0.063*"come" + 0.046*"film" + 0.006*"player" + 0.005*"original" + 0.005*"international" + 0.005*"build" + 0.005*"court" + 0.005*"set"
+topic diff=1.065695, rho=0.577350
+PROGRESS: pass 0, at document #20/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.211*"build" + 0.211*"original" + 0.062*"area" + 0.045*"film" + 0.043*"see" + 0.043*"royal" + 0.043*"back" + 0.041*"player" + 0.039*"school" + 0.038*"come"
+topic #1 (0.250): 0.349*"see" + 0.302*"back" + 0.187*"area" + 0.064*"set" + 0.023*"come" + 0.018*"player" + 0.017*"school" + 0.016*"long" + 0.016*"short" + 0.003*"film"
+topic #2 (0.250): 0.511*"come" + 0.320*"court" + 0.103*"international" + 0.016*"see" + 0.016*"area" + 0.014*"back" + 0.004*"set" + 0.003*"film" + 0.002*"school" + 0.002*"short"
+topic #3 (0.250): 0.318*"school" + 0.246*"film" + 0.217*"royal" + 0.130*"come" + 0.022*"area" + 0.018*"see" + 0.016*"back" + 0.006*"set" + 0.004*"short" + 0.004*"long"
+topic diff=1.689202, rho=0.500000
+PROGRESS: pass 0, at document #25/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.654*"build" + 0.212*"role" + 0.024*"area" + 0.021*"original" + 0.010*"royal" + 0.010*"back" + 0.010*"see" + 0.010*"court" + 0.007*"film" + 0.006*"player"
+topic #1 (0.250): 0.348*"see" + 0.302*"back" + 0.196*"area" + 0.060*"set" + 0.021*"come" + 0.017*"player" + 0.016*"school" + 0.015*"short" + 0.015*"long" + 0.003*"film"
+topic #2 (0.250): 0.462*"come" + 0.367*"court" + 0.094*"international" + 0.018*"area" + 0.017*"see" + 0.013*"back" + 0.005*"set" + 0.004*"film" + 0.003*"role" + 0.003*"school"
+topic #3 (0.250): 0.426*"royal" + 0.219*"school" + 0.170*"film" + 0.091*"come" + 0.024*"back" + 0.017*"area" + 0.014*"see" + 0.006*"set" + 0.004*"build" + 0.004*"short"
+topic diff=0.628532, rho=0.447214
+PROGRESS: pass 0, at document #30/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.618*"build" + 0.203*"role" + 0.027*"area" + 0.024*"original" + 0.014*"royal" + 0.013*"back" + 0.013*"see" + 0.013*"court" + 0.010*"film" + 0.010*"player"
+topic #1 (0.250): 0.311*"see" + 0.270*"back" + 0.175*"area" + 0.081*"long" + 0.054*"set" + 0.048*"short" + 0.020*"come" + 0.016*"player" + 0.015*"school" + 0.003*"film"
+topic #2 (0.250): 0.453*"come" + 0.360*"court" + 0.093*"international" + 0.019*"area" + 0.018*"see" + 0.015*"back" + 0.006*"set" + 0.005*"film" + 0.005*"role" + 0.005*"school"
+topic #3 (0.250): 0.347*"school" + 0.341*"royal" + 0.137*"film" + 0.074*"come" + 0.021*"back" + 0.015*"area" + 0.013*"see" + 0.007*"set" + 0.006*"build" + 0.006*"long"
+topic diff=0.248478, rho=0.408248
+PROGRESS: pass 0, at document #35/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.415*"build" + 0.289*"original" + 0.139*"role" + 0.022*"area" + 0.014*"royal" + 0.013*"back" + 0.013*"see" + 0.013*"court" + 0.011*"film" + 0.010*"player"
+topic #1 (0.250): 0.298*"see" + 0.264*"back" + 0.146*"area" + 0.109*"long" + 0.085*"set" + 0.040*"short" + 0.018*"come" + 0.014*"player" + 0.013*"school" + 0.003*"film"
+topic #2 (0.250): 0.391*"come" + 0.343*"court" + 0.173*"international" + 0.017*"see" + 0.014*"back" + 0.013*"area" + 0.010*"original" + 0.005*"set" + 0.005*"long" + 0.005*"film"
+topic #3 (0.250): 0.349*"film" + 0.322*"royal" + 0.189*"school" + 0.051*"come" + 0.016*"back" + 0.010*"original" + 0.010*"set" + 0.010*"see" + 0.010*"area" + 0.005*"build"
+topic diff=0.392186, rho=0.377964
+PROGRESS: pass 0, at document #40/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.561*"build" + 0.192*"original" + 0.094*"role" + 0.018*"area" + 0.013*"royal" + 0.012*"back" + 0.012*"see" + 0.012*"court" + 0.012*"short" + 0.011*"set"
+topic #1 (0.250): 0.274*"see" + 0.202*"back" + 0.157*"area" + 0.129*"long" + 0.111*"set" + 0.076*"short" + 0.014*"come" + 0.011*"player" + 0.011*"school" + 0.003*"film"
+topic #2 (0.250): 0.381*"come" + 0.334*"court" + 0.169*"international" + 0.018*"see" + 0.016*"back" + 0.015*"area" + 0.012*"original" + 0.007*"set" + 0.006*"long" + 0.006*"film"
+topic #3 (0.250): 0.422*"royal" + 0.284*"film" + 0.155*"school" + 0.043*"come" + 0.015*"back" + 0.010*"original" + 0.010*"set" + 0.010*"see" + 0.010*"area" + 0.006*"build"
+topic diff=0.220203, rho=0.353553
+PROGRESS: pass 0, at document #45/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.423*"role" + 0.314*"original" + 0.184*"build" + 0.011*"area" + 0.007*"short" + 0.006*"back" + 0.006*"set" + 0.006*"film" + 0.006*"long" + 0.006*"royal"
+topic #1 (0.250): 0.207*"back" + 0.179*"area" + 0.172*"see" + 0.166*"short" + 0.121*"long" + 0.107*"set" + 0.015*"come" + 0.011*"school" + 0.007*"player" + 0.003*"film"
+topic #2 (0.250): 0.576*"court" + 0.269*"come" + 0.081*"international" + 0.010*"see" + 0.010*"back" + 0.010*"area" + 0.007*"original" + 0.005*"role" + 0.005*"set" + 0.004*"long"
+topic #3 (0.250): 0.489*"school" + 0.398*"film" + 0.073*"royal" + 0.008*"come" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.003*"back" + 0.002*"see" + 0.002*"area"
+topic diff=0.648240, rho=0.333333
+PROGRESS: pass 0, at document #50/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.494*"role" + 0.259*"original" + 0.152*"build" + 0.011*"player" + 0.011*"area" + 0.008*"short" + 0.007*"back" + 0.007*"set" + 0.007*"film" + 0.007*"royal"
+topic #1 (0.250): 0.174*"short" + 0.163*"back" + 0.140*"area" + 0.135*"see" + 0.128*"set" + 0.126*"player" + 0.095*"long" + 0.016*"come" + 0.009*"school" + 0.003*"film"
+topic #2 (0.250): 0.364*"international" + 0.313*"come" + 0.261*"court" + 0.018*"player" + 0.005*"see" + 0.005*"back" + 0.005*"area" + 0.004*"original" + 0.004*"role" + 0.003*"set"
+topic #3 (0.250): 0.460*"school" + 0.374*"film" + 0.120*"royal" + 0.008*"come" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.004*"back" + 0.003*"see" + 0.003*"area"
+topic diff=0.404069, rho=0.316228
+PROGRESS: pass 0, at document #55/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.492*"role" + 0.308*"original" + 0.109*"build" + 0.009*"player" + 0.009*"area" + 0.008*"short" + 0.007*"set" + 0.007*"film" + 0.007*"back" + 0.007*"see"
+topic #1 (0.250): 0.179*"see" + 0.174*"player" + 0.162*"short" + 0.142*"area" + 0.127*"set" + 0.115*"back" + 0.068*"long" + 0.012*"come" + 0.007*"school" + 0.003*"film"
+topic #2 (0.250): 0.359*"international" + 0.309*"come" + 0.257*"court" + 0.019*"player" + 0.006*"see" + 0.006*"back" + 0.006*"area" + 0.005*"original" + 0.005*"role" + 0.004*"set"
+topic #3 (0.250): 0.759*"film" + 0.167*"school" + 0.044*"royal" + 0.006*"original" + 0.006*"set" + 0.004*"short" + 0.003*"come" + 0.002*"see" + 0.002*"back" + 0.001*"role"
+topic diff=0.290022, rho=0.301511
+PROGRESS: pass 0, at document #60/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.482*"role" + 0.353*"original" + 0.078*"build" + 0.008*"player" + 0.008*"area" + 0.008*"short" + 0.007*"set" + 0.007*"film" + 0.006*"back" + 0.006*"see"
+topic #1 (0.250): 0.206*"player" + 0.195*"short" + 0.160*"see" + 0.127*"area" + 0.114*"set" + 0.103*"back" + 0.061*"long" + 0.011*"come" + 0.007*"school" + 0.003*"film"
+topic #2 (0.250): 0.352*"international" + 0.303*"come" + 0.253*"court" + 0.021*"player" + 0.008*"see" + 0.008*"back" + 0.008*"area" + 0.006*"original" + 0.006*"role" + 0.006*"set"
+topic #3 (0.250): 0.755*"film" + 0.166*"school" + 0.044*"royal" + 0.006*"original" + 0.006*"set" + 0.005*"short" + 0.004*"come" + 0.002*"see" + 0.002*"back" + 0.002*"role"
+topic diff=0.141380, rho=0.288675
+PROGRESS: pass 0, at document #65/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.421*"role" + 0.339*"original" + 0.164*"build" + 0.007*"royal" + 0.007*"player" + 0.007*"area" + 0.007*"short" + 0.006*"back" + 0.006*"set" + 0.006*"film"
+topic #1 (0.250): 0.237*"back" + 0.161*"player" + 0.152*"short" + 0.151*"area" + 0.125*"see" + 0.089*"set" + 0.048*"long" + 0.012*"come" + 0.006*"school" + 0.003*"royal"
+topic #2 (0.250): 0.337*"come" + 0.306*"court" + 0.266*"international" + 0.017*"player" + 0.008*"back" + 0.008*"area" + 0.007*"see" + 0.006*"royal" + 0.006*"original" + 0.006*"role"
+topic #3 (0.250): 0.662*"film" + 0.185*"school" + 0.115*"royal" + 0.006*"original" + 0.006*"set" + 0.005*"short" + 0.004*"come" + 0.003*"see" + 0.002*"back" + 0.002*"role"
+topic diff=0.232897, rho=0.277350
+PROGRESS: pass 0, at document #70/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.331*"original" + 0.314*"build" + 0.285*"role" + 0.006*"area" + 0.006*"royal" + 0.006*"player" + 0.006*"short" + 0.005*"back" + 0.005*"long" + 0.005*"set"
+topic #1 (0.250): 0.215*"back" + 0.155*"area" + 0.137*"see" + 0.131*"long" + 0.113*"player" + 0.111*"set" + 0.107*"short" + 0.009*"come" + 0.005*"school" + 0.003*"royal"
+topic #2 (0.250): 0.367*"come" + 0.315*"international" + 0.231*"court" + 0.014*"player" + 0.007*"back" + 0.007*"area" + 0.007*"see" + 0.006*"royal" + 0.006*"original" + 0.006*"role"
+topic #3 (0.250): 0.569*"film" + 0.247*"school" + 0.143*"royal" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.004*"come" + 0.003*"see" + 0.003*"back" + 0.002*"role"
+topic diff=0.188919, rho=0.267261
+PROGRESS: pass 0, at document #75/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.674*"build" + 0.177*"original" + 0.110*"role" + 0.005*"area" + 0.003*"short" + 0.003*"set" + 0.003*"royal" + 0.003*"school" + 0.003*"player" + 0.003*"court"
+topic #1 (0.250): 0.429*"area" + 0.149*"set" + 0.098*"back" + 0.092*"see" + 0.082*"short" + 0.068*"long" + 0.062*"player" + 0.008*"come" + 0.004*"school" + 0.001*"build"
+topic #2 (0.250): 0.397*"come" + 0.292*"international" + 0.239*"court" + 0.010*"player" + 0.007*"area" + 0.006*"back" + 0.006*"see" + 0.005*"build" + 0.005*"royal" + 0.005*"school"
+topic #3 (0.250): 0.474*"film" + 0.393*"school" + 0.104*"royal" + 0.005*"set" + 0.004*"original" + 0.004*"come" + 0.003*"short" + 0.002*"area" + 0.002*"see" + 0.002*"back"
+topic diff=0.392223, rho=0.258199
+PROGRESS: pass 0, at document #80/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.590*"build" + 0.210*"role" + 0.156*"original" + 0.005*"area" + 0.003*"school" + 0.003*"short" + 0.003*"set" + 0.003*"royal" + 0.003*"player" + 0.003*"court"
+topic #1 (0.250): 0.365*"area" + 0.205*"back" + 0.151*"set" + 0.079*"see" + 0.070*"short" + 0.058*"long" + 0.053*"player" + 0.007*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.472*"international" + 0.287*"come" + 0.173*"court" + 0.008*"player" + 0.006*"area" + 0.005*"back" + 0.005*"set" + 0.005*"see" + 0.005*"build" + 0.005*"royal"
+topic #3 (0.250): 0.507*"film" + 0.371*"school" + 0.090*"royal" + 0.004*"set" + 0.004*"original" + 0.003*"come" + 0.003*"short" + 0.002*"area" + 0.002*"see" + 0.002*"back"
+topic diff=0.149630, rho=0.250000
+PROGRESS: pass 0, at document #85/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.544*"build" + 0.211*"original" + 0.194*"role" + 0.006*"area" + 0.004*"short" + 0.004*"school" + 0.004*"set" + 0.004*"royal" + 0.004*"long" + 0.004*"player"
+topic #1 (0.250): 0.306*"area" + 0.172*"back" + 0.127*"set" + 0.123*"player" + 0.092*"see" + 0.085*"short" + 0.075*"long" + 0.006*"come" + 0.003*"school" + 0.002*"build"
+topic #2 (0.250): 0.463*"international" + 0.282*"come" + 0.171*"court" + 0.010*"player" + 0.007*"area" + 0.007*"back" + 0.006*"set" + 0.006*"see" + 0.006*"build" + 0.006*"royal"
+topic #3 (0.250): 0.504*"film" + 0.369*"school" + 0.090*"royal" + 0.005*"set" + 0.004*"original" + 0.004*"come" + 0.004*"short" + 0.003*"area" + 0.003*"see" + 0.002*"back"
+topic diff=0.139138, rho=0.242536
+PROGRESS: pass 0, at document #90/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.535*"build" + 0.208*"original" + 0.192*"role" + 0.007*"area" + 0.005*"short" + 0.005*"school" + 0.005*"set" + 0.005*"royal" + 0.005*"long" + 0.005*"player"
+topic #1 (0.250): 0.327*"area" + 0.166*"back" + 0.122*"set" + 0.119*"player" + 0.089*"see" + 0.082*"short" + 0.073*"long" + 0.006*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.452*"international" + 0.276*"come" + 0.168*"court" + 0.011*"player" + 0.009*"area" + 0.008*"back" + 0.008*"set" + 0.008*"see" + 0.008*"build" + 0.008*"royal"
+topic #3 (0.250): 0.499*"film" + 0.366*"school" + 0.090*"royal" + 0.005*"set" + 0.005*"original" + 0.005*"come" + 0.004*"short" + 0.003*"area" + 0.003*"see" + 0.003*"back"
+topic diff=0.120996, rho=0.235702
+PROGRESS: pass 0, at document #95/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.526*"build" + 0.205*"original" + 0.189*"role" + 0.008*"area" + 0.006*"short" + 0.006*"school" + 0.006*"set" + 0.006*"royal" + 0.006*"long" + 0.006*"player"
+topic #1 (0.250): 0.324*"area" + 0.165*"back" + 0.122*"set" + 0.118*"player" + 0.089*"see" + 0.082*"short" + 0.073*"long" + 0.007*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.440*"court" + 0.294*"international" + 0.180*"come" + 0.009*"player" + 0.007*"area" + 0.007*"back" + 0.007*"set" + 0.006*"see" + 0.006*"school" + 0.006*"build"
+topic #3 (0.250): 0.463*"film" + 0.401*"school" + 0.084*"royal" + 0.006*"set" + 0.005*"original" + 0.005*"come" + 0.005*"short" + 0.004*"area" + 0.004*"see" + 0.004*"back"
+topic diff=0.167411, rho=0.229416
+-3.183 per-word bound, 9.1 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+PROGRESS: pass 0, at document #100/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.424*"build" + 0.291*"role" + 0.217*"original" + 0.006*"area" + 0.006*"player" + 0.005*"long" + 0.005*"royal" + 0.005*"come" + 0.005*"school" + 0.005*"short"
+topic #1 (0.250): 0.282*"player" + 0.196*"area" + 0.160*"back" + 0.134*"long" + 0.084*"see" + 0.074*"set" + 0.050*"short" + 0.005*"come" + 0.003*"school" + 0.002*"build"
+topic #2 (0.250): 0.316*"come" + 0.306*"court" + 0.300*"international" + 0.011*"player" + 0.006*"area" + 0.006*"back" + 0.006*"set" + 0.006*"original" + 0.006*"see" + 0.006*"build"
+topic #3 (0.250): 0.496*"film" + 0.307*"school" + 0.154*"royal" + 0.004*"set" + 0.004*"original" + 0.004*"come" + 0.004*"short" + 0.003*"long" + 0.003*"see" + 0.003*"role"
+topic diff=0.268849, rho=0.223607
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.05s', 'datetime': '2022-02-06T08:40:44.971550', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
 Time taken = 0 minutes
 Note: Log likelihood is per-word ELBO
 Note: Perplexity estimate based on a held-out corpus of 4 documents
 
 
 ## Finding the right value of K
-Starting K=2
-using symmetric alpha at 0.5
-using symmetric eta at 0.5
+Starting K=4
+using symmetric alpha at 0.25
+using symmetric eta at 0.25
 using serial LDA version on this node
-running online LDA training, 2 topics, 1 passes over the supplied corpus of 100 documents, updating every 10 documents, evaluating every ~100 documents, iterating 50x with a convergence threshold of 0.001000
-training LDA model using 2 processes
-PROGRESS: pass 0, dispatched chunk #0 = documents up to #5/100, outstanding queue size 1
-PROGRESS: pass 0, dispatched chunk #1 = documents up to #10/100, outstanding queue size 2
-PROGRESS: pass 0, dispatched chunk #2 = documents up to #15/100, outstanding queue size 3
-PROGRESS: pass 0, dispatched chunk #3 = documents up to #20/100, outstanding queue size 4
-PROGRESS: pass 0, dispatched chunk #4 = documents up to #25/100, outstanding queue size 5
-PROGRESS: pass 0, dispatched chunk #5 = documents up to #30/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #6 = documents up to #35/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #7 = documents up to #40/100, outstanding queue size 7
-PROGRESS: pass 0, dispatched chunk #8 = documents up to #45/100, outstanding queue size 8
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.271*"royal" + 0.151*"original" + 0.145*"build" + 0.095*"player" + 0.089*"school" + 0.086*"come" + 0.071*"film" + 0.010*"long" + 0.010*"see" + 0.010*"short"
-topic #1 (0.500): 0.311*"royal" + 0.133*"film" + 0.120*"come" + 0.117*"school" + 0.111*"player" + 0.067*"build" + 0.062*"original" + 0.009*"long" + 0.009*"see" + 0.009*"short"
-topic diff=1.946910, rho=1.000000
-PROGRESS: pass 0, dispatched chunk #9 = documents up to #50/100, outstanding queue size 8
-PROGRESS: pass 0, dispatched chunk #10 = documents up to #55/100, outstanding queue size 8
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.206*"build" + 0.202*"royal" + 0.072*"see" + 0.072*"area" + 0.070*"role" + 0.070*"court" + 0.068*"back" + 0.058*"school" + 0.046*"original" + 0.030*"player"
-topic #1 (0.500): 0.183*"long" + 0.168*"royal" + 0.117*"build" + 0.112*"school" + 0.093*"short" + 0.058*"film" + 0.053*"come" + 0.050*"player" + 0.030*"original" + 0.027*"back"
-topic diff=1.497898, rho=0.577350
-PROGRESS: pass 0, dispatched chunk #11 = documents up to #60/100, outstanding queue size 8
-PROGRESS: pass 0, dispatched chunk #12 = documents up to #65/100, outstanding queue size 8
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.317*"court" + 0.108*"royal" + 0.100*"international" + 0.077*"build" + 0.062*"see" + 0.060*"back" + 0.056*"come" + 0.052*"original" + 0.031*"film" + 0.028*"area"
-topic #1 (0.500): 0.215*"court" + 0.120*"long" + 0.112*"film" + 0.094*"international" + 0.082*"royal" + 0.075*"come" + 0.052*"build" + 0.050*"school" + 0.045*"set" + 0.042*"short"
-topic diff=1.017173, rho=0.447214
-PROGRESS: pass 0, dispatched chunk #13 = documents up to #70/100, outstanding queue size 7
-PROGRESS: pass 0, dispatched chunk #14 = documents up to #75/100, outstanding queue size 8
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.242*"court" + 0.121*"royal" + 0.105*"international" + 0.078*"see" + 0.074*"build" + 0.055*"come" + 0.049*"area" + 0.047*"back" + 0.041*"original" + 0.036*"set"
-topic #1 (0.500): 0.184*"international" + 0.124*"come" + 0.100*"player" + 0.092*"court" + 0.076*"long" + 0.072*"royal" + 0.070*"short" + 0.069*"set" + 0.049*"film" + 0.045*"build"
-topic diff=0.541281, rho=0.377964
-PROGRESS: pass 0, dispatched chunk #15 = documents up to #80/100, outstanding queue size 8
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.197*"court" + 0.108*"see" + 0.099*"royal" + 0.087*"international" + 0.083*"area" + 0.067*"role" + 0.061*"build" + 0.049*"original" + 0.046*"come" + 0.040*"back"
-topic #1 (0.500): 0.449*"film" + 0.088*"player" + 0.074*"international" + 0.062*"short" + 0.050*"come" + 0.045*"set" + 0.037*"court" + 0.034*"original" + 0.032*"role" + 0.031*"long"
-topic diff=0.548134, rho=0.333333
-PROGRESS: pass 0, dispatched chunk #16 = documents up to #85/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.223*"see" + 0.211*"back" + 0.132*"area" + 0.117*"come" + 0.068*"court" + 0.043*"set" + 0.038*"school" + 0.035*"royal" + 0.022*"international" + 0.021*"role"
-topic #1 (0.500): 0.421*"film" + 0.090*"player" + 0.072*"international" + 0.057*"short" + 0.054*"come" + 0.043*"court" + 0.043*"set" + 0.034*"original" + 0.030*"see" + 0.030*"role"
-topic diff=0.589752, rho=0.301511
-PROGRESS: pass 0, dispatched chunk #17 = documents up to #90/100, outstanding queue size 6
-PROGRESS: pass 0, dispatched chunk #18 = documents up to #95/100, outstanding queue size 7
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.204*"back" + 0.195*"see" + 0.138*"area" + 0.108*"come" + 0.071*"court" + 0.043*"set" + 0.040*"school" + 0.035*"role" + 0.031*"royal" + 0.030*"build"
-topic #1 (0.500): 0.318*"film" + 0.176*"school" + 0.065*"short" + 0.055*"court" + 0.051*"long" + 0.045*"player" + 0.042*"original" + 0.042*"come" + 0.041*"international" + 0.039*"set"
-topic diff=0.283365, rho=0.277350
-PROGRESS: pass 0, dispatched chunk #19 = documents up to #100/100, outstanding queue size 6
-merging changes from 10 documents into a model of 100 documents
-topic #0 (0.500): 0.209*"area" + 0.181*"back" + 0.142*"see" + 0.085*"build" + 0.080*"come" + 0.057*"school" + 0.053*"court" + 0.040*"set" + 0.026*"royal" + 0.026*"film"
-topic #1 (0.500): 0.278*"film" + 0.177*"school" + 0.072*"set" + 0.059*"international" + 0.059*"short" + 0.045*"build" + 0.041*"long" + 0.040*"role" + 0.039*"court" + 0.039*"player"
-topic diff=0.316681, rho=0.258199
--3.264 per-word bound, 9.6 perplexity estimate based on a held-out corpus of 5 documents with 27 words
-merging changes from 15 documents into a model of 100 documents
-topic #0 (0.500): 0.205*"area" + 0.172*"back" + 0.140*"see" + 0.080*"build" + 0.076*"come" + 0.068*"court" + 0.060*"school" + 0.039*"set" + 0.027*"original" + 0.025*"royal"
-topic #1 (0.500): 0.265*"film" + 0.170*"school" + 0.069*"set" + 0.062*"short" + 0.060*"player" + 0.057*"international" + 0.044*"long" + 0.043*"build" + 0.039*"court" + 0.038*"role"
-topic diff=0.077815, rho=0.242536
--3.160 per-word bound, 8.9 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+running online (single-pass) LDA training, 4 topics, 1 passes over the supplied corpus of 100 documents, updating model once every 5 documents, evaluating perplexity every 100 documents, iterating 50x with a convergence threshold of 0.001000
+PROGRESS: pass 0, at document #5/100
 merging changes from 5 documents into a model of 100 documents
-topic #0 (0.500): 0.177*"back" + 0.170*"area" + 0.132*"see" + 0.093*"come" + 0.081*"build" + 0.057*"court" + 0.055*"royal" + 0.051*"school" + 0.038*"role" + 0.032*"set"
-topic #1 (0.500): 0.246*"film" + 0.166*"player" + 0.129*"school" + 0.080*"long" + 0.056*"international" + 0.045*"set" + 0.045*"role" + 0.041*"short" + 0.034*"build" + 0.031*"come"
-topic diff=0.256053, rho=0.223607
--2.761 per-word bound, 6.8 perplexity estimate based on a held-out corpus of 5 documents with 27 words
-LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=2, decay=0.5, chunksize=5) in 0.18s', 'datetime': '2022-02-06T08:15:55.793137', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
-using ParallelWordOccurrenceAccumulator(processes=127, batch_size=64) to estimate probabilities from sliding windows
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-serializing accumulator to return to master...
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
-accumulator serialized
+topic #0 (0.250): 0.450*"build" + 0.449*"original" + 0.017*"player" + 0.015*"film" + 0.006*"back" + 0.006*"short" + 0.006*"set" + 0.006*"see" + 0.006*"long" + 0.006*"royal"
+topic #1 (0.250): 0.798*"player" + 0.037*"film" + 0.020*"build" + 0.018*"original" + 0.011*"back" + 0.011*"short" + 0.011*"set" + 0.011*"see" + 0.011*"long" + 0.011*"royal"
+topic #2 (0.250): 0.162*"film" + 0.130*"player" + 0.083*"original" + 0.080*"build" + 0.045*"back" + 0.045*"short" + 0.045*"set" + 0.045*"see" + 0.045*"long" + 0.045*"royal"
+topic #3 (0.250): 0.798*"film" + 0.030*"player" + 0.024*"original" + 0.019*"build" + 0.011*"back" + 0.011*"short" + 0.011*"set" + 0.011*"see" + 0.011*"long" + 0.011*"royal"
+topic diff=3.360335, rho=1.000000
+PROGRESS: pass 0, at document #10/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.378*"build" + 0.377*"original" + 0.025*"player" + 0.023*"film" + 0.018*"international" + 0.018*"come" + 0.017*"court" + 0.016*"see" + 0.016*"short" + 0.016*"set"
+topic #1 (0.250): 0.574*"player" + 0.044*"film" + 0.032*"international" + 0.032*"build" + 0.031*"come" + 0.031*"original" + 0.029*"court" + 0.025*"see" + 0.025*"short" + 0.025*"set"
+topic #2 (0.250): 0.701*"court" + 0.210*"international" + 0.070*"come" + 0.002*"film" + 0.002*"player" + 0.002*"original" + 0.002*"build" + 0.001*"see" + 0.001*"short" + 0.001*"set"
+topic #3 (0.250): 0.573*"film" + 0.039*"player" + 0.034*"original" + 0.033*"international" + 0.032*"come" + 0.031*"build" + 0.030*"court" + 0.025*"see" + 0.025*"short" + 0.025*"set"
+topic diff=1.734049, rho=0.707107
+PROGRESS: pass 0, at document #15/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.292*"build" + 0.291*"original" + 0.038*"royal" + 0.034*"player" + 0.033*"film" + 0.031*"school" + 0.030*"come" + 0.029*"international" + 0.029*"court" + 0.028*"short"
+topic #1 (0.250): 0.378*"player" + 0.063*"royal" + 0.048*"film" + 0.046*"school" + 0.043*"come" + 0.041*"international" + 0.041*"build" + 0.040*"original" + 0.040*"court" + 0.037*"set"
+topic #2 (0.250): 0.623*"court" + 0.188*"international" + 0.150*"come" + 0.005*"royal" + 0.003*"film" + 0.003*"school" + 0.003*"player" + 0.003*"original" + 0.003*"build" + 0.003*"short"
+topic #3 (0.250): 0.623*"royal" + 0.211*"school" + 0.063*"come" + 0.046*"film" + 0.006*"player" + 0.005*"original" + 0.005*"international" + 0.005*"build" + 0.005*"court" + 0.005*"set"
+topic diff=1.065695, rho=0.577350
+PROGRESS: pass 0, at document #20/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.211*"build" + 0.211*"original" + 0.062*"area" + 0.045*"film" + 0.043*"see" + 0.043*"royal" + 0.043*"back" + 0.041*"player" + 0.039*"school" + 0.038*"come"
+topic #1 (0.250): 0.349*"see" + 0.302*"back" + 0.187*"area" + 0.064*"set" + 0.023*"come" + 0.018*"player" + 0.017*"school" + 0.016*"long" + 0.016*"short" + 0.003*"film"
+topic #2 (0.250): 0.511*"come" + 0.320*"court" + 0.103*"international" + 0.016*"see" + 0.016*"area" + 0.014*"back" + 0.004*"set" + 0.003*"film" + 0.002*"school" + 0.002*"short"
+topic #3 (0.250): 0.318*"school" + 0.246*"film" + 0.217*"royal" + 0.130*"come" + 0.022*"area" + 0.018*"see" + 0.016*"back" + 0.006*"set" + 0.004*"short" + 0.004*"long"
+topic diff=1.689202, rho=0.500000
+PROGRESS: pass 0, at document #25/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.654*"build" + 0.212*"role" + 0.024*"area" + 0.021*"original" + 0.010*"royal" + 0.010*"back" + 0.010*"see" + 0.010*"court" + 0.007*"film" + 0.006*"player"
+topic #1 (0.250): 0.348*"see" + 0.302*"back" + 0.196*"area" + 0.060*"set" + 0.021*"come" + 0.017*"player" + 0.016*"school" + 0.015*"short" + 0.015*"long" + 0.003*"film"
+topic #2 (0.250): 0.462*"come" + 0.367*"court" + 0.094*"international" + 0.018*"area" + 0.017*"see" + 0.013*"back" + 0.005*"set" + 0.004*"film" + 0.003*"role" + 0.003*"school"
+topic #3 (0.250): 0.426*"royal" + 0.219*"school" + 0.170*"film" + 0.091*"come" + 0.024*"back" + 0.017*"area" + 0.014*"see" + 0.006*"set" + 0.004*"build" + 0.004*"short"
+topic diff=0.628532, rho=0.447214
+PROGRESS: pass 0, at document #30/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.618*"build" + 0.203*"role" + 0.027*"area" + 0.024*"original" + 0.014*"royal" + 0.013*"back" + 0.013*"see" + 0.013*"court" + 0.010*"film" + 0.010*"player"
+topic #1 (0.250): 0.311*"see" + 0.270*"back" + 0.175*"area" + 0.081*"long" + 0.054*"set" + 0.048*"short" + 0.020*"come" + 0.016*"player" + 0.015*"school" + 0.003*"film"
+topic #2 (0.250): 0.453*"come" + 0.360*"court" + 0.093*"international" + 0.019*"area" + 0.018*"see" + 0.015*"back" + 0.006*"set" + 0.005*"film" + 0.005*"role" + 0.005*"school"
+topic #3 (0.250): 0.347*"school" + 0.341*"royal" + 0.137*"film" + 0.074*"come" + 0.021*"back" + 0.015*"area" + 0.013*"see" + 0.007*"set" + 0.006*"build" + 0.006*"long"
+topic diff=0.248478, rho=0.408248
+PROGRESS: pass 0, at document #35/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.415*"build" + 0.289*"original" + 0.139*"role" + 0.022*"area" + 0.014*"royal" + 0.013*"back" + 0.013*"see" + 0.013*"court" + 0.011*"film" + 0.010*"player"
+topic #1 (0.250): 0.298*"see" + 0.264*"back" + 0.146*"area" + 0.109*"long" + 0.085*"set" + 0.040*"short" + 0.018*"come" + 0.014*"player" + 0.013*"school" + 0.003*"film"
+topic #2 (0.250): 0.391*"come" + 0.343*"court" + 0.173*"international" + 0.017*"see" + 0.014*"back" + 0.013*"area" + 0.010*"original" + 0.005*"set" + 0.005*"long" + 0.005*"film"
+topic #3 (0.250): 0.349*"film" + 0.322*"royal" + 0.189*"school" + 0.051*"come" + 0.016*"back" + 0.010*"original" + 0.010*"set" + 0.010*"see" + 0.010*"area" + 0.005*"build"
+topic diff=0.392186, rho=0.377964
+PROGRESS: pass 0, at document #40/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.561*"build" + 0.192*"original" + 0.094*"role" + 0.018*"area" + 0.013*"royal" + 0.012*"back" + 0.012*"see" + 0.012*"court" + 0.012*"short" + 0.011*"set"
+topic #1 (0.250): 0.274*"see" + 0.202*"back" + 0.157*"area" + 0.129*"long" + 0.111*"set" + 0.076*"short" + 0.014*"come" + 0.011*"player" + 0.011*"school" + 0.003*"film"
+topic #2 (0.250): 0.381*"come" + 0.334*"court" + 0.169*"international" + 0.018*"see" + 0.016*"back" + 0.015*"area" + 0.012*"original" + 0.007*"set" + 0.006*"long" + 0.006*"film"
+topic #3 (0.250): 0.422*"royal" + 0.284*"film" + 0.155*"school" + 0.043*"come" + 0.015*"back" + 0.010*"original" + 0.010*"set" + 0.010*"see" + 0.010*"area" + 0.006*"build"
+topic diff=0.220203, rho=0.353553
+PROGRESS: pass 0, at document #45/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.423*"role" + 0.314*"original" + 0.184*"build" + 0.011*"area" + 0.007*"short" + 0.006*"back" + 0.006*"set" + 0.006*"film" + 0.006*"long" + 0.006*"royal"
+topic #1 (0.250): 0.207*"back" + 0.179*"area" + 0.172*"see" + 0.166*"short" + 0.121*"long" + 0.107*"set" + 0.015*"come" + 0.011*"school" + 0.007*"player" + 0.003*"film"
+topic #2 (0.250): 0.576*"court" + 0.269*"come" + 0.081*"international" + 0.010*"see" + 0.010*"back" + 0.010*"area" + 0.007*"original" + 0.005*"role" + 0.005*"set" + 0.004*"long"
+topic #3 (0.250): 0.489*"school" + 0.398*"film" + 0.073*"royal" + 0.008*"come" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.003*"back" + 0.002*"see" + 0.002*"area"
+topic diff=0.648240, rho=0.333333
+PROGRESS: pass 0, at document #50/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.494*"role" + 0.259*"original" + 0.152*"build" + 0.011*"player" + 0.011*"area" + 0.008*"short" + 0.007*"back" + 0.007*"set" + 0.007*"film" + 0.007*"royal"
+topic #1 (0.250): 0.174*"short" + 0.163*"back" + 0.140*"area" + 0.135*"see" + 0.128*"set" + 0.126*"player" + 0.095*"long" + 0.016*"come" + 0.009*"school" + 0.003*"film"
+topic #2 (0.250): 0.364*"international" + 0.313*"come" + 0.261*"court" + 0.018*"player" + 0.005*"see" + 0.005*"back" + 0.005*"area" + 0.004*"original" + 0.004*"role" + 0.003*"set"
+topic #3 (0.250): 0.460*"school" + 0.374*"film" + 0.120*"royal" + 0.008*"come" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.004*"back" + 0.003*"see" + 0.003*"area"
+topic diff=0.404069, rho=0.316228
+PROGRESS: pass 0, at document #55/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.492*"role" + 0.308*"original" + 0.109*"build" + 0.009*"player" + 0.009*"area" + 0.008*"short" + 0.007*"set" + 0.007*"film" + 0.007*"back" + 0.007*"see"
+topic #1 (0.250): 0.179*"see" + 0.174*"player" + 0.162*"short" + 0.142*"area" + 0.127*"set" + 0.115*"back" + 0.068*"long" + 0.012*"come" + 0.007*"school" + 0.003*"film"
+topic #2 (0.250): 0.359*"international" + 0.309*"come" + 0.257*"court" + 0.019*"player" + 0.006*"see" + 0.006*"back" + 0.006*"area" + 0.005*"original" + 0.005*"role" + 0.004*"set"
+topic #3 (0.250): 0.759*"film" + 0.167*"school" + 0.044*"royal" + 0.006*"original" + 0.006*"set" + 0.004*"short" + 0.003*"come" + 0.002*"see" + 0.002*"back" + 0.001*"role"
+topic diff=0.290022, rho=0.301511
+PROGRESS: pass 0, at document #60/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.482*"role" + 0.353*"original" + 0.078*"build" + 0.008*"player" + 0.008*"area" + 0.008*"short" + 0.007*"set" + 0.007*"film" + 0.006*"back" + 0.006*"see"
+topic #1 (0.250): 0.206*"player" + 0.195*"short" + 0.160*"see" + 0.127*"area" + 0.114*"set" + 0.103*"back" + 0.061*"long" + 0.011*"come" + 0.007*"school" + 0.003*"film"
+topic #2 (0.250): 0.352*"international" + 0.303*"come" + 0.253*"court" + 0.021*"player" + 0.008*"see" + 0.008*"back" + 0.008*"area" + 0.006*"original" + 0.006*"role" + 0.006*"set"
+topic #3 (0.250): 0.755*"film" + 0.166*"school" + 0.044*"royal" + 0.006*"original" + 0.006*"set" + 0.005*"short" + 0.004*"come" + 0.002*"see" + 0.002*"back" + 0.002*"role"
+topic diff=0.141380, rho=0.288675
+PROGRESS: pass 0, at document #65/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.421*"role" + 0.339*"original" + 0.164*"build" + 0.007*"royal" + 0.007*"player" + 0.007*"area" + 0.007*"short" + 0.006*"back" + 0.006*"set" + 0.006*"film"
+topic #1 (0.250): 0.237*"back" + 0.161*"player" + 0.152*"short" + 0.151*"area" + 0.125*"see" + 0.089*"set" + 0.048*"long" + 0.012*"come" + 0.006*"school" + 0.003*"royal"
+topic #2 (0.250): 0.337*"come" + 0.306*"court" + 0.266*"international" + 0.017*"player" + 0.008*"back" + 0.008*"area" + 0.007*"see" + 0.006*"royal" + 0.006*"original" + 0.006*"role"
+topic #3 (0.250): 0.662*"film" + 0.185*"school" + 0.115*"royal" + 0.006*"original" + 0.006*"set" + 0.005*"short" + 0.004*"come" + 0.003*"see" + 0.002*"back" + 0.002*"role"
+topic diff=0.232897, rho=0.277350
+PROGRESS: pass 0, at document #70/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.331*"original" + 0.314*"build" + 0.285*"role" + 0.006*"area" + 0.006*"royal" + 0.006*"player" + 0.006*"short" + 0.005*"back" + 0.005*"long" + 0.005*"set"
+topic #1 (0.250): 0.215*"back" + 0.155*"area" + 0.137*"see" + 0.131*"long" + 0.113*"player" + 0.111*"set" + 0.107*"short" + 0.009*"come" + 0.005*"school" + 0.003*"royal"
+topic #2 (0.250): 0.367*"come" + 0.315*"international" + 0.231*"court" + 0.014*"player" + 0.007*"back" + 0.007*"area" + 0.007*"see" + 0.006*"royal" + 0.006*"original" + 0.006*"role"
+topic #3 (0.250): 0.569*"film" + 0.247*"school" + 0.143*"royal" + 0.006*"original" + 0.005*"set" + 0.005*"short" + 0.004*"come" + 0.003*"see" + 0.003*"back" + 0.002*"role"
+topic diff=0.188919, rho=0.267261
+PROGRESS: pass 0, at document #75/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.674*"build" + 0.177*"original" + 0.110*"role" + 0.005*"area" + 0.003*"short" + 0.003*"set" + 0.003*"royal" + 0.003*"school" + 0.003*"player" + 0.003*"court"
+topic #1 (0.250): 0.429*"area" + 0.149*"set" + 0.098*"back" + 0.092*"see" + 0.082*"short" + 0.068*"long" + 0.062*"player" + 0.008*"come" + 0.004*"school" + 0.001*"build"
+topic #2 (0.250): 0.397*"come" + 0.292*"international" + 0.239*"court" + 0.010*"player" + 0.007*"area" + 0.006*"back" + 0.006*"see" + 0.005*"build" + 0.005*"royal" + 0.005*"school"
+topic #3 (0.250): 0.474*"film" + 0.393*"school" + 0.104*"royal" + 0.005*"set" + 0.004*"original" + 0.004*"come" + 0.003*"short" + 0.002*"area" + 0.002*"see" + 0.002*"back"
+topic diff=0.392223, rho=0.258199
+PROGRESS: pass 0, at document #80/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.590*"build" + 0.210*"role" + 0.156*"original" + 0.005*"area" + 0.003*"school" + 0.003*"short" + 0.003*"set" + 0.003*"royal" + 0.003*"player" + 0.003*"court"
+topic #1 (0.250): 0.365*"area" + 0.205*"back" + 0.151*"set" + 0.079*"see" + 0.070*"short" + 0.058*"long" + 0.053*"player" + 0.007*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.472*"international" + 0.287*"come" + 0.173*"court" + 0.008*"player" + 0.006*"area" + 0.005*"back" + 0.005*"set" + 0.005*"see" + 0.005*"build" + 0.005*"royal"
+topic #3 (0.250): 0.507*"film" + 0.371*"school" + 0.090*"royal" + 0.004*"set" + 0.004*"original" + 0.003*"come" + 0.003*"short" + 0.002*"area" + 0.002*"see" + 0.002*"back"
+topic diff=0.149630, rho=0.250000
+PROGRESS: pass 0, at document #85/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.544*"build" + 0.211*"original" + 0.194*"role" + 0.006*"area" + 0.004*"short" + 0.004*"school" + 0.004*"set" + 0.004*"royal" + 0.004*"long" + 0.004*"player"
+topic #1 (0.250): 0.306*"area" + 0.172*"back" + 0.127*"set" + 0.123*"player" + 0.092*"see" + 0.085*"short" + 0.075*"long" + 0.006*"come" + 0.003*"school" + 0.002*"build"
+topic #2 (0.250): 0.463*"international" + 0.282*"come" + 0.171*"court" + 0.010*"player" + 0.007*"area" + 0.007*"back" + 0.006*"set" + 0.006*"see" + 0.006*"build" + 0.006*"royal"
+topic #3 (0.250): 0.504*"film" + 0.369*"school" + 0.090*"royal" + 0.005*"set" + 0.004*"original" + 0.004*"come" + 0.004*"short" + 0.003*"area" + 0.003*"see" + 0.002*"back"
+topic diff=0.139138, rho=0.242536
+PROGRESS: pass 0, at document #90/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.535*"build" + 0.208*"original" + 0.192*"role" + 0.007*"area" + 0.005*"short" + 0.005*"school" + 0.005*"set" + 0.005*"royal" + 0.005*"long" + 0.005*"player"
+topic #1 (0.250): 0.327*"area" + 0.166*"back" + 0.122*"set" + 0.119*"player" + 0.089*"see" + 0.082*"short" + 0.073*"long" + 0.006*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.452*"international" + 0.276*"come" + 0.168*"court" + 0.011*"player" + 0.009*"area" + 0.008*"back" + 0.008*"set" + 0.008*"see" + 0.008*"build" + 0.008*"royal"
+topic #3 (0.250): 0.499*"film" + 0.366*"school" + 0.090*"royal" + 0.005*"set" + 0.005*"original" + 0.005*"come" + 0.004*"short" + 0.003*"area" + 0.003*"see" + 0.003*"back"
+topic diff=0.120996, rho=0.235702
+PROGRESS: pass 0, at document #95/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.526*"build" + 0.205*"original" + 0.189*"role" + 0.008*"area" + 0.006*"short" + 0.006*"school" + 0.006*"set" + 0.006*"royal" + 0.006*"long" + 0.006*"player"
+topic #1 (0.250): 0.324*"area" + 0.165*"back" + 0.122*"set" + 0.118*"player" + 0.089*"see" + 0.082*"short" + 0.073*"long" + 0.007*"come" + 0.004*"school" + 0.002*"build"
+topic #2 (0.250): 0.440*"court" + 0.294*"international" + 0.180*"come" + 0.009*"player" + 0.007*"area" + 0.007*"back" + 0.007*"set" + 0.006*"see" + 0.006*"school" + 0.006*"build"
+topic #3 (0.250): 0.463*"film" + 0.401*"school" + 0.084*"royal" + 0.006*"set" + 0.005*"original" + 0.005*"come" + 0.005*"short" + 0.004*"area" + 0.004*"see" + 0.004*"back"
+topic diff=0.167411, rho=0.229416
+-3.183 per-word bound, 9.1 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+PROGRESS: pass 0, at document #100/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.250): 0.424*"build" + 0.291*"role" + 0.217*"original" + 0.006*"area" + 0.006*"player" + 0.005*"long" + 0.005*"royal" + 0.005*"come" + 0.005*"school" + 0.005*"short"
+topic #1 (0.250): 0.282*"player" + 0.196*"area" + 0.160*"back" + 0.134*"long" + 0.084*"see" + 0.074*"set" + 0.050*"short" + 0.005*"come" + 0.003*"school" + 0.002*"build"
+topic #2 (0.250): 0.316*"come" + 0.306*"court" + 0.300*"international" + 0.011*"player" + 0.006*"area" + 0.006*"back" + 0.006*"set" + 0.006*"original" + 0.006*"see" + 0.006*"build"
+topic #3 (0.250): 0.496*"film" + 0.307*"school" + 0.154*"royal" + 0.004*"set" + 0.004*"original" + 0.004*"come" + 0.004*"short" + 0.003*"long" + 0.003*"see" + 0.003*"role"
+topic diff=0.268849, rho=0.223607
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.06s', 'datetime': '2022-02-06T08:40:45.376102', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
+serializing accumulator to return to master...
+accumulator serialized
+serializing accumulator to return to master...
+accumulator serialized
+2 accumulators retrieved from output queue
+accumulated word occurrence stats for 65 virtual documents
+K=4, Coherence Score: 0.5503595963830592
+Starting K=5
+using symmetric alpha at 0.2
+using symmetric eta at 0.2
+using serial LDA version on this node
+running online (single-pass) LDA training, 5 topics, 1 passes over the supplied corpus of 100 documents, updating model once every 5 documents, evaluating perplexity every 100 documents, iterating 50x with a convergence threshold of 0.001000
+PROGRESS: pass 0, at document #5/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.465*"original" + 0.465*"build" + 0.008*"player" + 0.007*"film" + 0.005*"back" + 0.005*"short" + 0.005*"set" + 0.005*"see" + 0.005*"long" + 0.005*"royal"
+topic #1 (0.200): 0.095*"player" + 0.090*"film" + 0.075*"build" + 0.071*"original" + 0.056*"back" + 0.056*"short" + 0.056*"set" + 0.056*"see" + 0.056*"long" + 0.056*"royal"
+topic #2 (0.200): 0.092*"film" + 0.089*"player" + 0.074*"original" + 0.072*"build" + 0.056*"back" + 0.056*"short" + 0.056*"set" + 0.056*"see" + 0.056*"long" + 0.056*"royal"
+topic #3 (0.200): 0.089*"film" + 0.088*"player" + 0.080*"original" + 0.072*"build" + 0.056*"back" + 0.056*"short" + 0.056*"set" + 0.056*"see" + 0.056*"long" + 0.056*"royal"
+topic #4 (0.200): 0.466*"film" + 0.465*"player" + 0.006*"build" + 0.006*"original" + 0.005*"back" + 0.005*"short" + 0.005*"set" + 0.005*"see" + 0.005*"long" + 0.005*"royal"
+topic diff=3.727497, rho=1.000000
+PROGRESS: pass 0, at document #10/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.403*"original" + 0.403*"build" + 0.016*"player" + 0.015*"film" + 0.014*"international" + 0.014*"come" + 0.014*"court" + 0.013*"see" + 0.013*"short" + 0.013*"set"
+topic #1 (0.200): 0.810*"international" + 0.018*"come" + 0.016*"court" + 0.014*"player" + 0.014*"film" + 0.013*"build" + 0.012*"original" + 0.011*"see" + 0.011*"short" + 0.011*"set"
+topic #2 (0.200): 0.092*"international" + 0.088*"come" + 0.075*"court" + 0.065*"film" + 0.065*"player" + 0.060*"original" + 0.060*"build" + 0.055*"see" + 0.055*"short" + 0.055*"set"
+topic #3 (0.200): 0.757*"court" + 0.153*"international" + 0.075*"come" + 0.001*"film" + 0.001*"player" + 0.001*"original" + 0.001*"build" + 0.001*"see" + 0.001*"short" + 0.001*"set"
+topic #4 (0.200): 0.403*"film" + 0.402*"player" + 0.015*"build" + 0.015*"original" + 0.014*"international" + 0.014*"come" + 0.014*"court" + 0.014*"see" + 0.014*"short" + 0.014*"set"
+topic diff=1.793093, rho=0.707107
+PROGRESS: pass 0, at document #15/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.325*"original" + 0.325*"build" + 0.027*"player" + 0.026*"film" + 0.026*"royal" + 0.025*"come" + 0.025*"international" + 0.025*"school" + 0.025*"court" + 0.025*"short"
+topic #1 (0.200): 0.659*"international" + 0.027*"come" + 0.025*"court" + 0.024*"player" + 0.023*"film" + 0.023*"build" + 0.022*"royal" + 0.022*"original" + 0.022*"school" + 0.022*"short"
+topic #2 (0.200): 0.571*"royal" + 0.192*"school" + 0.192*"come" + 0.004*"international" + 0.004*"court" + 0.004*"film" + 0.004*"player" + 0.003*"original" + 0.003*"build" + 0.003*"short"
+topic #3 (0.200): 0.740*"court" + 0.151*"international" + 0.076*"come" + 0.003*"film" + 0.003*"player" + 0.003*"original" + 0.003*"build" + 0.002*"royal" + 0.002*"school" + 0.002*"set"
+topic #4 (0.200): 0.325*"film" + 0.324*"player" + 0.026*"build" + 0.026*"royal" + 0.025*"original" + 0.025*"come" + 0.025*"international" + 0.025*"school" + 0.025*"court" + 0.025*"set"
+topic diff=1.125746, rho=0.577350
+PROGRESS: pass 0, at document #20/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.370*"see" + 0.320*"back" + 0.185*"area" + 0.068*"set" + 0.018*"long" + 0.018*"short" + 0.006*"original" + 0.006*"build" + 0.003*"come" + 0.002*"school"
+topic #1 (0.200): 0.625*"international" + 0.210*"area" + 0.013*"court" + 0.013*"film" + 0.013*"come" + 0.012*"see" + 0.012*"back" + 0.012*"player" + 0.011*"build" + 0.011*"royal"
+topic #2 (0.200): 0.591*"come" + 0.195*"school" + 0.096*"royal" + 0.040*"see" + 0.035*"back" + 0.020*"area" + 0.008*"set" + 0.003*"long" + 0.003*"short" + 0.001*"court"
+topic #3 (0.200): 0.715*"court" + 0.121*"come" + 0.098*"international" + 0.014*"see" + 0.013*"area" + 0.012*"back" + 0.004*"set" + 0.003*"long" + 0.003*"short" + 0.003*"film"
+topic #4 (0.200): 0.335*"see" + 0.289*"back" + 0.184*"area" + 0.061*"set" + 0.059*"film" + 0.032*"player" + 0.016*"long" + 0.016*"short" + 0.003*"come" + 0.001*"school"
+topic diff=2.325706, rho=0.500000
+PROGRESS: pass 0, at document #25/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.312*"see" + 0.271*"back" + 0.172*"area" + 0.143*"build" + 0.049*"set" + 0.013*"short" + 0.013*"long" + 0.011*"role" + 0.005*"original" + 0.003*"come"
+topic #1 (0.200): 0.356*"international" + 0.286*"role" + 0.198*"area" + 0.019*"build" + 0.012*"court" + 0.012*"film" + 0.012*"come" + 0.012*"see" + 0.012*"back" + 0.012*"player"
+topic #2 (0.200): 0.493*"come" + 0.229*"royal" + 0.163*"school" + 0.037*"back" + 0.034*"see" + 0.018*"area" + 0.008*"set" + 0.003*"long" + 0.003*"short" + 0.002*"build"
+topic #3 (0.200): 0.714*"court" + 0.096*"come" + 0.078*"international" + 0.040*"role" + 0.014*"area" + 0.014*"see" + 0.011*"back" + 0.005*"set" + 0.004*"build" + 0.004*"short"
+topic #4 (0.200): 0.333*"see" + 0.287*"back" + 0.183*"area" + 0.061*"set" + 0.059*"film" + 0.032*"player" + 0.016*"long" + 0.016*"short" + 0.003*"come" + 0.002*"school"
+topic diff=0.578850, rho=0.447214
+PROGRESS: pass 0, at document #30/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.309*"see" + 0.269*"back" + 0.171*"area" + 0.142*"build" + 0.049*"set" + 0.014*"long" + 0.014*"short" + 0.012*"role" + 0.005*"original" + 0.004*"come"
+topic #1 (0.200): 0.323*"international" + 0.261*"role" + 0.183*"area" + 0.024*"build" + 0.018*"court" + 0.018*"film" + 0.018*"come" + 0.018*"see" + 0.018*"back" + 0.017*"player"
+topic #2 (0.200): 0.436*"come" + 0.246*"school" + 0.203*"royal" + 0.034*"back" + 0.031*"see" + 0.017*"area" + 0.008*"set" + 0.004*"long" + 0.004*"short" + 0.003*"build"
+topic #3 (0.200): 0.690*"court" + 0.095*"come" + 0.078*"international" + 0.041*"role" + 0.015*"area" + 0.015*"see" + 0.013*"back" + 0.007*"set" + 0.007*"build" + 0.006*"long"
+topic #4 (0.200): 0.274*"see" + 0.237*"back" + 0.151*"area" + 0.127*"long" + 0.070*"short" + 0.051*"set" + 0.049*"film" + 0.027*"player" + 0.003*"come" + 0.002*"school"
+topic diff=0.296329, rho=0.408248
+PROGRESS: pass 0, at document #35/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.311*"see" + 0.280*"back" + 0.131*"area" + 0.109*"build" + 0.081*"original" + 0.038*"set" + 0.011*"long" + 0.011*"short" + 0.010*"role" + 0.004*"come"
+topic #1 (0.200): 0.620*"international" + 0.123*"role" + 0.088*"area" + 0.016*"build" + 0.014*"long" + 0.013*"court" + 0.013*"film" + 0.013*"come" + 0.013*"see" + 0.013*"original"
+topic #2 (0.200): 0.431*"come" + 0.266*"royal" + 0.186*"school" + 0.034*"back" + 0.030*"see" + 0.014*"area" + 0.007*"set" + 0.006*"original" + 0.004*"long" + 0.004*"short"
+topic #3 (0.200): 0.720*"court" + 0.088*"come" + 0.057*"international" + 0.031*"role" + 0.014*"see" + 0.013*"area" + 0.012*"back" + 0.012*"original" + 0.007*"set" + 0.007*"build"
+topic #4 (0.200): 0.203*"see" + 0.176*"back" + 0.162*"film" + 0.157*"long" + 0.113*"area" + 0.101*"set" + 0.053*"short" + 0.020*"player" + 0.003*"come" + 0.002*"school"
+topic diff=0.403056, rho=0.377964
+PROGRESS: pass 0, at document #40/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.309*"see" + 0.203*"back" + 0.178*"area" + 0.163*"build" + 0.059*"original" + 0.038*"set" + 0.013*"short" + 0.010*"long" + 0.008*"role" + 0.004*"come"
+topic #1 (0.200): 0.564*"international" + 0.117*"role" + 0.087*"area" + 0.020*"build" + 0.019*"long" + 0.018*"court" + 0.018*"film" + 0.018*"come" + 0.018*"see" + 0.018*"original"
+topic #2 (0.200): 0.364*"come" + 0.362*"royal" + 0.158*"school" + 0.030*"back" + 0.027*"see" + 0.013*"area" + 0.007*"set" + 0.006*"original" + 0.005*"long" + 0.005*"short"
+topic #3 (0.200): 0.686*"court" + 0.087*"come" + 0.057*"international" + 0.032*"role" + 0.017*"see" + 0.016*"area" + 0.015*"back" + 0.015*"original" + 0.010*"set" + 0.010*"build"
+topic #4 (0.200): 0.194*"long" + 0.161*"see" + 0.143*"set" + 0.139*"back" + 0.128*"film" + 0.110*"short" + 0.090*"area" + 0.017*"player" + 0.003*"come" + 0.002*"school"
+topic diff=0.243786, rho=0.353553
+PROGRESS: pass 0, at document #45/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.252*"back" + 0.222*"area" + 0.180*"see" + 0.172*"original" + 0.095*"build" + 0.025*"set" + 0.022*"role" + 0.009*"short" + 0.007*"long" + 0.003*"come"
+topic #1 (0.200): 0.666*"role" + 0.152*"international" + 0.087*"area" + 0.008*"original" + 0.008*"come" + 0.008*"build" + 0.008*"back" + 0.007*"film" + 0.007*"long" + 0.007*"court"
+topic #2 (0.200): 0.697*"school" + 0.156*"come" + 0.102*"royal" + 0.012*"back" + 0.008*"see" + 0.005*"area" + 0.004*"short" + 0.003*"set" + 0.002*"original" + 0.002*"long"
+topic #3 (0.200): 0.867*"court" + 0.032*"come" + 0.021*"international" + 0.013*"role" + 0.007*"see" + 0.007*"area" + 0.007*"original" + 0.007*"back" + 0.005*"set" + 0.005*"build"
+topic #4 (0.200): 0.428*"film" + 0.169*"short" + 0.122*"long" + 0.100*"set" + 0.067*"see" + 0.058*"back" + 0.038*"area" + 0.007*"player" + 0.002*"original" + 0.002*"come"
+topic diff=0.818078, rho=0.333333
+PROGRESS: pass 0, at document #50/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.249*"back" + 0.220*"area" + 0.178*"see" + 0.170*"original" + 0.095*"build" + 0.026*"set" + 0.022*"role" + 0.010*"short" + 0.008*"long" + 0.004*"come"
+topic #1 (0.200): 0.580*"international" + 0.327*"role" + 0.030*"area" + 0.019*"player" + 0.005*"come" + 0.004*"original" + 0.004*"set" + 0.004*"build" + 0.004*"back" + 0.004*"film"
+topic #2 (0.200): 0.531*"school" + 0.291*"come" + 0.136*"royal" + 0.009*"back" + 0.007*"see" + 0.004*"area" + 0.003*"short" + 0.003*"player" + 0.003*"set" + 0.002*"original"
+topic #3 (0.200): 0.840*"court" + 0.033*"come" + 0.023*"international" + 0.015*"role" + 0.009*"see" + 0.009*"area" + 0.009*"original" + 0.009*"back" + 0.007*"set" + 0.007*"build"
+topic #4 (0.200): 0.332*"film" + 0.176*"short" + 0.133*"player" + 0.122*"set" + 0.095*"long" + 0.053*"see" + 0.046*"back" + 0.030*"area" + 0.002*"come" + 0.002*"original"
+topic diff=0.423060, rho=0.316228
+PROGRESS: pass 0, at document #55/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.245*"area" + 0.226*"see" + 0.208*"original" + 0.176*"back" + 0.067*"build" + 0.022*"role" + 0.019*"set" + 0.008*"short" + 0.006*"long" + 0.004*"come"
+topic #1 (0.200): 0.502*"international" + 0.400*"role" + 0.027*"area" + 0.017*"player" + 0.006*"come" + 0.005*"original" + 0.004*"set" + 0.004*"build" + 0.004*"film" + 0.004*"back"
+topic #2 (0.200): 0.525*"school" + 0.288*"come" + 0.135*"royal" + 0.010*"back" + 0.007*"see" + 0.005*"area" + 0.004*"short" + 0.003*"player" + 0.003*"set" + 0.003*"original"
+topic #3 (0.200): 0.806*"court" + 0.034*"come" + 0.025*"international" + 0.017*"role" + 0.012*"see" + 0.011*"area" + 0.011*"original" + 0.011*"back" + 0.009*"set" + 0.009*"build"
+topic #4 (0.200): 0.656*"film" + 0.090*"player" + 0.084*"short" + 0.065*"set" + 0.038*"see" + 0.034*"long" + 0.016*"back" + 0.011*"area" + 0.001*"original" + 0.001*"role"
+topic diff=0.286816, rho=0.301511
+PROGRESS: pass 0, at document #60/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.289*"original" + 0.215*"area" + 0.198*"see" + 0.155*"back" + 0.060*"build" + 0.020*"role" + 0.018*"set" + 0.011*"short" + 0.007*"long" + 0.004*"come"
+topic #1 (0.200): 0.477*"role" + 0.422*"international" + 0.024*"area" + 0.016*"player" + 0.006*"come" + 0.005*"original" + 0.005*"set" + 0.005*"build" + 0.005*"film" + 0.005*"back"
+topic #2 (0.200): 0.517*"school" + 0.284*"come" + 0.134*"royal" + 0.011*"back" + 0.008*"see" + 0.006*"area" + 0.005*"short" + 0.004*"player" + 0.004*"set" + 0.004*"original"
+topic #3 (0.200): 0.764*"court" + 0.036*"come" + 0.027*"international" + 0.019*"role" + 0.014*"see" + 0.014*"area" + 0.014*"original" + 0.014*"back" + 0.012*"set" + 0.012*"build"
+topic #4 (0.200): 0.618*"film" + 0.113*"player" + 0.106*"short" + 0.061*"set" + 0.036*"see" + 0.032*"long" + 0.016*"back" + 0.010*"area" + 0.001*"original" + 0.001*"role"
+topic diff=0.168951, rho=0.288675
+PROGRESS: pass 0, at document #65/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.306*"back" + 0.231*"original" + 0.191*"area" + 0.108*"build" + 0.107*"see" + 0.016*"role" + 0.010*"set" + 0.007*"short" + 0.004*"long" + 0.003*"come"
+topic #1 (0.200): 0.542*"role" + 0.352*"international" + 0.022*"area" + 0.015*"player" + 0.007*"come" + 0.006*"original" + 0.006*"back" + 0.006*"set" + 0.006*"build" + 0.006*"royal"
+topic #2 (0.200): 0.416*"school" + 0.268*"come" + 0.259*"royal" + 0.012*"back" + 0.006*"see" + 0.005*"area" + 0.004*"short" + 0.004*"player" + 0.004*"set" + 0.003*"original"
+topic #3 (0.200): 0.800*"court" + 0.026*"come" + 0.020*"international" + 0.016*"role" + 0.013*"build" + 0.012*"see" + 0.012*"area" + 0.012*"original" + 0.012*"back" + 0.011*"set"
+topic #4 (0.200): 0.615*"film" + 0.112*"player" + 0.105*"short" + 0.061*"set" + 0.036*"see" + 0.032*"long" + 0.016*"back" + 0.011*"area" + 0.002*"original" + 0.002*"role"
+topic diff=0.249685, rho=0.277350
+PROGRESS: pass 0, at document #70/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.253*"back" + 0.207*"original" + 0.191*"build" + 0.182*"area" + 0.110*"see" + 0.021*"set" + 0.011*"role" + 0.005*"long" + 0.005*"short" + 0.003*"come"
+topic #1 (0.200): 0.451*"international" + 0.440*"role" + 0.019*"area" + 0.014*"player" + 0.007*"come" + 0.006*"original" + 0.006*"back" + 0.006*"set" + 0.006*"build" + 0.006*"royal"
+topic #2 (0.200): 0.438*"school" + 0.260*"come" + 0.253*"royal" + 0.009*"back" + 0.005*"see" + 0.004*"area" + 0.004*"short" + 0.003*"player" + 0.003*"set" + 0.003*"original"
+topic #3 (0.200): 0.756*"court" + 0.028*"come" + 0.023*"international" + 0.018*"role" + 0.016*"build" + 0.015*"see" + 0.015*"area" + 0.015*"original" + 0.015*"back" + 0.014*"set"
+topic #4 (0.200): 0.533*"film" + 0.110*"long" + 0.098*"player" + 0.092*"short" + 0.085*"set" + 0.045*"see" + 0.015*"back" + 0.010*"area" + 0.002*"original" + 0.002*"role"
+topic diff=0.216448, rho=0.267261
+PROGRESS: pass 0, at document #75/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.418*"area" + 0.294*"build" + 0.091*"back" + 0.078*"original" + 0.069*"see" + 0.036*"set" + 0.003*"role" + 0.003*"short" + 0.002*"long" + 0.001*"international"
+topic #1 (0.200): 0.532*"international" + 0.354*"role" + 0.020*"area" + 0.013*"player" + 0.007*"come" + 0.007*"original" + 0.007*"set" + 0.007*"back" + 0.007*"build" + 0.007*"short"
+topic #2 (0.200): 0.604*"school" + 0.207*"come" + 0.159*"royal" + 0.005*"back" + 0.003*"see" + 0.003*"area" + 0.002*"short" + 0.002*"set" + 0.002*"player" + 0.002*"build"
+topic #3 (0.200): 0.793*"court" + 0.022*"come" + 0.020*"international" + 0.015*"role" + 0.014*"build" + 0.013*"area" + 0.013*"see" + 0.013*"original" + 0.013*"back" + 0.012*"set"
+topic #4 (0.200): 0.486*"film" + 0.159*"set" + 0.111*"short" + 0.092*"long" + 0.086*"player" + 0.033*"see" + 0.012*"area" + 0.009*"back" + 0.001*"original" + 0.001*"role"
+topic diff=0.342789, rho=0.258199
+PROGRESS: pass 0, at document #80/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.365*"area" + 0.257*"build" + 0.203*"back" + 0.069*"original" + 0.060*"see" + 0.032*"set" + 0.003*"role" + 0.003*"short" + 0.002*"long" + 0.001*"international"
+topic #1 (0.200): 0.559*"international" + 0.373*"role" + 0.010*"area" + 0.007*"player" + 0.005*"set" + 0.004*"come" + 0.004*"original" + 0.004*"school" + 0.004*"back" + 0.004*"build"
+topic #2 (0.200): 0.620*"school" + 0.195*"come" + 0.150*"royal" + 0.005*"back" + 0.003*"see" + 0.003*"area" + 0.003*"short" + 0.003*"set" + 0.002*"player" + 0.002*"build"
+topic #3 (0.200): 0.749*"court" + 0.025*"come" + 0.022*"international" + 0.018*"role" + 0.017*"build" + 0.016*"area" + 0.016*"see" + 0.016*"original" + 0.016*"back" + 0.015*"set"
+topic #4 (0.200): 0.520*"film" + 0.170*"set" + 0.096*"short" + 0.080*"long" + 0.075*"player" + 0.029*"see" + 0.011*"area" + 0.008*"back" + 0.002*"original" + 0.001*"role"
+topic diff=0.208888, rho=0.250000
+PROGRESS: pass 0, at document #85/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.346*"area" + 0.243*"build" + 0.192*"back" + 0.095*"original" + 0.075*"see" + 0.031*"set" + 0.003*"role" + 0.003*"short" + 0.002*"long" + 0.001*"international"
+topic #1 (0.200): 0.549*"international" + 0.366*"role" + 0.011*"area" + 0.008*"player" + 0.006*"set" + 0.006*"come" + 0.005*"original" + 0.005*"school" + 0.005*"back" + 0.005*"build"
+topic #2 (0.200): 0.614*"school" + 0.193*"come" + 0.149*"royal" + 0.006*"back" + 0.004*"see" + 0.004*"area" + 0.003*"short" + 0.003*"set" + 0.003*"player" + 0.003*"build"
+topic #3 (0.200): 0.700*"court" + 0.027*"come" + 0.025*"international" + 0.021*"role" + 0.020*"build" + 0.019*"area" + 0.019*"see" + 0.019*"original" + 0.019*"back" + 0.019*"set"
+topic #4 (0.200): 0.419*"film" + 0.165*"player" + 0.138*"set" + 0.113*"short" + 0.099*"long" + 0.038*"see" + 0.009*"area" + 0.007*"back" + 0.002*"original" + 0.002*"role"
+topic diff=0.158371, rho=0.242536
+PROGRESS: pass 0, at document #90/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.368*"area" + 0.233*"build" + 0.185*"back" + 0.092*"original" + 0.072*"see" + 0.030*"set" + 0.003*"role" + 0.003*"short" + 0.003*"long" + 0.002*"international"
+topic #1 (0.200): 0.536*"international" + 0.359*"role" + 0.013*"area" + 0.010*"player" + 0.007*"set" + 0.007*"come" + 0.007*"original" + 0.007*"school" + 0.007*"back" + 0.007*"build"
+topic #2 (0.200): 0.607*"school" + 0.191*"come" + 0.148*"royal" + 0.006*"back" + 0.005*"see" + 0.005*"area" + 0.004*"short" + 0.004*"set" + 0.004*"player" + 0.004*"build"
+topic #3 (0.200): 0.647*"court" + 0.030*"come" + 0.028*"international" + 0.024*"role" + 0.023*"build" + 0.023*"area" + 0.023*"see" + 0.023*"original" + 0.023*"back" + 0.022*"set"
+topic #4 (0.200): 0.417*"film" + 0.164*"player" + 0.137*"set" + 0.112*"short" + 0.099*"long" + 0.038*"see" + 0.009*"area" + 0.007*"back" + 0.002*"original" + 0.002*"role"
+topic diff=0.142478, rho=0.235702
+PROGRESS: pass 0, at document #95/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.366*"area" + 0.232*"build" + 0.184*"back" + 0.091*"original" + 0.072*"see" + 0.030*"set" + 0.004*"role" + 0.004*"short" + 0.003*"long" + 0.002*"international"
+topic #1 (0.200): 0.521*"international" + 0.349*"role" + 0.014*"area" + 0.011*"player" + 0.009*"set" + 0.009*"come" + 0.009*"original" + 0.009*"school" + 0.009*"back" + 0.009*"build"
+topic #2 (0.200): 0.636*"school" + 0.171*"come" + 0.132*"royal" + 0.007*"back" + 0.005*"see" + 0.005*"area" + 0.005*"short" + 0.005*"set" + 0.004*"player" + 0.004*"build"
+topic #3 (0.200): 0.853*"court" + 0.012*"come" + 0.011*"international" + 0.010*"role" + 0.010*"build" + 0.010*"area" + 0.010*"school" + 0.010*"see" + 0.009*"original" + 0.009*"back"
+topic #4 (0.200): 0.414*"film" + 0.163*"player" + 0.136*"set" + 0.112*"short" + 0.099*"long" + 0.038*"see" + 0.010*"area" + 0.008*"back" + 0.003*"original" + 0.003*"role"
+topic diff=0.286539, rho=0.229416
+-3.102 per-word bound, 8.6 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+PROGRESS: pass 0, at document #100/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.200): 0.292*"area" + 0.234*"back" + 0.231*"build" + 0.119*"original" + 0.076*"see" + 0.024*"set" + 0.003*"role" + 0.003*"short" + 0.003*"long" + 0.002*"come"
+topic #1 (0.200): 0.474*"role" + 0.432*"international" + 0.009*"area" + 0.008*"player" + 0.007*"long" + 0.006*"royal" + 0.006*"set" + 0.006*"come" + 0.006*"school" + 0.006*"original"
+topic #2 (0.200): 0.466*"school" + 0.255*"come" + 0.231*"royal" + 0.005*"back" + 0.004*"see" + 0.004*"area" + 0.004*"short" + 0.004*"player" + 0.004*"set" + 0.004*"original"
+topic #3 (0.200): 0.820*"court" + 0.014*"come" + 0.013*"international" + 0.012*"role" + 0.012*"build" + 0.012*"area" + 0.012*"school" + 0.012*"see" + 0.012*"original" + 0.012*"back"
+topic #4 (0.200): 0.341*"film" + 0.320*"player" + 0.151*"long" + 0.068*"set" + 0.055*"short" + 0.040*"see" + 0.008*"back" + 0.005*"area" + 0.002*"original" + 0.002*"role"
+topic diff=0.278348, rho=0.223607
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=5, decay=0.5, chunksize=5) in 0.04s', 'datetime': '2022-02-06T08:40:45.621592', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
+serializing accumulator to return to master...
+accumulator serialized
+serializing accumulator to return to master...
+accumulator serialized
+2 accumulators retrieved from output queue
+accumulated word occurrence stats for 65 virtual documents
+K=5, Coherence Score: 0.5503595963830592
+Starting K=6
+using symmetric alpha at 0.16666666666666666
+using symmetric eta at 0.16666666666666666
+using serial LDA version on this node
+running online (single-pass) LDA training, 6 topics, 1 passes over the supplied corpus of 100 documents, updating model once every 5 documents, evaluating perplexity every 100 documents, iterating 50x with a convergence threshold of 0.001000
+PROGRESS: pass 0, at document #5/100
+merging changes from 5 documents into a model of 100 documents
+topic #4 (0.167): 0.885*"film" + 0.010*"player" + 0.008*"build" + 0.008*"original" + 0.007*"back" + 0.007*"short" + 0.007*"set" + 0.007*"see" + 0.007*"long" + 0.007*"royal"
+topic #3 (0.167): 0.076*"player" + 0.074*"film" + 0.069*"original" + 0.066*"build" + 0.059*"back" + 0.059*"short" + 0.059*"set" + 0.059*"see" + 0.059*"long" + 0.059*"royal"
+topic #2 (0.167): 0.077*"player" + 0.075*"film" + 0.067*"original" + 0.066*"build" + 0.060*"back" + 0.060*"short" + 0.060*"set" + 0.060*"see" + 0.060*"long" + 0.060*"royal"
+topic #1 (0.167): 0.080*"player" + 0.074*"film" + 0.067*"build" + 0.066*"original" + 0.059*"back" + 0.059*"short" + 0.059*"set" + 0.059*"see" + 0.059*"long" + 0.059*"royal"
+topic #5 (0.167): 0.885*"player" + 0.010*"film" + 0.008*"build" + 0.008*"original" + 0.007*"back" + 0.007*"short" + 0.007*"set" + 0.007*"see" + 0.007*"long" + 0.007*"royal"
+topic diff=4.788329, rho=1.000000
+PROGRESS: pass 0, at document #10/100
+merging changes from 5 documents into a model of 100 documents
+topic #5 (0.167): 0.701*"player" + 0.021*"film" + 0.020*"build" + 0.020*"original" + 0.020*"international" + 0.020*"come" + 0.020*"court" + 0.020*"see" + 0.020*"short" + 0.020*"set"
+topic #4 (0.167): 0.701*"film" + 0.022*"player" + 0.020*"build" + 0.020*"original" + 0.020*"international" + 0.020*"come" + 0.020*"court" + 0.020*"see" + 0.020*"short" + 0.020*"set"
+topic #3 (0.167): 0.696*"court" + 0.150*"international" + 0.013*"come" + 0.012*"player" + 0.011*"film" + 0.011*"original" + 0.011*"build" + 0.011*"see" + 0.011*"short" + 0.011*"set"
+topic #0 (0.167): 0.418*"original" + 0.418*"build" + 0.013*"player" + 0.012*"film" + 0.012*"international" + 0.012*"come" + 0.012*"court" + 0.012*"see" + 0.012*"short" + 0.012*"set"
+topic #1 (0.167): 0.815*"court" + 0.164*"international" + 0.002*"come" + 0.002*"player" + 0.002*"film" + 0.001*"build" + 0.001*"original" + 0.001*"see" + 0.001*"short" + 0.001*"set"
+topic diff=2.253014, rho=0.707107
+PROGRESS: pass 0, at document #15/100
+merging changes from 5 documents into a model of 100 documents
+topic #5 (0.167): 0.507*"player" + 0.036*"royal" + 0.034*"school" + 0.034*"film" + 0.033*"build" + 0.033*"original" + 0.033*"international" + 0.033*"come" + 0.033*"court" + 0.032*"set"
+topic #2 (0.167): 0.396*"come" + 0.327*"court" + 0.202*"international" + 0.023*"royal" + 0.010*"school" + 0.004*"player" + 0.004*"film" + 0.004*"original" + 0.004*"build" + 0.004*"short"
+topic #0 (0.167): 0.345*"original" + 0.345*"build" + 0.023*"royal" + 0.023*"player" + 0.022*"film" + 0.022*"school" + 0.022*"international" + 0.022*"come" + 0.022*"court" + 0.022*"short"
+topic #1 (0.167): 0.793*"court" + 0.161*"international" + 0.004*"come" + 0.003*"player" + 0.003*"film" + 0.003*"build" + 0.003*"original" + 0.003*"royal" + 0.003*"school" + 0.003*"set"
+topic #3 (0.167): 0.575*"court" + 0.133*"international" + 0.022*"come" + 0.022*"royal" + 0.021*"player" + 0.021*"film" + 0.021*"original" + 0.021*"school" + 0.021*"build" + 0.020*"short"
+topic diff=0.992586, rho=0.577350
+PROGRESS: pass 0, at document #20/100
+merging changes from 5 documents into a model of 100 documents
+topic #4 (0.167): 0.432*"school" + 0.278*"film" + 0.223*"royal" + 0.015*"see" + 0.014*"area" + 0.013*"back" + 0.004*"set" + 0.003*"come" + 0.003*"short" + 0.003*"long"
+topic #2 (0.167): 0.697*"come" + 0.160*"court" + 0.035*"see" + 0.030*"back" + 0.027*"international" + 0.018*"area" + 0.012*"school" + 0.007*"set" + 0.003*"royal" + 0.003*"short"
+topic #3 (0.167): 0.353*"court" + 0.301*"international" + 0.277*"area" + 0.011*"film" + 0.005*"come" + 0.005*"royal" + 0.005*"see" + 0.005*"back" + 0.005*"player" + 0.005*"original"
+topic #5 (0.167): 0.369*"see" + 0.319*"back" + 0.185*"area" + 0.067*"set" + 0.020*"player" + 0.017*"short" + 0.017*"long" + 0.002*"school" + 0.001*"come" + 0.000*"court"
+topic #1 (0.167): 0.757*"court" + 0.157*"international" + 0.006*"come" + 0.006*"player" + 0.006*"film" + 0.006*"build" + 0.006*"area" + 0.006*"original" + 0.006*"see" + 0.006*"royal"
+topic diff=1.926842, rho=0.500000
+PROGRESS: pass 0, at document #25/100
+merging changes from 5 documents into a model of 100 documents
+topic #1 (0.167): 0.706*"court" + 0.150*"international" + 0.011*"come" + 0.010*"player" + 0.010*"role" + 0.010*"film" + 0.010*"build" + 0.010*"area" + 0.010*"original" + 0.010*"see"
+topic #3 (0.167): 0.433*"court" + 0.314*"area" + 0.162*"international" + 0.032*"role" + 0.008*"film" + 0.005*"come" + 0.005*"see" + 0.005*"build" + 0.005*"royal" + 0.005*"back"
+topic #5 (0.167): 0.372*"see" + 0.324*"back" + 0.182*"area" + 0.063*"set" + 0.019*"player" + 0.016*"short" + 0.016*"long" + 0.003*"school" + 0.001*"come" + 0.001*"court"
+topic #4 (0.167): 0.443*"royal" + 0.296*"school" + 0.191*"film" + 0.018*"back" + 0.011*"see" + 0.011*"area" + 0.004*"set" + 0.003*"come" + 0.003*"short" + 0.003*"long"
+topic #2 (0.167): 0.689*"come" + 0.159*"court" + 0.035*"see" + 0.031*"back" + 0.027*"international" + 0.019*"area" + 0.012*"school" + 0.008*"set" + 0.004*"royal" + 0.003*"short"
+topic diff=0.713249, rho=0.447214
+PROGRESS: pass 0, at document #30/100
+merging changes from 5 documents into a model of 100 documents
+topic #5 (0.167): 0.331*"see" + 0.288*"back" + 0.162*"area" + 0.087*"long" + 0.057*"set" + 0.051*"short" + 0.017*"player" + 0.003*"school" + 0.001*"come" + 0.001*"court"
+topic #2 (0.167): 0.677*"come" + 0.157*"court" + 0.036*"see" + 0.031*"back" + 0.028*"international" + 0.019*"area" + 0.013*"school" + 0.009*"set" + 0.005*"royal" + 0.004*"long"
+topic #1 (0.167): 0.641*"court" + 0.141*"international" + 0.016*"come" + 0.016*"player" + 0.016*"role" + 0.016*"film" + 0.016*"build" + 0.016*"area" + 0.016*"original" + 0.016*"see"
+topic #0 (0.167): 0.683*"build" + 0.201*"role" + 0.024*"original" + 0.007*"see" + 0.007*"royal" + 0.007*"area" + 0.007*"back" + 0.007*"court" + 0.007*"player" + 0.007*"film"
+topic #4 (0.167): 0.416*"school" + 0.355*"royal" + 0.154*"film" + 0.016*"back" + 0.010*"see" + 0.010*"area" + 0.005*"set" + 0.004*"come" + 0.004*"long" + 0.004*"short"
+topic diff=0.344216, rho=0.408248
+PROGRESS: pass 0, at document #35/100
+merging changes from 5 documents into a model of 100 documents
+topic #1 (0.167): 0.566*"court" + 0.132*"international" + 0.022*"come" + 0.022*"player" + 0.022*"original" + 0.022*"role" + 0.022*"film" + 0.022*"build" + 0.022*"area" + 0.022*"see"
+topic #4 (0.167): 0.374*"film" + 0.338*"royal" + 0.228*"school" + 0.011*"back" + 0.007*"see" + 0.007*"area" + 0.005*"set" + 0.004*"original" + 0.003*"come" + 0.003*"long"
+topic #2 (0.167): 0.597*"come" + 0.247*"court" + 0.039*"see" + 0.035*"back" + 0.020*"international" + 0.014*"area" + 0.010*"school" + 0.007*"set" + 0.005*"royal" + 0.005*"original"
+topic #5 (0.167): 0.314*"see" + 0.278*"back" + 0.134*"area" + 0.116*"long" + 0.091*"set" + 0.042*"short" + 0.014*"player" + 0.002*"school" + 0.002*"come" + 0.001*"court"
+topic #3 (0.167): 0.433*"international" + 0.262*"court" + 0.191*"area" + 0.023*"role" + 0.009*"film" + 0.008*"long" + 0.007*"come" + 0.007*"see" + 0.007*"build" + 0.007*"royal"
+topic diff=0.338986, rho=0.377964
+PROGRESS: pass 0, at document #40/100
+merging changes from 5 documents into a model of 100 documents
+topic #2 (0.167): 0.582*"come" + 0.242*"court" + 0.039*"see" + 0.036*"back" + 0.021*"international" + 0.015*"area" + 0.011*"school" + 0.009*"set" + 0.007*"royal" + 0.006*"original"
+topic #0 (0.167): 0.595*"build" + 0.221*"original" + 0.088*"role" + 0.007*"royal" + 0.007*"see" + 0.007*"area" + 0.007*"back" + 0.007*"short" + 0.007*"court" + 0.007*"set"
+topic #1 (0.167): 0.486*"court" + 0.121*"international" + 0.028*"come" + 0.028*"player" + 0.028*"original" + 0.028*"role" + 0.028*"film" + 0.028*"area" + 0.028*"build" + 0.028*"see"
+topic #5 (0.167): 0.299*"see" + 0.220*"back" + 0.143*"long" + 0.123*"set" + 0.107*"area" + 0.084*"short" + 0.012*"player" + 0.002*"school" + 0.002*"come" + 0.001*"court"
+topic #3 (0.167): 0.437*"area" + 0.283*"international" + 0.172*"court" + 0.018*"role" + 0.009*"film" + 0.008*"long" + 0.007*"come" + 0.007*"see" + 0.007*"build" + 0.007*"royal"
+topic diff=0.219123, rho=0.353553
+PROGRESS: pass 0, at document #45/100
+merging changes from 5 documents into a model of 100 documents
+topic #3 (0.167): 0.612*"area" + 0.172*"international" + 0.106*"court" + 0.030*"role" + 0.007*"film" + 0.007*"long" + 0.007*"back" + 0.007*"come" + 0.007*"see" + 0.007*"build"
+topic #1 (0.167): 0.909*"court" + 0.017*"international" + 0.005*"come" + 0.005*"role" + 0.005*"original" + 0.005*"player" + 0.005*"film" + 0.005*"area" + 0.005*"build" + 0.005*"short"
+topic #4 (0.167): 0.504*"school" + 0.406*"film" + 0.074*"royal" + 0.002*"back" + 0.002*"see" + 0.001*"set" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"role"
+topic #5 (0.167): 0.231*"back" + 0.193*"see" + 0.192*"short" + 0.138*"long" + 0.125*"set" + 0.100*"area" + 0.008*"player" + 0.002*"school" + 0.001*"come" + 0.001*"role"
+topic #2 (0.167): 0.645*"come" + 0.182*"court" + 0.044*"back" + 0.031*"see" + 0.018*"international" + 0.016*"area" + 0.010*"school" + 0.008*"set" + 0.007*"royal" + 0.006*"original"
+topic diff=0.766610, rho=0.333333
+PROGRESS: pass 0, at document #50/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.167): 0.487*"role" + 0.294*"original" + 0.162*"build" + 0.005*"player" + 0.004*"short" + 0.004*"back" + 0.004*"set" + 0.004*"area" + 0.004*"film" + 0.004*"long"
+topic #3 (0.167): 0.667*"international" + 0.208*"area" + 0.043*"role" + 0.037*"court" + 0.009*"player" + 0.004*"film" + 0.003*"come" + 0.003*"set" + 0.003*"short" + 0.003*"long"
+topic #2 (0.167): 0.780*"come" + 0.095*"court" + 0.026*"international" + 0.024*"back" + 0.017*"see" + 0.009*"area" + 0.007*"player" + 0.006*"school" + 0.006*"set" + 0.005*"royal"
+topic #5 (0.167): 0.194*"short" + 0.175*"back" + 0.148*"player" + 0.146*"see" + 0.143*"set" + 0.105*"long" + 0.076*"area" + 0.002*"school" + 0.002*"come" + 0.001*"role"
+topic #4 (0.167): 0.475*"school" + 0.382*"film" + 0.121*"royal" + 0.002*"back" + 0.002*"see" + 0.002*"set" + 0.002*"short" + 0.002*"area" + 0.002*"original" + 0.001*"role"
+topic diff=0.471037, rho=0.316228
+PROGRESS: pass 0, at document #55/100
+merging changes from 5 documents into a model of 100 documents
+topic #1 (0.167): 0.837*"court" + 0.021*"international" + 0.010*"come" + 0.010*"player" + 0.010*"role" + 0.010*"original" + 0.010*"film" + 0.010*"area" + 0.010*"build" + 0.010*"short"
+topic #4 (0.167): 0.773*"film" + 0.172*"school" + 0.044*"royal" + 0.001*"back" + 0.001*"see" + 0.001*"set" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"role"
+topic #0 (0.167): 0.482*"role" + 0.351*"original" + 0.112*"build" + 0.004*"player" + 0.004*"short" + 0.004*"set" + 0.004*"film" + 0.004*"back" + 0.004*"see" + 0.004*"area"
+topic #5 (0.167): 0.200*"player" + 0.198*"see" + 0.185*"short" + 0.149*"set" + 0.125*"back" + 0.075*"long" + 0.055*"area" + 0.002*"school" + 0.001*"come" + 0.001*"role"
+topic #3 (0.167): 0.561*"international" + 0.318*"area" + 0.037*"role" + 0.032*"court" + 0.009*"player" + 0.004*"film" + 0.004*"come" + 0.004*"set" + 0.004*"short" + 0.004*"long"
+topic diff=0.280022, rho=0.301511
+PROGRESS: pass 0, at document #60/100
+merging changes from 5 documents into a model of 100 documents
+topic #5 (0.167): 0.232*"player" + 0.220*"short" + 0.175*"see" + 0.132*"set" + 0.111*"back" + 0.067*"long" + 0.049*"area" + 0.002*"school" + 0.002*"come" + 0.002*"role"
+topic #4 (0.167): 0.770*"film" + 0.171*"school" + 0.044*"royal" + 0.001*"back" + 0.001*"see" + 0.001*"set" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"role"
+topic #3 (0.167): 0.548*"international" + 0.311*"area" + 0.038*"role" + 0.033*"court" + 0.010*"player" + 0.006*"film" + 0.005*"come" + 0.005*"set" + 0.005*"short" + 0.005*"long"
+topic #0 (0.167): 0.479*"role" + 0.388*"original" + 0.079*"build" + 0.004*"player" + 0.004*"short" + 0.004*"set" + 0.004*"film" + 0.004*"back" + 0.004*"see" + 0.004*"area"
+topic #1 (0.167): 0.789*"court" + 0.023*"international" + 0.013*"come" + 0.013*"player" + 0.013*"role" + 0.013*"original" + 0.013*"film" + 0.013*"area" + 0.013*"short" + 0.013*"build"
+topic diff=0.181065, rho=0.288675
+PROGRESS: pass 0, at document #65/100
+merging changes from 5 documents into a model of 100 documents
+topic #1 (0.167): 0.830*"court" + 0.017*"international" + 0.012*"build" + 0.011*"school" + 0.011*"come" + 0.011*"royal" + 0.011*"player" + 0.011*"role" + 0.011*"original" + 0.011*"film"
+topic #4 (0.167): 0.675*"film" + 0.190*"school" + 0.118*"royal" + 0.002*"back" + 0.001*"see" + 0.001*"set" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"role"
+topic #3 (0.167): 0.445*"international" + 0.418*"area" + 0.032*"role" + 0.028*"court" + 0.010*"player" + 0.006*"royal" + 0.006*"film" + 0.006*"back" + 0.006*"come" + 0.006*"set"
+topic #2 (0.167): 0.763*"come" + 0.067*"court" + 0.039*"back" + 0.022*"international" + 0.016*"see" + 0.012*"area" + 0.009*"player" + 0.009*"school" + 0.009*"royal" + 0.009*"set"
+topic #5 (0.167): 0.264*"back" + 0.188*"player" + 0.178*"short" + 0.142*"see" + 0.107*"set" + 0.054*"long" + 0.050*"area" + 0.002*"school" + 0.002*"come" + 0.002*"royal"
+topic diff=0.211246, rho=0.277350
+PROGRESS: pass 0, at document #70/100
+merging changes from 5 documents into a model of 100 documents
+topic #2 (0.167): 0.797*"come" + 0.052*"court" + 0.031*"back" + 0.018*"international" + 0.014*"see" + 0.011*"area" + 0.009*"player" + 0.009*"school" + 0.009*"royal" + 0.008*"set"
+topic #0 (0.167): 0.350*"original" + 0.323*"build" + 0.284*"role" + 0.003*"royal" + 0.003*"player" + 0.003*"short" + 0.003*"long" + 0.003*"back" + 0.003*"set" + 0.003*"see"
+topic #1 (0.167): 0.784*"court" + 0.020*"international" + 0.015*"build" + 0.014*"school" + 0.014*"come" + 0.014*"royal" + 0.014*"player" + 0.014*"role" + 0.014*"original" + 0.014*"film"
+topic #4 (0.167): 0.581*"film" + 0.253*"school" + 0.147*"royal" + 0.002*"back" + 0.002*"see" + 0.002*"set" + 0.002*"short" + 0.002*"area" + 0.001*"original" + 0.001*"role"
+topic #5 (0.167): 0.245*"back" + 0.158*"see" + 0.151*"long" + 0.134*"player" + 0.133*"set" + 0.127*"short" + 0.036*"area" + 0.002*"school" + 0.002*"come" + 0.002*"royal"
+topic diff=0.192924, rho=0.267261
+PROGRESS: pass 0, at document #75/100
+merging changes from 5 documents into a model of 100 documents
+topic #4 (0.167): 0.480*"film" + 0.401*"school" + 0.106*"royal" + 0.001*"back" + 0.001*"set" + 0.001*"see" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"build"
+topic #1 (0.167): 0.796*"court" + 0.017*"international" + 0.014*"build" + 0.014*"school" + 0.013*"set" + 0.013*"area" + 0.013*"come" + 0.013*"short" + 0.013*"see" + 0.013*"film"
+topic #3 (0.167): 0.821*"area" + 0.138*"international" + 0.017*"court" + 0.005*"role" + 0.002*"player" + 0.002*"build" + 0.002*"set" + 0.002*"school" + 0.002*"short" + 0.002*"come"
+topic #0 (0.167): 0.687*"build" + 0.184*"original" + 0.108*"role" + 0.002*"set" + 0.002*"short" + 0.002*"area" + 0.002*"school" + 0.002*"court" + 0.002*"royal" + 0.002*"see"
+topic #5 (0.167): 0.257*"set" + 0.164*"back" + 0.157*"see" + 0.141*"short" + 0.116*"long" + 0.107*"player" + 0.046*"area" + 0.001*"school" + 0.001*"come" + 0.001*"build"
+topic diff=0.470117, rho=0.258199
+PROGRESS: pass 0, at document #80/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.167): 0.602*"build" + 0.211*"role" + 0.161*"original" + 0.002*"set" + 0.002*"school" + 0.002*"short" + 0.002*"area" + 0.002*"court" + 0.002*"royal" + 0.002*"see"
+topic #1 (0.167): 0.748*"court" + 0.020*"international" + 0.017*"build" + 0.017*"school" + 0.017*"set" + 0.017*"area" + 0.017*"come" + 0.017*"short" + 0.017*"see" + 0.017*"film"
+topic #3 (0.167): 0.695*"area" + 0.265*"international" + 0.015*"court" + 0.005*"role" + 0.002*"player" + 0.002*"set" + 0.002*"build" + 0.002*"school" + 0.002*"short" + 0.002*"come"
+topic #2 (0.167): 0.807*"come" + 0.056*"court" + 0.023*"back" + 0.014*"international" + 0.012*"see" + 0.010*"area" + 0.008*"school" + 0.008*"player" + 0.008*"royal" + 0.008*"set"
+topic #4 (0.167): 0.514*"film" + 0.379*"school" + 0.091*"royal" + 0.001*"back" + 0.001*"set" + 0.001*"see" + 0.001*"short" + 0.001*"area" + 0.001*"original" + 0.001*"build"
+topic diff=0.149415, rho=0.250000
+PROGRESS: pass 0, at document #85/100
+merging changes from 5 documents into a model of 100 documents
+topic #1 (0.167): 0.694*"court" + 0.023*"international" + 0.021*"build" + 0.020*"school" + 0.020*"set" + 0.020*"area" + 0.020*"come" + 0.020*"short" + 0.020*"see" + 0.020*"film"
+topic #4 (0.167): 0.511*"film" + 0.378*"school" + 0.091*"royal" + 0.002*"back" + 0.002*"set" + 0.002*"see" + 0.002*"short" + 0.002*"area" + 0.002*"original" + 0.001*"build"
+topic #2 (0.167): 0.780*"come" + 0.056*"court" + 0.024*"back" + 0.016*"international" + 0.014*"see" + 0.012*"area" + 0.010*"school" + 0.010*"player" + 0.010*"royal" + 0.010*"set"
+topic #0 (0.167): 0.556*"build" + 0.218*"original" + 0.195*"role" + 0.002*"set" + 0.002*"school" + 0.002*"short" + 0.002*"area" + 0.002*"court" + 0.002*"royal" + 0.002*"long"
+topic #5 (0.167): 0.243*"back" + 0.182*"set" + 0.176*"player" + 0.131*"see" + 0.122*"short" + 0.107*"long" + 0.028*"area" + 0.001*"school" + 0.001*"come" + 0.001*"build"
+topic diff=0.165591, rho=0.242536
+PROGRESS: pass 0, at document #90/100
+merging changes from 5 documents into a model of 100 documents
+topic #3 (0.167): 0.707*"area" + 0.242*"international" + 0.014*"court" + 0.005*"role" + 0.003*"player" + 0.003*"set" + 0.003*"build" + 0.003*"school" + 0.003*"short" + 0.003*"come"
+topic #2 (0.167): 0.747*"come" + 0.056*"court" + 0.026*"back" + 0.018*"international" + 0.016*"see" + 0.014*"area" + 0.013*"school" + 0.013*"player" + 0.013*"royal" + 0.013*"set"
+topic #0 (0.167): 0.550*"build" + 0.216*"original" + 0.194*"role" + 0.003*"set" + 0.003*"school" + 0.003*"short" + 0.003*"area" + 0.003*"court" + 0.003*"royal" + 0.003*"long"
+topic #4 (0.167): 0.508*"film" + 0.375*"school" + 0.091*"royal" + 0.002*"back" + 0.002*"set" + 0.002*"see" + 0.002*"short" + 0.002*"area" + 0.002*"original" + 0.002*"build"
+topic #1 (0.167): 0.637*"court" + 0.027*"international" + 0.024*"build" + 0.024*"school" + 0.024*"set" + 0.024*"area" + 0.024*"come" + 0.024*"short" + 0.024*"see" + 0.024*"film"
+topic diff=0.161527, rho=0.235702
+PROGRESS: pass 0, at document #95/100
+merging changes from 5 documents into a model of 100 documents
+topic #0 (0.167): 0.543*"build" + 0.214*"original" + 0.192*"role" + 0.004*"set" + 0.004*"school" + 0.004*"short" + 0.004*"area" + 0.004*"court" + 0.004*"royal" + 0.004*"long"
+topic #3 (0.167): 0.699*"area" + 0.240*"international" + 0.015*"court" + 0.006*"role" + 0.004*"player" + 0.003*"set" + 0.003*"build" + 0.003*"school" + 0.003*"short" + 0.003*"come"
+topic #1 (0.167): 0.872*"court" + 0.009*"international" + 0.009*"school" + 0.009*"build" + 0.008*"set" + 0.008*"area" + 0.008*"come" + 0.008*"short" + 0.008*"see" + 0.008*"film"
+topic #4 (0.167): 0.472*"film" + 0.412*"school" + 0.085*"royal" + 0.002*"back" + 0.002*"set" + 0.002*"see" + 0.002*"short" + 0.002*"area" + 0.002*"original" + 0.002*"build"
+topic #2 (0.167): 0.711*"come" + 0.057*"court" + 0.028*"back" + 0.020*"international" + 0.018*"see" + 0.017*"area" + 0.015*"school" + 0.015*"player" + 0.015*"royal" + 0.015*"set"
+topic diff=0.308059, rho=0.229416
+-3.114 per-word bound, 8.7 perplexity estimate based on a held-out corpus of 5 documents with 27 words
+PROGRESS: pass 0, at document #100/100
+merging changes from 5 documents into a model of 100 documents
+topic #5 (0.167): 0.351*"player" + 0.197*"back" + 0.167*"long" + 0.104*"see" + 0.092*"set" + 0.062*"short" + 0.015*"area" + 0.001*"school" + 0.001*"international" + 0.001*"come"
+topic #4 (0.167): 0.505*"film" + 0.314*"school" + 0.156*"royal" + 0.002*"back" + 0.002*"see" + 0.002*"set" + 0.002*"short" + 0.002*"area" + 0.002*"long" + 0.002*"role"
+topic #0 (0.167): 0.436*"build" + 0.297*"role" + 0.225*"original" + 0.003*"player" + 0.003*"royal" + 0.003*"long" + 0.003*"set" + 0.003*"school" + 0.003*"short" + 0.003*"area"
+topic #2 (0.167): 0.829*"come" + 0.029*"court" + 0.015*"back" + 0.012*"international" + 0.011*"see" + 0.010*"player" + 0.010*"area" + 0.009*"school" + 0.009*"royal" + 0.009*"set"
+topic #3 (0.167): 0.620*"area" + 0.314*"international" + 0.014*"court" + 0.006*"role" + 0.004*"player" + 0.004*"set" + 0.004*"build" + 0.004*"school" + 0.004*"short" + 0.004*"come"
+topic diff=0.295526, rho=0.223607
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=6, decay=0.5, chunksize=5) in 0.08s', 'datetime': '2022-02-06T08:40:45.905372', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
+serializing accumulator to return to master...
+serializing accumulator to return to master...
+accumulator serialized
+accumulator serialized
+2 accumulators retrieved from output queue
+accumulated word occurrence stats for 65 virtual documents
+K=6, Coherence Score: 0.5503595963830591
+ALL DONE!

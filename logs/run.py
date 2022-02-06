@@ -1,3 +1,4 @@
+
 import re
 import numpy as np
 import pandas as pd
@@ -50,7 +51,6 @@ if sys.argv[-1].lower().strip()=='test':
     numtopics=4
     passes=1
     fnprefix='test_'
-    workers=2
 else:
     logging.info('App started in full mode.')
     evalevery=1000
@@ -58,7 +58,6 @@ else:
     numtopics=20
     passes=8
     fnprefix=''
-    workers=3
 
 
 fn='data/datapicklesoup.bz2'
@@ -223,7 +222,7 @@ if testmode:
 else:
   lda_model = gensim.models.ldamulticore.LdaMulticore(
      corpus=corpus, id2word=id2word, num_topics=numtopics, random_state=100, 
-     eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=workers
+     eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
   )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -274,7 +273,7 @@ if testmode:
 else:
   lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
      corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=numtopics, random_state=100, 
-     eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=workers
+     eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
   )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -321,7 +320,7 @@ else:
 for K in searchgrid:
     logging.info('Starting K={}'.format(K))
     starttime=time.time()
-    setUpNewLogFile('gensim_lem_{}.log'.format(K))
+    #setUpNewLogFile('gensim_lem_{}.log'.format(K))
 
     if testmode:
       lda_model_lemmatized = gensim.models.ldamodel.LdaModel(
@@ -331,10 +330,10 @@ for K in searchgrid:
     else:
       lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
          corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=K, random_state=100, 
-         eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=workers
+         eval_every=evalevery, chunksize=chunk, passes=passes, alpha='symmetric', per_word_topics=True, workers=2
       )   
     coherence_model_lda_lemmatized = CoherenceModel(
-       model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v', processes=workers
+       model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v'
     )
     coherence_lda_lemmatized = coherence_model_lda_lemmatized.get_coherence()
     logging.info('K={}, Coherence Score: {}'.format(K,coherence_lda_lemmatized))
