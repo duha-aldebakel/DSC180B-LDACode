@@ -1,0 +1,92 @@
+06-Feb-22 03:40:57 - root INFO Number of arguments: 2 arguments.
+06-Feb-22 03:40:57 - root INFO Argument List: ['run.py', 'test']
+06-Feb-22 03:40:57 - root INFO App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)
+06-Feb-22 03:40:57 - root INFO 
+
+# Loading data pickle file test/testdata/testdatapickle.bz2
+06-Feb-22 03:40:57 - root INFO                                                   text                                 title
+0    Predrag Vuković (Serbian Cyrillic: Предраг Вук...                  Predrag_Vukovi%C4%87
+1    Orlin Chalmers (born January 30, 1982) is a fo...                        Orlin_Chalmers
+2    Danielle Marie Johnson (born November 17, 1987...                      Danielle_Johnson
+3    The cornerstone of the Estonian cosmological r...              Space_science_in_Estonia
+4    Elisa Bailly de Vilmorin (3 May 1826 – 5 Augus...              Elisa_Bailly_de_Vilmorin
+..                                                 ...                                   ...
+993  Convergence trade is a trading strategy consis...                     Convergence_trade
+994  Suriname competed at the 1992 Summer Olympics ...  Suriname_at_the_1992_Summer_Olympics
+995  Blazin' Squad were an English hip hop group.  ...                       Blazin%27_Squad
+996  "Give No Fxk" (pronounced "give no fuck") is a...                           Give_No_Fxk
+997  Devistan I is a mountain of the Garhwal Himala...                            Devistan_I
+
+[996 rows x 2 columns]
+06-Feb-22 03:40:57 - root INFO 
+
+# Tokenizing articles
+06-Feb-22 03:40:59 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 03:40:59 - gensim.corpora.dictionary INFO built Dictionary(32390 unique tokens: ['actions', 'administration', 'aleksandar', 'and', 'appeared']...) from 996 documents (total 376596 corpus positions)
+06-Feb-22 03:40:59 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 03:40:59 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(32390 unique tokens: ['actions', 'administration', 'aleksandar', 'and', 'appeared']...) from 996 documents (total 376596 corpus positions)", 'datetime': '2022-02-06T03:40:59.363131', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:40:59 - root INFO 
+
+# Removing stop words and adding bigrams
+06-Feb-22 03:40:59 - gensim.models.phrases INFO collecting all words and their counts
+06-Feb-22 03:40:59 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
+06-Feb-22 03:41:00 - gensim.models.phrases INFO collected 236645 token types (unigram + bigrams) from a corpus of 376596 words and 996 sentences
+06-Feb-22 03:41:00 - gensim.models.phrases INFO merged Phrases<236645 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 03:41:00 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
+06-Feb-22 03:41:00 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<236645 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.66s', 'datetime': '2022-02-06T03:41:00.285533', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:00 - gensim.models.phrases INFO collecting all words and their counts
+06-Feb-22 03:41:00 - gensim.models.phrases INFO PROGRESS: at sentence #0, processed 0 words and 0 word types
+06-Feb-22 03:41:02 - gensim.models.phrases INFO collected 238396 token types (unigram + bigrams) from a corpus of 370137 words and 996 sentences
+06-Feb-22 03:41:02 - gensim.models.phrases INFO merged Phrases<238396 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 03:41:02 - gensim.utils DEBUG starting a new internal lifecycle event log for Phrases
+06-Feb-22 03:41:02 - gensim.utils INFO Phrases lifecycle event {'msg': 'built Phrases<238396 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 1.80s', 'datetime': '2022-02-06T03:41:02.088975', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:02 - gensim.models.phrases INFO exporting phrases from Phrases<236645 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 03:41:02 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
+06-Feb-22 03:41:02 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<515 phrases, min_count=5, threshold=100> from Phrases<236645 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.57s', 'datetime': '2022-02-06T03:41:02.656845', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:02 - gensim.models.phrases INFO exporting phrases from Phrases<238396 vocab, min_count=5, threshold=100, max_vocab_size=40000000>
+06-Feb-22 03:41:03 - gensim.utils DEBUG starting a new internal lifecycle event log for FrozenPhrases
+06-Feb-22 03:41:03 - gensim.utils INFO FrozenPhrases lifecycle event {'msg': 'exported FrozenPhrases<493 phrases, min_count=5, threshold=100> from Phrases<238396 vocab, min_count=5, threshold=100, max_vocab_size=40000000> in 0.57s', 'datetime': '2022-02-06T03:41:03.229183', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:05 - root INFO data_words_nostops[0][:40]
+06-Feb-22 03:41:05 - root INFO ['predrag', 'vukovic', 'serbian', 'cyrillic', 'предраг', 'вуковић', 'born', 'may', 'politician', 'serbia', 'mayor', 'sid', 'served', 'assembly', 'vojvodina', 'since', 'vukovic', 'member', 'serbian', 'progressive', 'party', 'vukovic', 'born', 'vukovar', 'socialist', 'republic', 'croatia', 'socialist', 'federal', 'republic', 'yugoslavia', 'degree', 'university', 'belgrade', 'faculty', 'economics', 'company', 'director', 'private', 'public']
+06-Feb-22 03:41:05 - root INFO data_words_bigrams[0][:40]
+06-Feb-22 03:41:05 - root INFO ['predrag', 'vukovic', 'serbian', 'cyrillic', 'предраг', 'вуковић', 'born', 'may', 'politician', 'serbia', 'mayor', 'sid', 'served', 'assembly', 'vojvodina', 'since', 'vukovic', 'member', 'serbian', 'progressive', 'party', 'vukovic', 'born', 'vukovar', 'socialist', 'republic', 'croatia', 'socialist', 'federal', 'republic', 'yugoslavia', 'degree', 'university', 'belgrade', 'faculty', 'economics', 'company', 'director', 'private', 'public']
+06-Feb-22 03:41:05 - root INFO 
+
+# Lemmatization
+06-Feb-22 03:41:05 - root INFO Lemmatization Example predrag -> VERB
+06-Feb-22 03:41:05 - root INFO Lemmatization Example vukovic -> ADJ
+06-Feb-22 03:41:05 - root INFO Lemmatization Example cyrillic -> NOUN
+06-Feb-22 03:41:05 - root INFO Lemmatization Example вуковић -> ADV
+06-Feb-22 03:41:05 - root INFO Lemmatization Example may -> AUX
+06-Feb-22 03:41:05 - root INFO Lemmatization Example politician -> PROPN
+06-Feb-22 03:41:05 - root INFO Lemmatization Example since -> SCONJ
+06-Feb-22 03:41:05 - root INFO Lemmatization Example twenty -> NUM
+06-Feb-22 03:41:33 - root INFO data_lemmatized[0][:40]
+06-Feb-22 03:41:33 - root INFO ['предраг', 'вуковић', 'bear', 'mayor', 'sid', 'serve', 'assembly', 'vojvodina', 'vukovic', 'member', 'vukovic', 'bear', 'vukovar', 'socialist', 'socialist', 'degree', 'faculty', 'economic', 'company', 'director', 'private', 'public', 'sector', 'sid', 'vukovic', 'appear', 'lead', 'position', 'electoral', 'list', 'local', 'election', 'sid', 'list', 'win', 'majority', 'victory', 'seat', 'choose', 'mayor']
+06-Feb-22 03:41:33 - root INFO data_words_bigrams[0][:40]
+06-Feb-22 03:41:33 - root INFO ['predrag', 'vukovic', 'serbian', 'cyrillic', 'предраг', 'вуковић', 'born', 'may', 'politician', 'serbia', 'mayor', 'sid', 'served', 'assembly', 'vojvodina', 'since', 'vukovic', 'member', 'serbian', 'progressive', 'party', 'vukovic', 'born', 'vukovar', 'socialist', 'republic', 'croatia', 'socialist', 'federal', 'republic', 'yugoslavia', 'degree', 'university', 'belgrade', 'faculty', 'economics', 'company', 'director', 'private', 'public']
+06-Feb-22 03:41:33 - root INFO 
+
+# Creating bag of words frequencies
+06-Feb-22 03:41:33 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO built Dictionary(32647 unique tokens: ['actions', 'administration', 'aleksandar', 'appeared', 'assembly']...) from 996 documents (total 221152 corpus positions)
+06-Feb-22 03:41:34 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 03:41:34 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(32647 unique tokens: ['actions', 'administration', 'aleksandar', 'appeared', 'assembly']...) from 996 documents (total 221152 corpus positions)", 'datetime': '2022-02-06T03:41:34.214508', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:34 - root INFO No lemmatization -- Number of unique tokens: 32647
+06-Feb-22 03:41:34 - root INFO No lemmatization -- Number of documents: 996
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO adding document #0 to Dictionary(0 unique tokens: [])
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO built Dictionary(20418 unique tokens: ['action', 'administration', 'aleksandar', 'appear', 'assembly']...) from 996 documents (total 175272 corpus positions)
+06-Feb-22 03:41:34 - gensim.utils DEBUG starting a new internal lifecycle event log for Dictionary
+06-Feb-22 03:41:34 - gensim.utils INFO Dictionary lifecycle event {'msg': "built Dictionary(20418 unique tokens: ['action', 'administration', 'aleksandar', 'appear', 'assembly']...) from 996 documents (total 175272 corpus positions)", 'datetime': '2022-02-06T03:41:34.512721', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO discarding 18448 tokens: [('aleksandar', 1), ('bear', 236), ('confrontation', 3), ('convene', 2), ('dismiss', 6), ('electoral', 9), ('lead', 147), ('list', 106), ('mandate', 7), ('member', 180)]...
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO keeping 1970 tokens which were in no less than 10 and no more than 99 (=10.0%) documents
+06-Feb-22 03:41:34 - gensim.corpora.dictionary DEBUG rebuilding dictionary, shrinking gaps
+06-Feb-22 03:41:34 - gensim.corpora.dictionary INFO resulting dictionary: Dictionary(1970 unique tokens: ['action', 'administration', 'appear', 'assembly', 'centre']...)
+06-Feb-22 03:41:34 - root INFO lemmatization -- Number of unique tokens: 1970
+06-Feb-22 03:41:34 - root INFO lemmatization -- Number of documents: 996
+06-Feb-22 03:41:34 - root INFO 
+
+# Fitting via LDA Variational Inference (Gensim) library
+06-Feb-22 03:41:34 - root INFO 
+
+## Without Lemmatization
