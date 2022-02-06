@@ -32,7 +32,7 @@ import os
 
 import logging
 
-logging.basicConfig(filename='app.log', 
+logging.basicConfig(filename='logs/app.log', 
                     filemode='w',
                     format='%(asctime)s - %(name)s %(levelname)s %(message)s', 
                     datefmt='%d-%b-%y %H:%M:%S',
@@ -171,6 +171,7 @@ logging.info('\n\n# Fitting via LDA Variational Inference (Gensim) library')
 
 
 def setUpNewLogFile(LOG_FILENAME):
+    LOG_FILENAME='logs/'+LOG_FILENAME
     try:
       os.remove(LOG_FILENAME)
     except:
@@ -220,7 +221,7 @@ logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
 
 p = re.compile(r"(-*\d+\.\d+) per-word .* (\d+\.\d+) perplexity")
-matches = [p.findall(l) for l in open('gensim_nolem.log')]
+matches = [p.findall(l) for l in open('logs/gensim_nolem.log')]
 matches = [m for m in matches if len(m) > 0]
 tuples = [t[0] for t in matches]
 perplexity = [float(t[1]) for t in tuples]
@@ -267,7 +268,7 @@ lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
 p = re.compile(r"(-*\d+\.\d+) per-word .* (\d+\.\d+) perplexity")
-matches = [p.findall(l) for l in open('gensim_lem.log')]
+matches = [p.findall(l) for l in open('logs/gensim_lem.log')]
 matches = [m for m in matches if len(m) > 0]
 tuples = [t[0] for t in matches]
 perplexity = [float(t[1]) for t in tuples]
@@ -291,8 +292,8 @@ plt.ylabel("Perplexity")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.eps', format='eps')
-plt.savefig('images/'+fnprefix+'NoLemConvergencePerplexity.png')
+plt.savefig('images/'+fnprefix+'LemConvergencePerplexity.eps', format='eps')
+plt.savefig('images/'+fnprefix+'LemConvergencePerplexity.png')
 plt.show()
 plt.close(fig)
 logging.info('Note: Log likelihood is per-word ELBO')
@@ -303,7 +304,7 @@ logging.info('\n\n## Finding the right value of K')
 K_Coherence={}
 models={}
 if testmode:
-  searchgrid=[3,4,5,6]
+  searchgrid=[1,2,3,4]
 else:
   searchgrid=[5,10,15,20,25,30,40]
 for K in searchgrid:
@@ -320,7 +321,7 @@ for K in searchgrid:
        model=lda_model_lemmatized, texts=data_lemmatized_filtered, dictionary=id2word_lemmatized, coherence='c_v'
     )
     coherence_lda_lemmatized = coherence_model_lda_lemmatized.get_coherence()
-    logging.info('Coherence Score: {}'.format(coherence_lda_lemmatized))
+    logging.info('K={}, Coherence Score: {}'.format(K,coherence_lda_lemmatized))
     K_Coherence[K]=coherence_lda_lemmatized
     models[K]=lda_model_lemmatized
 
