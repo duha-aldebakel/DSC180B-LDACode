@@ -46,9 +46,11 @@ if sys.argv[-1].lower().strip()=='test':
     logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
     testmode=True
     evalevery=100
+    numtopics=5
 else:
     logging.info('App started in full mode.')
     evalevery=1000
+    numtopics=20
 
 
 fn='data/datapicklesoup.bz2'
@@ -174,17 +176,17 @@ def setUpNewLogFile(LOG_FILENAME):
 
     my_logger = logging.getLogger()
     my_logger.setLevel(logging.INFO)
-    my_logger.handlers.clear()
-    handlers = my_logger.handlers[:]
-    for handler in handlers:
-        handler.close()
-        my_logger.removeHandler(handler)
+    #my_logger.handlers.clear()
+    #handlers = my_logger.handlers[:]
+    #for handler in handlers:
+    #    handler.close()
+    #    my_logger.removeHandler(handler)
 
     # Check if log exists and should therefore be rolled
     needRoll = os.path.isfile(LOG_FILENAME)
 
     # Add the log message handler to the logger
-    handler = logging.handlers.RotatingFileHandler(LOG_FILENAME, backupCount=50)
+    handler = logging.handlers.RotatingFileHandler(LOG_FILENAME, backupCount=5)
 
     my_logger.addHandler(handler)
 
@@ -207,7 +209,7 @@ setUpNewLogFile('gensim_nolem.log')
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model = gensim.models.ldamulticore.LdaMulticore(
    corpus=corpus, id2word=id2word, num_topics=20, random_state=100, 
-   eval_every=evalevery, chunksize=evalevery, passes=20, alpha='symmetric', per_word_topics=True
+   eval_every=evalevery, chunksize=evalevery, passes=numtopics, alpha='symmetric', per_word_topics=True
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -248,7 +250,7 @@ setUpNewLogFile('gensim_lem.log')
 
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
-   corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=20, random_state=100, 
+   corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=numtopics, random_state=100, 
    eval_every=evalevery, chunksize=evalevery, passes=10, alpha='symmetric', per_word_topics=True
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
