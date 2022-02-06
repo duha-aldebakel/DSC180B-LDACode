@@ -169,7 +169,7 @@ logging.info('\n\n# Fitting via LDA Variational Inference (Gensim) library')
 
 
 def setUpNewLogFile(LOG_FILENAME):
-
+    os.remove(LOG_FILENAME)
     #logging.basicConfig(filename=LOG_FILENAME,
     #                    format="%(asctime)s:%(levelname)s:%(message)s",
     #                    level=logging.INFO)
