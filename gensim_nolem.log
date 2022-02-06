@@ -1,249 +1,520 @@
 using symmetric alpha at 0.05
 using symmetric eta at 0.05
 using serial LDA version on this node
-running online LDA training, 20 topics, 20 passes over the supplied corpus of 996 documents, updating every 1400 documents, evaluating every ~996 documents, iterating 50x with a convergence threshold of 0.001000
+running online LDA training, 20 topics, 20 passes over the supplied corpus of 996 documents, updating every 700 documents, evaluating every ~996 documents, iterating 50x with a convergence threshold of 0.001000
 training LDA model using 7 processes
-PROGRESS: pass 0, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 0, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 0, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 0, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 0, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #15 (0.050): 0.005*"also" + 0.003*"first" + 0.003*"one" + 0.003*"may" + 0.002*"new" + 0.002*"two" + 0.002*"time" + 0.002*"species" + 0.002*"people" + 0.002*"would"
-topic #5 (0.050): 0.004*"also" + 0.004*"two" + 0.004*"first" + 0.003*"one" + 0.003*"would" + 0.003*"band" + 0.002*"new" + 0.002*"three" + 0.002*"album" + 0.002*"time"
-topic #11 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"time" + 0.003*"game" + 0.003*"city" + 0.002*"first" + 0.002*"two" + 0.002*"new" + 0.002*"would" + 0.002*"years"
-topic #7 (0.050): 0.004*"also" + 0.004*"one" + 0.003*"two" + 0.003*"first" + 0.002*"year" + 0.002*"bridge" + 0.002*"new" + 0.002*"three" + 0.002*"station" + 0.002*"since"
-topic #9 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"first" + 0.002*"university" + 0.002*"new" + 0.002*"two" + 0.002*"would" + 0.002*"company" + 0.002*"species" + 0.002*"film"
-topic diff=8.663399, rho=1.000000
--11.124 per-word bound, 2232.5 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 1, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 1, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 1, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 1, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 1, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #13 (0.050): 0.005*"also" + 0.005*"first" + 0.004*"game" + 0.003*"one" + 0.003*"time" + 0.003*"line" + 0.002*"two" + 0.002*"part" + 0.002*"new" + 0.002*"west"
-topic #3 (0.050): 0.005*"also" + 0.003*"national" + 0.003*"first" + 0.002*"two" + 0.002*"later" + 0.002*"year" + 0.002*"street" + 0.002*"years" + 0.002*"one" + 0.002*"second"
-topic #15 (0.050): 0.005*"also" + 0.004*"may" + 0.004*"species" + 0.003*"first" + 0.003*"one" + 0.003*"squadron" + 0.003*"new" + 0.002*"two" + 0.002*"known" + 0.002*"people"
-topic #8 (0.050): 0.003*"displaystyle" + 0.003*"one" + 0.003*"school" + 0.003*"two" + 0.003*"state" + 0.003*"first" + 0.002*"part" + 0.002*"also" + 0.002*"university" + 0.002*"team"
-topic #7 (0.050): 0.004*"also" + 0.004*"one" + 0.003*"two" + 0.003*"first" + 0.003*"displaystyle" + 0.003*"bridge" + 0.002*"park" + 0.002*"year" + 0.002*"three" + 0.002*"since"
-topic diff=1.331948, rho=0.378506
--10.440 per-word bound, 1389.4 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 2, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 2, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 2, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 2, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 2, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #1 (0.050): 0.006*"would" + 0.005*"also" + 0.005*"game" + 0.004*"first" + 0.004*"two" + 0.004*"team" + 0.004*"season" + 0.003*"one" + 0.003*"university" + 0.003*"year"
-topic #16 (0.050): 0.005*"one" + 0.005*"also" + 0.004*"first" + 0.003*"population" + 0.003*"years" + 0.002*"two" + 0.002*"line" + 0.002*"house" + 0.002*"university" + 0.002*"building"
-topic #0 (0.050): 0.008*"borg" + 0.007*"amazing_race" + 0.005*"season" + 0.005*"also" + 0.004*"team" + 0.004*"league" + 0.004*"first" + 0.003*"club" + 0.003*"star_trek" + 0.003*"one"
-topic #8 (0.050): 0.004*"school" + 0.004*"displaystyle" + 0.003*"one" + 0.003*"state" + 0.003*"two" + 0.003*"students" + 0.003*"first" + 0.002*"county" + 0.002*"part" + 0.002*"university"
-topic #5 (0.050): 0.005*"band" + 0.005*"two" + 0.004*"first" + 0.004*"also" + 0.004*"one" + 0.004*"laudrup" + 0.004*"new" + 0.003*"would" + 0.003*"album" + 0.003*"time"
-topic diff=1.195971, rho=0.353996
--10.055 per-word bound, 1064.1 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 3, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 3, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 3, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 3, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 3, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #10 (0.050): 0.003*"first" + 0.003*"two" + 0.003*"university" + 0.003*"also" + 0.003*"united_states" + 0.003*"world" + 0.003*"tanuki" + 0.003*"time" + 0.002*"event" + 0.002*"house"
-topic #18 (0.050): 0.004*"line" + 0.004*"squadron" + 0.003*"film" + 0.003*"one" + 0.003*"south" + 0.003*"city" + 0.003*"th" + 0.003*"east" + 0.002*"kilometres_mi" + 0.002*"first"
-topic #4 (0.050): 0.006*"cocaine" + 0.005*"de" + 0.005*"pce" + 0.004*"may" + 0.003*"also" + 0.003*"one" + 0.003*"children" + 0.003*"studies" + 0.003*"first" + 0.003*"effects"
-topic #3 (0.050): 0.004*"also" + 0.004*"street" + 0.003*"national" + 0.003*"physical" + 0.003*"event" + 0.003*"two" + 0.003*"first" + 0.002*"mental" + 0.002*"laws" + 0.002*"davidson"
-topic #1 (0.050): 0.007*"would" + 0.005*"also" + 0.005*"first" + 0.005*"game" + 0.005*"season" + 0.004*"team" + 0.004*"great_danes" + 0.004*"two" + 0.004*"university" + 0.003*"one"
-topic diff=1.036590, rho=0.333704
--9.828 per-word bound, 909.0 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 4, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 4, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 4, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 4, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 4, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #18 (0.050): 0.005*"line" + 0.004*"squadron" + 0.003*"film" + 0.003*"south" + 0.003*"one" + 0.003*"city" + 0.003*"th" + 0.003*"kilometres_mi" + 0.003*"east" + 0.003*"roosevelt"
-topic #17 (0.050): 0.005*"one" + 0.005*"film" + 0.004*"also" + 0.003*"center" + 0.002*"winner" + 0.002*"air" + 0.002*"patients" + 0.002*"work" + 0.002*"first" + 0.002*"station"
-topic #19 (0.050): 0.005*"school" + 0.004*"also" + 0.004*"first" + 0.004*"year" + 0.004*"one" + 0.003*"management" + 0.003*"company" + 0.002*"two" + 0.002*"th" + 0.002*"years"
-topic #11 (0.050): 0.004*"one" + 0.004*"vassar" + 0.003*"city" + 0.002*"enamel" + 0.002*"collection" + 0.002*"also" + 0.002*"two" + 0.002*"church" + 0.002*"first" + 0.002*"building"
-topic #13 (0.050): 0.006*"game" + 0.005*"also" + 0.004*"first" + 0.003*"one" + 0.003*"route" + 0.003*"ian" + 0.003*"two" + 0.003*"line" + 0.002*"nowe" + 0.002*"time"
-topic diff=0.883174, rho=0.316544
--9.683 per-word bound, 821.8 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 5, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 5, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 5, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 5, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 5, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #7 (0.050): 0.005*"displaystyle" + 0.004*"one" + 0.004*"first" + 0.004*"park" + 0.003*"final" + 0.003*"bridge" + 0.003*"two" + 0.003*"also" + 0.003*"losing" + 0.003*"year"
-topic #3 (0.050): 0.005*"street" + 0.004*"also" + 0.004*"physical" + 0.004*"national" + 0.003*"event" + 0.003*"mental" + 0.003*"laws" + 0.003*"davidson" + 0.003*"events" + 0.003*"two"
-topic #8 (0.050): 0.006*"school" + 0.005*"displaystyle" + 0.004*"students" + 0.004*"one" + 0.004*"county" + 0.003*"state" + 0.003*"goldberg" + 0.003*"carter" + 0.003*"weir_high" + 0.003*"university"
-topic #1 (0.050): 0.008*"would" + 0.006*"season" + 0.006*"first" + 0.005*"team" + 0.005*"game" + 0.005*"also" + 0.005*"great_danes" + 0.004*"university" + 0.004*"played" + 0.004*"two"
-topic #13 (0.050): 0.007*"game" + 0.005*"also" + 0.004*"first" + 0.003*"one" + 0.003*"route" + 0.003*"ian" + 0.003*"nowe" + 0.003*"two" + 0.002*"line" + 0.002*"samantha"
-topic diff=0.741094, rho=0.301786
--9.586 per-word bound, 768.7 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 6, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 6, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 6, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 6, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 6, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #2 (0.050): 0.006*"game" + 0.005*"also" + 0.005*"one" + 0.004*"athletes" + 0.003*"sport_psychology" + 0.003*"performance" + 0.003*"would" + 0.003*"time" + 0.003*"first" + 0.003*"sports"
-topic #14 (0.050): 0.006*"also" + 0.004*"hiv" + 0.004*"indonesia" + 0.003*"school" + 0.003*"national" + 0.003*"first" + 0.003*"university" + 0.003*"westover" + 0.003*"one" + 0.003*"sattler"
-topic #17 (0.050): 0.005*"film" + 0.005*"also" + 0.005*"one" + 0.003*"winner" + 0.003*"center" + 0.003*"air" + 0.003*"patients" + 0.002*"work" + 0.002*"first" + 0.002*"flavipes"
-topic #15 (0.050): 0.007*"species" + 0.005*"squadron" + 0.005*"also" + 0.005*"may" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"two" + 0.003*"first" + 0.003*"symbiodinium" + 0.003*"raf"
-topic #0 (0.050): 0.012*"borg" + 0.009*"amazing_race" + 0.006*"season" + 0.005*"league" + 0.005*"star_trek" + 0.005*"also" + 0.004*"first" + 0.004*"team" + 0.004*"club" + 0.003*"episode"
-topic diff=0.615264, rho=0.288916
--9.520 per-word bound, 734.3 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 7, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 7, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 7, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 7, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 7, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"film" + 0.003*"south" + 0.003*"kilometres_mi" + 0.003*"east" + 0.003*"city" + 0.003*"roosevelt" + 0.003*"th" + 0.003*"islands"
-topic #12 (0.050): 0.009*"railway" + 0.008*"met" + 0.007*"district" + 0.007*"station" + 0.007*"line" + 0.005*"north" + 0.005*"london" + 0.005*"finchley" + 0.004*"town" + 0.004*"city"
-topic #15 (0.050): 0.007*"species" + 0.006*"squadron" + 0.005*"also" + 0.005*"may" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"two" + 0.003*"symbiodinium" + 0.003*"first" + 0.003*"raf"
-topic #11 (0.050): 0.004*"vassar" + 0.004*"one" + 0.003*"enamel" + 0.003*"collection" + 0.003*"church" + 0.003*"th_century" + 0.002*"two" + 0.002*"building" + 0.002*"also" + 0.002*"high"
-topic #4 (0.050): 0.007*"cocaine" + 0.006*"de" + 0.006*"pce" + 0.005*"may" + 0.004*"children" + 0.004*"also" + 0.003*"effects" + 0.003*"studies" + 0.003*"one" + 0.003*"found"
-topic diff=0.506553, rho=0.277564
--9.475 per-word bound, 711.4 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 8, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 8, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 8, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 8, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 8, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"film" + 0.004*"south" + 0.003*"kilometres_mi" + 0.003*"east" + 0.003*"city" + 0.003*"roosevelt" + 0.003*"th" + 0.003*"islands"
-topic #19 (0.050): 0.006*"school" + 0.004*"also" + 0.004*"year" + 0.004*"first" + 0.004*"management" + 0.003*"one" + 0.003*"company" + 0.003*"university" + 0.003*"th" + 0.003*"work"
-topic #7 (0.050): 0.006*"displaystyle" + 0.004*"first" + 0.004*"one" + 0.004*"park" + 0.004*"final" + 0.003*"bridge" + 0.003*"losing" + 0.003*"two" + 0.003*"also" + 0.003*"year"
-topic #13 (0.050): 0.007*"game" + 0.005*"also" + 0.004*"first" + 0.003*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.002*"samantha" + 0.002*"two" + 0.002*"drakengard"
-topic #16 (0.050): 0.005*"one" + 0.005*"also" + 0.004*"population" + 0.003*"first" + 0.003*"years" + 0.003*"people" + 0.002*"house" + 0.002*"age" + 0.002*"area" + 0.002*"building"
-topic diff=0.413768, rho=0.267452
--9.443 per-word bound, 695.9 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 9, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 9, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 9, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 9, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 9, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #8 (0.050): 0.007*"displaystyle" + 0.006*"school" + 0.005*"students" + 0.004*"county" + 0.004*"one" + 0.004*"goldberg" + 0.003*"state" + 0.003*"carter" + 0.003*"weir_high" + 0.003*"university"
-topic #11 (0.050): 0.004*"vassar" + 0.003*"one" + 0.003*"enamel" + 0.003*"collection" + 0.003*"church" + 0.003*"th_century" + 0.002*"two" + 0.002*"include" + 0.002*"building" + 0.002*"high"
-topic #6 (0.050): 0.006*"album" + 0.005*"th" + 0.005*"lennon" + 0.004*"film" + 0.004*"also" + 0.004*"one" + 0.003*"first" + 0.003*"battle" + 0.003*"british" + 0.003*"two"
-topic #12 (0.050): 0.009*"railway" + 0.009*"met" + 0.007*"station" + 0.007*"district" + 0.007*"line" + 0.005*"north" + 0.005*"london" + 0.005*"finchley" + 0.004*"town" + 0.004*"road"
-topic #4 (0.050): 0.007*"cocaine" + 0.006*"de" + 0.006*"pce" + 0.005*"may" + 0.004*"children" + 0.004*"also" + 0.004*"effects" + 0.003*"studies" + 0.003*"one" + 0.003*"found"
-topic diff=0.336568, rho=0.258371
--9.420 per-word bound, 685.1 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 10, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 10, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 10, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 10, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 10, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #19 (0.050): 0.006*"school" + 0.004*"also" + 0.004*"year" + 0.004*"first" + 0.004*"management" + 0.003*"one" + 0.003*"company" + 0.003*"university" + 0.003*"work" + 0.003*"director"
-topic #7 (0.050): 0.006*"displaystyle" + 0.004*"first" + 0.004*"park" + 0.004*"one" + 0.004*"final" + 0.003*"losing" + 0.003*"bridge" + 0.003*"two" + 0.003*"year" + 0.003*"also"
-topic #8 (0.050): 0.007*"displaystyle" + 0.006*"school" + 0.005*"students" + 0.005*"county" + 0.004*"one" + 0.004*"goldberg" + 0.004*"carter" + 0.004*"weir_high" + 0.003*"state" + 0.003*"table"
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"south" + 0.004*"east" + 0.004*"kilometres_mi" + 0.004*"film" + 0.004*"islands" + 0.003*"city" + 0.003*"roosevelt" + 0.003*"th"
-topic #1 (0.050): 0.008*"would" + 0.008*"season" + 0.007*"team" + 0.006*"first" + 0.006*"played" + 0.005*"game" + 0.005*"also" + 0.005*"great_danes" + 0.005*"university" + 0.005*"year"
-topic diff=0.272718, rho=0.250156
--9.404 per-word bound, 677.3 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 11, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 11, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 11, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 11, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 11, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #6 (0.050): 0.005*"album" + 0.005*"th" + 0.005*"lennon" + 0.004*"film" + 0.004*"also" + 0.004*"one" + 0.003*"battle" + 0.003*"first" + 0.003*"british" + 0.003*"two"
-topic #10 (0.050): 0.005*"hayden" + 0.004*"united_states" + 0.004*"election" + 0.003*"tanuki" + 0.003*"university" + 0.003*"member" + 0.003*"house" + 0.003*"world" + 0.003*"first" + 0.003*"born"
-topic #14 (0.050): 0.006*"also" + 0.004*"hiv" + 0.004*"indonesia" + 0.004*"school" + 0.004*"national" + 0.003*"university" + 0.003*"westover" + 0.003*"sattler" + 0.003*"first" + 0.002*"one"
-topic #15 (0.050): 0.008*"species" + 0.006*"squadron" + 0.005*"also" + 0.005*"may" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"symbiodinium" + 0.003*"two" + 0.003*"raf" + 0.003*"found"
-topic #13 (0.050): 0.007*"game" + 0.005*"also" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.003*"samantha" + 0.002*"drakengard" + 0.002*"two"
-topic diff=0.220725, rho=0.242678
--9.391 per-word bound, 671.6 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 12, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 12, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 12, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 12, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 12, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #15 (0.050): 0.008*"species" + 0.006*"squadron" + 0.005*"also" + 0.005*"may" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"symbiodinium" + 0.003*"two" + 0.003*"found" + 0.003*"raf"
-topic #13 (0.050): 0.007*"game" + 0.005*"also" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.003*"samantha" + 0.002*"drakengard" + 0.002*"two"
-topic #7 (0.050): 0.006*"displaystyle" + 0.004*"first" + 0.004*"park" + 0.004*"one" + 0.004*"final" + 0.003*"losing" + 0.003*"bridge" + 0.003*"two" + 0.003*"year" + 0.003*"also"
-topic #1 (0.050): 0.009*"season" + 0.008*"would" + 0.008*"team" + 0.007*"first" + 0.006*"played" + 0.005*"game" + 0.005*"also" + 0.005*"football" + 0.005*"university" + 0.005*"year"
-topic #17 (0.050): 0.005*"film" + 0.005*"also" + 0.005*"one" + 0.004*"winner" + 0.003*"center" + 0.003*"patients" + 0.003*"air" + 0.003*"work" + 0.003*"flavipes" + 0.002*"uba"
-topic diff=0.178441, rho=0.235833
--9.382 per-word bound, 667.3 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 13, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 13, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 13, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 13, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 13, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #16 (0.050): 0.005*"one" + 0.005*"population" + 0.005*"also" + 0.003*"first" + 0.003*"years" + 0.003*"people" + 0.003*"area" + 0.003*"age" + 0.002*"house" + 0.002*"building"
-topic #10 (0.050): 0.005*"hayden" + 0.004*"election" + 0.004*"united_states" + 0.004*"tanuki" + 0.003*"university" + 0.003*"member" + 0.003*"house" + 0.003*"born" + 0.003*"elected" + 0.003*"world"
-topic #1 (0.050): 0.009*"season" + 0.008*"team" + 0.008*"would" + 0.007*"first" + 0.006*"played" + 0.006*"game" + 0.005*"football" + 0.005*"also" + 0.005*"year" + 0.005*"university"
-topic #0 (0.050): 0.014*"borg" + 0.010*"amazing_race" + 0.005*"star_trek" + 0.005*"season" + 0.004*"also" + 0.004*"league" + 0.004*"first" + 0.004*"episode" + 0.003*"club" + 0.003*"time"
-topic #6 (0.050): 0.005*"album" + 0.005*"th" + 0.005*"lennon" + 0.004*"film" + 0.004*"also" + 0.004*"one" + 0.003*"battle" + 0.003*"british" + 0.003*"first" + 0.003*"two"
-topic diff=0.144403, rho=0.229537
--9.375 per-word bound, 664.1 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 14, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 14, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 14, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 14, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 14, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #5 (0.050): 0.008*"band" + 0.006*"laudrup" + 0.006*"album" + 0.005*"also" + 0.005*"released" + 0.004*"two" + 0.004*"first" + 0.004*"one" + 0.004*"new" + 0.004*"single"
-topic #16 (0.050): 0.005*"one" + 0.005*"population" + 0.005*"also" + 0.003*"first" + 0.003*"years" + 0.003*"people" + 0.003*"area" + 0.003*"age" + 0.003*"house" + 0.003*"building"
-topic #6 (0.050): 0.005*"album" + 0.005*"th" + 0.005*"lennon" + 0.005*"film" + 0.004*"one" + 0.004*"also" + 0.003*"battle" + 0.003*"british" + 0.003*"first" + 0.003*"two"
-topic #3 (0.050): 0.005*"street" + 0.005*"physical" + 0.004*"event" + 0.004*"also" + 0.004*"mental" + 0.004*"laws" + 0.004*"national" + 0.004*"davidson" + 0.004*"events" + 0.003*"two"
-topic #4 (0.050): 0.008*"cocaine" + 0.006*"de" + 0.006*"pce" + 0.005*"may" + 0.004*"children" + 0.004*"effects" + 0.004*"also" + 0.004*"studies" + 0.003*"one" + 0.003*"crack"
-topic diff=0.116995, rho=0.223719
--9.370 per-word bound, 661.5 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 15, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 15, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 15, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 15, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 15, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #1 (0.050): 0.009*"season" + 0.009*"team" + 0.008*"would" + 0.007*"played" + 0.007*"first" + 0.006*"game" + 0.005*"football" + 0.005*"year" + 0.005*"also" + 0.005*"university"
-topic #3 (0.050): 0.005*"physical" + 0.005*"street" + 0.004*"event" + 0.004*"also" + 0.004*"mental" + 0.004*"laws" + 0.004*"national" + 0.004*"davidson" + 0.004*"events" + 0.003*"two"
-topic #7 (0.050): 0.006*"displaystyle" + 0.005*"first" + 0.004*"park" + 0.004*"one" + 0.004*"final" + 0.004*"losing" + 0.003*"bridge" + 0.003*"two" + 0.003*"year" + 0.003*"reached"
-topic #13 (0.050): 0.008*"game" + 0.005*"also" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.003*"samantha" + 0.002*"drakengard" + 0.002*"festival"
-topic #10 (0.050): 0.005*"hayden" + 0.004*"election" + 0.004*"united_states" + 0.004*"tanuki" + 0.003*"university" + 0.003*"member" + 0.003*"elected" + 0.003*"house" + 0.003*"born" + 0.003*"world"
-topic diff=0.095079, rho=0.218322
--9.365 per-word bound, 659.4 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 16, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 16, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 16, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 16, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 16, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #6 (0.050): 0.005*"album" + 0.005*"th" + 0.005*"lennon" + 0.005*"film" + 0.004*"one" + 0.004*"also" + 0.003*"battle" + 0.003*"british" + 0.003*"first" + 0.003*"two"
-topic #9 (0.050): 0.006*"board" + 0.005*"game" + 0.004*"film" + 0.003*"tactics_advance" + 0.003*"final_fantasy" + 0.003*"university" + 0.003*"new" + 0.003*"line" + 0.003*"ship" + 0.003*"one"
-topic #13 (0.050): 0.008*"game" + 0.005*"also" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.003*"samantha" + 0.002*"drakengard" + 0.002*"festival"
-topic #5 (0.050): 0.008*"band" + 0.006*"album" + 0.006*"laudrup" + 0.005*"released" + 0.005*"also" + 0.004*"first" + 0.004*"two" + 0.004*"one" + 0.004*"single" + 0.004*"new"
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"islands" + 0.004*"east" + 0.004*"south" + 0.004*"island" + 0.004*"kilometres_mi" + 0.004*"film" + 0.004*"city" + 0.003*"roosevelt"
-topic diff=0.077493, rho=0.213298
--9.361 per-word bound, 657.7 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 17, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 17, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 17, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 17, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 17, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #13 (0.050): 0.008*"game" + 0.005*"also" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"ian" + 0.003*"nowe" + 0.003*"samantha" + 0.002*"drakengard" + 0.002*"festival"
-topic #3 (0.050): 0.005*"physical" + 0.005*"street" + 0.004*"event" + 0.004*"also" + 0.004*"mental" + 0.004*"laws" + 0.004*"national" + 0.004*"davidson" + 0.004*"events" + 0.003*"two"
-topic #0 (0.050): 0.014*"borg" + 0.010*"amazing_race" + 0.006*"star_trek" + 0.005*"season" + 0.004*"also" + 0.004*"episode" + 0.004*"league" + 0.004*"first" + 0.003*"time" + 0.003*"club"
-topic #2 (0.050): 0.006*"game" + 0.005*"also" + 0.005*"one" + 0.005*"athletes" + 0.004*"sport_psychology" + 0.003*"performance" + 0.003*"would" + 0.003*"sports" + 0.003*"time" + 0.003*"state"
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"islands" + 0.004*"east" + 0.004*"south" + 0.004*"island" + 0.004*"kilometres_mi" + 0.004*"film" + 0.004*"city" + 0.003*"roosevelt"
-topic diff=0.063398, rho=0.208605
--9.358 per-word bound, 656.2 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 18, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 18, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 18, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 18, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 18, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #11 (0.050): 0.005*"vassar" + 0.004*"enamel" + 0.004*"collection" + 0.003*"church" + 0.003*"one" + 0.003*"th_century" + 0.003*"include" + 0.003*"two" + 0.002*"building" + 0.002*"period"
-topic #19 (0.050): 0.007*"school" + 0.004*"also" + 0.004*"year" + 0.004*"management" + 0.004*"first" + 0.004*"university" + 0.003*"company" + 0.003*"one" + 0.003*"work" + 0.003*"director"
-topic #4 (0.050): 0.008*"cocaine" + 0.007*"de" + 0.006*"pce" + 0.005*"may" + 0.004*"children" + 0.004*"effects" + 0.004*"studies" + 0.004*"also" + 0.003*"one" + 0.003*"crack"
-topic #1 (0.050): 0.009*"season" + 0.009*"team" + 0.008*"would" + 0.007*"played" + 0.007*"first" + 0.006*"game" + 0.006*"football" + 0.005*"year" + 0.005*"also" + 0.005*"league"
-topic #10 (0.050): 0.005*"hayden" + 0.005*"election" + 0.004*"united_states" + 0.004*"member" + 0.004*"elected" + 0.004*"university" + 0.004*"tanuki" + 0.003*"party" + 0.003*"born" + 0.003*"house"
-topic diff=0.052172, rho=0.204209
--9.355 per-word bound, 654.9 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-PROGRESS: pass 19, dispatched chunk #0 = documents up to #200/996, outstanding queue size 1
-PROGRESS: pass 19, dispatched chunk #1 = documents up to #400/996, outstanding queue size 2
-PROGRESS: pass 19, dispatched chunk #2 = documents up to #600/996, outstanding queue size 3
-PROGRESS: pass 19, dispatched chunk #3 = documents up to #800/996, outstanding queue size 4
-PROGRESS: pass 19, dispatched chunk #4 = documents up to #996/996, outstanding queue size 5
-topic #0 (0.050): 0.015*"borg" + 0.011*"amazing_race" + 0.006*"star_trek" + 0.005*"season" + 0.004*"also" + 0.004*"episode" + 0.004*"first" + 0.004*"league" + 0.003*"time" + 0.003*"film"
-topic #7 (0.050): 0.006*"displaystyle" + 0.005*"park" + 0.005*"first" + 0.004*"one" + 0.004*"final" + 0.004*"losing" + 0.003*"bridge" + 0.003*"two" + 0.003*"year" + 0.003*"cricket"
-topic #12 (0.050): 0.009*"railway" + 0.009*"met" + 0.008*"station" + 0.008*"district" + 0.008*"line" + 0.006*"north" + 0.006*"london" + 0.005*"road" + 0.005*"east" + 0.005*"city"
-topic #15 (0.050): 0.009*"species" + 0.006*"squadron" + 0.005*"also" + 0.005*"may" + 0.004*"brown_algae" + 0.003*"new" + 0.003*"symbiodinium" + 0.003*"found" + 0.003*"raf" + 0.003*"two"
-topic #18 (0.050): 0.006*"line" + 0.005*"squadron" + 0.004*"islands" + 0.004*"island" + 0.004*"east" + 0.004*"south" + 0.004*"kilometres_mi" + 0.004*"film" + 0.004*"city" + 0.003*"roosevelt"
-topic diff=0.043171, rho=0.200080
--9.353 per-word bound, 653.7 perplexity estimate based on a held-out corpus of 196 documents with 39665 words
-LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=32647, num_topics=20, decay=0.5, chunksize=200) in 51.10s', 'datetime': '2022-02-06T04:03:34.349105', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
+PROGRESS: pass 0, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 0, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 0, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 0, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 0, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 0, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 0, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 0, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 0, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 0, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #15 (0.050): 0.004*"also" + 0.004*"first" + 0.003*"one" + 0.003*"may" + 0.003*"new" + 0.002*"two" + 0.002*"species" + 0.002*"time" + 0.002*"people" + 0.002*"would"
+topic #5 (0.050): 0.004*"two" + 0.004*"also" + 0.004*"first" + 0.003*"one" + 0.003*"would" + 0.002*"three" + 0.002*"new" + 0.002*"time" + 0.002*"met" + 0.002*"band"
+topic #11 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"time" + 0.003*"city" + 0.002*"new" + 0.002*"first" + 0.002*"would" + 0.002*"two" + 0.002*"may" + 0.002*"borg"
+topic #7 (0.050): 0.004*"also" + 0.003*"one" + 0.003*"two" + 0.003*"first" + 0.002*"park" + 0.002*"year" + 0.002*"new" + 0.002*"since" + 0.002*"world" + 0.002*"station"
+topic #9 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"first" + 0.002*"university" + 0.002*"new" + 0.002*"board" + 0.002*"two" + 0.002*"company" + 0.002*"line" + 0.002*"would"
+topic diff=9.783338, rho=1.000000
+-15.017 per-word bound, 33146.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #14 (0.050): 0.005*"also" + 0.004*"first" + 0.004*"one" + 0.002*"line" + 0.002*"two" + 0.002*"school" + 0.002*"university" + 0.002*"time" + 0.002*"national" + 0.002*"new"
+topic #13 (0.050): 0.005*"first" + 0.005*"also" + 0.003*"time" + 0.003*"one" + 0.003*"game" + 0.002*"part" + 0.002*"two" + 0.002*"would" + 0.002*"new" + 0.002*"line"
+topic #19 (0.050): 0.004*"also" + 0.004*"one" + 0.004*"first" + 0.003*"school" + 0.003*"year" + 0.003*"new" + 0.002*"national" + 0.002*"th" + 0.002*"two" + 0.002*"years"
+topic #11 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"time" + 0.003*"game" + 0.002*"city" + 0.002*"two" + 0.002*"first" + 0.002*"new" + 0.002*"would" + 0.002*"john"
+topic #16 (0.050): 0.005*"also" + 0.004*"first" + 0.004*"one" + 0.003*"two" + 0.002*"years" + 0.002*"line" + 0.002*"university" + 0.002*"would" + 0.002*"district" + 0.002*"album"
+topic diff=2.672853, rho=0.353553
+-10.912 per-word bound, 1926.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 1, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 1, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 1, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 1, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 1, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 1, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 1, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 1, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 1, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 1, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #12 (0.050): 0.005*"also" + 0.004*"railway" + 0.004*"met" + 0.004*"district" + 0.003*"two" + 0.003*"station" + 0.003*"city" + 0.003*"north" + 0.003*"new" + 0.003*"first"
+topic #11 (0.050): 0.004*"one" + 0.003*"time" + 0.003*"also" + 0.003*"city" + 0.003*"game" + 0.002*"vassar" + 0.002*"first" + 0.002*"new" + 0.002*"would" + 0.002*"two"
+topic #9 (0.050): 0.004*"one" + 0.003*"board" + 0.003*"university" + 0.003*"also" + 0.002*"new" + 0.002*"first" + 0.002*"company" + 0.002*"line" + 0.002*"two" + 0.002*"would"
+topic #17 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"film" + 0.002*"first" + 0.002*"two" + 0.002*"winner" + 0.002*"station" + 0.002*"new" + 0.002*"may" + 0.002*"line"
+topic #0 (0.050): 0.007*"borg" + 0.006*"amazing_race" + 0.004*"also" + 0.004*"first" + 0.003*"one" + 0.003*"season" + 0.003*"league" + 0.003*"team" + 0.003*"star_trek" + 0.003*"time"
+topic diff=1.006757, rho=0.289157
+-11.035 per-word bound, 2097.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #11 (0.050): 0.004*"one" + 0.003*"also" + 0.003*"building" + 0.003*"time" + 0.003*"two" + 0.003*"church" + 0.002*"first" + 0.002*"game" + 0.002*"city" + 0.002*"would"
+topic #17 (0.050): 0.005*"one" + 0.003*"also" + 0.003*"film" + 0.003*"patients" + 0.003*"air" + 0.003*"center" + 0.002*"two" + 0.002*"time" + 0.002*"first" + 0.002*"displaystyle"
+topic #18 (0.050): 0.005*"line" + 0.004*"one" + 0.003*"film" + 0.003*"station" + 0.003*"new" + 0.002*"first" + 0.002*"east" + 0.002*"also" + 0.002*"city" + 0.002*"two"
+topic #13 (0.050): 0.005*"also" + 0.004*"first" + 0.003*"line" + 0.003*"time" + 0.003*"one" + 0.003*"part" + 0.003*"two" + 0.002*"station" + 0.002*"town" + 0.002*"west"
+topic #9 (0.050): 0.004*"one" + 0.004*"film" + 0.003*"university" + 0.003*"also" + 0.003*"board" + 0.002*"first" + 0.002*"channel" + 0.002*"frampton" + 0.002*"new" + 0.002*"company"
+topic diff=1.016506, rho=0.289157
+-9.683 per-word bound, 821.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 2, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 2, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 2, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 2, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 2, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 2, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 2, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 2, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 2, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 2, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 896 documents into a model of 996 documents
+topic #12 (0.050): 0.005*"railway" + 0.004*"met" + 0.004*"district" + 0.004*"also" + 0.004*"city" + 0.004*"town" + 0.003*"north" + 0.003*"station" + 0.003*"finchley" + 0.003*"new"
+topic #8 (0.050): 0.004*"school" + 0.004*"two" + 0.003*"one" + 0.003*"displaystyle" + 0.003*"state" + 0.003*"first" + 0.003*"students" + 0.003*"part" + 0.003*"county" + 0.002*"team"
+topic #1 (0.050): 0.006*"would" + 0.005*"season" + 0.005*"first" + 0.005*"game" + 0.005*"also" + 0.004*"team" + 0.004*"year" + 0.004*"played" + 0.004*"two" + 0.003*"school"
+topic #10 (0.050): 0.003*"first" + 0.003*"world" + 0.003*"two" + 0.003*"time" + 0.003*"also" + 0.003*"university" + 0.003*"ian" + 0.002*"house" + 0.002*"samantha" + 0.002*"member"
+topic #2 (0.050): 0.009*"game" + 0.006*"also" + 0.005*"one" + 0.004*"may" + 0.003*"world" + 0.003*"first" + 0.003*"two" + 0.003*"time" + 0.003*"year" + 0.003*"nbc"
+topic diff=0.886494, rho=0.277778
+-9.546 per-word bound, 747.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 100 documents into a model of 996 documents
+topic #4 (0.050): 0.016*"cocaine" + 0.013*"pce" + 0.010*"may" + 0.009*"children" + 0.008*"effects" + 0.008*"studies" + 0.006*"crack" + 0.005*"exposed" + 0.005*"found" + 0.005*"fetus"
+topic #7 (0.050): 0.015*"displaystyle" + 0.005*"model" + 0.004*"class" + 0.004*"conditions" + 0.004*"following" + 0.004*"logic" + 0.004*"conditional" + 0.004*"two" + 0.004*"frame" + 0.003*"also"
+topic #9 (0.050): 0.012*"board" + 0.004*"president" + 0.004*"public" + 0.004*"members" + 0.004*"film" + 0.004*"church" + 0.003*"one" + 0.003*"effect" + 0.003*"information" + 0.003*"shall"
+topic #11 (0.050): 0.005*"sattler" + 0.003*"one" + 0.003*"german" + 0.003*"city" + 0.003*"time" + 0.003*"also" + 0.003*"theatre" + 0.003*"burnett" + 0.003*"oslo" + 0.002*"church"
+topic #3 (0.050): 0.007*"prinz" + 0.007*"jewish" + 0.004*"also" + 0.004*"film" + 0.003*"sh" + 0.003*"born" + 0.003*"american" + 0.003*"became" + 0.002*"rabbi" + 0.002*"united_states"
+topic diff=0.972745, rho=0.277778
+-9.754 per-word bound, 863.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 3, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 3, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 3, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 3, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 3, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 3, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 3, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 3, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 3, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 3, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 896 documents into a model of 996 documents
+topic #13 (0.050): 0.006*"also" + 0.004*"first" + 0.004*"one" + 0.003*"two" + 0.003*"tale_type" + 0.003*"heineken_cup" + 0.003*"line" + 0.003*"route" + 0.003*"top" + 0.002*"village"
+topic #3 (0.050): 0.006*"prinz" + 0.006*"jewish" + 0.004*"also" + 0.003*"film" + 0.003*"sh" + 0.003*"american" + 0.003*"born" + 0.003*"national" + 0.003*"became" + 0.002*"physical"
+topic #10 (0.050): 0.009*"tanuki" + 0.006*"rabbit" + 0.005*"man" + 0.004*"kachi_kachi" + 0.004*"fire" + 0.003*"story" + 0.003*"first" + 0.003*"ian" + 0.003*"yama" + 0.003*"world"
+topic #6 (0.050): 0.005*"album" + 0.004*"film" + 0.004*"also" + 0.003*"first" + 0.003*"jhelum" + 0.003*"british" + 0.003*"one" + 0.003*"later" + 0.002*"art" + 0.002*"shire"
+topic #15 (0.050): 0.006*"also" + 0.005*"species" + 0.004*"may" + 0.003*"first" + 0.003*"state" + 0.003*"street" + 0.003*"known" + 0.003*"found" + 0.002*"two" + 0.002*"one"
+topic diff=0.745782, rho=0.267644
+-9.584 per-word bound, 767.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 100 documents into a model of 996 documents
+topic #19 (0.050): 0.005*"school" + 0.004*"one" + 0.004*"first" + 0.004*"also" + 0.003*"year" + 0.003*"music" + 0.003*"company" + 0.003*"th" + 0.003*"born" + 0.003*"years"
+topic #5 (0.050): 0.006*"album" + 0.005*"band" + 0.005*"released" + 0.005*"two" + 0.005*"first" + 0.004*"also" + 0.004*"one" + 0.004*"new" + 0.004*"single" + 0.003*"song"
+topic #4 (0.050): 0.013*"cocaine" + 0.010*"pce" + 0.008*"may" + 0.007*"effects" + 0.007*"children" + 0.006*"studies" + 0.004*"crack" + 0.004*"exposed" + 0.004*"also" + 0.004*"drugs"
+topic #12 (0.050): 0.016*"finchley" + 0.008*"railway" + 0.006*"station" + 0.006*"north" + 0.005*"london" + 0.005*"town" + 0.004*"east" + 0.004*"district" + 0.004*"also" + 0.004*"met"
+topic #3 (0.050): 0.005*"prinz" + 0.005*"jewish" + 0.005*"also" + 0.005*"hartenstein" + 0.004*"national" + 0.003*"born" + 0.003*"served" + 0.003*"film" + 0.003*"director" + 0.002*"sh"
+topic diff=0.760981, rho=0.267644
+-9.748 per-word bound, 859.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 4, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 4, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 4, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 4, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 4, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 4, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 4, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 4, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 4, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 4, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #3 (0.050): 0.005*"prinz" + 0.005*"also" + 0.005*"jewish" + 0.004*"hartenstein" + 0.003*"national" + 0.003*"physical" + 0.003*"born" + 0.003*"mental" + 0.003*"laws" + 0.003*"event"
+topic #19 (0.050): 0.005*"school" + 0.004*"first" + 0.004*"one" + 0.004*"also" + 0.004*"year" + 0.003*"company" + 0.003*"management" + 0.003*"th" + 0.003*"music" + 0.003*"born"
+topic #2 (0.050): 0.006*"game" + 0.006*"also" + 0.005*"one" + 0.004*"would" + 0.003*"canada" + 0.003*"world" + 0.003*"first" + 0.003*"athletes" + 0.003*"time" + 0.003*"two"
+topic #7 (0.050): 0.013*"displaystyle" + 0.005*"co" + 0.003*"conditions" + 0.003*"catalyst" + 0.003*"one" + 0.003*"class" + 0.003*"two" + 0.003*"model" + 0.003*"following" + 0.003*"logic"
+topic #1 (0.050): 0.013*"would" + 0.010*"season" + 0.010*"great_danes" + 0.009*"first" + 0.008*"team" + 0.007*"ualbany" + 0.007*"game" + 0.006*"university" + 0.006*"also" + 0.006*"conference"
+topic diff=0.603497, rho=0.258544
+-9.924 per-word bound, 971.3 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #9 (0.050): 0.008*"board" + 0.005*"film" + 0.004*"university" + 0.003*"hanseatic" + 0.003*"ship" + 0.003*"new" + 0.003*"one" + 0.003*"company" + 0.003*"line" + 0.003*"frampton"
+topic #11 (0.050): 0.006*"vassar" + 0.004*"fm" + 0.004*"station" + 0.003*"church" + 0.003*"one" + 0.003*"service" + 0.003*"imageshack" + 0.003*"wiwf" + 0.003*"format" + 0.003*"sattler"
+topic #0 (0.050): 0.018*"borg" + 0.007*"star_trek" + 0.006*"episode" + 0.005*"amazing_race" + 0.004*"season" + 0.004*"also" + 0.004*"time" + 0.004*"first" + 0.003*"collective" + 0.003*"one"
+topic #4 (0.050): 0.010*"cocaine" + 0.008*"squadron" + 0.008*"pce" + 0.007*"may" + 0.006*"children" + 0.006*"effects" + 0.005*"studies" + 0.004*"raf" + 0.004*"also" + 0.004*"found"
+topic #13 (0.050): 0.005*"also" + 0.004*"jackson" + 0.004*"first" + 0.004*"route" + 0.003*"one" + 0.003*"line" + 0.003*"two" + 0.003*"school" + 0.003*"west" + 0.003*"town"
+topic diff=0.570642, rho=0.258544
+-9.190 per-word bound, 583.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 5, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 5, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 5, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 5, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 5, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 5, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 5, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 5, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 5, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 5, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #10 (0.050): 0.005*"tanuki" + 0.004*"man" + 0.004*"ian" + 0.004*"berlin" + 0.003*"utc" + 0.003*"tropical_cyclone" + 0.003*"rabbit" + 0.003*"two" + 0.003*"samantha" + 0.003*"batsirai"
+topic #1 (0.050): 0.011*"would" + 0.010*"season" + 0.009*"first" + 0.009*"team" + 0.008*"great_danes" + 0.007*"game" + 0.006*"played" + 0.006*"university" + 0.006*"year" + 0.006*"also"
+topic #8 (0.050): 0.005*"county" + 0.005*"one" + 0.004*"school" + 0.004*"table" + 0.004*"students" + 0.004*"population" + 0.004*"munchwilen" + 0.004*"age" + 0.003*"people" + 0.003*"average"
+topic #6 (0.050): 0.009*"lennon" + 0.007*"album" + 0.006*"film" + 0.004*"john" + 0.004*"battle" + 0.004*"also" + 0.004*"irwin" + 0.004*"one" + 0.003*"first" + 0.003*"later"
+topic #12 (0.050): 0.009*"finchley" + 0.009*"railway" + 0.007*"met" + 0.006*"station" + 0.005*"north" + 0.005*"district" + 0.005*"london" + 0.005*"line" + 0.004*"east" + 0.004*"also"
+topic diff=0.456180, rho=0.250313
+-9.367 per-word bound, 660.3 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #11 (0.050): 0.005*"vassar" + 0.004*"church" + 0.004*"theatre" + 0.004*"imageshack" + 0.003*"fm" + 0.003*"building" + 0.003*"one" + 0.003*"service" + 0.003*"station" + 0.003*"grossmunster"
+topic #14 (0.050): 0.006*"university" + 0.006*"also" + 0.005*"indonesia" + 0.005*"hiv" + 0.005*"national" + 0.003*"people" + 0.003*"school" + 0.003*"chicago" + 0.003*"first" + 0.003*"work"
+topic #3 (0.050): 0.004*"also" + 0.004*"national" + 0.004*"film" + 0.003*"jewish" + 0.003*"prinz" + 0.003*"physical" + 0.003*"born" + 0.003*"events" + 0.003*"event" + 0.003*"since"
+topic #6 (0.050): 0.007*"lennon" + 0.007*"album" + 0.006*"film" + 0.005*"also" + 0.004*"john" + 0.004*"jhelum" + 0.004*"one" + 0.003*"british" + 0.003*"battle" + 0.003*"first"
+topic #8 (0.050): 0.005*"county" + 0.004*"one" + 0.004*"school" + 0.004*"table" + 0.004*"students" + 0.003*"population" + 0.003*"munchwilen" + 0.003*"age" + 0.003*"people" + 0.003*"two"
+topic diff=0.413435, rho=0.250313
+-8.947 per-word bound, 493.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 6, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 6, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 6, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 6, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 6, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 6, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 6, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 6, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 6, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 6, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #13 (0.050): 0.005*"also" + 0.004*"route" + 0.004*"first" + 0.004*"jackson" + 0.003*"one" + 0.003*"line" + 0.003*"west" + 0.003*"town" + 0.003*"two" + 0.003*"village"
+topic #17 (0.050): 0.005*"one" + 0.004*"winner" + 0.004*"air" + 0.004*"film" + 0.003*"center" + 0.003*"also" + 0.003*"patients" + 0.003*"uba" + 0.003*"train" + 0.003*"two"
+topic #15 (0.050): 0.006*"also" + 0.005*"species" + 0.004*"may" + 0.004*"new" + 0.004*"first" + 0.003*"egypt" + 0.003*"stories" + 0.003*"brown_algae" + 0.003*"known" + 0.003*"called"
+topic #2 (0.050): 0.009*"game" + 0.006*"also" + 0.005*"one" + 0.003*"may" + 0.003*"world" + 0.003*"would" + 0.003*"athletes" + 0.003*"two" + 0.003*"time" + 0.003*"first"
+topic #14 (0.050): 0.007*"university" + 0.006*"also" + 0.005*"indonesia" + 0.005*"hiv" + 0.005*"national" + 0.003*"people" + 0.003*"first" + 0.003*"burdenko" + 0.003*"school" + 0.003*"chicago"
+topic diff=0.331822, rho=0.242821
+-9.123 per-word bound, 557.5 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #16 (0.050): 0.006*"one" + 0.005*"also" + 0.004*"building" + 0.004*"street" + 0.004*"house" + 0.004*"bridge" + 0.003*"first" + 0.003*"population" + 0.003*"years" + 0.003*"many"
+topic #2 (0.050): 0.010*"game" + 0.005*"also" + 0.005*"one" + 0.004*"nbc" + 0.004*"may" + 0.003*"world" + 0.003*"week" + 0.003*"would" + 0.003*"baseball" + 0.003*"time"
+topic #0 (0.050): 0.014*"borg" + 0.007*"amazing_race" + 0.005*"star_trek" + 0.005*"also" + 0.005*"episode" + 0.004*"time" + 0.004*"games" + 0.004*"season" + 0.004*"first" + 0.003*"one"
+topic #10 (0.050): 0.004*"tanuki" + 0.003*"world" + 0.003*"ian" + 0.003*"man" + 0.003*"samantha" + 0.003*"member" + 0.003*"election" + 0.003*"university" + 0.003*"two" + 0.003*"utc"
+topic #7 (0.050): 0.007*"displaystyle" + 0.005*"final" + 0.005*"losing" + 0.005*"reached" + 0.004*"year" + 0.004*"bridge" + 0.004*"open" + 0.004*"two" + 0.003*"also" + 0.003*"first"
+topic diff=0.320429, rho=0.242821
+-8.833 per-word bound, 455.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 7, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 7, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 7, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 7, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 7, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 7, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 7, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 7, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 7, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 7, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+topic #0 (0.050): 0.014*"borg" + 0.008*"amazing_race" + 0.006*"star_trek" + 0.005*"episode" + 0.004*"also" + 0.004*"time" + 0.003*"first" + 0.003*"season" + 0.003*"one" + 0.003*"games"
+topic #5 (0.050): 0.009*"band" + 0.008*"album" + 0.007*"released" + 0.006*"song" + 0.005*"single" + 0.005*"first" + 0.004*"two" + 0.004*"also" + 0.004*"new" + 0.004*"music"
+topic #13 (0.050): 0.005*"route" + 0.004*"line" + 0.004*"also" + 0.004*"first" + 0.003*"horten" + 0.003*"west" + 0.003*"town" + 0.003*"jackson" + 0.003*"station" + 0.003*"two"
+topic #8 (0.050): 0.006*"school" + 0.006*"county" + 0.006*"students" + 0.004*"one" + 0.004*"weir_high" + 0.003*"average" + 0.003*"part" + 0.003*"population" + 0.003*"state" + 0.003*"age"
+topic #16 (0.050): 0.005*"one" + 0.005*"also" + 0.004*"building" + 0.004*"street" + 0.004*"house" + 0.003*"bridge" + 0.003*"population" + 0.003*"first" + 0.003*"area" + 0.003*"many"
+topic diff=0.223400, rho=0.235965
+-8.889 per-word bound, 474.2 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 8, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 8, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 8, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 8, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 8, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 8, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 8, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 8, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 8, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 8, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 900 documents into a model of 996 documents
+topic #8 (0.050): 0.007*"school" + 0.006*"county" + 0.006*"students" + 0.004*"one" + 0.004*"weir_high" + 0.004*"average" + 0.004*"population" + 0.003*"age" + 0.003*"sardou" + 0.003*"state"
+topic #13 (0.050): 0.005*"route" + 0.004*"also" + 0.004*"line" + 0.004*"first" + 0.003*"west" + 0.003*"jackson" + 0.003*"one" + 0.003*"town" + 0.003*"east" + 0.003*"two"
+topic #0 (0.050): 0.015*"borg" + 0.009*"amazing_race" + 0.006*"star_trek" + 0.005*"episode" + 0.004*"also" + 0.004*"time" + 0.003*"first" + 0.003*"season" + 0.003*"one" + 0.003*"film"
+topic #2 (0.050): 0.009*"game" + 0.006*"also" + 0.005*"one" + 0.004*"may" + 0.003*"world" + 0.003*"would" + 0.003*"athletes" + 0.003*"two" + 0.003*"time" + 0.003*"nbc"
+topic #7 (0.050): 0.009*"displaystyle" + 0.005*"final" + 0.004*"losing" + 0.004*"bridge" + 0.004*"reached" + 0.003*"one" + 0.003*"two" + 0.003*"year" + 0.003*"open" + 0.003*"first"
+topic diff=0.190185, rho=0.229658
+-9.062 per-word bound, 534.4 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 96 documents into a model of 996 documents
+topic #18 (0.050): 0.018*"line" + 0.007*"xuzhou" + 0.007*"kilometres_mi" + 0.006*"east" + 0.006*"station" + 0.006*"phase" + 0.006*"city" + 0.005*"district" + 0.004*"north" + 0.004*"west"
+topic #17 (0.050): 0.009*"patients" + 0.008*"center" + 0.006*"therapists" + 0.005*"one" + 0.003*"life" + 0.003*"janov" + 0.003*"group" + 0.003*"also" + 0.003*"work" + 0.003*"film"
+topic #11 (0.050): 0.008*"imageshack" + 0.006*"image" + 0.006*"images" + 0.005*"service" + 0.004*"free" + 0.004*"users" + 0.004*"community" + 0.004*"church" + 0.004*"based" + 0.004*"vassar"
+topic #5 (0.050): 0.009*"band" + 0.008*"album" + 0.008*"released" + 0.006*"single" + 0.006*"song" + 0.005*"first" + 0.004*"two" + 0.004*"also" + 0.004*"new" + 0.004*"one"
+topic #13 (0.050): 0.010*"route" + 0.007*"horten" + 0.007*"line" + 0.006*"vt" + 0.005*"town" + 0.005*"station" + 0.004*"road" + 0.004*"blote" + 0.004*"dukes" + 0.004*"also"
+topic diff=0.225151, rho=0.229658
+-8.305 per-word bound, 316.3 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 9, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 9, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 9, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 9, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 9, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 9, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 9, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 9, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 9, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 9, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.004*"may" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"first" + 0.003*"egypt" + 0.003*"stories" + 0.003*"known" + 0.003*"called"
+topic #18 (0.050): 0.015*"line" + 0.006*"kilometres_mi" + 0.006*"xuzhou" + 0.005*"east" + 0.005*"station" + 0.005*"city" + 0.005*"phase" + 0.005*"district" + 0.004*"west" + 0.004*"north"
+topic #7 (0.050): 0.007*"displaystyle" + 0.007*"losing" + 0.007*"final" + 0.007*"reached" + 0.006*"year" + 0.005*"open" + 0.004*"first" + 0.004*"three" + 0.004*"bridge" + 0.004*"two"
+topic #17 (0.050): 0.007*"patients" + 0.007*"center" + 0.005*"one" + 0.005*"therapists" + 0.004*"winner" + 0.003*"also" + 0.003*"film" + 0.003*"life" + 0.003*"work" + 0.003*"history"
+topic #16 (0.050): 0.006*"one" + 0.005*"also" + 0.005*"street" + 0.005*"building" + 0.004*"house" + 0.003*"nicaragua" + 0.003*"many" + 0.003*"population" + 0.003*"district" + 0.003*"first"
+topic diff=0.170441, rho=0.223831
+-8.482 per-word bound, 357.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #6 (0.050): 0.007*"film" + 0.005*"also" + 0.005*"album" + 0.004*"jhelum" + 0.004*"lennon" + 0.003*"british" + 0.003*"one" + 0.003*"th" + 0.003*"john" + 0.003*"first"
+topic #8 (0.050): 0.006*"school" + 0.005*"county" + 0.005*"students" + 0.003*"city" + 0.003*"one" + 0.003*"population" + 0.003*"area" + 0.003*"part" + 0.003*"average" + 0.003*"state"
+topic #4 (0.050): 0.015*"squadron" + 0.007*"cocaine" + 0.007*"raf" + 0.006*"may" + 0.005*"pce" + 0.005*"de" + 0.005*"children" + 0.004*"aircraft" + 0.004*"studies" + 0.004*"effects"
+topic #2 (0.050): 0.013*"game" + 0.006*"nbc" + 0.005*"also" + 0.005*"one" + 0.005*"week" + 0.005*"baseball" + 0.004*"games" + 0.004*"may" + 0.003*"world" + 0.003*"time"
+topic #10 (0.050): 0.004*"election" + 0.004*"render" + 0.004*"member" + 0.004*"ian" + 0.003*"elected" + 0.003*"university" + 0.003*"tanuki" + 0.003*"samantha" + 0.003*"species" + 0.003*"world"
+topic diff=0.157661, rho=0.223831
+-8.401 per-word bound, 337.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 10, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 10, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 10, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 10, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 10, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 10, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 10, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 10, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 10, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 10, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #3 (0.050): 0.005*"physical" + 0.005*"film" + 0.004*"national" + 0.004*"mental" + 0.004*"event" + 0.004*"laws" + 0.004*"events" + 0.004*"also" + 0.004*"davidson" + 0.004*"since"
+topic #7 (0.050): 0.007*"displaystyle" + 0.007*"final" + 0.006*"losing" + 0.006*"reached" + 0.005*"year" + 0.005*"open" + 0.004*"first" + 0.004*"two" + 0.004*"three" + 0.004*"bridge"
+topic #12 (0.050): 0.008*"railway" + 0.008*"met" + 0.007*"station" + 0.006*"line" + 0.006*"district" + 0.005*"north" + 0.005*"london" + 0.004*"east" + 0.004*"city" + 0.004*"angre"
+topic #9 (0.050): 0.008*"film" + 0.006*"board" + 0.005*"frampton" + 0.004*"channel" + 0.004*"zorns_lemma" + 0.004*"university" + 0.003*"one" + 0.003*"words" + 0.003*"ship" + 0.003*"images"
+topic #2 (0.050): 0.012*"game" + 0.005*"one" + 0.005*"also" + 0.004*"nbc" + 0.004*"week" + 0.004*"baseball" + 0.003*"may" + 0.003*"world" + 0.003*"would" + 0.003*"time"
+topic diff=0.134952, rho=0.218426
+-8.576 per-word bound, 381.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #12 (0.050): 0.007*"railway" + 0.006*"station" + 0.006*"met" + 0.005*"district" + 0.005*"line" + 0.005*"angre" + 0.005*"city" + 0.005*"east" + 0.004*"north" + 0.004*"london"
+topic #16 (0.050): 0.006*"one" + 0.005*"also" + 0.005*"street" + 0.004*"building" + 0.004*"house" + 0.003*"bridge" + 0.003*"nicaragua" + 0.003*"many" + 0.003*"day" + 0.003*"first"
+topic #9 (0.050): 0.009*"film" + 0.006*"frampton" + 0.005*"board" + 0.005*"channel" + 0.005*"zorns_lemma" + 0.004*"words" + 0.003*"one" + 0.003*"university" + 0.003*"images" + 0.003*"alphabet"
+topic #8 (0.050): 0.006*"county" + 0.006*"school" + 0.005*"students" + 0.003*"city" + 0.003*"population" + 0.003*"one" + 0.003*"area" + 0.003*"sardou" + 0.003*"state" + 0.003*"part"
+topic #4 (0.050): 0.017*"squadron" + 0.008*"raf" + 0.007*"cocaine" + 0.006*"may" + 0.005*"pce" + 0.005*"de" + 0.005*"aircraft" + 0.004*"children" + 0.004*"studies" + 0.004*"island"
+topic diff=0.123981, rho=0.218426
+-8.465 per-word bound, 353.4 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 11, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 11, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 11, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 11, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 11, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 11, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 11, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 11, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 11, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 11, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.005*"may" + 0.003*"first" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"known" + 0.003*"egypt" + 0.002*"people" + 0.002*"called"
+topic #14 (0.050): 0.009*"university" + 0.006*"also" + 0.004*"national" + 0.004*"school" + 0.004*"indonesia" + 0.004*"hiv" + 0.003*"international" + 0.003*"served" + 0.003*"work" + 0.003*"chicago"
+topic #8 (0.050): 0.006*"county" + 0.005*"school" + 0.004*"population" + 0.004*"students" + 0.004*"sardou" + 0.004*"age" + 0.004*"munchwilen" + 0.004*"one" + 0.003*"displaystyle" + 0.003*"city"
+topic #12 (0.050): 0.007*"railway" + 0.007*"station" + 0.005*"met" + 0.005*"district" + 0.005*"line" + 0.005*"east" + 0.005*"north" + 0.005*"city" + 0.004*"town" + 0.004*"finchley"
+topic #10 (0.050): 0.005*"ian" + 0.004*"election" + 0.004*"samantha" + 0.004*"tanuki" + 0.004*"member" + 0.003*"university" + 0.003*"elected" + 0.003*"species" + 0.003*"world" + 0.003*"utc"
+topic diff=0.104707, rho=0.213395
+-8.628 per-word bound, 395.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #11 (0.050): 0.006*"church" + 0.006*"imageshack" + 0.005*"theatre" + 0.004*"image" + 0.004*"images" + 0.004*"service" + 0.004*"building" + 0.004*"vassar" + 0.003*"community" + 0.003*"grossmunster"
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.004*"may" + 0.003*"first" + 0.003*"new" + 0.003*"water" + 0.003*"brown_algae" + 0.003*"wharton" + 0.002*"people" + 0.002*"called"
+topic #16 (0.050): 0.006*"one" + 0.005*"also" + 0.005*"street" + 0.005*"building" + 0.004*"house" + 0.004*"bridge" + 0.003*"many" + 0.003*"district" + 0.003*"village" + 0.003*"day"
+topic #18 (0.050): 0.013*"line" + 0.006*"kilometres_mi" + 0.005*"east" + 0.005*"xuzhou" + 0.005*"station" + 0.005*"city" + 0.004*"phase" + 0.004*"west" + 0.004*"district" + 0.004*"opened"
+topic #9 (0.050): 0.008*"film" + 0.005*"frampton" + 0.005*"board" + 0.005*"channel" + 0.004*"zorns_lemma" + 0.003*"one" + 0.003*"words" + 0.003*"university" + 0.003*"images" + 0.003*"alphabet"
+topic diff=0.111869, rho=0.213395
+-8.520 per-word bound, 367.1 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 12, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 12, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 12, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 12, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 12, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 12, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 12, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 12, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 12, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 12, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 900 documents into a model of 996 documents
+topic #10 (0.050): 0.004*"election" + 0.004*"ian" + 0.004*"member" + 0.004*"elected" + 0.004*"samantha" + 0.003*"tanuki" + 0.003*"world" + 0.003*"university" + 0.003*"species" + 0.003*"family"
+topic #1 (0.050): 0.011*"season" + 0.011*"team" + 0.008*"played" + 0.008*"first" + 0.008*"would" + 0.007*"league" + 0.007*"football" + 0.006*"year" + 0.006*"game" + 0.005*"club"
+topic #8 (0.050): 0.008*"school" + 0.007*"students" + 0.007*"county" + 0.004*"weir_high" + 0.004*"population" + 0.004*"average" + 0.003*"one" + 0.003*"part" + 0.003*"city" + 0.003*"state"
+topic #19 (0.050): 0.005*"school" + 0.004*"th" + 0.004*"also" + 0.004*"first" + 0.003*"one" + 0.003*"company" + 0.003*"year" + 0.003*"born" + 0.003*"work" + 0.003*"st"
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.005*"may" + 0.003*"first" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"water" + 0.002*"wharton" + 0.002*"known" + 0.002*"egypt"
+topic diff=0.071934, rho=0.208696
+-8.679 per-word bound, 410.0 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 96 documents into a model of 996 documents
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.004*"may" + 0.003*"first" + 0.003*"brown_algae" + 0.003*"new" + 0.003*"people" + 0.003*"water" + 0.002*"called" + 0.002*"among"
+topic #16 (0.050): 0.006*"one" + 0.006*"also" + 0.005*"street" + 0.005*"nicaragua" + 0.004*"building" + 0.004*"house" + 0.004*"day" + 0.004*"many" + 0.003*"feathering" + 0.003*"chicks"
+topic #3 (0.050): 0.006*"film" + 0.005*"student" + 0.005*"physical" + 0.005*"national" + 0.005*"events" + 0.005*"since" + 0.005*"festival" + 0.005*"film_festival" + 0.004*"event" + 0.004*"mental"
+topic #7 (0.050): 0.009*"losing" + 0.009*"final" + 0.008*"reached" + 0.007*"year" + 0.006*"open" + 0.006*"first" + 0.005*"three" + 0.005*"round" + 0.005*"also" + 0.005*"two"
+topic #1 (0.050): 0.010*"season" + 0.010*"team" + 0.008*"would" + 0.008*"played" + 0.008*"first" + 0.008*"league" + 0.007*"football" + 0.006*"year" + 0.005*"game" + 0.005*"tournament"
+topic diff=0.135476, rho=0.208696
+-8.171 per-word bound, 288.1 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 13, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 13, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 13, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 13, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 13, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 13, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 13, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 13, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 13, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 13, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 900 documents into a model of 996 documents
+topic #0 (0.050): 0.011*"borg" + 0.008*"amazing_race" + 0.006*"games" + 0.005*"australia" + 0.005*"also" + 0.004*"star_trek" + 0.004*"athletes" + 0.004*"events" + 0.004*"time" + 0.004*"australian"
+topic #14 (0.050): 0.009*"university" + 0.006*"also" + 0.005*"school" + 0.005*"national" + 0.004*"international" + 0.004*"served" + 0.003*"work" + 0.003*"indonesia" + 0.003*"since" + 0.003*"westover"
+topic #13 (0.050): 0.011*"route" + 0.007*"line" + 0.006*"station" + 0.006*"horten" + 0.005*"town" + 0.005*"vt" + 0.005*"road" + 0.004*"river" + 0.004*"west" + 0.004*"south"
+topic #15 (0.050): 0.008*"species" + 0.006*"also" + 0.004*"may" + 0.003*"brown_algae" + 0.003*"first" + 0.003*"new" + 0.002*"water" + 0.002*"people" + 0.002*"called" + 0.002*"known"
+topic #11 (0.050): 0.007*"imageshack" + 0.006*"image" + 0.005*"church" + 0.005*"images" + 0.005*"service" + 0.004*"free" + 0.004*"users" + 0.004*"community" + 0.004*"theatre" + 0.004*"vassar"
+topic diff=0.074330, rho=0.204294
+-8.328 per-word bound, 321.4 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 96 documents into a model of 996 documents
+topic #8 (0.050): 0.006*"school" + 0.005*"county" + 0.005*"students" + 0.004*"social" + 0.004*"city" + 0.004*"bashford" + 0.004*"manor" + 0.004*"built" + 0.004*"area" + 0.003*"part"
+topic #6 (0.050): 0.007*"film" + 0.005*"also" + 0.004*"album" + 0.004*"th" + 0.003*"series" + 0.003*"lennon" + 0.003*"one" + 0.003*"nielsen" + 0.003*"first" + 0.003*"jhelum"
+topic #10 (0.050): 0.006*"render" + 0.006*"election" + 0.005*"member" + 0.005*"elected" + 0.005*"manitoba" + 0.004*"species" + 0.003*"university" + 0.003*"provincial" + 0.003*"canada" + 0.003*"votes"
+topic #15 (0.050): 0.007*"species" + 0.006*"also" + 0.004*"may" + 0.003*"brown_algae" + 0.003*"first" + 0.003*"new" + 0.003*"people" + 0.003*"among" + 0.003*"called" + 0.002*"water"
+topic #3 (0.050): 0.008*"film" + 0.006*"student" + 0.006*"festival" + 0.006*"film_festival" + 0.006*"national" + 0.005*"since" + 0.005*"events" + 0.004*"physical" + 0.004*"event" + 0.004*"golden"
+topic diff=0.119134, rho=0.204294
+-8.000 per-word bound, 255.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 14, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 14, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 14, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 14, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 14, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 14, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 14, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 14, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 14, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 14, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 800 documents into a model of 996 documents
+topic #17 (0.050): 0.010*"patients" + 0.009*"center" + 0.007*"therapists" + 0.006*"one" + 0.004*"life" + 0.004*"group" + 0.003*"janov" + 0.003*"members" + 0.003*"feeling_therapy" + 0.003*"work"
+topic #19 (0.050): 0.005*"school" + 0.004*"also" + 0.004*"first" + 0.004*"th" + 0.004*"house" + 0.004*"art" + 0.004*"born" + 0.003*"one" + 0.003*"year" + 0.003*"company"
+topic #13 (0.050): 0.012*"route" + 0.009*"line" + 0.008*"station" + 0.007*"horten" + 0.006*"vt" + 0.006*"town" + 0.006*"road" + 0.004*"river" + 0.004*"two" + 0.004*"blote"
+topic #12 (0.050): 0.007*"railway" + 0.007*"met" + 0.006*"angre" + 0.006*"line" + 0.006*"station" + 0.005*"district" + 0.005*"east" + 0.004*"pin" + 0.004*"also" + 0.004*"company"
+topic #16 (0.050): 0.006*"one" + 0.006*"also" + 0.005*"street" + 0.005*"building" + 0.004*"nicaragua" + 0.004*"house" + 0.004*"many" + 0.004*"district" + 0.004*"day" + 0.003*"feathering"
+topic diff=0.085466, rho=0.200160
+-8.157 per-word bound, 285.4 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 196 documents into a model of 996 documents
+topic #6 (0.050): 0.008*"film" + 0.005*"jhelum" + 0.005*"also" + 0.004*"british" + 0.004*"shire" + 0.003*"th" + 0.003*"series" + 0.003*"first" + 0.003*"album" + 0.003*"lennon"
+topic #4 (0.050): 0.013*"squadron" + 0.007*"cocaine" + 0.006*"may" + 0.005*"de" + 0.005*"pce" + 0.005*"raf" + 0.005*"children" + 0.004*"aircraft" + 0.004*"islands" + 0.004*"studies"
+topic #7 (0.050): 0.010*"losing" + 0.009*"final" + 0.009*"reached" + 0.008*"year" + 0.007*"open" + 0.006*"first" + 0.006*"round" + 0.006*"three" + 0.005*"also" + 0.005*"two"
+topic #1 (0.050): 0.010*"team" + 0.010*"season" + 0.008*"played" + 0.008*"first" + 0.008*"league" + 0.008*"would" + 0.007*"football" + 0.006*"year" + 0.005*"game" + 0.005*"club"
+topic #3 (0.050): 0.008*"film" + 0.006*"film_festival" + 0.006*"student" + 0.006*"festival" + 0.005*"national" + 0.005*"since" + 0.004*"events" + 0.004*"physical" + 0.004*"also" + 0.004*"event"
+topic diff=0.094116, rho=0.200160
+-8.071 per-word bound, 268.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 15, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 15, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 15, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 15, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 15, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 15, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 15, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 15, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 15, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 15, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 896 documents into a model of 996 documents
+topic #16 (0.050): 0.006*"one" + 0.006*"also" + 0.005*"street" + 0.005*"building" + 0.004*"house" + 0.004*"nicaragua" + 0.004*"many" + 0.004*"day" + 0.004*"district" + 0.003*"council"
+topic #19 (0.050): 0.005*"school" + 0.004*"th" + 0.004*"first" + 0.004*"house" + 0.004*"also" + 0.004*"born" + 0.004*"art" + 0.004*"company" + 0.003*"one" + 0.003*"work"
+topic #11 (0.050): 0.009*"imageshack" + 0.007*"image" + 0.006*"images" + 0.006*"service" + 0.005*"free" + 0.005*"users" + 0.005*"theatre" + 0.005*"community" + 0.004*"based" + 0.004*"church"
+topic #5 (0.050): 0.009*"album" + 0.008*"band" + 0.008*"released" + 0.007*"song" + 0.006*"single" + 0.005*"first" + 0.005*"also" + 0.004*"one" + 0.004*"two" + 0.004*"laudrup"
+topic #0 (0.050): 0.011*"borg" + 0.008*"amazing_race" + 0.007*"games" + 0.006*"australia" + 0.006*"also" + 0.005*"athletes" + 0.005*"events" + 0.005*"australian" + 0.005*"winter_paralympics" + 0.004*"event"
+topic diff=0.063796, rho=0.196267
+-8.175 per-word bound, 288.9 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 100 documents into a model of 996 documents
+topic #15 (0.050): 0.007*"species" + 0.007*"also" + 0.005*"may" + 0.004*"wharton" + 0.003*"water" + 0.003*"virginia" + 0.003*"pratt" + 0.003*"first" + 0.003*"united_states" + 0.003*"people"
+topic #11 (0.050): 0.007*"church" + 0.007*"imageshack" + 0.005*"theatre" + 0.005*"image" + 0.005*"grossmunster" + 0.005*"images" + 0.005*"building" + 0.005*"service" + 0.004*"users" + 0.004*"free"
+topic #17 (0.050): 0.008*"patients" + 0.007*"center" + 0.006*"one" + 0.005*"therapists" + 0.004*"group" + 0.004*"air" + 0.003*"life" + 0.003*"members" + 0.003*"also" + 0.003*"time"
+topic #7 (0.050): 0.008*"final" + 0.007*"losing" + 0.006*"reached" + 0.006*"year" + 0.006*"open" + 0.005*"first" + 0.005*"round" + 0.005*"three" + 0.004*"also" + 0.004*"two"
+topic #14 (0.050): 0.010*"university" + 0.005*"also" + 0.005*"international" + 0.005*"national" + 0.004*"school" + 0.004*"research" + 0.004*"chicago" + 0.004*"since" + 0.004*"served" + 0.003*"work"
+topic diff=0.124195, rho=0.196267
+-8.298 per-word bound, 314.8 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 16, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 16, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 16, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 16, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 16, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 16, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 16, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 16, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 16, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 16, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 796 documents into a model of 996 documents
+topic #4 (0.050): 0.024*"squadron" + 0.010*"raf" + 0.006*"cocaine" + 0.006*"aircraft" + 0.006*"may" + 0.005*"pce" + 0.005*"air" + 0.004*"children" + 0.004*"island" + 0.004*"islands"
+topic #10 (0.050): 0.006*"election" + 0.005*"elected" + 0.004*"member" + 0.004*"world" + 0.004*"species" + 0.003*"university" + 0.003*"render" + 0.003*"tanuki" + 0.003*"party" + 0.003*"family"
+topic #0 (0.050): 0.012*"borg" + 0.009*"amazing_race" + 0.006*"australia" + 0.006*"games" + 0.005*"also" + 0.005*"star_trek" + 0.005*"event" + 0.004*"events" + 0.004*"athletes" + 0.004*"time"
+topic #2 (0.050): 0.014*"game" + 0.005*"one" + 0.005*"also" + 0.005*"nbc" + 0.005*"baseball" + 0.004*"week" + 0.004*"may" + 0.004*"games" + 0.004*"world" + 0.003*"time"
+topic #5 (0.050): 0.012*"album" + 0.011*"band" + 0.009*"released" + 0.008*"song" + 0.007*"single" + 0.006*"first" + 0.006*"music" + 0.005*"also" + 0.004*"songs" + 0.004*"new"
+topic diff=0.059143, rho=0.192593
+-8.376 per-word bound, 332.1 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 200 documents into a model of 996 documents
+topic #13 (0.050): 0.010*"route" + 0.007*"station" + 0.006*"line" + 0.006*"road" + 0.005*"town" + 0.005*"river" + 0.005*"horten" + 0.004*"vt" + 0.004*"south" + 0.004*"west"
+topic #1 (0.050): 0.012*"team" + 0.011*"season" + 0.008*"played" + 0.008*"football" + 0.008*"league" + 0.007*"first" + 0.007*"would" + 0.006*"club" + 0.006*"year" + 0.006*"win"
+topic #8 (0.050): 0.007*"displaystyle" + 0.006*"county" + 0.006*"sardou" + 0.005*"school" + 0.005*"age" + 0.005*"city" + 0.004*"population" + 0.004*"students" + 0.004*"area" + 0.004*"state"
+topic #2 (0.050): 0.014*"game" + 0.005*"also" + 0.005*"one" + 0.004*"may" + 0.004*"nbc" + 0.004*"week" + 0.004*"baseball" + 0.004*"world" + 0.003*"series" + 0.003*"network"
+topic #0 (0.050): 0.010*"borg" + 0.007*"amazing_race" + 0.005*"games" + 0.005*"australia" + 0.005*"also" + 0.004*"event" + 0.004*"star_trek" + 0.004*"one" + 0.004*"australian" + 0.004*"events"
+topic diff=0.102804, rho=0.192593
+-8.501 per-word bound, 362.3 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 17, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 17, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 17, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 17, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 17, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 17, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 17, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 17, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 17, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 17, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #7 (0.050): 0.006*"final" + 0.006*"open" + 0.005*"losing" + 0.005*"year" + 0.005*"reached" + 0.005*"first" + 0.004*"displaystyle" + 0.004*"enamel" + 0.004*"bridge" + 0.004*"two"
+topic #9 (0.050): 0.006*"film" + 0.005*"board" + 0.004*"hanseatic" + 0.004*"channel" + 0.004*"university" + 0.004*"ship" + 0.004*"frampton" + 0.004*"kasparov" + 0.004*"qd" + 0.003*"nf"
+topic #1 (0.050): 0.012*"team" + 0.011*"season" + 0.008*"played" + 0.008*"football" + 0.008*"first" + 0.007*"would" + 0.007*"league" + 0.006*"club" + 0.006*"year" + 0.006*"win"
+topic #11 (0.050): 0.008*"vassar" + 0.007*"church" + 0.004*"imageshack" + 0.004*"building" + 0.004*"theatre" + 0.004*"fm" + 0.004*"grossmunster" + 0.004*"image" + 0.004*"service" + 0.003*"poughkeepsie"
+topic #6 (0.050): 0.010*"film" + 0.005*"irwin" + 0.004*"also" + 0.004*"series" + 0.004*"lennon" + 0.004*"one" + 0.004*"battle" + 0.003*"th" + 0.003*"john" + 0.003*"british"
+topic diff=0.058024, rho=0.189117
+-8.635 per-word bound, 397.7 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #3 (0.050): 0.006*"film" + 0.005*"film_festival" + 0.004*"national" + 0.004*"physical" + 0.004*"jewish" + 0.004*"also" + 0.004*"festival" + 0.003*"prinz" + 0.003*"films" + 0.003*"since"
+topic #0 (0.050): 0.017*"borg" + 0.007*"amazing_race" + 0.006*"star_trek" + 0.005*"also" + 0.004*"games" + 0.004*"australia" + 0.004*"time" + 0.004*"episode" + 0.004*"event" + 0.004*"one"
+topic #14 (0.050): 0.011*"university" + 0.006*"also" + 0.005*"national" + 0.004*"school" + 0.004*"international" + 0.004*"research" + 0.004*"served" + 0.004*"chicago" + 0.003*"institute" + 0.003*"studies"
+topic #10 (0.050): 0.007*"ian" + 0.006*"election" + 0.006*"samantha" + 0.005*"tanuki" + 0.005*"elected" + 0.004*"species" + 0.004*"member" + 0.004*"family" + 0.003*"university" + 0.003*"party"
+topic #8 (0.050): 0.006*"county" + 0.006*"displaystyle" + 0.006*"population" + 0.005*"school" + 0.005*"sardou" + 0.005*"age" + 0.005*"munchwilen" + 0.004*"students" + 0.004*"city" + 0.004*"people"
+topic diff=0.085263, rho=0.189117
+-8.526 per-word bound, 368.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 18, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 18, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 18, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 18, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 18, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 18, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 18, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 18, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 18, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 18, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 700 documents into a model of 996 documents
+topic #12 (0.050): 0.008*"railway" + 0.007*"met" + 0.007*"station" + 0.006*"line" + 0.005*"district" + 0.005*"city" + 0.005*"north" + 0.005*"east" + 0.004*"service" + 0.004*"built"
+topic #9 (0.050): 0.007*"board" + 0.006*"film" + 0.004*"channel" + 0.004*"frampton" + 0.004*"university" + 0.004*"hanseatic" + 0.004*"ship" + 0.003*"kasparov" + 0.003*"qd" + 0.003*"one"
+topic #1 (0.050): 0.012*"team" + 0.012*"season" + 0.009*"played" + 0.008*"league" + 0.008*"football" + 0.008*"first" + 0.007*"club" + 0.006*"year" + 0.006*"would" + 0.005*"win"
+topic #13 (0.050): 0.010*"route" + 0.006*"road" + 0.006*"station" + 0.006*"line" + 0.004*"river" + 0.004*"town" + 0.004*"south" + 0.004*"west" + 0.004*"horten" + 0.004*"also"
+topic #2 (0.050): 0.013*"game" + 0.005*"one" + 0.005*"also" + 0.004*"may" + 0.003*"would" + 0.003*"world" + 0.003*"week" + 0.003*"nbc" + 0.003*"baseball" + 0.003*"series"
+topic diff=0.050114, rho=0.185824
+-8.659 per-word bound, 404.3 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 296 documents into a model of 996 documents
+topic #4 (0.050): 0.017*"squadron" + 0.008*"cocaine" + 0.007*"raf" + 0.007*"de" + 0.007*"may" + 0.007*"pce" + 0.005*"children" + 0.005*"aircraft" + 0.005*"effects" + 0.004*"studies"
+topic #12 (0.050): 0.008*"railway" + 0.007*"station" + 0.006*"met" + 0.006*"line" + 0.005*"east" + 0.005*"north" + 0.005*"finchley" + 0.005*"district" + 0.005*"city" + 0.004*"service"
+topic #11 (0.050): 0.007*"church" + 0.006*"vassar" + 0.005*"imageshack" + 0.005*"theatre" + 0.004*"fm" + 0.004*"image" + 0.004*"service" + 0.004*"building" + 0.004*"images" + 0.003*"free"
+topic #13 (0.050): 0.010*"route" + 0.007*"station" + 0.006*"line" + 0.006*"road" + 0.005*"town" + 0.005*"river" + 0.005*"horten" + 0.004*"south" + 0.004*"vt" + 0.004*"west"
+topic #3 (0.050): 0.006*"film" + 0.005*"film_festival" + 0.004*"national" + 0.004*"physical" + 0.004*"also" + 0.004*"jewish" + 0.003*"festival" + 0.003*"films" + 0.003*"since" + 0.003*"event"
+topic diff=0.073427, rho=0.185824
+-8.534 per-word bound, 370.6 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+PROGRESS: pass 19, dispatched chunk #0 = documents up to #100/996, outstanding queue size 1
+PROGRESS: pass 19, dispatched chunk #1 = documents up to #200/996, outstanding queue size 2
+PROGRESS: pass 19, dispatched chunk #2 = documents up to #300/996, outstanding queue size 3
+PROGRESS: pass 19, dispatched chunk #3 = documents up to #400/996, outstanding queue size 4
+PROGRESS: pass 19, dispatched chunk #4 = documents up to #500/996, outstanding queue size 5
+PROGRESS: pass 19, dispatched chunk #5 = documents up to #600/996, outstanding queue size 6
+PROGRESS: pass 19, dispatched chunk #6 = documents up to #700/996, outstanding queue size 7
+PROGRESS: pass 19, dispatched chunk #7 = documents up to #800/996, outstanding queue size 8
+PROGRESS: pass 19, dispatched chunk #8 = documents up to #900/996, outstanding queue size 9
+PROGRESS: pass 19, dispatched chunk #9 = documents up to #996/996, outstanding queue size 10
+merging changes from 800 documents into a model of 996 documents
+topic #2 (0.050): 0.012*"game" + 0.005*"one" + 0.005*"also" + 0.004*"may" + 0.003*"world" + 0.003*"would" + 0.003*"nbc" + 0.003*"week" + 0.003*"baseball" + 0.003*"time"
+topic #0 (0.050): 0.016*"borg" + 0.009*"amazing_race" + 0.006*"star_trek" + 0.005*"episode" + 0.005*"also" + 0.004*"time" + 0.004*"event" + 0.004*"games" + 0.004*"australia" + 0.004*"one"
+topic #7 (0.050): 0.007*"displaystyle" + 0.006*"final" + 0.005*"losing" + 0.005*"open" + 0.005*"year" + 0.005*"reached" + 0.004*"first" + 0.004*"two" + 0.004*"also" + 0.004*"three"
+topic #17 (0.050): 0.005*"one" + 0.005*"center" + 0.005*"patients" + 0.004*"air" + 0.004*"winner" + 0.003*"submarine" + 0.003*"also" + 0.003*"therapists" + 0.003*"history" + 0.003*"group"
+topic #11 (0.050): 0.007*"church" + 0.006*"vassar" + 0.005*"theatre" + 0.005*"fm" + 0.004*"imageshack" + 0.004*"image" + 0.004*"building" + 0.004*"service" + 0.004*"sattler" + 0.003*"images"
+topic diff=0.042418, rho=0.182696
+-8.667 per-word bound, 406.5 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+merging changes from 196 documents into a model of 996 documents
+topic #13 (0.050): 0.011*"route" + 0.007*"station" + 0.007*"line" + 0.006*"road" + 0.005*"river" + 0.005*"town" + 0.005*"horten" + 0.005*"vt" + 0.004*"south" + 0.004*"west"
+topic #5 (0.050): 0.011*"album" + 0.010*"band" + 0.009*"released" + 0.008*"song" + 0.007*"single" + 0.006*"first" + 0.005*"music" + 0.005*"also" + 0.004*"songs" + 0.004*"laudrup"
+topic #16 (0.050): 0.006*"one" + 0.006*"also" + 0.005*"street" + 0.005*"building" + 0.005*"house" + 0.004*"bridge" + 0.004*"village" + 0.003*"many" + 0.003*"district" + 0.003*"population"
+topic #19 (0.050): 0.005*"school" + 0.004*"also" + 0.004*"th" + 0.004*"first" + 0.004*"born" + 0.003*"st" + 0.003*"one" + 0.003*"war" + 0.003*"london" + 0.003*"art"
+topic #4 (0.050): 0.021*"squadron" + 0.009*"raf" + 0.007*"cocaine" + 0.006*"may" + 0.006*"de" + 0.006*"pce" + 0.005*"aircraft" + 0.005*"children" + 0.004*"air" + 0.004*"island"
+topic diff=0.073292, rho=0.182696
+-8.431 per-word bound, 345.2 perplexity estimate based on a held-out corpus of 96 documents with 18935 words
+LdaMulticore lifecycle event {'msg': 'trained LdaModel(num_terms=32647, num_topics=20, decay=0.5, chunksize=100) in 52.79s', 'datetime': '2022-02-06T04:12:57.297402', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
 Time taken = 1 minutes
 Note: Perplexity estimate based on a held-out corpus of 4 documents
 

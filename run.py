@@ -45,8 +45,10 @@ testmode=False
 if sys.argv[-1].lower().strip()=='test':
     logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
     testmode=True
+    evalevery=100
 else:
     logging.info('App started in full mode.')
+    evalevery=1000
 
 
 fn='data/datapicklesoup.bz2'
@@ -205,7 +207,7 @@ setUpNewLogFile('gensim_nolem.log')
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model = gensim.models.ldamulticore.LdaMulticore(
    corpus=corpus, id2word=id2word, num_topics=20, random_state=100, 
-   eval_every=1000, chunksize=200, passes=20, alpha='symmetric', per_word_topics=True
+   eval_every=evalevery, chunksize=evalevery, passes=20, alpha='symmetric', per_word_topics=True
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -247,7 +249,7 @@ setUpNewLogFile('gensim_lem.log')
 #New code uses multicore which runs works in parallel for each CPU core.
 lda_model_lemmatized = gensim.models.ldamulticore.LdaMulticore(
    corpus=corpus_lemmatized, id2word=id2word_lemmatized, num_topics=20, random_state=100, 
-   eval_every=1000, chunksize=1000, passes=10, alpha='symmetric', per_word_topics=True
+   eval_every=evalevery, chunksize=evalevery, passes=10, alpha='symmetric', per_word_topics=True
 )
 logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
 
@@ -278,4 +280,5 @@ plt.savefig('images/LemConvergencePerplexity.png')
 plt.show()
 logging.info('Note: Log likelihood is per-word ELBO')
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
+
 
