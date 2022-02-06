@@ -191,7 +191,7 @@ def setUpNewLogFile(LOG_FILENAME):
     my_logger.addHandler(handler)
 
     # This is a stale log, so roll it
-    if needRoll:    
+    if needRoll and False:    
         # Add timestamp
         my_logger.debug('\n---------\nLog closed on %s.\n---------\n' % time.asctime())
 
@@ -221,23 +221,29 @@ tuples = [t[0] for t in matches]
 perplexity = [float(t[1]) for t in tuples]
 liklihood = [float(t[0]) for t in tuples]
 iter = list(range(0,len(tuples)*10,10))
+
+fig=plt.figure()
 plt.plot(iter[:-1],liklihood[:-1],c="black")
 plt.ylabel("log likelihood")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/NoLemConvergenceLikelihood.eps', format='eps')
+#plt.savefig('images/NoLemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/NoLemConvergenceLikelihood.png')
 plt.show()
+plt.close(fig)
 
+
+fig=plt.figure()
 plt.plot(iter[:-1],perplexity[:-1],c="black")
 plt.ylabel("Perplexity")
 plt.xlabel("iteration")
 plt.title("Topic Model Convergence")
 plt.grid()
-plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
+#plt.savefig('images/NoLemConvergencePerplexity.eps', format='eps')
 plt.savefig('images/NoLemConvergencePerplexity.png')
 plt.show()
+plt.close(fig)
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
 ## With Lemmatization
@@ -262,6 +268,8 @@ tuples = [t[0] for t in matches]
 perplexity = [float(t[1]) for t in tuples]
 liklihood = [float(t[0]) for t in tuples]
 iter = list(range(0,len(tuples)*10,10))
+
+fig=plt.figure()
 plt.plot(iter[:-1],liklihood[:-1],c="black")
 plt.ylabel("log likelihood")
 plt.xlabel("iteration")
@@ -270,8 +278,9 @@ plt.grid()
 plt.savefig('images/LemConvergenceLikelihood.eps', format='eps')
 plt.savefig('images/LemConvergenceLikelihood.png')
 plt.show()
+plt.close(fig)
 
-
+fig=plt.figure()
 plt.plot(iter[:-1],perplexity[:-1],c="black")
 plt.ylabel("Perplexity")
 plt.xlabel("iteration")
@@ -280,6 +289,7 @@ plt.grid()
 plt.savefig('images/LemConvergencePerplexity.eps', format='eps')
 plt.savefig('images/LemConvergencePerplexity.png')
 plt.show()
+plt.close(fig)
 logging.info('Note: Log likelihood is per-word ELBO')
 logging.info('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 
