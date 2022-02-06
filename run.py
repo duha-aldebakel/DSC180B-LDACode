@@ -43,12 +43,12 @@ logging.info('Number of arguments: {} arguments.'.format(len(sys.argv)))
 logging.info( 'Argument List: {}'.format(str(sys.argv)))
 testmode=False
 if sys.argv[-1].lower().strip()=='test':
-    logging.info('App started in test mode. Using test data (generated with just 2 features. See makeTestData.py)')
+    logging.info('App started in test mode. Using test data (generated with just 100 articles. See  wikidownloader.py)')
     testmode=True
     evalevery=20
     chunk=5
     numtopics=4
-    passes=8
+    passes=10
     fnprefix='test_'
     workers=2
 else:
@@ -56,7 +56,7 @@ else:
     evalevery=1000
     chunk=1000
     numtopics=20
-    passes=8
+    passes=10
     fnprefix=''
     workers=3
 
