@@ -1412,7 +1412,7 @@ topic #1 (0.250): 0.248*"player" + 0.209*"area" + 0.167*"back" + 0.123*"long" + 
 topic #2 (0.250): 0.331*"come" + 0.306*"court" + 0.295*"international" + 0.006*"player" + 0.005*"set" + 0.005*"school" + 0.005*"build" + 0.005*"area" + 0.005*"original" + 0.005*"royal"
 topic #3 (0.250): 0.504*"film" + 0.311*"school" + 0.145*"royal" + 0.006*"short" + 0.003*"set" + 0.003*"long" + 0.003*"role" + 0.003*"original" + 0.003*"see" + 0.003*"area"
 topic diff=0.180644, rho=0.182574
-LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.30s', 'datetime': '2022-02-06T08:52:07.418669', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=4, decay=0.5, chunksize=5) in 0.29s', 'datetime': '2022-02-06T21:48:04.051219', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
 using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
 serializing accumulator to return to master...
 accumulator serialized
@@ -3036,7 +3036,7 @@ topic #2 (0.200): 0.475*"school" + 0.262*"come" + 0.220*"royal" + 0.003*"short" 
 topic #3 (0.200): 0.833*"court" + 0.011*"build" + 0.011*"school" + 0.011*"international" + 0.011*"area" + 0.011*"short" + 0.011*"original" + 0.011*"set" + 0.011*"long" + 0.011*"film"
 topic #4 (0.200): 0.403*"film" + 0.314*"player" + 0.156*"long" + 0.073*"short" + 0.035*"set" + 0.002*"original" + 0.002*"see" + 0.002*"role" + 0.002*"international" + 0.002*"back"
 topic diff=0.202076, rho=0.182574
-LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=5, decay=0.5, chunksize=5) in 0.37s', 'datetime': '2022-02-06T08:52:08.006994', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=5, decay=0.5, chunksize=5) in 0.34s', 'datetime': '2022-02-06T21:48:04.511179', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
 using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
 serializing accumulator to return to master...
 accumulator serialized
@@ -4660,7 +4660,7 @@ topic #4 (0.167): 0.513*"film" + 0.317*"school" + 0.147*"royal" + 0.002*"short" 
 topic #2 (0.167): 0.866*"come" + 0.009*"player" + 0.009*"original" + 0.009*"build" + 0.009*"royal" + 0.009*"school" + 0.009*"set" + 0.009*"back" + 0.009*"see" + 0.009*"area"
 topic #5 (0.167): 0.314*"player" + 0.212*"back" + 0.156*"long" + 0.126*"see" + 0.105*"set" + 0.073*"short" + 0.001*"international" + 0.001*"school" + 0.001*"original" + 0.001*"build"
 topic diff=0.203204, rho=0.182574
-LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=6, decay=0.5, chunksize=5) in 0.39s', 'datetime': '2022-02-06T08:52:08.734542', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-glibc2.31', 'event': 'created'}
+LdaModel lifecycle event {'msg': 'trained LdaModel(num_terms=16, num_topics=6, decay=0.5, chunksize=5) in 0.36s', 'datetime': '2022-02-06T21:48:04.987876', 'gensim': '4.1.2', 'python': '3.9.5 | packaged by conda-forge | (default, Jun 19 2021, 00:32:32) \n[GCC 9.3.0]', 'platform': 'Linux-5.10.16.3-microsoft-standard-WSL2-x86_64-with-glibc2.31', 'event': 'created'}
 using ParallelWordOccurrenceAccumulator(processes=2, batch_size=64) to estimate probabilities from sliding windows
 serializing accumulator to return to master...
 accumulator serialized
