@@ -1,0 +1,11 @@
+data_dir: test/testdata/
+file_name: testdatapickle.bz2
+lda_gensim_params:
+  min_token_len: 4
+  test_mode: True
+  eval_every: 20
+  chunk: 5
+  num_topics: 4
+  passes: 10
+  fnprefix: test_
+  workers: 2

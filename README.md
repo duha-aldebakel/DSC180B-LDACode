@@ -21,18 +21,17 @@ To get it up and running:
 - `python3.7 -m venv env`
 - `source env/bin/activate`
 - `pip install -r requirements.txt`
-To interact with jupyter notebooks (make sure virtual env is activated and requirements.txt are installed):
+
+To interact with jupyter notebooks (make sure virtual environment is activated and requirements.txt are installed):
 - `cd DSC180B-LDACode`
--  Download spacy data: 
--  `python3 -m spacy download en_core_web_md`
--  `python3 -m spacy download en_core_web_sm`
--  Additional downloads...
+- `ipython kernel install --user --name=env` (assuming you named your virtual environment `env`)
 -  `jupyter notebook`
+- When notebook server is running: Navigate to `Kernel` > `Change kernel` > select `env`
   
 ## 2) Getting the repository from Github
 - "`git clone https://github.com/duha-aldebakel/DSC180B-LDACode.git`"
 - "`cd DSC180B-LDACode`"
-- "`python run.py test`" to run on test data
-- "`python run.py`" to run on production data
+- "`python run.py test-gensim`" to run on test data
+- "`python run.py`" to run on production data (run time ~16-17min)
   
 
