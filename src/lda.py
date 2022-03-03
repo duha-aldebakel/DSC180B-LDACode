@@ -3,8 +3,8 @@ import numpy as np
 from typing import List
 from scipy.special import gammaln
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 import pyLDAvis
-
 
 class LDA:
 
@@ -42,7 +42,7 @@ class LDA:
                 self.per_doc_word_topic_assignment[d][w] = topic_idx
     
     def _sample(self):
-        for d, doc in enumerate(tqdm(self.corpus)):
+        for d, doc in enumerate(self.corpus):
             for w, bow in enumerate(doc):
                 token_id, token_count = bow
                 topic_idx = self.per_doc_word_topic_assignment[d][w]
@@ -54,10 +54,8 @@ class LDA:
                 self.per_doc_word_topic_assignment[d][w] = topic_idx
 
                 # compute full conditional distribution            
-                word_topic_count = self.topic_word_count[:, token_id]
-                topic_doc_count = self.doc_topic_count[d,:]
-                topic_doc_ratio = (topic_doc_count + self.alpha) / (len(doc) + (self.num_topics * self.alpha))
-                word_topic_ratio = (word_topic_count + self.beta) / (self.nz + (self.vocab_len * self.beta))
+                topic_doc_ratio = (self.doc_topic_count[d,:] + self.alpha) / (len(doc) + (self.num_topics * self.alpha))
+                word_topic_ratio = (self.topic_word_count[:, token_id] + self.beta) / (self.nz + (self.vocab_len * self.beta))
                 p_z_w = topic_doc_ratio * word_topic_ratio
                 full_cond_dist = p_z_w / np.sum(p_z_w)
                 new_topic_idx = np.random.multinomial(1, full_cond_dist).argmax()  # sample from multinomial dist
@@ -76,7 +74,7 @@ class LDA:
         self.theta_trace = []
         self.total_doc_topic_count = np.zeros([self.num_docs, self.num_topics])
         self.total_topic_word_count = np.zeros([self.num_topics, self.vocab_len]) 
-        for i in range(burnin+max_iter):
+        for i in tqdm(range(burnin+max_iter)):
             self._sample()
 
             # track log likelihood and perplexity
@@ -91,7 +89,6 @@ class LDA:
                 self.total_doc_topic_count += self.doc_topic_count
                 self.total_topic_word_count += self.topic_word_count
 
-        
     def log_likelihood(self):
         ll = 0
         # log p(w|z)
@@ -119,6 +116,7 @@ class LDA:
         return theta
     
     def top_topic_word_idx_mat(self, num_terms):
+        # gets num_terms indices of largest phi values sorted by their index
         topic_word_idx_sorted = np.argpartition(self.get_phi(), kth=range(-num_terms, 0), axis=-1)[:,-num_terms:]
         topic_word_idx_sorted = np.flip(topic_word_idx_sorted, axis=-1)
         return topic_word_idx_sorted
@@ -140,55 +138,24 @@ class LDA:
         for i, topic in enumerate(self.get_topics(vocab,topn)):
             topic = dict(sorted(topic.items(), key=lambda item: item[1], reverse=True))
             print(i,topic)
+            print("\n")
 
-#     def plot_ldavis(self, dictionary):
-#         doc_lengths = [len(doc) for doc in self.corpus]
-#         tf = [dictionary.cfs[i] for i in range(len(dictionary))]
-#         data = {'topic_term_dists': self.get_phi(), 
-#             'doc_topic_dists': self.get_theta(),
-#             'doc_lengths': doc_lengths,
-#             'vocab': dictionary,
-#             'term_frequency': tf}
-#         vis_data = pyLDAvis.prepare(**data)
-#         pyLDAvis.display(vis_data)
+    def plot_log_likelihood(self):
+        plt.plot(self.log_likelihood_trace)
+        plt.show()
 
+    def plot_ldavis(self, dictionary):
+        # for use in jupyter notebook
+        doc_lengths = [len(doc) for doc in self.corpus]
+        tf = [dictionary.cfs[i] for i in range(len(dictionary))]
+        data = {'topic_term_dists': self.get_phi(), 
+            'doc_topic_dists': self.get_theta(),
+            'doc_lengths': doc_lengths,
+            'vocab': dictionary,
+            'term_frequency': tf}
+        vis_data = pyLDAvis.prepare(**data)
+        return pyLDAvis.display(vis_data)
 
-# if __name__ == "__main__":
-#     import bz2
-#     import pickle
-#     from pandas.core.frame import DataFrame
-#     import gensim
-#     from gensim.models import CoherenceModel
-#     from tqdm import tqdm
-#     import time
-#     import spacy
-#     import logging
-#     import warnings
-#     warnings.filterwarnings('ignore')
-#     from wikipreprocess import WikiPreprocess
-
-#     path = 'data/datapicklesoup.bz2'
-#     with bz2.BZ2File(path, 'rb') as f:  #Use datacompression BZ2
-#         data = pickle.load(f)
-#     # data = data[:]
-#     data, _ = data
-#     data = data[0:100]
-#     # print(data)
-#     print(len(data))
-#     wiki_pp = WikiPreprocess()
-#     preprocessed_data =  [wiki_pp.preprocess_document(text=d, min_token_len=4) for d in tqdm(data)]
-#     data_words_bigrams = wiki_pp.make_bigrams(preprocessed_data)
-#     nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
-#     data_lemmatized = [wiki_pp.lemmatize(d, nlp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']) for d in tqdm(data_words_bigrams)]
-#     id2word_lemmatized = wiki_pp.create_dictionary(data_lemmatized)
-#     print(id2word_lemmatized)
-#     print(len(id2word_lemmatized))
-#     corpus_lemmatized_bow = [id2word_lemmatized.doc2bow(text) for text in tqdm(data_lemmatized)]
-  
-#     lda = LDA(corpus=corpus_lemmatized_bow, num_topics=10, vocab_len=len(id2word_lemmatized), alpha=0.01, beta=0.01)
-#     lda.fit(documents=corpus_lemmatized_bow,burnin=10,max_iter=1)
-#     lda.print_topics(id2word_lemmatized, topn=10)
-#     # lda.plot_ldavis(id2word_lemmatized)
 
 
     
