@@ -143,6 +143,10 @@ class LDA:
     def plot_log_likelihood(self):
         plt.plot(self.log_likelihood_trace)
         plt.show()
+    
+    def plot_perplexity(self):
+        plt.plot(self.perplexity_trace)
+        plt.show()
 
     def plot_ldavis(self, dictionary):
         # for use in jupyter notebook
@@ -155,9 +159,3 @@ class LDA:
             'term_frequency': tf}
         vis_data = pyLDAvis.prepare(**data)
         return pyLDAvis.display(vis_data)
-
-
-
-    
-
-
