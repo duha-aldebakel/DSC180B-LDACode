@@ -15,7 +15,7 @@ We are interested in learning about these topics in an unsupervised manner -- in
 <br>
 
 
-![](https://github.com/a1limon/DSC180B.visual.io/blob/gh-pages/images/lda_graphical_model.png?raw=true)
+![Latent Dirichlet Allocation](https://github.com/a1limon/DSC180B.visual.io/blob/gh-pages/images/lda_graphical_model.png?raw=true)
 
 Firstly, don’t be alarmed by the many symbols. We can get through this together. What we actually observe is the words on every Wikipedia article. This is represented by the gray circle, with the subscripts denoting which Wikipedia article and word in that article we observe. Everything else in this model is latent variables, that is, not directly observed. Our goal is to infer what these variables are through their collective impact on the observed words. 
 <br>
@@ -44,5 +44,10 @@ Putting it together, we will condition on the chosen topic for the word from the
 <br>
 This process is called Latent Dirichlet Allocation. The term “latent” refers to the fact that many of the parameters cannot be observed directly. The term “Dirichlet Allocation” refers to the manner in which we assign discrete probabilities on topic proportions.
 # Bayesian Inference
+Now that we have a generative model on how documents are generated from topics, the next step is to fit the model on live data. This process is called Bayesian Inference, which maximizes the likelihood of the latent parameters to match what we have seen from live data. 
+<br>
+<br>
+The issue is that solving this problem is intractable. This means it is difficult or impossible to solve analytically. The problem arises from the dependence of variables from the two pathways of “Topic Assignment” and “Topic Vocab”, where solving each pathway would require knowledge of the other.
 
+![Mean-field Variation Inference](https://camo.githubusercontent.com/be972716d5117d7d769095628c721909c5f4f90ece185c99054e936beee1435d/68747470733a2f2f6769746875622e636f6d2f647568612d616c646562616b656c2f445343313830422d4c4441436f64652f626c6f622f6d61737465722f696d616765732f4c44415f4d65616e6669656c642e504e473f7261773d74727565)
 
