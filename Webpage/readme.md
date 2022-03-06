@@ -62,9 +62,34 @@ The graph above illustrates this where the posterior P which is conditioned on t
 <br>
 <br>
 ## Mean-field variational inference
-Mean-field variational inference is a special case of variational inference where we further assume that the variational family can be fully factored. In other words, the latent parameters are all independent of each other. Recall that our main problem was due to the dependence of the variables on the left and right pathways to the observed data, with conditional probabilities involved in the definition. If we instead choose to break this and assume independence, the variational family would not have to deal with conditional probabilities but instead, be simply the product of all the multinomial and Dirichlet distributions.
+Mean-field variational inference is a special case of variational inference where we further assume that the variational family can be fully factored. In other words, the latent parameters are all independent of each other. Recall that our main problem was due to the dependence of the variables on the left and right pathways to the observed data, with conditional probabilities involved in the definition. If we instead choose to break this and assume independence, the variational family would not have to deal with conditional probabilities but instead, be simply the product of all the multinomial and Dirichlet distributions. Explicitly:
+<br>
+<br>
 ![]( https://github.com/duha-aldebakel/DSC180B-LDACode/blob/master/images/MFVI.PNG?raw=true)
-
-
+<br>
+<br>
+The template for Mean-field variational inference thus looks like the image below. The arrows are no longer linked since the variables are independent. In addition, you would notice variational parameters phi and gamma. (And while not shown, there is also lambda as the variational parameter for beta.) These are variational parameters that are used to tweak the Q distribution to be as close to P as possible.
+<br>
+<br>
 ![Mean-field Variation Inference](https://camo.githubusercontent.com/be972716d5117d7d769095628c721909c5f4f90ece185c99054e936beee1435d/68747470733a2f2f6769746875622e636f6d2f647568612d616c646562616b656c2f445343313830422d4c4441436f64652f626c6f622f6d61737465722f696d616765732f4c44415f4d65616e6669656c642e504e473f7261773d74727565)
+<br>
+<br>
+We can now hill-climb our way to find the best Q using the Expectation-Maximization (EM) Algorithm. This involves the E step that matches theta and z from the left pathway for topic proportions, with the assumption that every other latent parameter is already correct when independently optimizing a single latent parameter. (This is done by optimizing the variational parameters of phi and gamma for z and theta respectively.) 
+<br>
+<br>
+Then, the M step matches the beta from the right pathway for topic vocab, while again assuming that the latent parameters from the E step are correct due to independence. (This is done by optimizing the variational parameters of lambda for beta.) 
+<br>
+<br>
+The pseudo-code of the EM algorithm is shown below.
+![EM Algo](https://camo.githubusercontent.com/22fce9cd102f74289c87d8834c04081b9a909f1861520e0da6f8c3a5eb2d5cfe/68747470733a2f2f6769746875622e636f6d2f647568612d616c646562616b656c2f445343313830422d4c4441436f64652f626c6f622f6d61737465722f696d616765732f56425f4c44415f416c676f312e504e473f7261773d74727565)
+## Gibbs Sampling
+Another way to solve the Bayesian inference problem of LDA is via Gibbs Sampling. 
+<br>
+<br>
+Sampling is a method to use random numbers to draw samples in an attempt to find the probability distribution of the posterior, for example, to produce a histogram of the distribution. 
+<br>
+<br>
+Gibbs Sampling is a specialized method of sampling that falls under the category of Markov chain Monte Carlo (MCMC) algorithms. This technique involves choosing the next sample based on taking an informed step from the last sample in the chain. In this matter, more time can be spent sampling the distribution which the highest contribution to the probability distribution, hence more efficiently solving the problem.
+
+
 
