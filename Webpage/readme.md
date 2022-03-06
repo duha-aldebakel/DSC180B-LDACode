@@ -17,3 +17,9 @@ We are interested in learning about these topics in an unsupervised manner -- in
 
 ![](https://github.com/a1limon/DSC180B.visual.io/blob/gh-pages/images/lda_graphical_model.png?raw=true)
 
+The intuition behind LDA is the assumption that documents exhibit multiple topics, as opposed to the assumption that documents exhibit a single topic. We can elaborate on this by describing the imaginary generative probabilistic process that we assume our data came from. LDA first assumes that each topic is a distribution over terms in a fixed size vocabulary. LDA then assumes documents are generated as follows:
+<br>
+* A distribution over topics is chosen
+* For each word in a document, a topic from the distribution over topics is chosen
+* A word is drawn from a distribution over terms associated with the topic chosen in the previous step.
+<br>
