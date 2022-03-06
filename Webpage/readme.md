@@ -51,8 +51,15 @@ The issue is that solving this problem is intractable. This means it is difficul
 <br>
 Instead of trying to find the exact solution, it would thus be better to find a good approximate solution. Along this line, Mean-field variational inference and Gibbs Sampling are two popular ways to solve the inference problem for the latent parameters. 
 ## Mean-field variational inference
-The technical term for the correct distribution given the observed data is the posterior, which is often not a “nice” distribution to deal with mathematically. The posterior can be any distribution at all and doesn’t have a well-known distribution.
+### Variational inference
+The technical term for the correct distribution given the observed data is the posterior, denoted by P, which is often not a “nice” distribution to deal with mathematically. The posterior can be any distribution at all and doesn’t have to be a well-known distribution that is mathematically easy to manipulate. The solution is to choose a distribution Q from a user-defined variational family that approximates P. This process of choosing a variational family, and then finding the closest distribution Q to P within that variational family is known as variational inference. 
+<br>
+<br>
+The graph below illustrates this where the posterior P which is conditioned on the observed data X has an unknown blue distribution. We use a Gaussian variational family, and vary the parameters which are in this case the mean and standard deviation to find the best Q to match the posterior. It would not be a perfect match, and thus this is an approximate solution. Obviously, the choice of the variational family would also determine how close Q will ultimately be to P.
 ![Variational Inference](https://miro.medium.com/max/1002/1*YVFAbC7DgfAj94-0TRt8IQ.png)
+<br>
+<br>
+## Mean-field
 
 ![Mean-field Variation Inference](https://camo.githubusercontent.com/be972716d5117d7d769095628c721909c5f4f90ece185c99054e936beee1435d/68747470733a2f2f6769746875622e636f6d2f647568612d616c646562616b656c2f445343313830422d4c4441436f64652f626c6f622f6d61737465722f696d616765732f4c44415f4d65616e6669656c642e504e473f7261773d74727565)
 
