@@ -1,4 +1,5 @@
 # Welcome our website for DSC180B A06
+Authors:
 * Duha Aldebakel
 * Yu Cao
 * Anthony Limon
