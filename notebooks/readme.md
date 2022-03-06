@@ -1,4 +1,3 @@
-
 ---
 jupyter:
   kernelspec:
@@ -558,10 +557,10 @@ Online Learning for Latent Dirichlet Allocation\', NIPS 2010
     https://papers.neurips.cc/paper/2010/file/71f6278d140af599e06ad9bf1ba03cb0-Paper.pdf
 
 ![LDA
-ALGO](vertopal_a0e7ae95ddd645629504631bf74d43ce/1e2f6308ead1da1d7685748cd2214d2a7dcd9708.png)
+ALGO](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/1e2f6308ead1da1d7685748cd2214d2a7dcd9708.png)
 
 ![LDA
-ALGO](vertopal_a0e7ae95ddd645629504631bf74d43ce/145ee4ed40ef45d7b8af064feec63c4e8b0b0f30.png)
+ALGO](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/145ee4ed40ef45d7b8af064feec63c4e8b0b0f30.png)
 
 EM Algorihmn explanation:
 
@@ -696,11 +695,11 @@ print('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 ```
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/635dc70eaf9291cad70c0a35cc1723ae4142481e.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/635dc70eaf9291cad70c0a35cc1723ae4142481e.png)
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/bff5f823d38c35bc0e21d2ebc5bbd4c18af15f68.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/bff5f823d38c35bc0e21d2ebc5bbd4c18af15f68.png)
 :::
 
 ::: {.output .stream .stdout}
@@ -792,11 +791,11 @@ print('Note: Perplexity estimate based on a held-out corpus of 4 documents')
 ```
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/adb2fda6511417d13dee071bf402bc5b19e0b0c4.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/adb2fda6511417d13dee071bf402bc5b19e0b0c4.png)
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/f974906a06c8658f002c46cd83e414e0ef796564.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/f974906a06c8658f002c46cd83e414e0ef796564.png)
 :::
 
 ::: {.output .stream .stdout}
@@ -941,7 +940,7 @@ plt.axvline(x[np.argmax(coherence_values)],
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/ae4c62fa51f2e434a7914ae147a946d818a433f6.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/ae4c62fa51f2e434a7914ae147a946d818a433f6.png)
 :::
 :::
 
@@ -1154,7 +1153,7 @@ meanchangethresh = 0.001
 
 ::: {.cell .markdown}
 ![LDA
-ALGO](vertopal_a0e7ae95ddd645629504631bf74d43ce/3621abc0d68398d76fa4da688e200babfbd3abc7.png)
+ALGO](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/3621abc0d68398d76fa4da688e200babfbd3abc7.png)
 :::
 
 ::: {.cell .code execution_count="116"}
@@ -1385,10 +1384,10 @@ class OnlineLDA:
 
 ::: {.cell .markdown}
 ![LDA
-ALGO](vertopal_a0e7ae95ddd645629504631bf74d43ce/8e9e53039478bbff45176ecc723ef7b0beaa3054.png)
+ALGO](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/8e9e53039478bbff45176ecc723ef7b0beaa3054.png)
 
 ![LDA
-ALGO](vertopal_a0e7ae95ddd645629504631bf74d43ce/145ee4ed40ef45d7b8af064feec63c4e8b0b0f30.png)
+ALGO](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/145ee4ed40ef45d7b8af064feec63c4e8b0b0f30.png)
 :::
 
 ::: {.cell .markdown}
@@ -1412,7 +1411,7 @@ $$ z_{di} \sim Multinomial(θ)$$ and so the distributions are mirrored in
 q, but the big difference is the dependence of the terms (such as
 between θ and β) in p which make the calculation intractable.
 
-![MFVB](vertopal_a0e7ae95ddd645629504631bf74d43ce/ae6e8337ccdc635af13a42d619cd83b4cbdaaf9b.png)
+![MFVB](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/ae6e8337ccdc635af13a42d619cd83b4cbdaaf9b.png)
 :::
 
 ::: {.cell .code execution_count="108"}
@@ -1593,7 +1592,7 @@ plt.title('ELBO on holdout set of 1k documents')
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/3d5a7007bbd32bb9a5b2f7b30eda0cb0225466a5.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/3d5a7007bbd32bb9a5b2f7b30eda0cb0225466a5.png)
 :::
 :::
 
@@ -1609,7 +1608,7 @@ plt.title('Per-word likelihood on holdout set of 1k documents')
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/062f58107abffa1ffe46ca338bf69a12719762e1.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/062f58107abffa1ffe46ca338bf69a12719762e1.png)
 :::
 :::
 
@@ -1625,7 +1624,7 @@ plt.title('Per-word likelihood on holdout set of 1k documents')
 :::
 
 ::: {.output .display_data}
-![](vertopal_a0e7ae95ddd645629504631bf74d43ce/2b043b3f3b6d6faeaf44ba54c2e3eb9c5e61c273.png)
+![](vertopal_dcb007632ead4fe5bc2e86648a2c1fb3/2b043b3f3b6d6faeaf44ba54c2e3eb9c5e61c273.png)
 :::
 :::
 
