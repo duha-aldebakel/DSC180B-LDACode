@@ -51,7 +51,7 @@ The issue is that solving this problem is intractable. This means it is difficul
 <br>
 Instead of trying to find the exact solution, it would thus be better to find a good approximate solution. Along this line, Mean-field variational inference and Gibbs Sampling are two popular ways to solve the inference problem for the latent parameters. 
 ## Mean-field variational inference
-![Variational Inference[ (https://miro.medium.com/max/1002/1*YVFAbC7DgfAj94-0TRt8IQ.png)
+![Variational Inference] (https://miro.medium.com/max/1002/1*YVFAbC7DgfAj94-0TRt8IQ.png)
 <br>
 <br>
 The technical term for the correct distribution given the observed data is the posterior, which is often not a “nice” distribution to deal with mathematically. 
