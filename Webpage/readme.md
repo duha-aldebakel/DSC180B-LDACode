@@ -14,7 +14,6 @@ We are interested in learning about these topics in an unsupervised manner -- in
 <br>
 <br>
 
-
 ![Latent Dirichlet Allocation](https://github.com/a1limon/DSC180B.visual.io/blob/gh-pages/images/lda_graphical_model.png?raw=true)
 
 Firstly, don’t be alarmed by the many symbols. We can get through this together. What we actually observe is the words on every Wikipedia article. This is represented by the gray circle, with the subscripts denoting which Wikipedia article and word in that article we observe. Everything else in this model is latent variables, that is, not directly observed. Our goal is to infer what these variables are through their collective impact on the observed words. 
@@ -48,6 +47,14 @@ Now that we have a generative model on how documents are generated from topics, 
 <br>
 <br>
 The issue is that solving this problem is intractable. This means it is difficult or impossible to solve analytically. The problem arises from the dependence of variables from the two pathways of “Topic Assignment” and “Topic Vocab”, where solving each pathway would require knowledge of the other.
+<br>
+<br>
+Instead of trying to find the exact solution, it would thus be better to find a good approximate solution. Along this line, Mean-field variational inference and Gibbs Sampling are two popular ways to solve the inference problem for the latent parameters. 
+## Mean-field variational inference
+![Variational Inference[ (https://miro.medium.com/max/1002/1*YVFAbC7DgfAj94-0TRt8IQ.png)
+<br>
+<br>
+The technical term for the correct distribution given the observed data is the posterior, which is often not a “nice” distribution to deal with mathematically. 
 
 ![Mean-field Variation Inference](https://camo.githubusercontent.com/be972716d5117d7d769095628c721909c5f4f90ece185c99054e936beee1435d/68747470733a2f2f6769746875622e636f6d2f647568612d616c646562616b656c2f445343313830422d4c4441436f64652f626c6f622f6d61737465722f696d616765732f4c44415f4d65616e6669656c642e504e473f7261773d74727565)
 
