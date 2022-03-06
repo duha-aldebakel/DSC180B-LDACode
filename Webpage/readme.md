@@ -36,13 +36,13 @@ Next, based on alpha and the Dirichlet distribution, each document receives its 
 Next, based on theta and the multinomial distribution, each word in every document receives its own topic assignment, making D x N assignments in total. The model is a bag of words, so the ordering does not matter. Based on our previous example of 50% “health” and 50% “food”, each word would be flipping a coin and getting exactly only one of those assignments.
 
 ### Topic Vocab 
-From the above, we have topic assignments for every word in every document. 
+From the above, we have topic assignments for every word in every document. How is the actual word chosen? Starting from the far right, we have another hyperparameter of the Dirichlet distribution, to determine the concentration of the vocabulary of each topic. Since there are K topics, we draw from the Dirichlet distribution K times to get a discrete probability distribution of the vocabulary of each topic. For example, if the topic is “food”, the probabilities of words such as “sushi”, “rice”, “egg” would be higher than other topics.
+<br>
+<br>
+Putting it together, we will condition on the chosen topic for the word from the topic assignment on the left pathway. This looks up the appropriate vocabulary for that topic. Using another multinomial distribution, we basically roll a weighted die customized for that topic to choose a random word assignment. This results in actual words that we observe.
+<br>
+<br>
+This process is called Latent Dirichlet Allocation. The term “latent” refers to the fact that many of the parameters cannot be observed directly. The term “Dirichlet Allocation” refers to the manner in which we assign discrete probabilities on topic proportions.
+# Bayesian Inference
 
 
-The intuition behind LDA is the assumption that documents exhibit multiple topics, as opposed to the assumption that documents exhibit a single topic. We can elaborate on this by describing the imaginary generative probabilistic process that we assume our data came from. LDA first assumes that each topic is a distribution over terms in a fixed size vocabulary. LDA then assumes documents are generated as follows:
-<br>
-* A distribution over topics is chosen
-* For each word in a document, a topic from the distribution over topics is chosen
-* A word is drawn from a distribution over terms associated with the topic chosen in the previous step.
-<br>
-In other words, We might choose a topic  from a distribution over topics. Based on this topic $x$ we choose a word from the distribution over terms associated with topic $x$. This is repeated for every word in a document and is how our document is generated. We repeat this for the next document in our collection, and thus a new distribution over topics is chosen and its words are chosen in the same process. It is important to note that the topics across each document remain the same, but the distribution of topics and how much each document exhibits the topics changes. Another important observation to point out is that this model has a bag-of-words assumption, in other words, the order of the words doesn't matter. The generative process isn't meant to retain coherence, but it will generate documents with different subject matter and topics.
