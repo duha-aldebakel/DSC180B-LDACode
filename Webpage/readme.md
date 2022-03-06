@@ -27,9 +27,16 @@ You might also notice that there are two pathways to determine the word in every
 <br>
 <br>
 ### Topic Assignment
+Starting from the far left, alpha is a hyperparameter that determines how concentrated the topics are. Would a random Wikipedia document discuss many topics, or would it focus on a small number of topics? Typically, it does not make sense that a document would talk about everything under the sun, and so we will expect some concentration of topics as a good author is wise to focus his or her energies.
+<br>
+<br>
+Next, based on alpha and the Dirichlet distribution, each document receives its own theta value which determines the overall proportion of topics in the document. (We can see now that we have D thetas as we enter the rectangle marked D) Perhaps one theta value might be 50% “health” and 50% “food”, if the article is about the healing ability of good cooking! 
+<br>
+<br>
+Next, based on theta and the multinomial distribution, each word in every document receives its own topic assignment, making D x N assignments in total. The model is a bag of words, so the ordering does not matter. Based on our previous example of 50% “health” and 50% “food”, each word would be flipping a coin and getting exactly only one of those assignments.
 
 ### Topic Vocab 
-
+From the above, we have topic assignments for every word in every document. 
 
 
 The intuition behind LDA is the assumption that documents exhibit multiple topics, as opposed to the assumption that documents exhibit a single topic. We can elaborate on this by describing the imaginary generative probabilistic process that we assume our data came from. LDA first assumes that each topic is a distribution over terms in a fixed size vocabulary. LDA then assumes documents are generated as follows:
