@@ -90,6 +90,21 @@ Sampling is a method to use random numbers to draw samples in an attempt to find
 <br>
 <br>
 Gibbs Sampling is a specialized method of sampling that falls under the category of Markov chain Monte Carlo (MCMC) algorithms. This technique involves choosing the next sample based on taking an informed step from the last sample in the chain. In this matter, more time can be spent sampling the distribution which the highest contribution to the probability distribution, hence more efficiently solving the problem.
+# Final output
+We spent a lot of time discussing how to infer the latent parameters of LDA. The final output that is actually of most interest is the topic vocab or beta. We ran our experiment on documents from Wikipedia and here are the vocabularies of the first two topics.
+![](https://github.com/duha-aldebakel/DSC180B-LDACode/blob/master/images/Topics1.PNG?raw=true)
+<br>
+<br>
+The first topic above appears to be about storybooks, as you can see from the relative frequencies of “story”, “book” and “character” which appear with higher probability than other documents on different topics.
+<br>
+<br>
+![](https://github.com/duha-aldebakel/DSC180B-LDACode/blob/master/images/Topics2.PNG?raw=true)
+<br>
+<br>
+The second topic above appears to be about the geography of a village or town.
+<br>
+<br>
+
 
 
 
