@@ -5,6 +5,8 @@ from scipy.special import gammaln
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 import pyLDAvis
+from src.wikipreprocess import WikiPreprocess
+import spacy
 
 class LDA:
 
@@ -16,22 +18,19 @@ class LDA:
         self.alpha = np.array([alpha] * self.num_topics)
         self.alpha = alpha
         self.beta = beta
-        self.doc_topic_count = np.zeros([self.num_docs, self.num_topics])  # D x K, number of words in i'th document assigned to j'th topic, per document topic distribution
-        self.topic_word_count = np.zeros([self.num_topics, self.vocab_len])  # K x W, number of times j'th word is assigned to i'th topic, per topic word distribution
-        self.nz = np.zeros(self.num_topics)  # 1 x K, total word count for each topic
-        self.per_doc_word_topic_assignment = [[0] * len(doc) for doc in corpus]
-    
-    def initialize(self, documents: List[List[str]]):
-        """Initializes the count matrices
-
-        Args:
-            documents (List[List[str]]): a list of bag of words for each document in the corpus
-        """
         self.doc_topic_count = np.zeros([self.num_docs, self.num_topics])  # number of words in i'th document assigned to j'th topic, per document topic distribution
-        self.topic_word_count = np.zeros([self.num_topics, self.vocab_len])  # number of times j'th term is assigned to i'th topic, per topic word distribution
-        self.nz = np.zeros(self.num_topics)  # number of times a topic k is assigned in corpus
-        self.per_doc_word_topic_assignment = [[0] * len(doc) for doc in documents]  # stores topic assignment for each term in each document
-        for d, doc in enumerate(documents):
+        self.topic_word_count = np.zeros([self.num_topics, self.vocab_len])  # number of times j'th word is assigned to i'th topic, per topic word distribution
+        self.nz = np.zeros(self.num_topics)  # 1 x K, total word count for each topic
+        self.per_doc_word_topic_assignment = [[0] * len(doc) for doc in corpus]  # stores topic assignment for each term in each document
+    
+    def initialize(self):
+        """Initializes the count matrices
+        """
+        self.doc_topic_count = np.zeros([self.num_docs, self.num_topics])
+        self.topic_word_count = np.zeros([self.num_topics, self.vocab_len])
+        self.nz = np.zeros(self.num_topics)
+        self.per_doc_word_topic_assignment = [[0] * len(doc) for doc in self.corpus]
+        for d, doc in enumerate(self.corpus):
             for w, bow in enumerate(doc):
                 token_id, token_count = bow
                 topic_idx = np.random.randint(self.num_topics)
@@ -42,6 +41,8 @@ class LDA:
                 self.per_doc_word_topic_assignment[d][w] = topic_idx
     
     def _sample(self):
+        """Draws a topic sample from the full-conditional-distribution
+        """
         for d, doc in enumerate(self.corpus):
             for w, bow in enumerate(doc):
                 token_id, token_count = bow
@@ -51,11 +52,12 @@ class LDA:
                 self.nz[topic_idx] -= 1
                 self.doc_topic_count[d, topic_idx] -= 1
                 self.topic_word_count[topic_idx, token_id] -= 1
-                self.per_doc_word_topic_assignment[d][w] = topic_idx
+                # self.per_doc_word_topic_assignment[d][w] = topic_idx
 
-                # compute full conditional distribution            
-                topic_doc_ratio = (self.doc_topic_count[d,:] + self.alpha) / (len(doc) + (self.num_topics * self.alpha))
-                word_topic_ratio = (self.topic_word_count[:, token_id] + self.beta) / (self.nz + (self.vocab_len * self.beta))
+                # compute full conditional distribution and pics more accurate topic assignment
+                tmp_alpha = [self.alpha for i in range(self.num_topics)]    
+                topic_doc_ratio = (self.doc_topic_count[d,:] + self.alpha) / (len(doc) + (np.sum(tmp_alpha)))
+                word_topic_ratio = (self.topic_word_count[:, token_id] + self.beta) / (self.nz + self.vocab_len * self.beta)
                 p_z_w = topic_doc_ratio * word_topic_ratio
                 full_cond_dist = p_z_w / np.sum(p_z_w)
                 new_topic_idx = np.random.multinomial(1, full_cond_dist).argmax()  # sample from multinomial dist
@@ -66,28 +68,37 @@ class LDA:
                 self.topic_word_count[new_topic_idx, token_id] += 1  # update count for current word assigned to j'th topic
                 self.per_doc_word_topic_assignment[d][w] = new_topic_idx
 
-    def fit(self, documents: List[List[str]], burnin: int, max_iter: int):
-        self.initialize(documents) 
+    def fit(self,burnin: int, max_iter: int):
+        self.initialize() 
         self.perplexity_trace = np.zeros(burnin + max_iter)
         self.log_likelihood_trace = np.zeros(burnin + max_iter)
         self.phi_trace = []
         self.theta_trace = []
         self.total_doc_topic_count = np.zeros([self.num_docs, self.num_topics])
-        self.total_topic_word_count = np.zeros([self.num_topics, self.vocab_len]) 
-        for i in tqdm(range(burnin+max_iter)):
+        self.total_topic_word_count = np.zeros([self.num_topics, self.vocab_len])
+        print("starting burn in phase...")
+        for i in tqdm(range(burnin)):
             self._sample()
-
             # track log likelihood and perplexity
             ll = self.log_likelihood()
             self.log_likelihood_trace[i] = ll
-            perplexity = np.exp(-ll / self.vocab_len)  # number of tokens, modify?
+            perplexity = np.exp(-ll / self.vocab_len)
             self.perplexity_trace[i] = perplexity
-
+        print("running sampler...")
+        for i in tqdm(range(max_iter)):
+            self._sample()
+            # track log likelihood and perplexity
+            ll = self.log_likelihood()
+            self.log_likelihood_trace[burnin+i] = ll
+            perplexity = np.exp(-ll / self.vocab_len)
+            self.perplexity_trace[burnin+i] = perplexity
+            
             # accumulate counts for point estimates
             if not i % 10:
                 print(f"iteration: {i} log_likelihood: {ll} perplexity: {perplexity}")
                 self.total_doc_topic_count += self.doc_topic_count
                 self.total_topic_word_count += self.topic_word_count
+
 
     def log_likelihood(self):
         ll = 0
@@ -142,10 +153,19 @@ class LDA:
 
     def plot_log_likelihood(self):
         plt.plot(self.log_likelihood_trace)
+        plt.xlabel('Iterations') 
+        plt.ylabel('Log Likelihood') 
+        plt.title("Convergence of log-likelihood vs iterations of sampler")
+        plt.grid()
+
         plt.show()
     
     def plot_perplexity(self):
         plt.plot(self.perplexity_trace)
+        plt.xlabel('Iterations') 
+        plt.ylabel('Perplexity') 
+        plt.title("Convergence of perplexity vs iterations of sampler")
+        plt.grid()
         plt.show()
 
     def plot_ldavis(self, dictionary):
@@ -158,4 +178,32 @@ class LDA:
             'vocab': dictionary,
             'term_frequency': tf}
         vis_data = pyLDAvis.prepare(**data)
+        pyLDAvis.save_html(vis_data, 'lda_cgs.html')
+        pyLDAvis.save_json(vis_data, 'lda_cgs_data.json')
         return pyLDAvis.display(vis_data)
+
+def run_cgs(data, **kwargs):
+    print(f"corpus size: {len(data)}")
+    wiki_pp = WikiPreprocess()
+    print("preprocessing data...")
+    preprocessed_data =  [wiki_pp.preprocess_document(text=d, min_token_len=4) for d in tqdm(data)]
+    print("creating bigrams...")
+    data_words_bigrams = wiki_pp.make_bigrams(preprocessed_data)
+    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
+    print("lemmatizing data and creating dictionary from bigrams... ")
+    data_lemmatized = [wiki_pp.lemmatize(d, nlp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']) for d in tqdm(data_words_bigrams)]
+    id2word_lemmatized = wiki_pp.filtered_dictionary(data_lemmatized, no_below=5, no_above=0.1)
+    print("creating bag of words frequencies...")
+    corpus_lemmatized_bow = [id2word_lemmatized.doc2bow(text) for text in tqdm(data_lemmatized)]
+    print(f'Number of unique tokens: {len(id2word_lemmatized)}')
+    print(f'Number of documents: {len(corpus_lemmatized_bow)}')
+    lda = LDA(
+        corpus=corpus_lemmatized_bow,
+        num_topics=kwargs['num_topics'],
+        vocab_len=len(id2word_lemmatized),
+        alpha=kwargs['alpha'],
+        beta=kwargs['beta']
+    )
+    print("Fitting model...")
+    lda.fit(burnin=kwargs['burnin'],max_iter=kwargs['max_iter'])
+    lda.print_topics(id2word_lemmatized, topn=kwargs['num_topics'])
