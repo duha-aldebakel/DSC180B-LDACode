@@ -34,4 +34,3 @@ To interact with jupyter notebooks (make sure virtual environment is activated a
 - "`python run.py test-gensim`" to run on test data
 - "`python run.py`" to run on production data (run time ~16-17min)
   
-
