@@ -91,7 +91,6 @@ To avoid this, I explictly search for paragraphs with class_="", i.e. not set.
             time.sleep(5)
             continue
 
-    #return(soup, all, articletitle) #for debugging
     return(all, articletitle)
 
 class WikiThread(threading.Thread):
@@ -147,6 +146,4 @@ if __name__ == '__main__':
     #Save new data   
     with bz2.BZ2File('testdatapickle.bz2', 'wb') as f: #Use datacompression BZ2
         pickle.dump((data[0]+newdata[0],data[1]+newdata[1]), f)
-        
-        
-        
+

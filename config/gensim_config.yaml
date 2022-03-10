@@ -1,0 +1,11 @@
+data_dir: data/
+file_name: datapicklesoup.bz2
+lda_gensim_params:
+  min_token_len: 4
+  test_mode: False
+  eval_every: 1000
+  chunk: 1000
+  num_topics: 20
+  passes: 10
+  fnprefix: ''
+  workers: 3

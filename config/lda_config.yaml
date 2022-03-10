@@ -1,0 +1,8 @@
+data_dir: data/
+file_name: datapicklesoup.bz2
+lda_params:
+  num_topics: 30
+  alpha: asymmetric
+  beta: 0.01
+  burnin: 20
+  max_iter: 80
