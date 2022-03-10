@@ -16,13 +16,13 @@ To get it up and running:
 ### Option 3: If using DSMLP
 - SSH to `dsmlp-login.ucsd.edu`. (Note if working outside the school, you would need to first connect via VPN)
 - Run "`launch.sh -i daldebak/dsc180b:latest`"
-### Option 4: Running from your own python environment (Hardest)
+### For local development:
 - Make sure, preferably, you have python3.7+ installed and assuming you have configured the `PATH` and `PATHEXT` variables upon installation:
 - `python3.7 -m venv env`
 - `source env/bin/activate`
-- `pip install -r requirements.txt`
+- `pip install -r requirements_pip.txt`
 
-To interact with jupyter notebooks (make sure virtual environment is activated and requirements.txt are installed):
+To interact with jupyter notebooks (make sure virtual environment is activated and requirements_pip.txt are installed):
 - `cd DSC180B-LDACode`
 - `ipython kernel install --user --name=env` (assuming you named your virtual environment `env`)
 -  `jupyter notebook`
