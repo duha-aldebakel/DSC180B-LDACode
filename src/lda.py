@@ -7,16 +7,20 @@ import matplotlib.pyplot as plt
 import pyLDAvis
 from src.wikipreprocess import WikiPreprocess
 import spacy
+import bz2
+import pickle
 
 class LDA:
 
-    def __init__(self, corpus: List[List[str]], num_topics: int, vocab_len: int, alpha: int = 0.01, beta: int = 0.01, **kwargs):
+    def __init__(self, corpus: List[List[str]], num_topics: int, vocab_len: int, alpha: str = 'asymmetric', beta: int = 0.01, **kwargs):
         self.corpus = corpus
         self.num_topics = num_topics
         self.num_docs = len(corpus)
         self.vocab_len = vocab_len
-        self.alpha = np.array([alpha] * self.num_topics)
-        self.alpha = alpha
+        if alpha == 'symmetric':
+            self.alpha = np.array([1.0 / self.num_topics] * self.num_topics)
+        elif alpha == 'asymmetric':
+            self.alpha = np.array([1.0 / (k + np.sqrt(self.num_topics)) for k in range(self.num_topics)])
         self.beta = beta
         self.doc_topic_count = np.zeros([self.num_docs, self.num_topics])  # number of words in i'th document assigned to j'th topic, per document topic distribution
         self.topic_word_count = np.zeros([self.num_topics, self.vocab_len])  # number of times j'th word is assigned to i'th topic, per topic word distribution
@@ -55,8 +59,8 @@ class LDA:
                 # self.per_doc_word_topic_assignment[d][w] = topic_idx
 
                 # compute full conditional distribution and pics more accurate topic assignment
-                tmp_alpha = [self.alpha for i in range(self.num_topics)]    
-                topic_doc_ratio = (self.doc_topic_count[d,:] + self.alpha) / (len(doc) + (np.sum(tmp_alpha)))
+                # tmp_alpha = [self.alpha for i in range(self.num_topics)]    
+                topic_doc_ratio = (self.doc_topic_count[d,:] + self.alpha) / (len(doc) + (np.sum(self.alpha)))
                 word_topic_ratio = (self.topic_word_count[:, token_id] + self.beta) / (self.nz + self.vocab_len * self.beta)
                 p_z_w = topic_doc_ratio * word_topic_ratio
                 full_cond_dist = p_z_w / np.sum(p_z_w)
@@ -80,15 +84,16 @@ class LDA:
         for i in tqdm(range(burnin)):
             self._sample()
             # track log likelihood and perplexity
-            ll = self.log_likelihood()
+            ll = self.log_likelihood()[-1]
             self.log_likelihood_trace[i] = ll
             perplexity = np.exp(-ll / self.vocab_len)
             self.perplexity_trace[i] = perplexity
+
         print("running sampler...")
         for i in tqdm(range(max_iter)):
             self._sample()
             # track log likelihood and perplexity
-            ll = self.log_likelihood()
+            ll = self.log_likelihood()[-1]
             self.log_likelihood_trace[burnin+i] = ll
             perplexity = np.exp(-ll / self.vocab_len)
             self.perplexity_trace[burnin+i] = perplexity
@@ -157,7 +162,6 @@ class LDA:
         plt.ylabel('Log Likelihood') 
         plt.title("Convergence of log-likelihood vs iterations of sampler")
         plt.grid()
-
         plt.show()
     
     def plot_perplexity(self):
@@ -191,7 +195,12 @@ def run_cgs(data, **kwargs):
     data_words_bigrams = wiki_pp.make_bigrams(preprocessed_data)
     nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
     print("lemmatizing data and creating dictionary from bigrams... ")
-    data_lemmatized = [wiki_pp.lemmatize(d, nlp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']) for d in tqdm(data_words_bigrams)]
+    # data_lemmatized = [wiki_pp.lemmatize(d, nlp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']) for d in tqdm(data_words_bigrams)]
+    # lemmatizing is computationally intensive so we can save ourselves some time by reading in the data instead
+    with bz2.BZ2File('./data/lemmatized_bigrams.bz2', 'rb') as f:  #Use datacompression BZ2
+        data_lemmatized = pickle.load(f)
+        data_lemmatized = data_lemmatized[:len(data)]
+    
     id2word_lemmatized = wiki_pp.filtered_dictionary(data_lemmatized, no_below=5, no_above=0.1)
     print("creating bag of words frequencies...")
     corpus_lemmatized_bow = [id2word_lemmatized.doc2bow(text) for text in tqdm(data_lemmatized)]
@@ -207,3 +216,6 @@ def run_cgs(data, **kwargs):
     print("Fitting model...")
     lda.fit(burnin=kwargs['burnin'],max_iter=kwargs['max_iter'])
     lda.print_topics(id2word_lemmatized, topn=kwargs['num_topics'])
+    # lda.plot_log_likelihood()
+    # lda.plot_perplexity()
+

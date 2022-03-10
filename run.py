@@ -7,6 +7,7 @@ import yaml
 from yaml.error import YAMLError
 from src.etl import load_data
 from src.lda_gensim import run_lda_gensim
+from src.lda import run_cgs
 
 def main(targets):
    logging.basicConfig(
@@ -35,7 +36,7 @@ def main(targets):
       df=df[articlelen>10]
       run_lda_gensim(corpus=df, **lda_gensim_params)
 
-   else:
+   elif 'gensim' in targets:
       with open("config/gensim_config.yaml", "r") as f:
          try:
             config = yaml.safe_load(f)
@@ -52,7 +53,41 @@ def main(targets):
       articlelen=df.text.apply(len)
       df=df[articlelen>10]
       run_lda_gensim(corpus=df, **lda_gensim_params)
-      return
+   
+   elif 'test-lda-cgs' in targets:
+      with open("config/test_lda_config.yaml", "r") as f:
+         try:
+            config = yaml.safe_load(f)
+         except YAMLError as exc:
+            print(exc)
+
+      data = load_data(**config)
+      df = pd.DataFrame({'text':data[0],'title':data[1]})
+      #remove low length articles
+      articlelen=df.text.apply(len)
+      df=df[articlelen>10]
+      data = df.text.values
+      data = data[:500]
+      lda_cgs_params = config['lda_params']
+      run_cgs(data, **lda_cgs_params)
+
+   elif 'lda-cgs' in targets:
+      with open("config/lda_config.yaml", "r") as f:
+         try:
+            config = yaml.safe_load(f)
+         except YAMLError as exc:
+            print(exc)
+
+      data = load_data(**config)
+      df = pd.DataFrame({'text':data[0],'title':data[1]})
+      #remove low length articles
+      articlelen=df.text.apply(len)
+      df=df[articlelen>10]
+      data = df.text.values
+      lda_cgs_params = config['lda_params']
+      run_cgs(data, **lda_cgs_params)
+
+   else: return
 
 if __name__ == "__main__":
     targets = sys.argv[1:]
