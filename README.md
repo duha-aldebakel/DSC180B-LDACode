@@ -2,7 +2,12 @@
 
 This repository serves as the central user code repository for Group A06's DSC180B Capstone project.
 
-To get it up and running:
+## Title:
+Exploration of Variational Inference and Monte Carlo Markov Chain Models for Latent Dirichlet Allocation of Wikipedia Corpus
+## Abstract:
+Topic modeling allows us to fulfill algorithmic needs to organize, understand, and annotate documents according to the discovered structure. Given the vast troves of data and the lack of specialized skillsets, it is helpful to extract topics in an unsupervised manner using Latent Dirichlet Allocation (LDA). LDA is a generative probabilistic topic model for discrete data, but unfortunately, solving for the posterior distribution of LDA is intractable, given the numerous latent variables that have cross dependencies. It is widely acknowledged that inference methods such Markov Chain Monte Carlo and Variational Inference are a good way forward to achieve suitable approximate solutions for LDA. In this report, we will explore both these methods to solve the LDA problem on the Wikipedia corpus. We find that better performance can be achieved via preprocessing the data to filter only certain parts-of-speech via lemmatization, and also exclude extremely rare or common words. We improved on the Expectations-Maximization (EM) Algorithm used for variational inference by limiting the number of iterations in the E step even if sub-optimal. This leads to benefit of faster runtimes and better convergences due to fewer iterations and avoidance of local minima. Finally, we explore early stopping runtimes on under-parameterized LDA models to infer the true dimensionality of the Wikipedia vocabulary to solve for topics. While the English language has around a million words, our findings are that it only takes around fifteen thousand words to infer around twenty major topics in the dataset.
+
+# To get it up and running:
 ## 1) Set up python environment
 ### Option 1: (Easiest) Pulling our Docker from Dockerhub
 - Just run "`docker run -it --rm daldebak/dsc180b bash`"
@@ -16,13 +21,13 @@ To get it up and running:
 ### Option 3: If using DSMLP
 - SSH to `dsmlp-login.ucsd.edu`. (Note if working outside the school, you would need to first connect via VPN)
 - Run "`launch.sh -i daldebak/dsc180b:latest`"
-### Option 4: Running from your own python environment (Hardest)
+### For local development:
 - Make sure, preferably, you have python3.7+ installed and assuming you have configured the `PATH` and `PATHEXT` variables upon installation:
 - `python3.7 -m venv env`
 - `source env/bin/activate`
-- `pip install -r requirements.txt`
+- `pip install -r requirements_pip.txt`
 
-To interact with jupyter notebooks (make sure virtual environment is activated and requirements.txt are installed):
+To interact with jupyter notebooks (make sure virtual environment is activated and requirements_pip.txt are installed):
 - `cd DSC180B-LDACode`
 - `ipython kernel install --user --name=env` (assuming you named your virtual environment `env`)
 -  `jupyter notebook`
