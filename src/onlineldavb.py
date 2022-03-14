@@ -38,6 +38,22 @@ import numpy as n
 from scipy.special import gammaln, psi
 
 
+try:
+    from wikipreprocess import WikiPreprocess
+except ImportError:
+    from src.wikipreprocess import WikiPreprocess
+
+from pandas.core.frame import DataFrame
+from helpers.log import setUpNewLogFile
+import gensim
+from gensim.models import CoherenceModel
+from tqdm import tqdm
+import time
+import spacy
+import logging
+import warnings
+warnings.filterwarnings('ignore')
+
 n.random.seed(100000001)
 meanchangethresh = 0.001
 
@@ -260,5 +276,144 @@ class OnlineLDA:
 
         return(score)
 
+from collections import defaultdict
+eLoopTime=defaultdict(list, {5: [36, 58, 35, 30, 51, 47], 10: [35, 47, 43, 51, 55, 59], 20: [95, 68, 93, 75, 84, 81], 40: [84, 55, 86, 66, 103, 54], 80: [111, 50, 64, 63, 59, 85]})
+eLoopBound=defaultdict(list, {5: [-111733851.43260013, -117781528.69408886, -123040409.73264208, -128633409.69968084, -121205953.4537439, -110966698.16985334], 10: [-129755490.7799989, -128921847.34090501, -117951450.05467737, -120393444.00248368, -120385338.58080256, -108159118.92671846], 20: [-124170809.46135023, -136015016.3987571, -106827136.22064555, -115562658.78387602, -124336169.61204082, -118594594.42351212], 40: [-114759190.73191096, -132424958.91197848, -133231030.76268373, -111836848.71508917, -131526004.52976249, -117476012.67518403], 80: [-117973922.65220611, -146022696.2883227, -117976902.21794659, -133024236.67739585, -120428154.47847381, -119522519.74053846]})
+
+
+def run_onlineldavb(corpus: DataFrame, **kwargs):
+   # Preprocessing articles
+    logging.info('\n\n# Preprocessing articles')
+    data = corpus.text.values
+    wiki_pp = WikiPreprocess()
+    print("Preprocessing...")
+    starttime = time.time()
+    logging.info('\n\n# Preprocessing articles (preprocessed_data)')
+    preprocessed_data =  [wiki_pp.preprocess_document(text=d, min_token_len=kwargs['min_token_len']) for d in tqdm(data)]
+    logging.info('\n\n# Preprocessing articles (preprocessed_data done)')
+        
+    # Adding bigrams
+    logging.info('\n\n# Adding bigrams')
+    print("Creating bigrams... ")
+    data_words_bigrams = wiki_pp.make_bigrams(preprocessed_data)
+
+
+    # Lemmatization
+    logging.info('\n\n# Lemmatization')
+    print("Lemmatizing data and creating dictionary from bigrams... ")
+    nlp = spacy.load('en_core_web_sm', disable=['parser', 'ner'])
+    data_lemmatized = [wiki_pp.lemmatize(d, nlp, allowed_postags=['NOUN', 'ADJ', 'VERB', 'ADV']) for d in tqdm(data_words_bigrams)]
+    id2word_lemmatized = wiki_pp.filtered_dictionary(data_lemmatized, no_below=10, no_above=0.1)
+  
+
+    # Creating bag of words frequencies
+    logging.info('\n\n# Creating bag of words frequencies.')
+    print("Creating bag of words frequencies... ")
+    corpus_lemmatized = [id2word_lemmatized.doc2bow(text) for text in tqdm(data_lemmatized)]
+    dictwords=set(id2word_lemmatized.values())
+    data_lemmatized_filtered=[[w for w in article if w in dictwords] for article in data_lemmatized]
+    
+
+    # Fitting via LDA Online Variational Inference (Blei) library
+    logging.info('\n\n# Fitting via LDA Online Variational Inference (Blei) library')
+
+    from datetime import datetime
+    import random
+
+    K=20
+    datasetsize=25
+    sortedByFrequencies=sorted([t for t,f in id2word_lemmatized.cfs.items()],reverse=True)
+
+
+    for maxE in [5]:
+        random.shuffle(corpus_lemmatized)
+        if True:
+            start=datetime.now()
+
+            D = 100000 #estimate of number of documents in the population
+            S = 1000 #sample size of a batch
+            alpha = 0.1
+            eta = 0.01
+
+            tau0 = 10.0
+            kappa = 0.05
+
+
+            '''
+                Hyperparameter of Dirichlet priors
+                    concentration parameter of Dirichlet prior, which smaller meaning more concentrated
+                    we like it to be relatively concentrated since any topic usually uses a small number of key words
+                    we allow one document to have more than one topic, but we want to penalize it when there are too many potential topics
+
+                alpha: Hyperparameter for prior on weight vectors theta
+                eta: Hyperparameter for prior on topics beta
+
+                Learning rate parameters:
+                tau0: A (positive) learning parameter that downweights early iterations
+                kappa: Learning rate: exponential decay rate---should be between
+                     (0.5, 1.0] to guarantee asymptotic convergence.
+
+
+                For each document d, we would like to know the distributions of 
+                    theta, the topic distribution of the document
+                    z_n, the topic of n-th word in document
+                    (so for each document, there is one theta and N z_n)
+
+                but we only observe
+                    w_n, the actual n-th word in document
+
+
+            '''
+
+            vocab=list(id2word_lemmatized.token2id.keys())
+            model = OnlineLDA(vocab, K, D, alpha, eta, tau0, kappa)
+
+            model.maxEIter=maxE
+
+
+            bounds=[]
+            bounds_h=[]
+            times=[]
+            lasttime=0
+            for i in range(1000):
+                j=i%datasetsize #We only have 50k documents, so we make another pass after 50
+                batch=corpus_lemmatized[(j*S):((j+1)*S)]
+                wordids = [[w for w,c in doc] for doc in batch]
+                wordcts = [[c for w,c in doc] for doc in batch]
+                if i==0:
+                    holdids=wordids #First batch is the holdout
+                    holdcts=wordcts #First batch is the holdout
+                if j==0:
+                    continue #Don't use holdout for learning
+
+                (gamma, bound)=model.update_lambda(wordids, wordcts)
+                (gamma_h, sstats_h) = model.do_e_step(holdids, holdcts)
+                # Estimate held-out likelihood for current values of lambda.
+
+                earlystoppingtime=(datetime.now()-start).seconds
+                if earlystoppingtime<max(lasttime*1.1,lasttime+5):
+                    continue
+
+                lasttime=earlystoppingtime
+                bound_h = model.approx_bound(holdids, holdcts, gamma_h)
+                #bound is the evidence lower bound (ELBO)
+
+                logging.info('elasped {}s bound_h {}'.format(earlystoppingtime,bound_h))
+
+                bounds.append(bound)
+                bounds_h.append(bound_h)
+                times.append(earlystoppingtime)
+
+                if len(bounds_h)>3:
+                    if bounds_h[-1]*(1+10**-5) < bounds_h[-3]*0.5+bounds_h[-2]*0.5:
+                        break
+            eLoopTime[maxE].append(times[-1])
+            eLoopBound[maxE].append(bound_h)
+            logging.info(str(eLoopTime))
+            logging.info(str(eLoopBound))
+
+
+    logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
+    
 
   
