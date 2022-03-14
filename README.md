@@ -40,4 +40,4 @@ To interact with jupyter notebooks (make sure virtual environment is activated a
 - "`python run.py gensim`" to run gensim on production data 
 - "`python run.py test-lda-cgs`" to run gibbs on test data
 - "`python run.py lda-cgs`" to run gibbs on production data 
-  
+- "`python run.py onlineldavb`" to run blei MFVI LDA on production data   
