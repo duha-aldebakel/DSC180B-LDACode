@@ -36,6 +36,8 @@ To interact with jupyter notebooks (make sure virtual environment is activated a
 ## 2) Getting the repository from Github
 - "`git clone https://github.com/duha-aldebakel/DSC180B-LDACode.git`"
 - "`cd DSC180B-LDACode`"
-- "`python run.py test-gensim`" to run on test data
-- "`python run.py`" to run on production data (run time ~16-17min)
+- "`python run.py test-gensim`" to run gensim on test data
+- "`python run.py gensim`" to run gensim on production data 
+- "`python run.py test-lda-cgs`" to run gibbs on test data
+- "`python run.py lda-cgs`" to run gibbs on production data 
   
