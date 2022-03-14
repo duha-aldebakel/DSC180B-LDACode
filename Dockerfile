@@ -8,6 +8,11 @@ RUN pip install --no-cache-dir pymc3 pandas
 COPY requirements_pip.txt requirements_pip.txt
 RUN pip install --no-cache-dir -r requirements_pip.txt
 
+# 3) Download language library data
+RUN python -m spacy download en_core_web_sm
+RUN python -m spacy download en_core_web_md
+RUN python -m nltk.downloader stopwords
+
 #rename this file as "Dockerfile" then run:-
 #docker build -t duha-aldebakel/dsc180b .
 
