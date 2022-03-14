@@ -102,7 +102,7 @@ def main(targets):
       #remove zero length articles
       articlelen=df.text.apply(len)
       df=df[articlelen>10]
-      onlineldavb(corpus=df, **lda_gensim_params)
+      run_onlineldavb(corpus=df, **lda_gensim_params)
 
    else: return
 
