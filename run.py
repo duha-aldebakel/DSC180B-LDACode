@@ -8,6 +8,7 @@ from yaml.error import YAMLError
 from src.etl import load_data
 from src.lda_gensim import run_lda_gensim
 from src.lda import run_cgs
+from src.onlineldavb import *
 
 def main(targets):
    logging.basicConfig(
@@ -86,6 +87,22 @@ def main(targets):
       data = df.text.values
       lda_cgs_params = config['lda_params']
       run_cgs(data, **lda_cgs_params)
+   elif 'test-onlineldavb' in targets:
+      with open("config/test_gensim_config.yaml", "r") as f:
+         try:
+            test_config = yaml.safe_load(f)
+         except YAMLError as exc:
+            print(exc)
+     
+      logging.info('App started in test mode. Using test data (generated with just 100 articles. See  wikidownloader.py)')
+      logging.info('\n\n# Loading data pickle file '+ test_config['data_dir'] + test_config['file_name'])
+      data = load_data(**test_config)
+      lda_gensim_params = test_config['lda_gensim_params']
+      df = pd.DataFrame({'text':data[0],'title':data[1]})
+      #remove zero length articles
+      articlelen=df.text.apply(len)
+      df=df[articlelen>10]
+      onlineldavb(corpus=df, **lda_gensim_params)
 
    else: return
 
