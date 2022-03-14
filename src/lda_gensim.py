@@ -21,8 +21,10 @@ def run_lda_gensim(corpus: DataFrame, **kwargs):
     wiki_pp = WikiPreprocess()
     print("Preprocessing...")
     starttime = time.time()
+    logging.info('\n\n# Preprocessing articles (preprocessed_data)')
     preprocessed_data =  [wiki_pp.preprocess_document(text=d, min_token_len=kwargs['min_token_len']) for d in tqdm(data)]
-    
+    logging.info('\n\n# Preprocessing articles (preprocessed_data done)')
+        
     # Adding bigrams
     logging.info('\n\n# Adding bigrams')
     print("Creating bigrams... ")
