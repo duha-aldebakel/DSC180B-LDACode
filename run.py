@@ -87,13 +87,15 @@ def main(targets):
       data = df.text.values
       lda_cgs_params = config['lda_params']
       run_cgs(data, **lda_cgs_params)
-   elif 'onlineldavb' in targets:
+   else:
       with open("config/gensim_config.yaml", "r") as f:
          try:
             config = yaml.safe_load(f)
          except YAMLError as exc:
             print(exc)
       logging.info('App started in prod mode. Using approximately 50,000 articles.')
+      logging.info('Defaulting to python run.py onlineldavb (Blei/Hoffman code modified)')
+      logging.info('Please consider other command line options as well.')
       logging.info('\n\n# Loading data pickle file '+ config['data_dir'] + config['file_name'])
       data = load_data(**config)
       lda_gensim_params = config['lda_gensim_params']
@@ -102,8 +104,6 @@ def main(targets):
       articlelen=df.text.apply(len)
       df=df[articlelen>10]
       run_onlineldavb(corpus=df, **lda_gensim_params)
-
-   else: return
 
 if __name__ == "__main__":
     targets = sys.argv[1:]
