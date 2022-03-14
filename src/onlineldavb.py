@@ -1,4 +1,3 @@
-
 '''
 This file has been modified under GNU by:-
 Duha Aldebakel
@@ -409,11 +408,117 @@ def run_onlineldavb(corpus: DataFrame, **kwargs):
                         break
             eLoopTime[maxE].append(times[-1])
             eLoopBound[maxE].append(bound_h)
-            logging.info(str(eLoopTime))
-            logging.info(str(eLoopBound))
+            logging.info('runtimes under different maximum E step iterations (cummulative from many runs) are: '+str(eLoopTime))
+            logging.info('ELBO under different maximum E step iterations (cummulative from many runs) are: '+str(eLoopBound))
+            logging.info('Please see notebooks for plots')
+
+    logging.info('\n\nNow doing Under parameterizaion/Early Stopping experiment..')
+    from datetime import datetime
+    import random
+    from collections import defaultdict
+
+    optimalStopping=defaultdict(list, {(49, 1000): [28, 26, 25, 25, 37, 24, 23, 25, 25, 22, 24, 29, 25, 26, 25, 25, 25], (49, 2500): [25, 22, 27, 25, 25, 25, 24, 24, 26, 24, 37, 31, 24, 25, 26, 37, 33], (49, 5000): [72, 33, 39, 21, 47, 54, 31, 49, 41, 27, 60, 56, 36, 43, 58, 50, 54], (49, 7500): [141, 56, 46, 79, 47, 65, 56, 59, 45, 52, 80, 93, 36, 44, 64, 74, 60], (49, 10000): [90, 69, 69, 102, 42, 53, 52, 80, 83, 44, 64, 66, 35, 63, 104, 76, 72], (49, 12500): [79, 129, 66, 132, 50, 53, 67, 42, 82, 47, 69, 109, 35, 81, 86, 67, 54], (49, 17500): [85, 72, 108, 199, 74, 74, 64, 133, 82, 59, 70, 71, 30, 54, 78, 51, 36], (49, 25000): [46, 46, 132, 177, 36, 72, 40, 45, 77, 41, 38, 70, 29, 88, 82, 49, 73], (24, 1000): [28, 25, 23, 26, 26, 27, 24, 32, 26, 25, 23, 23, 26, 23, 25], (24, 2500): [25, 21, 27, 23, 25, 21, 25, 22, 32, 35, 24, 24, 24, 25, 26], (24, 5000): [28, 55, 50, 49, 41, 49, 66, 45, 47, 59, 60, 25, 50, 60, 81], (24, 7500): [58, 58, 52, 44, 90, 51, 86, 54, 61, 72, 53, 60, 50, 40, 44], (24, 10000): [145, 86, 70, 57, 95, 70, 45, 70, 58, 72, 47, 54, 48, 38, 43], (24, 12500): [116, 44, 57, 61, 87, 25, 49, 43, 59, 71, 51, 53, 49, 39, 44], (24, 17500): [105, 41, 59, 51, 92, 31, 46, 40, 53, 77, 66, 47, 58, 41, 62], (24, 25000): [51, 38, 55, 57, 34, 77, 39, 58, 53, 72, 29, 47, 58, 46, 54]})
+    boundsh=defaultdict(list, {(49, 1000): [-998194257.16, -1095456596.58, -1100399814.2, -1029909183.66, -981458399.08, -903910300.52, -1102162092.2, -1160587733.75, -1076599139.88, -1052261098.95, -965457916.98, -1178935419.42, -983501853.57, -957531625.96, -1154346182.93, -1051951686.17, -1042566358.64], (49, 2500): [-665666849.5, -719763935.52, -731620668.44, -687558590.63, -660973095.7, -610420930.45, -732937523.79, -771285165.2, -718297372.6, -697108066.67, -648831843.7, -780586681.9, -655100105.8, -634984758.53, -763871978.91, -696454849.88, -701043744.76], (49, 5000): [-419607059.68, -463499888.28, -473984839.69, -440411852.15, -421756218.69, -390860733.83, -468692155.37, -491188625.63, -458904364.01, -445412888.61, -415679633.0, -492610164.07, -412043615.76, -406004812.7, -487688760.82, -436378845.72, -444174653.82], (49, 7500): [-313451185.16, -349914160.78, -351496716.56, -332178324.49, -316071073.55, -296508916.53, -348425071.7, -369345602.91, -339886507.53, -332348100.66, -309702249.56, -371624796.26, -312266309.63, -305929642.55, -365674875.44, -325919534.52, -337395362.39], (49, 10000): [-253381669.23, -285237898.9, -283415976.65, -268567647.79, -257398119.96, -241925088.44, -280337975.13, -301295905.72, -276085824.53, -271390287.61, -250078172.75, -303820706.01, -254351714.33, -248589584.49, -289296695.87, -263713816.98, -270059938.5], (49, 12500): [-211749383.31, -233941880.14, -236564246.26, -218724536.15, -215864683.01, -198976275.66, -234468706.36, -251486438.45, -229160364.69, -224620662.09, -206789141.5, -249526378.86, -212679117.04, -207966048.18, -241961178.56, -220177375.57, -225920026.5], (49, 17500): [-162998427.61, -178125247.19, -177715543.54, -166037349.51, -163864490.63, -151177561.37, -176701850.46, -189896192.32, -177425273.61, -173379475.35, -158401218.56, -189789317.1, -163971285.34, -158279688.83, -186105854.24, -166498616.96, -171464885.08], (49, 25000): [-126141984.68, -137410075.78, -135109696.92, -125637042.01, -125286014.7, -111500899.45, -136662757.28, -147891742.35, -134649074.98, -132338630.06, -124552127.51, -144650430.74, -126733335.91, -117700163.94, -141085515.15, -128430643.51, -128442679.24], (24, 1000): [-1047066521.48, -1059318107.29, -1024938520.62, -998660237.26, -1198712524.03, -1107968994.61, -1104506349.86, -1110338255.15, -1086691525.84, -1063666118.37, -1121020661.94, -845643713.98, -912724713.6, -1118647747.49, -899014079.21], (24, 2500): [-697684131.99, -703759891.28, -682433386.39, -664655460.43, -804248851.55, -740584950.37, -731378554.02, -739477885.61, -714687859.73, -707708467.42, -743717869.98, -562371163.63, -602675871.63, -744016095.65, -588504587.7], (24, 5000): [-440641225.11, -453375292.97, -430877066.3, -422867628.36, -510132046.03, -477394955.64, -467215423.23, -467476332.39, -449765594.06, -448622603.96, -473515478.15, -360241910.49, -385159273.42, -473489990.64, -374986746.94], (24, 7500): [-329768828.97, -338553341.5, -323980951.42, -314746492.4, -382080818.25, -357047119.93, -349111593.83, -346282613.04, -335998421.39, -333720962.02, -354098447.33, -267154225.98, -286271603.64, -354180680.81, -280735346.39], (24, 10000): [-266600154.6, -277629977.16, -264050733.03, -254567834.32, -306177025.31, -287430282.26, -286093042.91, -282482138.0, -275373499.46, -270484258.4, -288183392.0, -216449055.86, -232702158.09, -290010388.84, -224145421.85], (24, 12500): [-220844219.11, -232119375.94, -219311156.71, -215279404.1, -258861056.79, -242678820.8, -238287919.62, -234594702.08, -229999137.12, -223472905.47, -241847153.19, -179516188.32, -196278629.22, -240791551.13, -187618060.23], (24, 17500): [-170668967.88, -177887764.41, -167916057.59, -162417430.32, -195874373.98, -187505487.17, -180496769.24, -181737548.58, -177084292.2, -170949271.9, -181906204.33, -138578763.15, -149930727.04, -185164406.91, -143591308.21], (24, 25000): [-131545198.24, -135639750.56, -127297022.74, -123486080.12, -152052717.99, -137007353.44, -139425005.08, -139504405.07, -134848642.08, -130994306.74, -141117136.94, -106709795.82, -113963833.69, -141325590.49, -111421638.98]})
+
+    sortedByFrequencies=sorted([t for t,f in id2word_lemmatized.cfs.items()],reverse=True)
+
+    for iter in range(1): 
+        maxE=20
+        K=20
+        datasetsize=25
+        random.shuffle(corpus_lemmatized)
+        for vocabLimit in [1000]: #,2500,5000,7500,10000,12500,17500,25000]:
+            start=datetime.now()
+            print('datasetsize = {}k, vocabLimit = {}'.format(datasetsize-1,vocabLimit))
+
+            D = 100000 #estimate of number of documents in the population
+            S = 1000 #sample size of a batch
+            alpha = 0.1
+            eta = 0.01
+
+            tau0 = 10.0
+            kappa = 0.05
 
 
-    logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
+            '''
+                Hyperparameter of Dirichlet priors
+                    concentration parameter of Dirichlet prior, which smaller meaning more concentrated
+                    we like it to be relatively concentrated since any topic usually uses a small number of key words
+                    we allow one document to have more than one topic, but we want to penalize it when there are too many potential topics
+
+                alpha: Hyperparameter for prior on weight vectors theta
+                eta: Hyperparameter for prior on topics beta
+
+                Learning rate parameters:
+                tau0: A (positive) learning parameter that downweights early iterations
+                kappa: Learning rate: exponential decay rate---should be between
+                     (0.5, 1.0] to guarantee asymptotic convergence.
+
+
+                For each document d, we would like to know the distributions of 
+                    theta, the topic distribution of the document
+                    z_n, the topic of n-th word in document
+                    (so for each document, there is one theta and N z_n)
+
+                but we only observe
+                    w_n, the actual n-th word in document
+
+
+            '''
+
+            vocab=list(id2word_lemmatized.token2id.keys())
+            model = OnlineLDA(vocab, K, D, alpha, eta, tau0, kappa)
+
+            model.maxEIter=maxE
+            model.vocabLimit=vocabLimit
+            model.sortedByFrequencies=sortedByFrequencies
+
+            bounds=[]
+            bounds_h=[]
+            times=[]
+            lasttime=0
+            for i in range(1000):
+                j=i%datasetsize #We only have 50k documents, so we make another pass after 50
+                batch=corpus_lemmatized[(j*S):((j+1)*S)]
+                wordids = [[w for w,c in doc] for doc in batch]
+                wordcts = [[c for w,c in doc] for doc in batch]
+                if i==0:
+                    holdids=wordids #First batch is the holdout
+                    holdcts=wordcts #First batch is the holdout
+                if j==0:
+                    continue #Don't use holdout for learning
+
+                (gamma, bound)=model.update_lambda(wordids, wordcts)
+                (gamma_h, sstats_h) = model.do_e_step(holdids, holdcts)
+                # Estimate held-out likelihood for current values of lambda.
+
+                earlystoppingtime=(datetime.now()-start).seconds
+                if earlystoppingtime<max(lasttime*1.1,lasttime+5):
+                    continue
+
+                lasttime=earlystoppingtime
+                bound_h = model.approx_bound(holdids, holdcts, gamma_h)
+                #bound is the evidence lower bound (ELBO)
+
+                print('elasped {}s bound_h {}'.format(earlystoppingtime,bound_h))
+
+                bounds.append(bound)
+                bounds_h.append(bound_h)
+                times.append(earlystoppingtime)
+
+                if len(bounds_h)>3:
+                    if bounds_h[-1]*(1+10**-5) < bounds_h[-3]*0.5+bounds_h[-2]*0.5:
+                        break
+            optimalStopping[(datasetsize-1,vocabLimit)].append(times[-1])
+            boundsh[(datasetsize-1,vocabLimit)].append(bound_h)
+
+            logging.info('runtimes under dimensions of lambda are: '+str(optimalStopping))
+            logging.info('ELBO under dimensions of lambda are:  '+str(eLoopBound))
+            logging.info('Please see notebooks for plots')
+
+
+
+        logging.info('Time taken = {:.0f} minutes'.format((time.time()-starttime)/60.0))
     
 
   
